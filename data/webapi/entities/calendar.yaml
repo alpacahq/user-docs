@@ -1,0 +1,17 @@
+spec:
+  - name: date
+    type: string
+    desc: Date string in "%Y-%m-%d" format
+  - name: open
+    type: string
+    desc: The time the market opens at on this date in "%H:%M" format
+  - name: close
+    type: string
+    desc: The time the market closes at on this date in "%H:%M" format
+example: |
+  {
+    "date": "2018-01-03",
+    "open": "09:30",
+    "close": "16:00"
+  }
+

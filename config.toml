@@ -1,0 +1,78 @@
+baseurl = "http://docs.alpaca.markets/"
+languageCode = "en-us"
+title = "Alpaca Documents"
+theme = "hugo-material-docs"
+metadataformat = "yaml"
+canonifyurls = true
+# Enable Google Analytics by entering your tracking id
+googleAnalytics = ""
+pygmentsUseClasses = true
+
+[params]
+	# General information
+	author = "Alpaca"
+	description = "All about Alpaca."
+	copyright = "Released under the MIT license"
+
+	# Repository
+	# provider = "GitHub"
+	# repo_url = "https://github.com/alpacahq/"
+
+	version = ""
+	logo = "images/alpacalogo.png"
+	favicon = "https://alpaca.markets/static/favicon-32x32.png"
+
+	permalink = "#"
+
+	# Custom assets
+	custom_css = ["css/custom.css", "fontello/css/fontello.css"]
+	custom_js  = []
+
+	# Syntax highlighting theme
+	highlight_css  = ""
+
+	[params.palette]
+    	primary = "yellow"
+    	accent  = "orange"
+
+    [params.font]
+    	text = "Lato"
+    	code = "PT Mono"
+
+[social]
+	twitter = "AlpacaHQ"
+	github  = "alpacahq"
+	email   = ""
+
+
+[[menu.main]]
+	name   = "Material"
+	url    = "/"
+	weight = 0
+
+[[menu.main]]
+	name   = "Getting started"
+	url    = "getting-started/"
+	weight = 10
+
+[[menu.main]]
+	name   = "Adding content"
+	url    = "adding-content/"
+	weight = 20
+
+[[menu.main]]
+	name   = "Roadmap"
+	url    = "roadmap/"
+	weight = 30
+
+[[menu.main]]
+	name   = "License"
+	url    = "license/"
+	weight = 40
+
+
+[blackfriday]
+	smartypants	= true
+	fractions = true
+	smartDashes = true
+	plainIDAnchors = true

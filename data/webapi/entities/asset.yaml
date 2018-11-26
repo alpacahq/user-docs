@@ -1,0 +1,29 @@
+spec:
+  - name: id
+    type: string<uuid>
+    desc: Asset ID.
+  - name: asset_class
+    type: string
+    desc: '"us_equity"'
+  - name: exchange
+    type: string
+    desc: |
+      `AMEX`, `ARCA`, `BATS`, `NYSE`, `NASDAQ` or `NYSEARCA`
+  - name: symbol
+    type: string
+  - name: status
+    type: string
+    desc: |
+      `active` or `inactive`
+  - name: tradable
+    type: boolean
+    desc: Asset is tradable on Alpaca or not.
+example: |
+  {
+    "id": "904837e3-3b76-47ec-b432-046db621571b",
+    "asset_class": "us_equity",
+    "exchange": "NASDAQ",
+    "symbol": "AAPL",
+    "status": "active",
+    "tradable": true
+  }

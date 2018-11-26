@@ -1,0 +1,16 @@
+{{ $name := .Get "name" -}}
+{{ $obj := index $.Site.Data.webapi.entities $name -}}
+
+<div class="spec-table">
+{{ range $obj.spec }}
+    <div class="spec-row">
+    <div class="spec-left"><span class="spec-name">{{ .name }}</span></div>
+    <div class="spec-right">
+        <div class="spec-type">{{ .type }}
+            {{- if .required }}<span class="required">Required</span>{{ end -}}
+        </div>
+        <div class="spec-desc">{{ .desc | markdownify }}</div>
+    </div>
+    </div>
+{{ end }}
+</div>

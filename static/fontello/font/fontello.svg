@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2018 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="slack" unicode="&#xf198;" d="M848 417q34 0 57-23t24-56q0-54-52-73l-96-33 31-93q4-12 4-26 0-33-24-57t-56-24q-26 0-48 15t-29 40l-31 92-173-59 31-91q4-14 4-27 0-33-23-57t-57-24q-27 0-48 15t-29 41l-31 91-85-30q-17-5-28-5-34 0-57 22t-23 57q0 26 16 47t40 30l87 29-59 175-87-30q-14-5-27-5-33 0-56 23t-23 56q0 26 15 48t40 29l88 30-30 88q-4 14-4 27 0 33 23 57t57 24q26 0 48-16t29-40l30-89 173 59-30 89q-4 13-4 26 0 33 23 57t57 24q26 0 48-15t30-40l29-90 91 31q11 3 24 3 33 0 57-22t24-55q0-25-17-45t-41-29l-88-30 59-177 91 32q13 4 26 4z m-443-146l173 58-59 176-173-60z" horiz-adv-x="928.6" />
+</font>
+</defs>
+</svg>

@@ -1,0 +1,7 @@
+endpoints:
+  /v1/clock:
+    GET:
+      title: Get the clock
+      summary: Returns the market clock.
+      returns: |
+        A [Clock](#clock-entity) object

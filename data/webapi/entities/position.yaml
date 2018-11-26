@@ -1,0 +1,68 @@
+spec:
+  - name: asset_id
+    type: string<uuid>
+    desc: Asset ID
+  - name: symbol
+    type: string
+    desc: Symbol name of the asset
+  - name: exchange
+    type: string
+    desc: Exchange name of the asset
+  - name: asset_class
+    type: string
+    desc: Asset class name
+  - name: avg_entry_price
+    type: string
+    desc: Average entry price of the position
+  - name: qty
+    type: string<int>
+    desc: The number of shares
+  - name: side
+    type: string
+    desc: '"long"'
+  - name: market_value
+    type: string<number>
+    desc: Total dollar amount of the position
+  - name: cost_basis
+    type: string<number>
+    desc: Total cost basis in dollar
+  - name: unrealized_pl
+    type: string<string>
+    desc: Unrealized profit/loss in dollar
+  - name: unrealized_plpc
+    type: string<number>
+    desc: Unrealized profit/loss percent (by a factor of 1)
+  - name: unrealized_intraday_pl
+    type: string<number>
+    desc: Unrealized profit/loss in dollar for the day
+  - name: unrealized_intraday_plpc
+    type: string<number>
+    desc: Unrealized profit/loss percent (by a factor of 1)
+  - name: current_price
+    type: string<number>
+    desc: Current asset price per share
+  - name: lastday_price
+    type: string<number>
+    desc: Last day's asset price per share
+  - name: change_today
+    type: string<number>
+    desc: Percent change from last day price (by a factor of 1)
+example: |
+  {
+    "asset_id": "904837e3-3b76-47ec-b432-046db621571b",
+    "symbol": "AAPL",
+    "exchange": "NASDAQ",
+    "asset_class": "us_equity",
+    "avg_entry_price": "100.0",
+    "qty": "5",
+    "side": "long",
+    "market_value": "600.0",
+    "cost_basis": "500.0",
+    "unrealized_pl": "100.0",
+    "unrealized_plpc": "0.20",
+    "unrealized_intraday_pl": "10.0",
+    "unrealized_intraday_plpc": "0.0084",
+    "current_price": "120.0",
+    "lastday_price": "119.0",
+    "change_today": "0.0084"
+  }

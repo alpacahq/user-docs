@@ -1,0 +1,8 @@
+endpoints:
+  /v1/account:
+    GET:
+      title: Get the account
+      summary: |
+        Returns the account associated with the API key.
+      returns: |
+        [Account](#account-entity) object

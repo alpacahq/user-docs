@@ -1,0 +1,116 @@
+.palette-primary-yellow,
+.palette-primary-yellow .footer, .palette-primary-yellow .header {
+    background: #FCD503;
+    color: #030303;
+}
+.palette-primary-yellow .article a, .palette-primary-yellow .article code, .palette-primary-yellow .article h1, .palette-primary-yellow .article h2 {
+    color: #947120;
+}
+.palette-primary-yellow .drawer .toc a.current, .palette-primary-yellow .drawer .toc a:focus, .palette-primary-yellow .drawer .toc a:hover {
+    color: #947120; /*#FCD503; #BA9527; */
+}
+.palette-primary-yellow .drawer .anchor a {
+    border-color: #947120;
+}
+@media only screen and (max-width: 959px) {
+    .palette-primary-yellow .project  {
+        background: #030303;
+        color: #FCD503;
+    }
+}
+.article {
+    font-size: 16px;
+}
+
+.article h1 {
+    font-size: 28px;
+}
+
+.article h2 {
+    font-size: 24px;
+}
+
+.article h3 {
+    font-size: 20px;
+}
+
+.palette-primary-yellow .article a, .palette-primary-yellow .article code, .palette-primary-yellow .article h1, .palette-primary-yellow .article h2 {
+    font-weight: bold;
+}
+
+.palette-primary-yellow .article code.hljs {
+    font-weight: normal;
+}
+
+.active > div > a.current {
+    background-color: #e3e3e3;
+    margin-right: 3px;
+}
+
+pre.entity {
+    white-space: normal;
+}
+
+pre.entity li {
+    list-style: none;
+    margin-top: 0;
+}
+
+.spec-table {
+    margin: 15px 0;
+}
+.spec-table .spec-row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+.spec-table .spec-left {
+    width: 25%;
+}
+.spec-table .spec-name:before {
+    content: "- ";
+}
+.spec-table .spec-right {
+    width: 70%;
+    border-bottom: 1px solid #e3e3e3;
+}
+.spec-table .spec-type {
+    color: #9c9c9c;
+    font-size: 90%;
+    line-height: 1.0em;
+}
+.spec-table .required {
+    color: #d45;
+    margin-left: 8px;
+}
+
+.rest-entity-example {
+    font-size: 80%;
+}
+.rest-http {
+    background-color: #f2f2f2;
+    padding: 0.2em 5px;
+    margin: 0.5em 0;
+    font-family: "PT Mono", monospace;
+}
+.rest-http span.method {
+    margin-right: 15px;
+    display: inline-block;
+    font-weight: bold;
+}
+.rest-endpoint .summary {
+    margin-bottom: 25px;
+}
+
+.http-error {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff3f3;
+    margin: 7px 0;
+}
+.http-error .status {
+    width: 25%;
+}
+.http-error .reason {
+    width: 70%;
+}

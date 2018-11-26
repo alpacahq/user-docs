@@ -1,0 +1,7 @@
+endpoints:
+  /v1/calendar:
+    GET:
+      title: Get the calendar
+      summary: Returns the market calendar.
+      returns: |
+        An array of [Calendar](#calendar-entity) object

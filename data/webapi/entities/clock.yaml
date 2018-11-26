@@ -1,0 +1,21 @@
+spec:
+  - name: timestamp
+    type: string<timestamp>
+    desc: Current timestamp
+  - name: is_open
+    type: boolean
+    desc: Whether or not the market is open
+  - name: next_open
+    type: string<timestamp
+    desc: Next market open timestamp
+  - name: next_close
+    type: string<timestamp>
+    desc: Next market close timestamp
+example: |
+  {
+    "timestamp": "2018-04-01T12:00:00.000Z",
+    "is_open": true,
+    "next_open": "2018-04-01T12:00:00.000Z",
+    "next_close": "2018-04-01T12:00:00.000Z"
+  }
+

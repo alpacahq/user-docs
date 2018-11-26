@@ -1,0 +1,16 @@
+{{ $nindent := or (.Get "indent") "0" -}}
+{{ $indent := strings.Repeat $nindent " " -}}
+{{ $name := .Get "name" -}}
+{{ $obj := index $.Site.Data.webapi.entities $name -}}
+{{ .Scratch.Set "buf" "" -}}
+{{ $lines := split $obj.example "\n" -}}
+{{ range $i, $line := $lines -}}
+{{ $.Scratch.Add "buf" $indent -}}
+{{ $.Scratch.Add "buf" $line -}}
+{{ if lt $i (sub (len $lines) 1) -}}
+{{ $.Scratch.Add "buf" "\n" -}}
+{{ end -}}
+{{ end -}}
+<div class="rest-entity-example">
+{{- highlight (.Scratch.Get "buf" | safeHTML) "json" "" -}}
+</div>

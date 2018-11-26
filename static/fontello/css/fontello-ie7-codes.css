@@ -1,0 +1,2 @@
+
+.icon-slack { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf198;&nbsp;'); }

@@ -1,0 +1,52 @@
+spec:
+  - name: id
+    type: string<uuid>
+    desc: Account ID.
+  - name: status
+    type: string<account_status>
+    desc: See [Account Status](/web-api/account/#account-status)
+  - name: currency
+    type: string
+    desc: '"USD"'
+  - name: buying_power
+    type: string<number>
+    desc: Tradable buying power
+  - name: cash
+    type: string<number>
+    desc: Cash balance
+  - name: cash_withdrawable
+    type: string<number>
+    desc: Withdrawable cash amount
+  - name: portfolio_value
+    type: string<number>
+    desc: Total value of cash + holding positions
+  - name: pattern_day_trader
+    type: boolean
+    desc: Whether or not the account has been flagged as a pattern day trader
+  - name: trading_blocked
+    type: boolean
+    desc: If true, the account is not allowed to place orders.
+  - name: transfers_blocked
+    type: boolean
+    desc: If true, the account is not allowed to request money transfers.
+  - name: account_blocked
+    type: boolean
+    desc: If true, the account activity by user is prohibited.
+  - name: created_at
+    type: string<timestamp>
+    desc: Timestamap this account was created at
+example: |
+  {
+    "id": "904837e3-3b76-47ec-b432-046db621571b",
+    "status": "ACTIVE",
+    "currency": "USD",
+    "buying_power": "4000.32",
+    "cash": "4000.32",
+    "cash_withdrawable": "4000.32",
+    "portfolio_value": "4321.98",
+    "pattern_day_trader": false,
+    "trading_blocked": false,
+    "transfers_blocked": false,
+    "account_blocked": false,
+    "created_at": "2018-10-01T13:35:25Z"
+  }

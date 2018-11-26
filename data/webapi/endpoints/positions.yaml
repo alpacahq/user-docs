@@ -1,0 +1,23 @@
+endpoints:
+  /v1/positions:
+    GET:
+      title: Get open positions
+      summary: |
+        Retrieves a list of the account's open positions.
+      returns: |
+        An array of [Position](#position-entity) object
+  /v1/positions/{symbol}:
+    GET:
+      title: Get an open position
+      summary: |
+        Retrieves the account's open position for the given `symbol`.
+      params:
+        path:
+          - name: symbol
+            type: string
+            desc: symbol or asset_id
+      returns: |
+        A [Position](#position-entity) object
+      errors:
+        - status: 404
+          reason: Position is not found.

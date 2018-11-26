@@ -1,0 +1,53 @@
+{{ $path := .Get "path" -}}
+{{ $method := .Get "method" -}}
+{{ $resource := .Get "resource" -}}
+{{ $root := index $.Site.Data.webapi.endpoints $resource -}}
+{{ $node := index (index $root.endpoints $path) $method -}}
+<div class="rest-endpoint">
+<h2 id="{{ replace (lower $node.title) " " "-" }}">[{{ $method }}] {{ $node.title | markdownify }}</h2>
+
+<div class="rest-http">
+<span class="method">{{- $method }}</span>
+{{- $path }}
+</div>
+
+<div class="summary">
+{{ $node.summary | markdownify }}
+</div>
+
+{{ if $node.params }}
+<h3>Parameters</h3>
+{{ range (slice "path" "query" "body") }}
+    {{ if index $node.params . }}
+    <h4>{{ humanize . }} Parameters</h4>
+    <div class="spec-table">
+    {{ range (index $node.params .) }}
+        <div class="spec-row">
+        <div class="spec-left"><span class="spec-name">{{ .name }}</span></div>
+        <div class="spec-right">
+            <div class="spec-type">{{ .type }}
+                {{- if .required }}<span class="required">Required</span>{{ end -}}
+            </div>
+            <div class="spec-desc">{{ .desc | markdownify }}</div>
+        </div>
+        </div>
+    {{ end }}
+    </div>
+    {{ end }}
+{{ end }}
+{{ end }}
+
+<h3>Response</h3>
+{{ $node.returns | markdownify }}
+</div>
+
+{{ $status_map := dict "403" "forbidden" "404" "not found" "422" "unprocessable"}}
+{{ if $node.errors }}
+<h3>Errors</h3>
+{{ range $node.errors }}
+<div class="http-error">
+<div class="status">{{ .status }} {{ humanize (index $status_map (string .status)) }}</div>
+<div class="reason">{{ .reason }}</div>
+</div>
+{{ end }}
+{{ end }}
