@@ -1,24 +1,22 @@
 # Alpaca User Documentation
 
-## Building the Site
+This repository powers the documentation for Alpaca's users.
 
-1. Install [hugo](https://gohugo.io/) (`brew install hugo` on osx should do it)
-1. In the project directory, run `hugo`
-1. Open public/index.html
+Its contents are hosted on Alpaca's site [here](https://docs.alpaca.markets).
 
-Yeah that's really it.
+## Submitting Improvements
 
-## Deployment
+We are accepting pull requests for this repository, so if you'd like to make some improvements to the documentation,
+we'd certainly appreciate it! To submit a correction or any other sort of improvment, you can fork this repository
+on GitHub, make your changes, and send them as a pull request.
 
-`make publish` will push to the s3 bucket using `aws` command.
+## Building the Site Locally
 
-Example:
-```
-$ make publish
-```
+You can make changes to the markdown files holding site content here on GitHub, but if you'd like to see your changes
+locally before you submit, you can follow these steps.
 
-Drone is set up so if you push to the branch `production` it publishes to the production bucket.
+1. Install [hugo](https://gohugo.io/). If on OSX, install [homebrew](https://brew.sh/) and run `brew install hugo`.
+1. In the project directory, run `hugo server`.
+1. If you follow the link in hugo's output, you'll be taken to a local version of the site with the changes you've made.
 
-```
-$ git push origin master master:production
-```
+On your local version of the site, you can check any pages that will be affected by the changes you've made.
