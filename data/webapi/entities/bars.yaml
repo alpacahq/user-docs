@@ -1,0 +1,32 @@
+spec:
+  - name: t
+    type: int
+    desc: the beginnig time of this bar in nanosecond Unix epoch
+  - name: o
+    type: number
+    desc: open price
+  - name: h
+    type: number
+    desc: high price
+  - name: l
+    type: number
+    desc: low price
+  - name: c
+    type: number
+    desc: close price
+  - name: v
+    type: number
+    desc: volume
+example: |
+  {
+    "AAPL": [
+      {
+        "t": 1542952680000000000,
+        "o": 172.26,
+        "h": 172.3,
+        "l": 172.16,
+        "c": 172.18,
+        "v": 3892,
+      }
+    ]
+  }

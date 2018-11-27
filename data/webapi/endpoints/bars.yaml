@@ -1,0 +1,58 @@
+endpoints:
+  /v1/bars/{timeframe}:
+    GET:
+      title: Get a list of bars
+      summary: |
+        Retrieves a list of bars for each requested symbol.
+        It is guaranteed all bars are in ascending order by time.
+
+        Currently, no "incomplete" bars are returned. For example,
+        a 1 minute bar for 09:30 will not be returned until 09:31.
+
+      params:
+        path:
+          - name: timeframe
+            type: string
+            desc: |
+              One of `minute`, `1Min`, `5Min`, `15Min`, `day` or `1D`.
+              `minute` is an alias of `1Min`. Similarly, `day` is
+              of `1D`.
+        query:
+          - name: symbols
+            type: string
+            required: true
+            desc: |
+              One or more (max 200) symbol names split by commas (",").
+          - name: limit
+            type: integer
+            desc: |
+              The maximum number of bars to be returned for each symbol.
+              It can be between 1 and 1000.
+              Default is 100 if parameter is unspecified or 0.
+          - name: start
+            type: timestamp
+            desc: |
+              Filter bars equal to or after this time.
+              Cannot be used with `after`.
+          - name: end
+            type: timestamp
+            desc: |
+              Filter bars equal to or before this time.
+              Cannot be used with `until`.
+          - name: after
+            type: timestamp
+            desc: |
+              Filter bars after this time.
+              Cannot be used with `start`.
+          - name: until
+            type: timestamp
+            desc: |
+              Filter bars before this time.
+              Cannot be used with `end`.
+      returns: |
+        An object with a key for each symbol and the [Bars](#bars-entity) object as the values.
+
+        Note that it returns status 200 with an empty object if no requested symbol is found.
+      errors:
+        - status: 422
+          reason: The parameters are not well formed.

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="769px" height="503px" viewBox="0 0 769 503" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>flowchart</title>
+    <desc>Created with Sketch.</desc>
+    <g id="flowchart" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" stroke="#979797" x="62.5" y="325.5" width="274" height="98"></rect>
+        <rect id="Rectangle" stroke="#979797" x="438.5" y="325.5" width="285" height="98"></rect>
+        <text id="Full-Market-data-by" font-family="Lato-Medium, Lato" font-size="18" font-weight="400" letter-spacing="0.0900000036">
+            <tspan x="452.434" y="358" fill="#000000">Full volume data by </tspan>
+            <a xlink:href="/web-api/market-data/#polygon-integration" target="_parent"><tspan x="610.699" y="358" fill="#947120">Polygon API</tspan></a>
+            <tspan x="707.566" y="358" fill="#000000"></tspan>
+            <tspan x="574.735" y="380" fill="#000000">+</tspan>
+            <tspan x="496.993" y="402" fill="#000000">IEX data by </tspan>
+            <a xlink:href="/web-api/market-data/#alpaca-data-api" target="_parent"><tspan x="592.24" y="402" fill="#947120">Data API</tspan></a>
+        </text>
+        <text id="IEX-data-by-Data-API" font-family="Lato-Medium, Lato" font-size="20" font-weight="400" letter-spacing="0.100000001">
+            <tspan x="103" y="380" fill="#000000">IEX data by </tspan>
+            <a xlink:href="/web-api/market-data/#alpaca-data-api" target="_parent"><tspan x="208.83" y="380" fill="#947120">Data API</tspan></a>
+        </text>
+        <path id="Line-2" d="M195,317 L195,157 L195,156.5 L196,156.5 L196,157 L196,317 L200,317 L195.5,326 L191,317 L195,317 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Line-2" d="M580.025225,316.998554 L580.500002,156.998516 L580.501486,156.498519 L581.501481,156.501486 L581.499998,157.001484 L581.02522,317.001521 L585.025203,317.01339 L580.498516,325.999998 L576.025242,316.986684 L580.025225,316.998554 Z" fill="#979797" fill-rule="nonzero"></path>
+        <polygon id="Polygon" stroke="#979797" points="580 157 387.5 234 195 157 387.5 80"></polygon>
+        <text id="I-have-live-trading" font-family="Lato-Medium, Lato" font-size="20" font-weight="400" letter-spacing="0.100000001" fill="#000000">
+            <tspan x="267.435" y="150">I have a live trading account.</tspan>
+            <tspan x="280.45" y="174">(Not only paper trading)</tspan>
+        </text>
+        <text id="No" font-family="Lato-Medium, Lato" font-size="20" font-weight="400" letter-spacing="0.100000009" fill="#000000">
+            <tspan x="248.21" y="273">No</tspan>
+        </text>
+        <text id="Yes" font-family="Lato-Medium, Lato" font-size="20" font-weight="400" letter-spacing="0.100000009" fill="#000000">
+            <tspan x="500.015" y="273">Yes</tspan>
+        </text>
+    </g>
+</svg>
