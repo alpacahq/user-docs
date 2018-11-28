@@ -18,7 +18,7 @@ jobs:
       - checkout
       - setup_remote_docker
       - attach_workspace:
-          at: public
+          at: .
       - run: sudo pip install awscli
       - run: sudo apt-get install -y make curl && make publish
 
