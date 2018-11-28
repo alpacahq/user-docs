@@ -38,5 +38,4 @@ workflows:
               only: /.*/
             branches:
               only:
-                - staging
-                - production
+                - master
