@@ -80,8 +80,7 @@ flexible query capability such as multi-symbol and precise time range parameters
 
 ### Can I get the full volume data from Alpaca Data API?
 
-Currently, no. The plan is to eventually provide everything through Alpaca Data API,
-and the Polygon integration will terminate at some point.
+Currently, no. The plan is to eventually provide everything through Alpaca Data API at some point.
 This is to achieve the best user experience for all Alpaca users.
 But don't worry! We will have enough time period for everyone to smoothly migrate from
 Polygon API to Alpaca API. Through our community Slack and email notifications, we will
