@@ -5,7 +5,7 @@ jobs:
       - image: cibuilds/hugo:0.49
     steps:
       - checkout
-      - run: make DEPLOYMENT=${CIRCLE_BRANCH} build
+      - run: make build
       - persist_to_workspace:
           root: .
           paths: public
@@ -20,7 +20,7 @@ jobs:
       - attach_workspace:
           at: public
       - run: sudo pip install awscli
-      - run: sudo apt-get install -y make curl && make DEPLOYMENT=${CIRCLE_BRANCH} publish
+      - run: sudo apt-get install -y make curl && make publish
 
 workflows:
   version: 2
