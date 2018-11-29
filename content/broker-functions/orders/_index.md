@@ -43,7 +43,7 @@ fill for a quite a bit of time –- it will only be filled if price reaches
 the specified limit price level. You could miss a trading opportunity if price
 moves away from the limit price before your order can be filled.  Note that
 even if the price moves to the limit price level, the order still may not get
-filled there are not enough buyers or sellers at that particular price level. 
+filled there are not enough buyers or sellers at that particular price level.
 
 ### Stop Order
 A stop order is an order to buy or sell a security when its price moves past
@@ -79,10 +79,6 @@ The following are the types of time-in-force Alpaca supports.
   The order is good until canceled.
 - `opg`<br>
   The order is placed at the time the market opens.
-- `ioc`<br>
-  The order is immediately filled or canceled after being placed (may partial fill).
-- `fok`<br>
-  The order is immediately filled or canceled after being placed (may not partial fill).
 
 
 ## Order Lifecycle
