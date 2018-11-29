@@ -1,16 +1,59 @@
 ---
-title: Setup pylivetrader on Windows
+title: Install Pylivetrader on Windows
 weight: 50
 ---
+# Install Pylivetrader on Windows
+## Install With Anaconda (Recommended)
 
-# Setup pylivetrader on Windows
+Pylivetrader packages for Windows are hosted on our channel on Anaconda. To get started, follow these steps.
 
-*These steps are from a Windows user who kept track while successfully setting up pylivetrader to run a Quantopian-like algorithm on Alpaca*
+1. Install the Python 3.7 version of [Anaconda](https://www.anaconda.com/download/#windows) if you don’t already have it. You may be prompted to register an Anaconda account after installation.
+2. From your start menu, open Anaconda Prompt.
+3. Navigate into a development folder.
 
-## OS
+    ```
+    mkdir alpacahq
+    cd alpacahq
+    ```
+
+4. Add the conda-forge, Quantopian, and alpacahq channels.
+
+    ```
+    conda config --add channels conda-forge
+    conda config --add channels Quantopian
+    conda config --add channels alpacahq
+    ```
+
+5. Create a virtual environment with the necessary packages installed.
+
+    ```
+    conda create -n pylivetraderenv pylivetrader
+    ```
+
+6. Activate your new virtual environment.
+
+    ```
+    source activate pylivetraderenv
+    ```
+
+Once you follow these steps, you should be able to run pylivetrader from the Anaconda Prompt terminal.
+```
+pylivetrader run exampleAlgorithm.py --backend-config exampleConfig.yaml
+```
+You can reactivate this environment at any time by running `source activate pylivetraderenv` inside the Anaconda prompt.
+
+If you encounter issues with setting your environment up, feel free to ask for help in our community Slack. A link to join is in the sidebar.
+
+## Alternative: Install Without Anaconda
+
+Note: we recommend trying the conda installation path first, as it does not involve compiling any dependencies.
+
+*These steps are from a Windows user who kept track while successfully setting up pylivetrader to run a Quantopian-like algorithm on Alpaca.*
+
+### OS
 This was on Windows 7 and should also apply to Windows 10.
 
-## Visual Studio and .NET
+### Visual Studio and .NET
 Prerequisites are Python 3.6 or higher and some form of C++ compiler, which requires .NET Framework.
 
 **C++ compiler install**
@@ -42,7 +85,7 @@ During the install, I selected these options:
 - Desktop development with C++
 - Python development
 
-## Install Python 3.6
+### Install Python 3.6
 
   One option is python.org: https://www.python.org/downloads/release/python-370/
 
@@ -72,7 +115,7 @@ System32\Wbem;C:\Program Files\Git\cmd;C:\Program Files\Microsoft VS Code\bin;C:
 Start > Run > cmd
 or Windows key > r* > cmd
 
-## Install Python modules and pylivetrader
+### Install Python modules and pylivetrader
 
 Updated **pip** (python tool for installing things)
 `python -m pip install --upgrade pip`
@@ -91,7 +134,7 @@ Installed **pipeline-live** ([link](https://github.com/alpacahq/pipeline-live "p
 
 `pip install pipeline-live`
 
-## Set up Keys and Configure
+### Set up Keys and Configure
 Obtain key from [Dashboard](https://app.alpaca.markets/dashboard/overview)
 
 The slider at the top of the page switches between paper trading and live, and results in different keys for the two separate purposes.
@@ -128,7 +171,7 @@ base_url: https://paper-api.alpaca.markets
 
 Make an **algorithm**. Find an example online.
 
-## Start algorithm at any time of day
+### Start algorithm at any time of day
 
 ```
 C:\ap> pylivetrader.exe run -f alpaca_test1.py --backend-config paper.yaml
