@@ -24,7 +24,7 @@ and make sure you set the following fields in the HTTP header:
 The API endpoint is different from the Trading API's endpoint.
 
 ```
-http://data.alpaca.markets/v1
+https://data.alpaca.markets/v1
 ```
 
 This URL is the same between paper trading and live trading.
