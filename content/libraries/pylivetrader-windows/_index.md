@@ -3,7 +3,7 @@ title: Install Pylivetrader on Windows
 weight: 50
 ---
 # Install Pylivetrader on Windows
-## Install With Anaconda (Recommended)
+## Install with Anaconda (Recommended)
 
 Pylivetrader packages for Windows are hosted on our channel on Anaconda. To get started, follow these steps.
 
@@ -44,7 +44,7 @@ You can reactivate this environment at any time by running `source activate pyli
 
 If you encounter issues with setting your environment up, feel free to ask for help in our community Slack. A link to join is in the sidebar.
 
-## Alternative: Install Without Anaconda
+## Alternative: Install without Anaconda
 
 Note: we recommend trying the conda installation path first, as it does not involve compiling any dependencies.
 
