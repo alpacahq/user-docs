@@ -1,6 +1,10 @@
 ---
 title: Alpaca Documents
 type: index
+outputs:
+ - html
+ - rss
+ - json
 ---
 
 Welcome to the Alpaca Documents! This is the place where you learn about
