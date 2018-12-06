@@ -20,7 +20,7 @@ if (searchQuery) {
     $("#search-query").val(searchQuery);
     executeSearch(searchQuery);
 } else {
-    $('#search-results').append("<p>Please enter a word or phrase above</p>");
+    $('#search-results').append("<p>Please enter a word or phrase into the search box.</p>");
 }
 
 
@@ -67,7 +67,7 @@ function populateResults(result) {
         if (snippet.length < 1) {
             snippet += contents.substring(0, summaryInclude * 2);
         }
-        //pull template from hugo templarte definition
+        //pull template from hugo template definition
         var templateDefinition = $('#search-result-template').html();
         //replace values
         var output = render(templateDefinition, { key: key, title: value.item.title, link: value.item.permalink, snippet: snippet });
