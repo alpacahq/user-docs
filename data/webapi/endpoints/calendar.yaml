@@ -3,5 +3,15 @@ endpoints:
     GET:
       title: Get the calendar
       summary: Returns the market calendar.
+      params:
+        query:
+          - name: start
+            type: timestamp
+            desc: |
+              The first date to retrieve data for (inclusive)
+          - name: end
+            type: timestamp
+            desc: |
+              The last date to retrieve data for (inclusive)
       returns: |
         An array of [Calendar](#calendar-entity) object
