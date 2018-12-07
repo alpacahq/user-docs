@@ -1,7 +1,7 @@
 spec:
   - name: t
     type: int
-    desc: the beginnig time of this bar in nanosecond Unix epoch
+    desc: the beginnig time of this bar as a Unix epoch in seconds
   - name: o
     type: number
     desc: open price
@@ -21,7 +21,7 @@ example: |
   {
     "AAPL": [
       {
-        "t": 1542952680000000000,
+        "t": 1544129220,
         "o": 172.26,
         "h": 172.3,
         "l": 172.16,
