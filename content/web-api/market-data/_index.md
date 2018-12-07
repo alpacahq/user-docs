@@ -32,9 +32,10 @@ This URL is the same between paper trading and live trading.
 
 ## Polygon Integration
 
-All Alpaca customers with full brokerage accounts can access various kinds of market data in [Polygon](https://polygon.io/).
-(This data is not available to paper-only accounts.) For the RESTful interface, you need to give the `apiKey`
-parameter with the same API key ID you use for Alpaca, as demonstrated below.
+All Alpaca customers with live brokerage accounts can access various kinds of market data in [Polygon](https://polygon.io/).
+(This data is not available to users who have not yet set up live accounts.) For the RESTful interface,
+you need to give the `apiKey` parameter with the same API key ID you use for Alpaca, as demonstrated below.
+You will see an authentication error message saying "invalid API key" if your account does not have Polygon access.
 
 ```sh
 $ curl "https://api.polygon.io/v1/historic/quotes/SPY/2018-06-01?apiKey=$APCA_API_KEY_ID"
@@ -66,8 +67,8 @@ refer to the documentation provided by [each language SDK]({{< relref "/librarie
 
 You may wonder which of the two above - IEX or Polygon - to use. First of all, the full
 volume data provided by Polygon is not immediately available to everyone. You first need
-to create a live trading account - paper-only accounts must use IEX - and agree with the
-exchange agreements.
+to create a live trading account - users without live brokerage accounts must use IEX -\
+and agree with the exchange agreements.
 
 <object type="image/svg+xml" data="flowchart.svg">
 </object>
