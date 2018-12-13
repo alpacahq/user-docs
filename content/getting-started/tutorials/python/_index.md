@@ -58,7 +58,11 @@ Here we create an `api` object from this class.
 ```py
 import alpaca_trade_api as tradeapi
 
-api = tradeapi.REST()
+api = tradeapi.REST(
+    key_id='REPLACEME',
+    secret_key='REPLACEME',
+    base_url='https://paper-api.alpaca.markets'
+)
 ```
 
 With this `api` object, you can call each REST API endpoint
