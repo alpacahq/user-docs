@@ -15,6 +15,12 @@ or system-assigned unique ID to check the status. Updates on open orders
 at Alpaca will also be sent over the streaming interface, which is the
 recommended method of maintaining order state.
 
+## Orders Submitted Outside of Regular Trading Hours
+Orders submitted outside of market hours will be routed and made available for
+execution at the time of the next market open. Extended-hours trading is not
+yet supported at Alpaca, but orders can be placed around the clock to be
+handled as soon as the market is open.
+
 ## Order Types
 When you submit an order, you can choose one of supported order types.
 Currently, Alpaca supports four different types of orders.
@@ -133,8 +139,3 @@ orders reach these states:
 
 An order may be canceled through the API up until the point it reaches
 a state of either `filled`, `canceled`, or `expired`.
-
-{{< warning title="Limitation" >}}
-Alpaca Trade API currently accepts orders only while the market is open.
-Out of the regular market hours, order submission will be rejected.
-{{< /warning >}}
