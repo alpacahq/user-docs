@@ -88,8 +88,9 @@ The following are the types of time-in-force Alpaca supports.
   accepted if it is received before 9:15AM (ET). The order can be
   cancelled after 9:15AM, but it cannot be edited. After 9:28AM, OPG
   orders cannot be edited or cancelled. Any unfilled orders
-  after opening of the market will be cancelled (appears as "rejected"
-  in your dashboard).
+  after opening of the market will be cancelled. If you submit
+  OPG orders during the market hours, it will appear as "rejected"
+  in your dashboard.
 
 
 ## Order Lifecycle
