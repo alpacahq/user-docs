@@ -416,7 +416,7 @@ It is very hard to try this type of shuffling algorithm without a commission-fre
 trading platform with this size of cash, since a few dollars of commission will
 kill the cash balance and profit margins pretty quickly.
 
-## Set up the enviornment and run the script
+## Set up the environment and run the script
 Let's get ready to run our script. For your convenience, we've got a repository
 set up for this script on GitHub. You should start off by cloning it from [here](https://github.com/alpacahq/samplealgo01).
 This repository is set up using `pipenv`, something which sits on top of `pip`,
