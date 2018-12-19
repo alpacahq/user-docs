@@ -43,10 +43,10 @@ Choose one of the supported ones and start building your idea.
 
 ## Tutorial through a Sample Algorithm
 
-You can learn the thought process by a [sample algorithm in python]({{< relref "/getting-started/sample-algo/_index.md" >}}). This is
+You can learn the thought process by a [sample algorithm in Python]({{< relref "/getting-started/tutorials/python/_index.md" >}}). This is
 a complete working scaffold which you can immediately start running.
-Learn how an algorithm is structured and code API requests so you can
-customize for your needs.
+Learn how an algorithm is structured and code API requests that you can
+customize for your own needs.
 
 ## Coming from Quantopian?
 
