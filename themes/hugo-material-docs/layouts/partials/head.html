@@ -50,6 +50,7 @@
     <link rel="stylesheet" href="{{ "stylesheets/application.css" | absURL }}">
     <link rel="stylesheet" href="{{ "stylesheets/temporary.css" | absURL }}">
     <link rel="stylesheet" href="{{ "stylesheets/palettes.css" | absURL }}">
+    <link rel="stylesheet" href="{{ "css/prism.css" | absURL }}">
     <link rel="stylesheet" href="{{ with .Site.Params.highlight_css }}{{ . | absURL }}{{ else }}{{ "stylesheets/highlight/highlight.css" | absURL }}{{ end }}">
 
     {{/* set default values if no custom ones are defined */}}
@@ -74,7 +75,7 @@
     <link href="{{ . }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
     <link href="{{ . }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
     {{ end }}
-  
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113069056-7"></script>
     <script>

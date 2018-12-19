@@ -1,0 +1,32 @@
+{{- $pathURL := (print "/content" (.Get "path"))}}
+{{- $files := readDir $pathURL -}}
+<table>
+    <th>Size in bytes</th>
+    <th>Name</th>
+    <div class="example-tabs">
+    {{ $.Scratch.Set "first" 1 }}
+    {{- range $files }}
+        {{ if eq ($.Scratch.Get "first") 1 }}
+        <div class="example-tab active">
+        {{ else }}
+        <div class="example-tab inactive ">
+        {{ end }}
+        {{ .Name }}
+        </div>
+        {{ $.Scratch.Set "first" 0 }}
+    {{- end }}
+    </div>
+    {{- range $files }}
+    {{ $.Scratch.Add "filepath" ($.Get "path") }}
+    {{ $.Scratch.Add "filepath" "/"}}
+    {{ $.Scratch.Add "filepath" .Name}}
+
+    {{ $.Scratch.Get "filepath" }}
+    <pre class="line-numbers" data-src={{ $.Scratch.Get "filepath" }}></pre>
+    <tr>
+        <td>{{ .Size }}</td>
+        <td><a href="{{ $.Get "path" }}{{ .Name | relURL }}" target="_blank"> {{ .Name }}</a></td>
+    </tr>
+    {{ $.Scratch.Set "filepath" ""}}
+    {{- end }}
+</table>
