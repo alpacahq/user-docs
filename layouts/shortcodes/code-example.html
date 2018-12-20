@@ -1,32 +1,34 @@
 {{- $pathURL := (print "/content" (.Get "path"))}}
 {{- $files := readDir $pathURL -}}
-<table>
-    <th>Size in bytes</th>
-    <th>Name</th>
-    <div class="example-tabs">
-    {{ $.Scratch.Set "first" 1 }}
-    {{- range $files }}
-        {{ if eq ($.Scratch.Get "first") 1 }}
-        <div class="example-tab active">
-        {{ else }}
-        <div class="example-tab inactive ">
-        {{ end }}
-        {{ .Name }}
-        </div>
-        {{ $.Scratch.Set "first" 0 }}
-    {{- end }}
+<div class="example-tabs">
+{{ $.Scratch.Set "tabClass" "active" }}
+{{- range $files }}
+    <div class="example-tab {{ $.Scratch.Get "tabClass"}} {{$.Get "example-id"}}" id="{{.Name}}">
+    {{ $filename_arr := split .Name "." }}
+    {{ $filename_ext := index $filename_arr 1 }}
+    
+    {{ if eq $filename_ext "py"}}
+        Python
+    {{else if eq $filename_ext "js"}}
+        Javascript
+    {{else if eq $filename_ext "md"}}
+        Markdown
+    {{ end }}
     </div>
-    {{- range $files }}
+    <script>
+        currentTab = window.parent.document.getElementById("{{.Name}}");
+        currentTab.onclick = function() { changeExamplesTab("{{$.Get "example-id"}}", "{{.Name}}")};
+    </script>
+    {{ $.Scratch.Set "tabClass" "inactive" }}
+{{- end }}
+</div>
+{{ $.Scratch.Set "blockClass" "active" }}
+{{- range $files }}
+    
     {{ $.Scratch.Add "filepath" ($.Get "path") }}
     {{ $.Scratch.Add "filepath" "/"}}
     {{ $.Scratch.Add "filepath" .Name}}
-
-    {{ $.Scratch.Get "filepath" }}
-    <pre class="line-numbers" data-src={{ $.Scratch.Get "filepath" }}></pre>
-    <tr>
-        <td>{{ .Size }}</td>
-        <td><a href="{{ $.Get "path" }}{{ .Name | relURL }}" target="_blank"> {{ .Name }}</a></td>
-    </tr>
+    <pre id="{{$.Get "example-id"}}-{{ .Name }}" class="line-numbers example-block {{ $.Scratch.Get "blockClass" }}" data-src={{ $.Scratch.Get "filepath" }}></pre>
     {{ $.Scratch.Set "filepath" ""}}
-    {{- end }}
-</table>
+    {{ $.Scratch.Set "blockClass" "inactive" }}
+{{- end }}

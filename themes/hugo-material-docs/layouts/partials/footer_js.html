@@ -85,6 +85,33 @@
       </script>
     {{ end }}
 
+
+    <script>
+      function changeExamplesTab(exampleId, tabId) {
+        // Change the code being displayed for an example code block
+        let oldActiveTab = window.parent.document.getElementsByClassName('example-tab active ' + exampleId)[0];
+        if(oldActiveTab.id == tabId) {
+            return;
+        }
+        let oldActiveBlock = window.parent.document.getElementById(exampleId + '-' + oldActiveTab.id);
+
+        let newActiveTab = window.parent.document.getElementById(tabId);
+        let newActiveBlock = window.parent.document.getElementById(exampleId + '-' + tabId)
+
+        // Update the tabs
+        oldActiveTab.classList.add('inactive');
+        oldActiveTab.classList.remove('active');
+        newActiveTab.classList.add('active');
+        newActiveTab.classList.remove('inactive');
+
+        // Update the visible code block
+        oldActiveBlock.classList.add('inactive');
+        oldActiveBlock.classList.remove('active');
+        newActiveBlock.classList.add('active');
+        newActiveBlock.classList.remove('inactive');
+      }
+    </script>
+
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 

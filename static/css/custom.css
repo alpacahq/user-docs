@@ -87,7 +87,6 @@ pre.entity li {
 .example-tabs {
     display: flex;
     align-items: flex-end;
-    border-left: 2px solid #947120;
 }
 
 .example-tab {
@@ -104,6 +103,16 @@ pre.entity li {
 .example-tab.active {
     height: 45px;
     background-color: #FFE765;
+    border-left: 4px solid #947120;
+    font-weight:bold;
+}
+
+.example-block.inactive {
+    display: none;
+}
+
+.example-block.active {
+    display: intial;
 }
 
 .rest-entity-example {
