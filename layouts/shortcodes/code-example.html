@@ -1,40 +1,49 @@
 {{- $pathURL := (print "/content" (.Get "path"))}}
 {{- $files := readDir $pathURL -}}
 <div class="example-tabs">
-{{ $.Scratch.Set "tabClass" "active" }}
-{{- range $files }}
-    <div class="example-tab {{ $.Scratch.Get "tabClass"}} {{$.Get "example-id"}}" id="{{.Name}}">
-    {{ $filename_arr := split .Name "." }}
-    {{ $filename_ext := index $filename_arr 1 }}
+    {{ $.Scratch.Set "tabClass" "active" }}
+    {{- range $files }}
+        {{ $filename_arr := split .Name "." }}
+        {{ $filename := index $filename_arr 0}}
+        {{ $filename_ext := index $filename_arr 1 }}
 
-    {{ if eq $filename_ext "py"}}
-        Python
-    {{ else if eq $filename_ext "js" }}
-        Javascript
-    {{ else if eq $filename_ext "md" }}
-        Markdown
-    {{ else if eq $filename_ext "yaml" }}
-        YAML
-    {{ else if eq $filename_ext "toml" }}
-        TOML
-    {{ else}}
-        .{{ $filename_ext }}
-    {{ end }}
-    </div>
-    <script>
-        currentTab = window.parent.document.getElementById("{{.Name}}");
-        currentTab.onclick = function() { changeExamplesTab("{{$.Get "example-id"}}", "{{.Name}}")};
-    </script>
-    {{ $.Scratch.Set "tabClass" "inactive" }}
-{{- end }}
+        {{ if eq $filename ($.Get "exampleId") }}
+            <div class="example-tab {{ $.Scratch.Get "tabClass"}} {{$.Get "example-id"}}" id="{{.Name}}">
+            {{ if eq $filename_ext "py"}}
+                Python
+            {{ else if eq $filename_ext "js" }}
+                Javascript
+            {{ else if eq $filename_ext "cs" }}
+                C#
+            {{ else if eq $filename_ext "yaml" }}
+                YAML
+            {{ else if eq $filename_ext "toml" }}
+                TOML
+            {{ else}}
+                .{{ $filename_ext }}
+            {{ end }}
+            </div>
+            <script>
+                currentTab = window.parent.document.getElementById("{{.Name}}");
+                currentTab.onclick = function () { changeExamplesTab("{{$.Get "example - id"}}", "{{.Name}}") };
+            </script>
+            {{ $.Scratch.Set "tabClass" "inactive" }}
+        {{ end }}
+    {{- end }}
 </div>
 {{ $.Scratch.Set "blockClass" "active" }}
 {{- range $files }}
+    {{ $filename_arr := split .Name "." }}
+    {{ $filename := index $filename_arr 0}}
+    {{ $filename_ext := index $filename_arr 1 }}
 
-    {{ $.Scratch.Add "filepath" ($.Get "path") }}
-    {{ $.Scratch.Add "filepath" "/"}}
-    {{ $.Scratch.Add "filepath" .Name}}
-    <pre id="{{$.Get "example-id"}}-{{ .Name }}" class="line-numbers example-block {{ $.Scratch.Get "blockClass" }}" data-src={{ $.Scratch.Get "filepath" }}></pre>
-    {{ $.Scratch.Set "filepath" ""}}
-    {{ $.Scratch.Set "blockClass" "inactive" }}
+    {{ if eq $filename ($.Get "exampleId") }}
+        {{ $.Scratch.Add "filepath" ($.Get "path") }}
+        {{ $.Scratch.Add "filepath" "/"}}
+        {{ $.Scratch.Add "filepath" .Name}}
+        <pre id="{{$.Get "example-id"}}-{{ .Name }}" class="line-numbers example-block {{ $.Scratch.Get "blockClass" }}"
+            data-src={{ $.Scratch.Get "filepath" }}></pre>
+        {{ $.Scratch.Set "filepath" ""}}
+        {{ $.Scratch.Set "blockClass" "inactive" }}
+    {{ end }}
 {{- end }}
