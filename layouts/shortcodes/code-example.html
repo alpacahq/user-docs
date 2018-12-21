@@ -25,7 +25,7 @@
             </button>
             <script>
                 !function() {
-                    currentTab = window.parent.document.getElementById("{{.Name}}");
+                    let currentTab = window.parent.document.getElementById("{{.Name}}");
                     currentTab.onclick = function () { changeExamplesTab("{{$.Get "example - id"}}", "{{.Name}}") };
                 }()
             </script>
