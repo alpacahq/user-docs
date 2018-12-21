@@ -8,7 +8,7 @@
         {{ $filename_ext := index $filename_arr 1 }}
 
         {{ if eq $filename ($.Get "exampleId") }}
-            <div class="example-tab {{ $.Scratch.Get "tabClass"}} {{$.Get "example-id"}}" id="{{.Name}}">
+            <button class="example-tab {{ $.Scratch.Get "tabClass"}} {{$.Get "example-id"}}" id="{{.Name}}">
             {{ if eq $filename_ext "py"}}
                 Python
             {{ else if eq $filename_ext "js" }}
@@ -22,10 +22,12 @@
             {{ else}}
                 .{{ $filename_ext }}
             {{ end }}
-            </div>
+            </button>
             <script>
-                currentTab = window.parent.document.getElementById("{{.Name}}");
-                currentTab.onclick = function () { changeExamplesTab("{{$.Get "example - id"}}", "{{.Name}}") };
+                !function() {
+                    currentTab = window.parent.document.getElementById("{{.Name}}");
+                    currentTab.onclick = function () { changeExamplesTab("{{$.Get "example - id"}}", "{{.Name}}") };
+                }()
             </script>
             {{ $.Scratch.Set "tabClass" "inactive" }}
         {{ end }}
