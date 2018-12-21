@@ -1,4 +1,4 @@
-{{- $pathURL := (print "/content" (.Get "path"))}}
+{{- $pathURL := (print "/content" (.Get "pathURL"))}}
 {{- $files := readDir $pathURL -}}
 <div class="example-tabs">
     {{ $.Scratch.Set "tabClass" "active" }}
@@ -38,7 +38,7 @@
     {{ $filename_ext := index $filename_arr 1 }}
 
     {{ if eq $filename ($.Get "exampleId") }}
-        {{ $.Scratch.Add "filepath" ($.Get "path") }}
+        {{ $.Scratch.Add "filepath" ($.Get "pathURL") }}
         {{ $.Scratch.Add "filepath" "/"}}
         {{ $.Scratch.Add "filepath" .Name}}
         <pre id="{{$.Get "example-id"}}-{{ .Name }}" class="line-numbers example-block {{ $.Scratch.Get "blockClass" }}"
