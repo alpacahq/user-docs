@@ -84,6 +84,38 @@ pre.entity li {
     margin-left: 8px;
 }
 
+.example-tabs {
+    display: flex;
+    align-items: flex-end;
+}
+
+.example-tab {
+    border-left: 2px solid #947120;
+    padding: 0 7px;
+    display: flex;
+    align-items: center;
+}
+
+.example-tab.inactive {
+    background-color: #FCD503;
+    height: 25px;
+}
+
+.example-tab.active {
+    height: 45px;
+    background-color: #FFE765;
+    border-left: 4px solid #947120;
+    font-weight:bold;
+}
+
+.example-block.inactive {
+    display: none;
+}
+
+.example-block.active {
+    display: intial;
+}
+
 .rest-entity-example {
     font-size: 80%;
 }
