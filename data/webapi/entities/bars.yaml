@@ -1,7 +1,7 @@
 spec:
   - name: t
     type: int
-    desc: the beginnig time of this bar as a Unix epoch in seconds
+    desc: the beginning time of this bar as a Unix epoch in seconds
   - name: o
     type: number
     desc: open price
