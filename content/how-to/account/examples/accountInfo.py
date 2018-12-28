@@ -6,7 +6,8 @@ api = tradeapi.REST()
 account = api.get_account()
 
 # Check if our account is restricted from trading.
-can_trade = not account.trading_blocked
+if account.trading_blocked:
+    print('Account is currently restricted from trading.')
 
 # Check how much money we can use to open new positions.
-buying_power = account.buying_power
+print('${} is available as buying power.'.format(account.buying_power))
