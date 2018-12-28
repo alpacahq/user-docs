@@ -1,7 +1,5 @@
 const Alpaca = require('@alpacahq/alpaca-trade-api')
-const alpaca = new Alpaca({
-    paper: true
-})
+const alpaca = new Alpaca()
 
 // Prepare the websocket connection and subscribe to account_updates.
 let websocket = alpaca.websocket

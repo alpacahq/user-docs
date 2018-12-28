@@ -1,7 +1,5 @@
 const Alpaca = require('@alpacahq/alpaca-trade-api')
-const alpaca = new Alpaca({
-    paper: true
-})
+const alpaca = new Alpaca()
 
 // Submit a market order and assign it a Client Order ID.
 alpaca.createOrder({

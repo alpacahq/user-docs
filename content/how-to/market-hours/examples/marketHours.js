@@ -1,7 +1,5 @@
 const Alpaca = require('@alpacahq/alpaca-trade-api')
-const alpaca = new Alpaca({
-    paper: true
-})
+const alpaca = new Alpaca()
 
 // Check if the market is open now.
 alpaca.getClock().then((clock) => {

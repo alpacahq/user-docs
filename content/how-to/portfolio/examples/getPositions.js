@@ -1,7 +1,5 @@
 const Alpaca = require('@alpacahq/alpaca-trade-api')
-const alpaca = new Alpaca({
-    paper: true
-})
+const alpaca = new Alpaca()
 
 // Get our position in AAPL.
 aaplPosition = alpaca.getPosition('AAPL')

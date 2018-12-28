@@ -1,7 +1,5 @@
 const Alpaca = require('@alpacahq/alpaca-trade-api')
-const alpaca = new Alpaca({
-    paper: true
-})
+const alpaca = new Alpaca()
 
 // Submit a market order to buy 1 share of Apple at market price
 alpaca.createOrder({
