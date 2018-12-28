@@ -8,7 +8,7 @@ client_order_id = r'my_client_order_id'
 @conn.on(client_order_id)
 async def on_msg(conn, channel, data):
     # Print the update to the console.
-    print("Update for {}. Event: {}".format(client_order_id, data['event']))
+    print("Update for {}. Event: {}.".format(client_order_id, data['event']))
 
 # Start listening for updates.
 conn.run(['trade_updates'])
