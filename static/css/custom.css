@@ -107,6 +107,7 @@ pre.entity li {
 .example-tab.inactive {
     background-color: #FCD503;
     height: 25px;
+    cursor: pointer;
 }
 
 .example-tab.active {

@@ -4,7 +4,7 @@ conn = tradeapi.stream2.StreamConn()
 
 # Handle incoming account updates.
 # The r indicates that we're listening for a regex pattern.
-@conn.on(r'.*')
+@conn.on(r'account_updates')
 async def on_msg(conn, channel, data):
     # Track the cash balance in our account.
     print("Update for account. Cash balance: {}".format(data['cash']))

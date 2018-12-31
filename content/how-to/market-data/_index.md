@@ -12,9 +12,3 @@ Alpaca provides market data from various sources. To learn more about data optio
 By making a GET request to our [`/v1/bars`](https://docs.alpaca.markets/web-api/market-data/bars/) endpoint, you can see what a stock price was at a particular time.
 
 {{< code-example exampleId="getPrices" pathURL="/how-to/market-data/examples">}}
-
-## Listen for Current Market Data with Websockets
-
-You can use Websockets to receive real-time updates about market prices.
-
-{{< code-example exampleId="streaming" pathURL="/how-to/market-data/examples">}}

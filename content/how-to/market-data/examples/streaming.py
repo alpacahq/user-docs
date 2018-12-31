@@ -7,7 +7,7 @@ streams = ['bars/AAPL/1Min']
 
 # Handle incoming market data updates.
 # The r indicates that we're listening for a regex pattern.
-@conn.on(r'.*')
+@conn.on(r'bars\/AAPL\/1Min')
 async def on_msg(conn, channel, data):
     if channel in streams:
         print('Got price update. Latest close price: ', data.c)
