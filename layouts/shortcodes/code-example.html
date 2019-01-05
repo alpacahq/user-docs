@@ -9,7 +9,7 @@
             {{ $filename_ext := index $filename_arr 1 }}
 
             {{ if eq $filename ($.Get "exampleId") }}
-                <button class="example-tab {{ $.Scratch.Get "tabClass"}} {{$.Get "example-id"}}" id="{{.Name}}">
+                <button class="example-tab {{ $.Scratch.Get "tabClass"}} {{$.Get "exampleId"}}" id="{{.Name}}">
                 {{ if eq $filename_ext "py"}}
                     Python
                 {{ else if eq $filename_ext "js" }}
@@ -27,7 +27,7 @@
                 <script>
                     !function() {
                         let currentTab = window.parent.document.getElementById("{{.Name}}");
-                        currentTab.onclick = function () { changeExamplesTab("{{$.Get "example - id"}}", "{{.Name}}") };
+                        currentTab.onclick = function () { changeExamplesTab("{{$.Get "exampleId"}}", "{{.Name}}") };
                     }()
                 </script>
                 {{ $.Scratch.Set "tabClass" "inactive" }}
@@ -44,7 +44,7 @@
             {{ $.Scratch.Add "filepath" ($.Get "pathURL") }}
             {{ $.Scratch.Add "filepath" "/"}}
             {{ $.Scratch.Add "filepath" .Name}}
-            <pre id="{{$.Get "example-id"}}-{{ .Name }}" class="line-numbers example-block {{ $.Scratch.Get "blockClass" }}"
+            <pre id="{{$.Get "exampleId"}}-{{ .Name }}" class="line-numbers example-block {{ $.Scratch.Get "blockClass" }}"
                 data-src={{ $.Scratch.Get "filepath" }}></pre>
             {{ $.Scratch.Set "filepath" ""}}
             {{ $.Scratch.Set "blockClass" "inactive" }}
