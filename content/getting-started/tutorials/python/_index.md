@@ -13,7 +13,7 @@ The idea behind the sample algorithm is this:
 - We rebuild our portfolio once a day in the morning.
 - We maintain a reasonable size of positions (~5 stocks) at a time.
 
-In short, this strategy hopes to capitlaize on some of the random-walk fluctuations in stock prices by placing orders to buy stocks when their prices stray too far below the EMA, hoping they will recover quickly. It shuffles the portfolio by ranking the most oversold stocks and keeping only the top-ranked stocks at any point. And due to the liquidity and generally low volatility of the S&P 500's consituents, we do not expect positions to have highly volatile returns. Therefore, the risk should be low and there should be some correlation with the S&P 500.
+In short, this strategy hopes to capitalize on some of the random-walk fluctuations in stock prices by placing orders to buy stocks when their prices stray too far below the EMA, hoping they will recover quickly. It shuffles the portfolio by ranking the most oversold stocks and keeping only the top-ranked stocks at any point. And due to the liquidity and generally low volatility of the S&P 500's constituents, we do not expect positions to have highly volatile returns. Therefore, the risk should be low and there should be some correlation with the S&P 500.
 
 Now, we are going to go through the steps to write this algorithm. We have a finished version of the algorithm on GitHub [here](https://github.com/alpacahq/samplealgo01).
 
@@ -185,7 +185,7 @@ def _get_prices(symbols, end_dt, max_workers=5):
 It is hard to define which stocks are "the most oversold" among a number of
 stocks, but let's assume the difference between the price and EMA indicates
 something of value here. Short-term EMA usually converges close to the price,
-but if it diverges a lot instead, that means the price changed siginificantly
+but if it diverges a lot instead, that means the price changed significantly
 in a short period of time. We'll need to normalize the value of the difference
 so we can compare the significance between stocks in a fair manner.
 
@@ -210,7 +210,7 @@ def calc_scores(price_df, dayindex=-1):
 
 We use pandas's `ewm()` method to calculate the EMA on a DataFrame here,
 but if you want to use a different technical indicator to find oversold stocks,
-you could use the `ta-lib` package, which supports a wider variety of inicators.
+you could use the `ta-lib` package, which supports a wider variety of indicators.
 Please note that `diff` is the difference between the last price and 10-day EMA
 as a percentage of last price. This value can be negative or positive,
 with a negative `diff` indicating the price dropped recently.
@@ -261,7 +261,7 @@ def get_orders(api, price_df, position_size=100, max_positions=5):
         })
         logger.info(f'order(sell): {symbol} for {shares}')
 
-    # likewise, if the portfoio is missing stocks from the
+    # likewise, if the portfolio is missing stocks from the
     # desired portfolio, buy them. We sent a limit for the total
     # position size so that we don't end up holding too many positions.
     max_to_buy = max_positions - (len(positions) - len(to_sell))
@@ -443,7 +443,7 @@ may not want to keep your computer up and running all the time,
 and you probably don't want to worry about monitoring whether or
 not your computer's online.
 
-You can borrow a machine from AWS or one of the other cloud providiers, which
+You can borrow a machine from AWS or one of the other cloud providers, which
 costs a few dollars a month. The smallest instance should be fine for this
 algo, since it doesn't do much CPU work, but you have to set up the environment,
 install dependencies, etc.
