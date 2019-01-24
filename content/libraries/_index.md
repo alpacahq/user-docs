@@ -9,7 +9,7 @@ list of our official libraries. If there is not one that fits your needs,
 let us know and we will work on that.
 
 ## Client SDK
-These are the basic SDK for each lanuage program to interact with
+These are the basic SDK for each language program to interact with
 our Web API.
 
 - Python: [alpaca-trade-api-python](https://github.com/alpacahq/alpaca-trade-api-python/) /
