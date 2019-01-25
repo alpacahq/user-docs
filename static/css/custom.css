@@ -155,3 +155,10 @@ pre.entity li {
 .http-error .reason {
     width: 70%;
 }
+
+.suggestions {
+    padding-top: 60px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 40px;
+}

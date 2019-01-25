@@ -19,23 +19,23 @@
 
 	<article class="article">
 		<div class="wrapper">
-
 			{{ .Content }}
 
 			{{ if gt (len .Data.Pages) 0 }}
-				<h1>Pages in {{ .Title | singularize }}</h1>
+			<h1>Pages in {{ .Title | singularize }}</h1>
 
-				{{ range .Data.Pages }}
-				<a href="{{ .Permalink }}" title="{{ .Title }}">
-					<h2>{{ .Title }}</h2>
-				</a>
+			{{ range .Data.Pages }}
+			<a href="{{ .Permalink }}" title="{{ .Title }}">
+				<h2>{{ .Title }}</h2>
+			</a>
 
-				<br>
-				{{ printf "%s" .Summary | markdownify }}
+			<br>
+			{{ printf "%s" .Summary | markdownify }}
 
-				<hr>
-				{{ end }}
+			<hr>
 			{{ end }}
+			{{ end }}
+			{{ partial "suggestions" .}}
 		</div>
 	</article>
 
