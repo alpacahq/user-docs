@@ -2,15 +2,15 @@
   <a href="{{ with .Site.Params.repo_url }}{{ . }}{{ else }}{{ .Site.BaseURL }}{{ end }}" class="project">
     <div class="banner">
       {{ with .Site.Params.logo }}
-        <div class="logo">
-          <img src="{{ $.Site.BaseURL }}{{ . }}">
-        </div>
+      <div class="logo">
+        <img src="{{ $.Site.BaseURL }}{{ . }}">
+      </div>
       {{ end }}
       <div class="name">
         <strong>{{ .Site.Title }} {{ with .Site.Params.version }}<span class="version">{{ . }}</span>{{ end }}</strong>
         {{ with .Scratch.Get "repo_id" }}
-          <br>
-          {{ . }}
+        <br>
+        {{ . }}
         {{ end }}
       </div>
     </div>
@@ -19,20 +19,20 @@
   <div class="scrollable">
     <div class="wrapper">
       {{ if (eq (trim .Site.Params.provider " " | lower) "github") | and (isset .Site.Params "repo_url") }}
-        <ul class="repo">
-          <li class="repo-download">
-            <a href="{{ .Site.Params.repo_url }}/archive/master.zip" target="_blank" title="Download" data-action="download">
-              <i class="icon icon-download"></i> Download
-            </a>
-          </li>
-          <li class="repo-stars">
-            <a href="{{ .Site.Params.repo_url }}/stargazers" target="_blank" title="Stargazers" data-action="star">
-              <i class="icon icon-star"></i> Stars
-              <span class="count">&ndash;</span>
-            </a>
-          </li>
-        </ul>
-        <hr>
+      <ul class="repo">
+        <li class="repo-download">
+          <a href="{{ .Site.Params.repo_url }}/archive/master.zip" target="_blank" title="Download" data-action="download">
+            <i class="icon icon-download"></i> Download
+          </a>
+        </li>
+        <li class="repo-stars">
+          <a href="{{ .Site.Params.repo_url }}/stargazers" target="_blank" title="Stargazers" data-action="star">
+            <i class="icon icon-star"></i> Stars
+            <span class="count">&ndash;</span>
+          </a>
+        </li>
+      </ul>
+      <hr>
       {{ end }}
 
       <div class="toc">
@@ -46,7 +46,7 @@
         {{ if isset .Site.Params "author" }}
         <hr>
         <span class="section">Find Alpaca</span>
-        
+
         <ul>
           <li>
             <a href="https://alpaca.markets/slack" target="_blank">
@@ -78,16 +78,28 @@
           {{ end }}
         </ul>
         {{ end }}
+        <hr>
+        <span class="section">Suggestions for Alpaca?</span>
+        <ul>
+          <li style="display: flex; align-items: center; padding-left: 20px">
+            <img src="/images/githublogo.png" width="16" height="16">
+            <a href="https://github.com/alpacahq/Alpaca-API" style="padding-left:5px">Tech Issues and Feature Requests</a>
+          </li>
+          <li style="display: flex; align-items: center; padding-left: 20px">
+            <img src="/images/githublogo.png" width="16" height="16">
+            <a href="https://github.com/alpacahq/user-docs" style="padding-left:5px">Edit docs on GitHub</a>
+          </li>
+        </ul>
       </div>
-			<aside class="copyright" role="note">
-				{{ with .Site.Params.copyright }}
-				&copy; {{ now.Format "2006" }} {{ . }} &ndash;
-				{{ end }}
-				Documentation built with
-				<a href="https://www.gohugo.io" target="_blank">Hugo</a>
-				using the
-				<a href="http://github.com/digitalcraftsman/hugo-material-docs" target="_blank">Material</a> theme.
-			</aside>
+      <aside class="copyright" role="note">
+        {{ with .Site.Params.copyright }}
+        &copy; {{ now.Format "2006" }} {{ . }} &ndash;
+        {{ end }}
+        Documentation built with
+        <a href="https://www.gohugo.io" target="_blank">Hugo</a>
+        using the
+        <a href="http://github.com/digitalcraftsman/hugo-material-docs" target="_blank">Material</a> theme.
+      </aside>
     </div>
   </div>
 
