@@ -28,13 +28,13 @@ how to move your Quantopian algorithm to the Alpaca API.
 
 ## Order Book Imbalance Scalping Algorithm using streaming
 
-With this algorithm, you can take advantage of a daytrading algorithm that makes many quick trades on a single
-security to take advantage of penny-level order book imbalances. The idea is not secret
-or new - it's a strategy that has been studied in academia and the industry.
+This algorithm is an active, daytrading strategy that captures small moves frequently using
+order book imbalance as an indicator. The idea is not secret or new - it's a strategy that has
+been studied in academia and the industry.
 
 This example also gives you a good idea of how to use streaming data in an algorithm's code.
 
-[Code on GitHub](https://github.com/alpacahq/example-hft)
+[Code on GitHub](https://github.com/alpacahq/example-scalping)
 
 
 ## Google Spreadsheet Trading
