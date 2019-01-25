@@ -162,3 +162,18 @@ pre.entity li {
     padding-right: 50px;
     padding-bottom: 40px;
 }
+
+.button-key {
+    display: table-cell;
+    vertical-align: top;
+    width: 135px;
+}
+
+.link-key {
+    display: inline-block;
+    font-size: 20px;
+    padding: 8px;
+    margin: 4px;
+    text-decoration: underline;
+    font-weight: bold;
+}
