@@ -5,12 +5,12 @@ weight: 100
 
 # Example Algorithms
 
-These are sample algorithms that Alpaca or community has built and free to use for your own purpose or customize.
+These are sample algorithms built by Alpaca and the developer community. They're free to use and customize for your own purposes.
 
 ## S&P 500 Buy-on-Dip
 
-This example demonstrates a basic trading algorithm that buys stocks oversold within S&P 500 universe
-using exponential moving average. The page explains details about how to structure the code as well.
+This example demonstrates a basic trading algorithm that buys oversold stocks within the S&P 500 universe
+using an exponential moving average indicator. The page explains details about how to structure the code as well.
 
 [Detail Tutorial with Sample Code]({{< relref "/getting-started/tutorials/python/_index.md" >}})
 
@@ -20,7 +20,7 @@ using exponential moving average. The page explains details about how to structu
 
 This algorithm implements Benjamin Graham's teaching using [pylivetrader](https://github.com/alpacahq/pylivetrader),
 a python library that helps write trading algorithms in Quantopian style. This example also tells you
-how to move your Quantopian algorithm into one for Alpaca API.
+how to move your Quantopian algorithm to the Alpaca API.
 
 [Detailed Explanation on Medium](https://medium.com/automation-generation/teaching-your-computer-to-invest-with-python-commission-free-automated-investing-5ade10961e08)
 
@@ -28,19 +28,19 @@ how to move your Quantopian algorithm into one for Alpaca API.
 
 ## HFT-ish Order Book Imbalance Algorithm using streaming
 
-Ever wanted to get into HFT world? While the professional HFT world is all about speed and latency,
-you can take advantage of commission-free and get into HFT-ish algorithm. The idea is not secret
-or new, but implements a strategy that has been studied in academic and the industry.
+Ever wanted to get into high-frequency trading world? While professional HFT is all about speed and latency,
+you can take advantage of commission-free trading at a higher frequency with this HFT-ish algorithm. The idea is not secret
+or new, but implements a strategy that has been studied in academia and the industry.
 
-This example also gives you a good idea of how to write a streaming-based algorithm code.
+This example also gives you a good idea of how to use streaming data in an algorithm's code.
 
 [Code on GitHub](https://github.com/alpacahq/example-hft)
 
 
 ## Google Spreadsheet Trading
 
-Trading API is not just automation and frequency. Using simpel REST interface, you can build
-your own user interface suitable for your own trading needs. Spreadsheet is a great software
+Alpaca's trading API is not just about automation and frequency. Using a simple REST interface, you can build
+your own user interface suitable for your own trading needs. Google Spreadsheet is a great software
 that everyone can use, and with this example, you can trade directly from your portfolio
 management spreadsheet.
 
@@ -51,4 +51,4 @@ management spreadsheet.
 
 ## List Yours Here
 
-Got an interesting idea? Tells in our [Slack](https://alpaca.markets/slack) and we can list it here.
+Got an interesting idea? Tell us about it in our [Slack](https://alpaca.markets/slack), and we can list it here.
