@@ -26,11 +26,11 @@ how to move your Quantopian algorithm to the Alpaca API.
 
 [Code on GitHub](https://github.com/alpacahq/pylivetrader/tree/master/examples/graham-fundamentals)
 
-## HFT-ish Order Book Imbalance Algorithm using streaming
+## Order Book Imbalance Scalping Algorithm using streaming
 
-Ever wanted to get into high-frequency trading world? While professional HFT is all about speed and latency,
-you can take advantage of commission-free trading at a higher frequency with this HFT-ish algorithm. The idea is not secret
-or new, but implements a strategy that has been studied in academia and the industry.
+With this algorithm, you can take advantage of a daytrading algorithm that makes many quick trades on a single
+security to take advantage of penny-level order book imbalances. The idea is not secret
+or new - it's a strategy that has been studied in academia and the industry.
 
 This example also gives you a good idea of how to use streaming data in an algorithm's code.
 
