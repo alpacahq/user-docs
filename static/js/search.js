@@ -2,12 +2,13 @@ summaryInclude = 120;
 var fuseOptions = {
     shouldSort: true,
     includeMatches: true,
-    threshold: 0.4,
+    threshold: 0.01,
     tokenize: true,
     location: 0,
     distance: 100,
     maxPatternLength: 32,
     minMatchCharLength: 3,
+    matchAllTokens: true,
     keys: [
         { name: "title", weight: 0.8 },
         { name: "contents", weight: 0.5 }
