@@ -26,7 +26,7 @@ how to move your Quantopian algorithm to the Alpaca API.
 
 [Code on GitHub](https://github.com/alpacahq/pylivetrader/tree/master/examples/graham-fundamentals)
 
-## Order Book Imbalance Scalping Algorithm using streaming
+## HFT-ish Order Book Imbalance Algorithm Using Streaming
 
 This algorithm is an active, daytrading strategy that captures small moves frequently using
 order book imbalance as an indicator. The idea is not secret or new - it's a strategy that has
@@ -34,7 +34,7 @@ been studied in academia and the industry.
 
 This example also gives you a good idea of how to use streaming data in an algorithm's code.
 
-[Code on GitHub](https://github.com/alpacahq/example-scalping)
+[Code on GitHub](https://github.com/alpacahq/example-hftish)
 
 
 ## Google Spreadsheet Trading
