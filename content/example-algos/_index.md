@@ -1,6 +1,6 @@
 ---
 title: Example Algorithms
-weight: 100
+weight: 180
 ---
 
 # Example Algorithms

@@ -1,6 +1,6 @@
 ---
 title: Third-Party Tools Integration
-weight: 20
+weight: 160
 ---
 # Third-Party Tools Integration
 
@@ -14,7 +14,7 @@ our official platform integration libraries. If you would like to see us provide
 for a platform not listed here, please let us know at our Feature Request and Issues repo 
 [here]('https://github.com/alpacahq/Alpaca-API').
 
-## Python
+### Python
 
 ### pylivetrader
 [pylivetrader](https://github.com/alpacahq/pylivetrader/) is a live trading framework in
@@ -42,7 +42,7 @@ today and you can run your backtrader algo with our API.
 
 [backtrader integrated with Alpaca SDK](https://github.com/alpacahq/alpaca-backtrader-api/)
 
-## .NET/C\#
+### .NET/C\#
 
 ### Lean
 We have integrated with [Lean](https://github.com/QuantConnect/Lean/)
