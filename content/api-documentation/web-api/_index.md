@@ -1,6 +1,6 @@
 ---
 title: Web API
-weight: 30
+weight: 10
 ---
 # Web API
 Alpaca is a modern platform for algorithmic trading.  Alpaca's

@@ -1,23 +1,18 @@
 ---
-title: Libraries
-weight: 70
+title: Third-Party Tools Integration
+weight: 20
 ---
-# Libraries
-From client SDK to trading system integration, we provide many open source
-libraries and code snippets to fit your unique use case. Here are the
-list of our official libraries. If there is not one that fits your needs,
-let us know and we will work on that.
+# Third-Party Tools Integration
 
-## Client SDK
-These are the basic SDK for each language program to interact with
-our Web API.
+This page is meant to serve as a guide to existing algo traders and researchers
+currently using other platforms or brokers including but not limited to Quantopian,
+Interactive Brokers, TD Ameritrade, Robinhood, Backtrader, and QuantConnect.
 
-- Python: [alpaca-trade-api-python](https://github.com/alpacahq/alpaca-trade-api-python/) /
-[PyPI](https://pypi.org/project/alpaca-trade-api/)
-- .NET/C#: [alpaca-trade-api-charp](https://github.com/alpacahq/alpaca-trade-api-csharp/) /
-[NuGet](https://www.nuget.org/packages/Alpaca.Markets/)
-- Go: [alpaca-trade-api-go](https://github.com/alpacahq/alpaca-trade-api-go/)
-- Node: [alpaca-trade-api-js](https://github.com/alpacahq/alpaca-trade-api-js/)
+We provide several open source libraries to aid in the platform integration process and
+help expedite the time it takes for you to get up and running with Alpaca. Below is a list of
+our official platform integration libraries. If you would like to see us provide integration support
+for a platform not listed here, please let us know at our Feature Request and Issues repo 
+[here]('https://github.com/alpacahq/Alpaca-API').
 
 ## Python
 

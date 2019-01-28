@@ -3,7 +3,7 @@ title: Getting Started
 weight: 10
 ---
 
-# Getting Started
+# Getting Started with Alpaca
 
 If you are new to Alpaca, this is the great place to be! Here are things you need to know first.
 
@@ -35,10 +35,10 @@ only once when generating it. Make sure you keep both in your hands.
 
 ## Learn how API works
 
-Read through our [Web API document]({{< relref "/web-api/_index.md" >}}). It describes
+Read through our [Web API document]({{< relref "/api-documentation/web-api/_index.md" >}}). It describes
 how our API works in details so you can prepare for your algorithm to interact with it.
 
-You can also learn about [SDK for your language]({{< relref "/libraries/_index.md" >}}).
+You can also learn about [SDK for your language]({{< relref "/api-documentation/how-to/_index.md" >}}).
 Choose one of the supported ones and start building your idea.
 
 ## Tutorial through a Sample Algorithm
@@ -50,6 +50,6 @@ customize for your own needs.
 
 ## Coming from Quantopian?
 
-If you are coming from the popular backtesting service Quantopian,
-there is something you want to read about [how easy it is to run your algorithm for live trading with Alpaca]({{< relref "/libraries/zipline-to-pylivetrader" >}}).
+If you are coming from the popular backtesting service Quantopian, please check out our page covering platform 
+migration and read about [how easy it is to run your algorithm for live trading with Alpaca]({{< relref "/platform-migration/zipline-to-pylivetrader" >}}).
 

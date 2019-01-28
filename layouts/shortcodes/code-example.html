@@ -1,4 +1,4 @@
-{{- $pathURL := (print "/content" (.Get "pathURL"))}}
+{{- $pathURL := (print "/content/api-documentation/" (.Get "pathURL"))}}
 {{- $files := readDir $pathURL -}}
 <div class="code-example">
     <div class="example-tabs">
