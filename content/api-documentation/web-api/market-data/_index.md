@@ -13,7 +13,7 @@ set is IEX price data, but we are working on adding more.
 
 
 ## Authentication
-The authentication is done the same way as [Trading API]({{< relref "/web-api/_index.md#authentication" >}}),
+The authentication is done the same way as [Trading API]({{< relref "/api-documentation/web-api/_index.md#authentication" >}}),
 and make sure you set the following fields in the HTTP header:
 
 - `APCA-API-KEY-ID`
@@ -61,7 +61,7 @@ The NATS server addresses for Alpaca users are shown below.
 
 For the further description and specification of each API endpoint, please find more details [here](https://polygon.io/docs/).
 The details about NATS protocol can be found [here](https://nats.io/documentation/internals/nats-protocol/). Also, please
-refer to the documentation provided by [each language SDK]({{< relref "/libraries/_index.md" >}}) for its I/O specification.
+refer to the documentation provided by [each language SDK]({{< relref "/api-documentation/client-sdk/_index.md" >}}) for its I/O specification.
 
 ## Which API should I use?
 

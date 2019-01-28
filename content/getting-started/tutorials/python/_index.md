@@ -115,12 +115,12 @@ our algorithm calculates EMA to find the most oversold stocks in the S&P 500
 universe of stocks.
 
 ### Get the price data
-First, we want to get price data to calculate the EMA. We'll use the [/bars]({{< ref path="/web-api/market-data/bars/_index.md" >}})
+First, we want to get price data to calculate the EMA. We'll use the [/bars]({{< ref path="/api-documentation/web-api/market-data/bars/_index.md" >}})
 endpoint of the Alpaca data API to do this. Alpaca users with brokerage
 accounts also have access to a premium data source called Polygon. Since
 we're starting out with paper trading, which can be done without a brokerage
 account, we'll only be talking about Alpaca's data API in this tutorial. For
-more information about the data sources available to you, reference [this page]({{< ref path="/web-api/market-data/_index.md" >}}).
+more information about the data sources available to you, reference [this page]({{< ref path="/api-documentation/web-api/market-data/_index.md" >}}).
 
 Price data can be retrieved from the `/bars` endpoint by calling `get_barset`
 on the REST object. For example:

@@ -28,7 +28,7 @@ Alpaca account. Please also read our [FAQ page for banking](https://support.alpa
 
 ## Generate API Key
 
-In order to start using Alpaca [Web API]({{< relref "/web-api/_index.md" >}}), you will
+In order to start using Alpaca [Web API]({{< relref "/api-documentation/web-api/_index.md" >}}), you will
 need to obtain your API key. An API key consists of two strings, one called
 Key ID which always appears in your dashboard, and Secret Key, which appears
 only once when generating it. Make sure you keep both in your hands.
