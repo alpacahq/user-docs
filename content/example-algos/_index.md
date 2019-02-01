@@ -1,9 +1,9 @@
 ---
-title: Example Algorithms
-weight: 180
+title: Run Example Algorithms
+weight: 30
 ---
 
-# Example Algorithms
+# Run Example Algorithms
 
 The following is a list of working example algorithms built by Alpaca and the developer community. They can be 
 immediately deployed in paper or live trading, and best of all, they're free to use and customize for your own 

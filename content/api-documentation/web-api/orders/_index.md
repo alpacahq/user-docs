@@ -15,7 +15,7 @@ the status. Updates on open orders at Alpaca will also be sent over the
 streaming interface, which is the recommended method of maintaining order 
 state.
 
-For details of orders, see [Order page]({{< ref path="/broker-functions/orders/_index.md" >}})
+For details of orders, see [Order page]({{< ref path="/orders/_index.md" >}})
 
 {{< rest-endpoint resource="orders" method="GET" path="/v1/orders" >}}
 {{< rest-endpoint resource="orders" method="POST" path="/v1/orders" >}}

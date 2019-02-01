@@ -1,9 +1,9 @@
 ---
-title: Orders
-weight: 30
+title: Understand Orders
+weight: 60
 ---
 
-# Orders
+# Understand Orders
 
 Using Alpaca Trade API, a user can monitor, place and cancel their orders
 with Alpaca. Each order has a unique identifier provided by the client.
@@ -17,8 +17,8 @@ recommended method of maintaining order state.
 
 ## Orders Submitted Outside of Regular Trading Hours
 Orders submitted outside of market hours will be routed and made available for
-execution at the time of the next market open. Extended-hours trading is not
-yet supported at Alpaca, but orders can be placed around the clock to be
+execution at the time of the next market open. **Pre-market and extended-hours trading
+are not yet supported at Alpaca**, but orders can be placed around the clock to be
 handled as soon as the market is open.
 
 ## Order Types
@@ -26,15 +26,27 @@ When you submit an order, you can choose one of supported order types.
 Currently, Alpaca supports four different types of orders.
 
 ### Market Order
-A market order is a request to buy or sell a security at the current-available
-price in the current market. It provides the most likely method of filling.
+A market order is a request to buy or sell a security at the currently available
+market price. It provides the most likely method of filling an order. Market orders 
+fill nearly instantaneously.
 
-If there is enough liquidity, market orders fill nearly instantaneously.
-However, with less liquid securities, it may still take some time.
+As a trade-off, your fill price may slip depending on the available liquidity at 
+each price level as well as any price moves that may occur while your order is 
+being routed to its execution venue. There is also the risk with market orders 
+that they may get filled at unexpected prices due to short-term price spikes.
 
-As a trade-off, your filling price may slip depending on the market activities.
-There is also the risk with market orders that they may get filled at
-unexpected prices due to the short period price spikes.
+To protect against excessive price impact, Alpaca converts buy market orders into 
+marketable limit orders with a price limit that is 5% higher than the current market price.
+In most cases, this will have the same exact outcome as using a true market order.
+However, if the stock price moves more than 5% above the market price in the time that it 
+takes to route your order to the execution venue, then your order would not execute until 
+the price came back within the 5% collar. Sell market orders are **not** converted into
+limit orders.
+
+If you submit a buy market order during pre-market or extended-hours trading, we use the 
+last traded price to determine the limit price. This means that if the stock opens more than 5% 
+above the last traded price that existed at the time you submitted your order, your order 
+won’t be executed until the price came back within the 5% price collar.  
 
 ### Limit Order
 A limit order is an order to buy or sell at a specified price or better. A
@@ -44,29 +56,32 @@ to sell) is executed at the specified limit price or higher (better). Unlike
 a market order, you have to specify the limit price parameter when submitting
 your order.
 
-While a limit order can prevent negative slippage, it may not get a
-fill for a quite a bit of time –- it will only be filled if price reaches
-the specified limit price level. You could miss a trading opportunity if price
-moves away from the limit price before your order can be filled.  Note that
-even if the price moves to the limit price level, the order still may not get
-filled there are not enough buyers or sellers at that particular price level.
+While a limit order can prevent slippage, it may not be filled for a quite a bit 
+of time, if at all. For a buy limit order, if the market price is **within** your specified 
+limit price, you can expect the order to be filled. If the market price is **equivalent** to 
+your limit price, your order may or may not be filled; if the order cannot immediately
+execute against resting liquidity, then it is deemed non-marketable and will only be filled 
+once a marketable order interacts with it. You could miss a trading opportunity if price
+moves away from the limit price before your order can be filled.
 
 ### Stop Order
-A stop order is an order to buy or sell a security when its price moves past
+A stop (market) order is an order to buy or sell a security when its price moves past
 a particular point, ensuring a higher probability of achieving a predetermined
-entry or exit price. Once the price crosses the predefined entry/exit point,
-the stop order becomes a market order.
+entry or exit price. Once the market price crosses the specified stop price,
+the stop order becomes a market order. Alpaca converts buy stop orders into stop limit
+orders with a limit price that is 5% higher than the stop price. Sell stop orders are
+**not** converted into stop limit orders.
 
-A stop order does not guarantee the order will be filled at certain price
-after converted to a market order.
+A stop order does not guarantee the order will be filled at a certain price
+after it is converted to a market order.
 
 In order to submit a stop order, you will need to specify the stop price
-parameter in the API.
+parameter in the API.  
 
 ### Stop Limit Order
 A stop-limit order is a conditional trade over a set time frame that combines
-the features of stop with those of a limit order and is used to mitigate risk.
-The stop-limit order will be executed at a specified price, or better, after
+the features of a stop order with those of a limit order and is used to mitigate risk.
+The stop-limit order will be executed at a specified limit price, or better, after
 a given stop price has been reached. Once the stop price is reached, the
 stop-limit order becomes a limit order to buy or sell at the limit price
 or better.
@@ -145,3 +160,17 @@ orders reach these states:
 
 An order may be canceled through the API up until the point it reaches
 a state of either `filled`, `canceled`, or `expired`.
+
+## Buying Power
+
+In order to submit a buy order and have it accepted, your account must have sufficient buying power.
+Alpaca calculates the value of a buy order as the order's limit price (in the case of market orders,
+the limit price is 5% above the current market price as noted above) multiplied by the order's
+quantity. The value of the order is then checked against your available cash balance to determine if
+it can be accepted. Please note that your available cash balance is reduced by other open (pending) buy orders,
+while sell orders do not add to your available cash balance until they have executed.
+
+For example, if your cash balance is $10,000 and you submit a limit buy order with an order 
+value of $3,000, your order will be accepted and your remaining available cash balance will 
+be $7,000. Even if this order is unfilled, as long as it is open and has not been cancelled, it will count against
+your available buying power. If you then submitted another order with an order value of $8,000, it would be rejected.

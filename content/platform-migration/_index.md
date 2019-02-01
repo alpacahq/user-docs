@@ -1,6 +1,6 @@
 ---
 title: Third-Party Tools Integration
-weight: 160
+weight: 90
 ---
 # Third-Party Tools Integration
 

@@ -176,7 +176,7 @@ receive stream messages for these events.
 - `calculated`
 
 The common and rare events all correspond to order statuses. For more information on what those statuses mean, please refer
-back to the [Orders]({{< relref "/broker-functions/orders/_index.md#order-lifecycle" >}}).
+back to the [Orders]({{< relref "/orders/_index.md#order-lifecycle" >}}).
 
 ## Account Updates
 Users may also listen to the account updates stream under: `account_updates`. This stream provides clients with updates pertaining

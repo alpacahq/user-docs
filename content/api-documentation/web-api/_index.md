@@ -47,7 +47,7 @@ After you have tested your algo on paper and are ready to start running your alg
 for real, you can switch the domain to the live domain, and the credentials to your
 live credentials. Your algo will then start trading with real money.
 
-To learn more about paper trading, visit the [paper trading page]({{< relref "/broker-functions/papertrading/_index.md" >}}).
+To learn more about paper trading, visit the [paper trading page]({{< relref "/paper-trading/_index.md" >}}).
 
 ## Rate Limit
 There is a rate limit for the API requests.  When it is exceeded, the API
