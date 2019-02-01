@@ -1,0 +1,43 @@
+<nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        <a href="https://alpaca.markets" target="_blank"><img src="{{ "images/alpaca_logotype_black.svg" | absURL }}" class="alpaca-docs-subtitle-image" alt="Alpaca Documentation" /></a> <span class="alpaca-docs-subtitle"><a href="/">Docs</a></span>
+      </div>
+    </div>
+
+    <div class="button button-nowrap" role="button" aria-label="Community and Support">
+      <a href="https://alpaca.markets/slack" target="_blank" class="link-key link-key-community">Community &amp; Support</a>
+    </div>
+
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+
+    <div class="button button-key" role="button" aria-label="API Key">
+      <a href="https://app.alpaca.markets" target="_blank" class="toggle-button cta-button-key">Get API Key</a>
+    </div>
+  </div> <!-- end nav items -->
+
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <form action="{{ "search/" | absURL }}">
+          <input id="search-query" name="s" class="query" type="text" placeholder="Search" autocapitalize="off"
+            autocorrect="off" autocomplete="off" spellcheck>
+        </form>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>

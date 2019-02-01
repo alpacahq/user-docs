@@ -169,6 +169,10 @@ pre.entity li {
     width: 135px;
 }
 
+.button-nowrap {
+    white-space: nowrap;
+}
+
 .link-key {
     display: inline-block;
     font-size: 20px;
@@ -176,4 +180,58 @@ pre.entity li {
     margin: 4px;
     text-decoration: underline;
     font-weight: bold;
+}
+
+.link-key-community {
+    font-size: 14px;
+    line-height: 28px;
+    text-decoration: none;
+    margin-right: 10px;
+    text-decoration: none;
+}
+.link-key-community:hover {
+    text-decoration: underline;
+}
+
+.cta-button-key {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 40px;
+    margin: 4px;
+    text-decoration: none;
+    letter-spacing: 0.025em;
+    margin-left: 30px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+    background: #000000;
+    color: #fff;
+    padding: 2px 16px 0 16px;
+    font-family: "Gilroy-ExtraBold";
+    min-width: 150px;
+    height: 40px;
+}
+.cta-button-key:hover {
+    background: #333;
+}
+
+img.alpaca-docs-subtitle-image {
+    float: left;
+    height: 25px;
+}
+span.alpaca-docs-subtitle {
+    font-size: 16px;
+    line-height: 25px;
+    margin-left: 10px; 
+    display: block;
+    float: left;
+    color: #555;
+}
+span.alpaca-docs-subtitle a {
+    text-decoration: none;
+}
+span.alpaca-docs-subtitle a:hover {
+    color: #000;
 }

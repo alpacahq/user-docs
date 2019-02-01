@@ -1,6 +1,11 @@
 ---
 title: Web API
 weight: 30
+menu:
+  docs:
+    title: "how to use menus in templates"
+    parent: "templates"
+    weight: 130
 ---
 # Web API
 Alpaca is a modern platform for algorithmic trading.  Alpaca's
