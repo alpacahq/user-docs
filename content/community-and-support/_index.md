@@ -7,8 +7,6 @@ weight: 110
 
 There are generally two types of questions and issues that you may come up with when using Alpaca.
 
-### [Tech-related]({{< relref "/community-and-support/tech-related/_index.md" >}}) and [Brokerage-related]({{< relref "/community-and-support/brokerage-related/_index.md" >}})
-
 When you are running scripts calling the Alpaca API and find a potential bug, you probably have tech-related issue that 
 you want to report or ask about. If you are reading the API documentation and you have no clue how it works, you 
 probably have tech-related questions. However, if, for example, you are having a difficult time linking your bank 
@@ -19,3 +17,7 @@ have clearly distinguished our support lines for tech and brokerage. Because Alp
 services and technology, some questions and issues may seem relevant to both technology and brokerage operations. 
 By detailing our support channels, we hope to help users understand where to go for different types of questions 
 and issues so that they may resolve them as quickly as possible.
+
+### [Link to Tech-related Issues and Questions]({{< relref "/community-and-support/tech-related/_index.md" >}})
+
+### [Link to Brokerage-related Issues and Questions]({{< relref "/community-and-support/brokerage-related/_index.md" >}})

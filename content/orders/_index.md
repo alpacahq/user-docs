@@ -17,9 +17,12 @@ recommended method of maintaining order state.
 
 ## Orders Submitted Outside of Regular Trading Hours
 Orders submitted outside of market hours will be routed and made available for
-execution at the time of the next market open. **Pre-market and extended-hours trading
-are not yet supported at Alpaca**, but orders can be placed around the clock to be
+execution at the time of the next market open. Pre-market and extended-hours trading
+are not yet supported at Alpaca, but orders can be placed around the clock to be
 handled as soon as the market is open.
+
+## Extended Trading Hours
+Pre-market and extended-hours trading are not yet supported but are on our roadmap. Stay tuned!
 
 ## Order Types
 When you submit an order, you can choose one of supported order types.
@@ -95,7 +98,7 @@ The following are the types of time-in-force Alpaca supports.
 
 - `day`<br>
   The order is good for the day, and it will be canceled automatically
-  at the end of market hours.
+  at the end of Regular Trading Hours if unfilled.
 - `gtc`<br>
   The order is good until canceled.
 - `opg`<br>
@@ -110,7 +113,7 @@ The following are the types of time-in-force Alpaca supports.
 
 ## Order Lifecycle
 An order executed through Alpaca can experience several status changes
-during its lifecycle. These most common statuses are described in detail below:
+during its lifecycle. The most common statuses are described in detail below:
 
 - `new`<br>
    The order has been received by Alpaca, and routed to exchanges for execution.
@@ -135,7 +138,7 @@ orders reach these states:
 
 - `accepted`<br>
    The order has been received by Alpaca, but hasn't yet been routed to
-   exchanges. This state only occurs on rare occasions.
+   the execution venue. This state only occurs on rare occasions.
 - `pending_new`<br>
    The order has been received by Alpaca, and routed to the exchanges,
    but has not yet been accepted for execution. This state only occurs on rare occasions.
@@ -149,7 +152,7 @@ orders reach these states:
    usually at a stated price or better, but has not yet occurred. This state only occurs on rare occasions.
 - `rejected`<br>
    The order has been rejected, and no further updates will occur for
-   the order. This state occurs on rare occasions, and may occur based on various conditions decided by the exchanges.
+   the order. This state occurs on rare occasions and may occur based on various conditions decided by the exchanges.
 - `suspended`<br>
    The order has been suspended, and is not eligible for trading. This
    state only occurs on rare occasions.

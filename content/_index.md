@@ -1,5 +1,5 @@
 ---
-title: Alpaca Documents
+title: Documentation
 type: index
 outputs:
  - html

@@ -1,9 +1,15 @@
 ---
-title: Python Tutorial
-weight: 100
+title: S&P 500 Buy-On-Dip
+weight: 10
 ---
 
-The purpose of this tutorial is to explain the general flow of building your first algorithm by going through an example. It is completely free to run this algorithm as-is or to modify it for your own needs. No guarantees about its performance are made, however.
+# S&P 500 Buy-On-Dip
+
+The purpose of this tutorial is to explain the general flow of building your first algorithm by going through an 
+example. It is completely free to run this algorithm as-is or to modify it for your own needs. No guarantees about 
+its performance are made, however.
+
+[Code on GitHub](https://github.com/alpacahq/samplealgo01)
 
 ## Algorithm Idea
 The idea behind the sample algorithm is this:

@@ -8,60 +8,50 @@ weight: 20
 If you are new to Alpaca, this is a great place to be! Here's a guide to quickly get up and running with Alpaca. If 
 you still desire further information, please review all of the content on our Documentation and FAQ pages.
 
-## Real-Money Trading Account
+## Sign up to generate your API key
 
-Once you complete the account application, your information will be reviewed for approval. For more information about 
-account review process, please read our [FAQ page](https://support.alpaca.markets/hc/en-us/sections/360001817852-Account-Sign-Up).
+In order to start using Alpaca [Web API]({{< relref "/api-documentation/web-api/_index.md" >}}), you will need to 
+obtain your API key. An API key consists of two strings, one called **Key ID** which always appears in your dashboard, 
+and **Secret Key**, which appears only once when generating it. Make sure you keep both in your hands.
 
-## Dashboard
+To obtain your API key, you need to sign up on the [signup page](https://app.alpaca.markets/signup) by inputting 
+your email address and password, then confirming your password through receiving a code on your email.
 
-Your account information will be available in your [dashboard](https://app.alpaca.markets/) page.
-Here you can view your positions, historical performance, and orders, as well as
-perform some operations such as depositing money, enabling and resetting [paper trading]({{< relref "/paper-trading/_index.md" >}}),
-and updating your personal information.
+## Read through the Web API Document
 
-## Deposit Your Money
+Learn how API works by read through our [Web API document]({{< relref "/api-documentation/web-api/_index.md" >}}). It 
+describes how our API works in details so you can prepare for your algorithm to interact with it.
 
-In order to start trading, you need to deposit your money in your account.
-Go to your dashboard, link your bank account, and initiate an ACH transfer from your bank to
-your Alpaca account. Please also read our [FAQ page for banking](https://support.alpaca.markets/hc/en-us/sections/360001964091-Banking-and-Transfers).
+You can also learn about [SDK for your language]({{< relref "/api-documentation/client-sdk/_index.md" >}}). Choose 
+one of the supported ones and start building your idea.
 
-## Generate API Key
+## Copy, paste, and run code examples
 
-In order to start using the Alpaca [Web API]({{< relref "/api-documentation/web-api/_index.md" >}}), you will
-need to obtain your API key. An API key consists of two strings. One is your **Key ID** which always appears in your 
-dashboard, and the other is your **Secret Key**, which appears only once when generating it. Please keep them both
-in a safe place.
+You can learn how the process of algorithmic trading works by actually running a list of sample algorithms written 
+in Python in a paper-trading or live-trading environment.
 
-## Learn how the API works
+You can also run code examples for each specific function such as getting market data, placing new orders, and 
+getting a list of existing orders.
 
-Please read through our [Web API document]({{< relref "/api-documentation/web-api/_index.md" >}}). It describes in detail
-how our API works and how your algorithm can interact with Alpaca.
+## Start live trading
 
-You can also learn about the [SDK for your language]({{< relref "/api-documentation/client-sdk/_index.md" >}}).
-Choose one of the supported ones and start building your idea.
+After signing up on the signup page with your email and password, you land on the dashboard where you can view your 
+positions, historical performance, and orders. On the dashboard, you can follow the top-left link to start 
+live trading.
 
-## Tutorial through a Sample Algorithm
+For you to start live trading, you need to open an Alpaca Securities brokerage account. Currently, Alpaca Securities 
+brokerage account is available only for the US residents, and requires you to complete the account application. 
+Once you complete the application, your information is going to be reviewed and approved if everything is good. 
+For more information about account review process, please read [Alpaca Securities FAQ](https://support.alpaca.markets/hc/en-us/) 
+page.
 
-You can learn the thought process by a [sample algorithm in Python]({{< relref "/getting-started/tutorials/python/_index.md" >}}). This is
-a complete working scaffold which you can immediately start running.
-Learn how an algorithm is structured and code API requests that you can
-customize for your own needs.
+## Deposit your money
 
-## Coming from Quantopian?
+In order to start trading, you need to deposit your money into your account. Go to your dashboard, link your bank
+account, and initiate an ACH transfer from your bank to your Alpaca account. Please also read our 
+[FAQ page for banking](https://support.alpaca.markets/hc/en-us/sections/360001964091-Banking-and-Transfers), too.
 
-If you are coming from the popular backtesting service Quantopian, please check out our page covering platform 
-migration and read about [how easy it is to run your algorithm for live trading with Alpaca]({{< relref "/platform-migration/zipline-to-pylivetrader" >}}).
+## Have your Quantopian algorithms work at Alpaca
 
-## Coming from Another Broker?
-
-We welcome users coming from Interactive Brokers, TD Ameritrade, Robinhood, E*Trade, and other brokerages. With an 
-Alpaca brokerage account, you'll have access to:
-
-* Commission-free trading
-* An official API that is constantly being improved and updated
-* Easy to understand API documentation
-* Free, real-time Consolidated Market Data
-* Paper trading for testing your strategies
-* Fully working, example algorithms that can be deployed immediately
-* Multiple support channels
+If you are coming from the popular backtesting service Quantopian, there is something you want to read about [how easy 
+it is to run your algorithm for live trading with Alpaca]({{< relref "/platform-migration/zipline-to-pylivetrader" >}}). 

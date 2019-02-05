@@ -9,12 +9,14 @@ Alpaca provides users with different market data depending upon their account ty
 available to our customers. **Currently, we only provide data for U.S. listed equities.**
 
 ## IEX Data
+**This is available to all Alpaca users**
 
 Users that have signed up with Alpaca but have not opened a real money brokerage account are able to receive free
 real-time data from [IEX](https://iextrading.com/). Please note that this data feed only includes quotes and trades
 occurring on the IEX (one of the U.S. stock exchanges) order book.
 
 ## Consolidated Market Data
+**This is available only to brokerage account holders (U.S. residents only)**
 
 Alpaca Securities brokerage account customers are provided with a consolidated U.S. equity market data feed. As of January 2019,
 we provide this data for free. 
@@ -28,7 +30,7 @@ ensures that investors receive the best available displayed prices on their trad
 ### Our Data Provider and Terms of Usage
 
 Consolidated market data is provided by third-party data vendor [Polygon](https://polygon.io/). Please note that this 
-data is currently only available to customers who can affirm their Non-Professional Subscriber status. During the 
+data is currently only available to customers who affirm their **Non-Professional Subscriber** status. During the 
 account opening process, customers are directed through the data agreement, which is an agreement between the customer 
 and Polygon. 
 
