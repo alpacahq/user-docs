@@ -1,5 +1,5 @@
-#baseurl = "http://docs.alpaca.markets/"
-baseurl = "/"
+baseurl = "http://docs.alpaca.markets/"
+#baseurl = "/"
 languageCode = "en-us"
 title = "Alpaca Documents"
 theme = "hugo-material-docs"
