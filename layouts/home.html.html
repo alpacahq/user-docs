@@ -1,0 +1,114 @@
+{{ partial "head" . }}
+
+<div class="backdrop">
+  <div class="backdrop-paper"></div>
+</div>
+
+<input class="toggle" type="checkbox" id="toggle-drawer">
+<input class="toggle" type="checkbox" id="toggle-search">
+<label class="toggle-button overlay" for="toggle-drawer"></label>
+
+<header class="header">
+  {{ partial "header" . }}
+</header>
+
+<main class="main">
+  <div class="drawer">
+    {{ partial "drawer" . }}
+  </div>
+
+  <article class="article">
+    <div class="wrapper">
+      <h1 class="norule">Documentation</h1>
+      <p><strong>Welcome to Alpaca!</strong> Get familar with Alpaca and explore the resources.</p>
+
+      <div class="flex-grid homepage-category-links">
+
+        <div class="col homepage-category-box">
+          <a href="#">
+            <h2>Who is Alpaca?</h2>
+            <p>
+              Find out who is behind Alpaca.
+            </p>
+          </a>
+        </div>
+
+        <div class="col homepage-category-box">
+          <a href="#">
+            <h2>Where should I start?</h2>
+            <p>
+              Not sure where to start? Here are multiple starting points you can kick off with.
+            </p>
+          </a>
+        </div>
+
+        <div class="col homepage-category-box">
+          <a href="#">
+            <h2>Run Example Algorithms</h2>
+            <p>
+              Do you learn by doing things? Copy and paste an example algorithm and run it right away!
+            </p>
+          </a>
+        </div>
+
+        <div class="col homepage-category-box">
+          <a href="#">
+            <h2>API Documentation</h2>
+            <p>
+              Go deep dive in our users’ favorite Web API documentation.
+            </p>
+          </a>
+        </div>
+
+        <div class="col homepage-category-box">
+          <a href="#">
+            <h2>Understand Orders</h2>
+            <p>
+              Learn all about order-types and their behaviors that you can use on Alpaca.
+            </p>
+          </a>
+        </div>
+
+        <div class="col homepage-category-box">
+          <a href="#">
+            <h2>Paper Trading Specification</h2>
+            <p>
+              Alpaca’s paper trading offers a great simulation environment to test your algorithms.
+            </p>
+          </a>
+        </div>
+
+        <div class="col homepage-category-box">
+          <a href="#">
+            <h2>Third-Party Tools Integration</h2>
+            <p>
+              Coming from Quantopian? Looking for client SDKs in Python, .NET/C#, Go, Node? Check them out.
+            </p>
+          </a>
+        </div>
+
+        <div class="col homepage-category-box">
+          <a href="#">
+            <h2>Community & Support</h2>
+            <p>
+              Understand how &amp; where you can get support. And don’t forget to join the community Slack!
+            </p>
+          </a>
+        </div>
+
+      </div><!-- end .flex-grid -->
+
+    </div>
+  </article>
+
+  <div class="results" role="status" aria-live="polite">
+    <div class="scrollable">
+      <div class="wrapper">
+        <div class="meta"></div>
+        <div class="list"></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{{ partial "footer_js" . }}
