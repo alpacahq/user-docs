@@ -251,6 +251,14 @@ span.alpaca-docs-subtitle a:hover {
     height: 60px;
     padding: 10px;
 }
+.banner-mobile img.alpaca-docs-subtitle-image {
+    height: 30px;
+    margin: 7px 0 0 7px;
+}
+.banner-mobile span.alpaca-docs-subtitle {
+    font-size: 20px;
+    margin-left: 5px;
+}
 
 .norule {
     border-bottom: 0 !important;
