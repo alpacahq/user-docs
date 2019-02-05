@@ -196,14 +196,14 @@ pre.entity li {
 .cta-button-key {
     display: inline-block;
     font-size: 18px;
-    line-height: 40px;
+    line-height: 36px;
     margin: 4px;
     text-decoration: none;
     letter-spacing: 0.025em;
     margin-left: 30px;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.5);
     border-radius: 4px;
-    text-transform: uppercase;
+    text-transform: none;
     text-align: center;
     vertical-align: middle;
     background: #000000;
@@ -217,17 +217,26 @@ pre.entity li {
     background: #333;
 }
 
+nav div.bar {
+    padding-top: 2px;
+}
+nav div.title {
+    padding-top: 0 !important;
+}
 img.alpaca-docs-subtitle-image {
     float: left;
-    height: 25px;
+    height: 43px;
 }
 span.alpaca-docs-subtitle {
-    font-size: 16px;
-    line-height: 25px;
+    font-family: Gilroy;
+    font-size: 27px;
+    font-weight: 800;
+    line-height: 44px;
+    padding-top: 1px;
     margin-left: 10px; 
     display: block;
     float: left;
-    color: #555;
+    color: #303030;
 }
 span.alpaca-docs-subtitle a {
     text-decoration: none;
