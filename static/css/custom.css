@@ -194,7 +194,7 @@ pre.entity li {
 }
 
 .cta-button-key {
-    display: inline-block;
+    display: table-cell;
     font-size: 18px;
     line-height: 36px;
     margin: 4px;
@@ -211,6 +211,7 @@ pre.entity li {
     padding: 2px 16px 0 16px;
     font-family: "Gilroy-ExtraBold";
     min-width: 150px;
+    float: right;
     height: 40px;
 }
 .cta-button-key:hover {
@@ -243,6 +244,12 @@ span.alpaca-docs-subtitle a {
 }
 span.alpaca-docs-subtitle a:hover {
     color: #000;
+}
+
+.banner-mobile {
+    background: #FCD503;
+    height: 60px;
+    padding: 10px;
 }
 
 .norule {
@@ -292,4 +299,50 @@ span.alpaca-docs-subtitle a:hover {
     flex-basis: 45%;
     margin: 10px;
     align-items: stretch;
+}
+
+/** Responsive stuff **/
+
+.hide-sm-only, .hide-sm-only-table-cell, .show-md-table-cell {
+    display: none;
+}
+.show-sm-only {
+    display: block;
+}
+.main > .drawer .scrollable {
+    top: 60px !important;
+}
+
+@media (min-width: 1025px) {
+    .hide-sm-only {
+        display: block;
+    }
+    .hide-sm-only-table-cell {
+        display: table-cell;
+    }
+    .show-sm-only {
+        display: none;
+    }
+    .main > .drawer .scrollable {
+        top: 100px !important;
+    }
+}
+
+/**  Tablets, Ipads (landscape) - not considered "small" **/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .hide-sm-only {
+        display: block;
+    }
+    .hide-sm-only-table-cell {
+        display: table-cell;
+    }
+    .show-sm-only {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .show-md-table-cell {
+        display: table-cell;
+    }
 }
