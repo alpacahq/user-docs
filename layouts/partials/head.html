@@ -68,7 +68,7 @@
     </style>
 
     {{ range .Site.Params.custom_css }}
-    <link rel="stylesheet" href="{{ . | absURL }}">
+    <link rel="stylesheet" href="{{ . | absURL }}?v=1">
     {{ end }}
     <script src="{{ "javascripts/modernizr.js" | absURL }}"></script>
 
