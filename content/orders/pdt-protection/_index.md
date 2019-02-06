@@ -31,8 +31,8 @@ could potentially result in the account being flagged for PDT. This
 protection triggers only when the account equity is less than $25k at
 the time of order submission.
 
-In addition to the filled orders, the system also takes account into
-consideration pending orders of the account. In this case, regardless of
+In addition to the filled orders, the system also takes into
+consideration pending orders in the account. In this case, regardless of
 the order of pending orders, a pair of buy and sell orders is counted as
 a potential day trade. This is because orders that are active (pending)
 in the marketplace may fill in random orders. Therefore, even if your
