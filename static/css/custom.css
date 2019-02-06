@@ -229,9 +229,8 @@ img.alpaca-docs-subtitle-image {
     height: 43px;
 }
 span.alpaca-docs-subtitle {
-    font-family: Gilroy;
+    font-family: "Gilroy-ExtraBold", sans-serif;
     font-size: 27px;
-    font-weight: 800;
     line-height: 44px;
     padding-top: 1px;
     margin-left: 10px; 
@@ -241,6 +240,7 @@ span.alpaca-docs-subtitle {
 }
 span.alpaca-docs-subtitle a {
     text-decoration: none;
+    font-family: "Gilroy-ExtraBold", sans-serif;
 }
 span.alpaca-docs-subtitle a:hover {
     color: #000;
@@ -277,9 +277,9 @@ span.alpaca-docs-subtitle a:hover {
 }
 
 .homepage-category-box h2 {
-    font-family: Gilroy;
+    font-family: "Gilroy-Bold", sans-serif;
     font-size: 25px;
-    font-weight: 800;
+    font-weight: 400 !important;
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
@@ -292,6 +292,7 @@ span.alpaca-docs-subtitle a:hover {
 .homepage-category-box p {
     color: #000 !important;
     font-size: 16px;
+    font-weight: normal;
 }
 
 /** Simple grid for home page **/
