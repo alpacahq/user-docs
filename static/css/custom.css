@@ -194,7 +194,7 @@ pre.entity li {
 }
 
 .cta-button-key {
-    display: inline-block;
+    display: table-cell;
     font-size: 18px;
     line-height: 36px;
     margin: 4px;
@@ -211,6 +211,7 @@ pre.entity li {
     padding: 2px 16px 0 16px;
     font-family: "Gilroy-ExtraBold";
     min-width: 150px;
+    float: right;
     height: 40px;
 }
 .cta-button-key:hover {
@@ -228,9 +229,8 @@ img.alpaca-docs-subtitle-image {
     height: 43px;
 }
 span.alpaca-docs-subtitle {
-    font-family: Gilroy;
+    font-family: "Gilroy-ExtraBold", sans-serif;
     font-size: 27px;
-    font-weight: 800;
     line-height: 44px;
     padding-top: 1px;
     margin-left: 10px; 
@@ -240,9 +240,24 @@ span.alpaca-docs-subtitle {
 }
 span.alpaca-docs-subtitle a {
     text-decoration: none;
+    font-family: "Gilroy-ExtraBold", sans-serif;
 }
 span.alpaca-docs-subtitle a:hover {
     color: #000;
+}
+
+.banner-mobile {
+    background: #FCD503;
+    height: 60px;
+    padding: 10px;
+}
+.banner-mobile img.alpaca-docs-subtitle-image {
+    height: 30px;
+    margin: 7px 0 0 7px;
+}
+.banner-mobile span.alpaca-docs-subtitle {
+    font-size: 20px;
+    margin-left: 5px;
 }
 
 .norule {
@@ -262,9 +277,9 @@ span.alpaca-docs-subtitle a:hover {
 }
 
 .homepage-category-box h2 {
-    font-family: Gilroy;
+    font-family: "Gilroy-Bold", sans-serif;
     font-size: 25px;
-    font-weight: 800;
+    font-weight: 400 !important;
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
@@ -277,6 +292,7 @@ span.alpaca-docs-subtitle a:hover {
 .homepage-category-box p {
     color: #000 !important;
     font-size: 16px;
+    font-weight: normal;
 }
 
 /** Simple grid for home page **/
@@ -292,4 +308,50 @@ span.alpaca-docs-subtitle a:hover {
     flex-basis: 45%;
     margin: 10px;
     align-items: stretch;
+}
+
+/** Responsive stuff **/
+
+.hide-sm-only, .hide-sm-only-table-cell, .show-md-table-cell {
+    display: none;
+}
+.show-sm-only {
+    display: block;
+}
+.main > .drawer .scrollable {
+    top: 60px !important;
+}
+
+@media (min-width: 1025px) {
+    .hide-sm-only {
+        display: block;
+    }
+    .hide-sm-only-table-cell {
+        display: table-cell;
+    }
+    .show-sm-only {
+        display: none;
+    }
+    .main > .drawer .scrollable {
+        top: 100px !important;
+    }
+}
+
+/**  Tablets, Ipads (landscape) - not considered "small" **/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .hide-sm-only {
+        display: block;
+    }
+    .hide-sm-only-table-cell {
+        display: table-cell;
+    }
+    .show-sm-only {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .show-md-table-cell {
+        display: table-cell;
+    }
 }
