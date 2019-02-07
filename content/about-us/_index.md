@@ -7,9 +7,10 @@ weight: 10
 
 ## Who We Are
 
-Alpaca Securities is a FINRA member and SEC registered broker-dealer that launched in early 2018 to serve the needs 
-of the growing community of software developers and technology-minded individuals. We offer a robust, user-friendly
-API which can be used to automate your trading and investing of U.S. equities.
+Alpaca started in 2015 as a pure technology company building a database solution for unstructured data, initially 
+visual data and ultimately time-series data. We then launched an API-first commission-free stock trading platform
+in early 2018 to serve the needs of the growing community of software developers and technology-minded individuals. 
+We offer a robust, user-friendly API which can be used to automate your trading and investing of U.S. equities.
 
 Alpaca's team consists of developers, traders, and brokerage business specialists, who collectively have decades of
 financial services and technology industry experience at organizations such as FINRA, IBM, EMC, Greenplum, 
@@ -17,7 +18,7 @@ Wealthfront, Lehman Brothers, UBS. Alpaca is led by [Yoshi Yokokawa](https://www
 [Hitoshi Harada](https://www.linkedin.com/in/hitoshi-harada-02b01425/) (CTO), [John Torola](https://www.linkedin.com/in/johnttorola/) (COO/CCO), 
 and [Luke Lonergan](https://www.linkedin.com/in/lukelonergan/) (Chief Architect). Our investors include a group of 
 well-capitalized investors including Global Brain, the biggest Japanese independent venture capital firm, as well as 
-highly experienced industry angel investors such as Josh Levine (former CTO/COO of ETRADE) and 
+highly experienced industry angel investors such as Joshua S. Levine (former CTO/COO of ETRADE) and 
 Eric Di Benedetto (a fintech angel investor with more than 30 IPO and M&A exits). Additionally, members of Berkeley 
 Angel Network and two biggest Japanese banks (MUFG and SMBC) are investors in Alpaca.
 
@@ -32,8 +33,7 @@ We welcome them all and seek to provide a platform for anyone, novice or experie
 investing and trading.
 
 Alpaca users trade a variety of strategies ranging from passive to active, long-term to short-term intraday. 
-As a point of reference, we have some users who execute hundreds of trades worth hundreds of thousands
-of dollars a day. 
+As a point of reference, we have some users who execute hundreds of trades worth millions of dollars a day. 
 
 With an Alpaca brokerage account, users have access to:
 
@@ -44,6 +44,8 @@ With an Alpaca brokerage account, users have access to:
 * Paper trading for testing your strategies
 * Fully working, example algorithms that can be deployed immediately
 * Multiple support channels
+
+Please see the bottom of the [Alpaca homepage](https://alpaca.markets/) for disclosures.
 
 ## How Alpaca Works
 
@@ -94,7 +96,7 @@ You can check the background of Alpaca on FINRA’s [BrokerCheck](https://broker
 **SIPC Membership**
 
 Member of SIPC, which protects securities customers of its members up to $500,000 (including $250,000 for 
-claims for cash). Explanatory brochure available upon request or at [www.sipc.org](www.sipc.org).
+claims for cash). Explanatory brochure available upon request or at [www.sipc.org](https://www.sipc.org).
 
 ## Systems and Technology
 We initially started Alpaca in 2015 as a pure technology company building a database solution for unstructured data, 
@@ -106,4 +108,4 @@ algorithm service, AlpacaAlgo, that had more than 25,000 deep neural net trading
 generating trade signals to the users. This required processing a large volume of time series data efficiently. 
 Hitoshi and Luke lead Alpaca's technology team and are responsible for the data intensive system architecture. 
 Both of them come from Greenplum (Luke is a co-founder/CTO of Greenplum), a parallel distributed database company, 
-that was used globally by major financial institutions and their quant desks.  
+that is used globally by major financial institutions and their quant desks.  

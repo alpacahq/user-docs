@@ -5,8 +5,8 @@ weight: 45
 
 # Market Data
 
-Alpaca provides users with different market data depending upon their account type. Below is a summary of the data feeds
-available to our customers. **Currently, we only provide data for U.S. listed equities.**
+Alpaca provides you with different market data depending upon your account type. Below is a summary of the data feeds
+available. **Currently, we only provide data for U.S. listed equities.**
 
 ## IEX Data
 **This is available to all Alpaca users**
@@ -16,10 +16,11 @@ real-time data from [IEX](https://iextrading.com/). Please note that this data f
 occurring on the IEX (one of the U.S. stock exchanges) order book.
 
 ## Consolidated Market Data
-**This is available only to brokerage account holders (U.S. residents only)**
+**This is available only to Alpaca Brokerage Accounts (Alpaca Securities brokerage account customers, 
+currently U.S. residents only)**
 
-Alpaca Securities brokerage account customers are provided with a consolidated U.S. equity market data feed. As of January 2019,
-we provide this data for free. 
+Alpaca Securities brokerage account customers are provided with a consolidated U.S. equity market data feed.
+Currently we provide this data for free. 
 
 Consolidated stock market data is an aggregated reporting of all securities exchanges’ and alternative trading venues’ 
 quote and trade data. It is the most relied upon type of market data, providing investors and traders globally with a 
@@ -34,7 +35,7 @@ data is currently only available to customers who affirm their **Non-Professiona
 account opening process, customers are directed through the data agreement, which is an agreement between the customer 
 and Polygon. 
 
-## Fundamental Data
+## Fundamentals Data
 
 We provide all users with fundamental data through our web API by leveraging the [IEX API](https://iextrading.com/developer/docs/). 
 This includes financial statements, financial ratio analysis, and earnings and dividend data.

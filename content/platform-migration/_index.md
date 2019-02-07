@@ -12,7 +12,7 @@ We provide several open source libraries to aid in the platform integration proc
 help expedite the time it takes for you to get up and running with Alpaca. Below is a list of
 our official platform integration libraries. If you would like to see us provide integration support
 for a platform not listed here, please let us know at our Feature Request and Issues repo 
-[here]('https://github.com/alpacahq/Alpaca-API').
+[here](https://github.com/alpacahq/Alpaca-API).
 
 ### Python
 

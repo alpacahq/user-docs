@@ -7,8 +7,8 @@ outputs:
  - json
 ---
 
-If you are new to Alpaca, this is a great place to be! Here's a guide to quickly get up and running with Alpaca. If 
-you still desire further information, please review all of the content on our Documentation and FAQ pages.
+
+# Getting Started
 
 ## Sign up to generate your API key
 

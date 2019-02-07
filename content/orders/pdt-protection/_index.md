@@ -3,14 +3,19 @@ title: Pattern Day Trader Protection
 weight: 200
 ---
 
-# Pattern Day Trader (PDT) Protection at Alpaca
+# Pattern Day Trader Protection
 
-In order to prevent our customers from unintentionally being designated as a
-Pattern Day Trader (PDT), Alpaca Trading platform checks the PDT rule condition
-every time an order is submitted from a customer. If the order could potentially
+## 
+What is the In order to prevent Alpaca Brokerage Account customers from unintentionally being 
+designated as a Pattern Day Trader (PDT), the Alpaca Trading platform checks the PDT 
+rule condition every time an order is submitted from a customer. If the order could potentially
 result in the account being flagged as a PDT, the order is rejected, and API
-returns error with HTTP status code 403 (Forbidden). Below is the detail of
-how this protection works.
+returns error with HTTP status code 403 (Forbidden).
+
+### What happens if I am designated as a Pattern Day Trader?
+Alpaca has PDT protection in place to prevent this from happening, but we
+also want to highlight the process that takes place when a trader is
+designated as a Pattern Day Trader. 
 
 ## The Rule
 A day trade is defined as a round-trip pair of trades within the same day. A
@@ -28,7 +33,7 @@ will not flag the account for PDT.
 Alpaca Trading platform monitors the number of day trades for the account
 for the past 5 business days and rejects a newly submitted order if it
 could potentially result in the account being flagged for PDT. This
-protection triggers only when the account equity is less than $25k at
+protection triggers only when the account equity is less than $25,000 at
 the time of order submission.
 
 In addition to the filled orders, the system also takes into

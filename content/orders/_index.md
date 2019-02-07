@@ -22,7 +22,10 @@ are not yet supported at Alpaca, but orders can be placed around the clock to be
 handled as soon as the market is open.
 
 ## Extended Trading Hours
-Pre-market and extended-hours trading are not yet supported but are on our roadmap. Stay tuned!
+Pre-market and after-hours trading are not yet available. We are currently working on supporting 
+extended hours trading and will be offering **early access to invited high-volume users**. If you would 
+like to receive an invite, please **[complete this form](https://goo.gl/forms/D9k1MMNtY9awXcum1)** 
+and we'll contact you.
 
 ## Order Types
 When you submit an order, you can choose one of supported order types.
