@@ -19,6 +19,8 @@ discretion.
 
 **[HFT-ish Order Book Imbalance Algorithm Using Streaming]({{< relref "/example-algos/order-imbal/_index.md" >}})**
 
+**[Build a Day-Trading Algorithm and Run it in the Cloud Using Only Free Services]({{< relref "/example-algos/daytrading-momentum/_index.md" >}})**
+
 **[Google Spreadsheet Trading]({{< relref "/example-algos/google-spreadsheet/_index.md" >}})**
 
 **Got an interesting idea? Tell us about it in our [Slack](https://alpaca.markets/slack), and we can list it here.**
