@@ -45,7 +45,6 @@ pygmentsUseClasses = true
 	github  = "alpacahq"
 	email   = ""
 
-
 [[menu.main]]
 	name   = "Material"
 	url    = "/"

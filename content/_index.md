@@ -8,7 +8,7 @@ outputs:
 ---
 
 
-# Getting Started
+# Where Should I Start?
 
 ## Sign up to generate your API key
 

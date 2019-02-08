@@ -265,20 +265,24 @@ span.alpaca-docs-subtitle a:hover {
     padding-bottom: 0 !important;
 }
 
+h1.homepage-title {
+    border: 0 !important;
+    padding-bottom: 0 !important;
+}
 .homepage-category-links {
     margin-top: 20px;
+    margin-bottom: 20px !important;
 }
 
 .homepage-category-box {
     padding: 10px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
     display: block;
-    border: 1px solid #bfa100;
 }
 
 .homepage-category-box h2 {
     font-family: "Gilroy-Bold", sans-serif;
-    font-size: 25px;
+    font-size: 16px;
     font-weight: 400 !important;
     font-style: normal;
     font-stretch: normal;
@@ -291,7 +295,9 @@ span.alpaca-docs-subtitle a:hover {
 
 .homepage-category-box p {
     color: #000 !important;
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 8px;
     font-weight: normal;
 }
 
