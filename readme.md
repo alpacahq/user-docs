@@ -36,7 +36,7 @@ extension, and the name you choose should also be given to the shortcode as `exa
 Example usage, given a set of files like `ex1.py`, `ex1.js`, and `ex1.cs` stored in an `examples/` directory that you
 want to include on the orders page:
 ```
-{{< code-example exampleId="ex1" pathURL="/web-api/fun/examples/" >}}
+{{< code-example exampleId="ex1" pathURL="/web-api/fun/examples" >}}
 ```
 
 (Note that when you only have one example to show and the tabs are unneccessary, you can forego the shortcode and use

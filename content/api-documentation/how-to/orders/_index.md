@@ -11,12 +11,12 @@ understanding different types of orders and how they behave once they're placed,
 ## Place New Orders
 Orders can be placed with a POST request to our [/v1/orders](https://docs.alpaca.markets/api-documentation/web-api/orders/#request-a-new-order) endpoint.
 
-{{< code-example exampleId="placeOrder" pathURL="/api-documentation/how-to/orders/examples/" >}}
+{{< code-example exampleId="placeOrder" pathURL="/api-documentation/how-to/orders/examples" >}}
 
 ## Use Client Order IDs
 Client Order IDs can be used to organize and track specific orders in your client program.
 
-{{< code-example exampleId="useClientOrderId" pathURL="/api-documentation/how-to/orders/examples/">}}
+{{< code-example exampleId="useClientOrderId" pathURL="/api-documentation/how-to/orders/examples">}}
 
 ## Get a List of Existing Orders
 If you'd like to see a list of your existing orders, you can send a get request to our [/v1/orders](https://docs.alpaca.markets/api-documentation/web-api/orders/#get-a-list-of-orders) endpoint.
