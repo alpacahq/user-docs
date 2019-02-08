@@ -35,11 +35,6 @@ data is currently only available to customers who affirm their **Non-Professiona
 account opening process, customers are directed through the data agreement, which is an agreement between the customer 
 and Polygon. 
 
-## Fundamentals Data
-
-We provide all users with access to fundamentals data through our web API by leveraging the [IEX API](https://iextrading.com/developer/docs/). 
-This includes financial statements, financial ratio analysis, and earnings and dividend data.
-
 ## Further Reading
 
 For more information about market data feeds, please see our [Medium post](https://medium.com/automation-generation/exploring-the-differences-between-u-s-stock-market-data-feeds-3da26946cbd6).
