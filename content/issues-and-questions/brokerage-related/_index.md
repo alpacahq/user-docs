@@ -13,7 +13,8 @@ have licensed representatives handle such brokerage-related issues and requests.
 
 Questions and issues that often arise include trouble linking a bank account, updating an address on file, and 
 correcting erroneous information provided during onboarding. But please do not email our operations team 
-if, for example, you are having trouble getting your API key to work.
+if, for example, you are having trouble getting your API key to work (instead, check out our 
+[tech-related support channels]({{< relref "/issues-and-questions/tech-related/_index.md" >}}))
 
 ## Alpaca Securities FAQ
 

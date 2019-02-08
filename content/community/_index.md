@@ -93,7 +93,10 @@ interface. The main purpose is to run algorithms developed in the Quantopian pla
 Alpaca trade API. It makes rapid trading algo development easy, with support for both the REST and streaming 
 interfaces.
 
-[alpaca-trade-api-go](https://github.com/alpacahq/alpaca-trade-api-go) - A Go library for the Alpaca trade 
+[alpaca-trade-api-js](https://github.com/alpacahq/alpaca-trade-api-js) - A Node.js library for the Alpaca trade 
+API. It makes rapid trading algo development easy, with support for both the REST and streaming interfaces.
+
+[alpaca-trade-api-csharp](https://github.com/alpacahq/alpaca-trade-api-csharp) - A .NET/C# library for the Alpaca trade 
 API. It makes rapid trading algo development easy, with support for both the REST and streaming interfaces.
 
 [alpaca-rn-mobile](https://github.com/alpacahq/alpaca-rn-mobile) - An example react native mobile app that 

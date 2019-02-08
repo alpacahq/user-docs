@@ -37,7 +37,7 @@ and Polygon.
 
 ## Fundamentals Data
 
-We provide all users with fundamental data through our web API by leveraging the [IEX API](https://iextrading.com/developer/docs/). 
+We provide all users with access to fundamentals data through our web API by leveraging the [IEX API](https://iextrading.com/developer/docs/). 
 This includes financial statements, financial ratio analysis, and earnings and dividend data.
 
 ## Further Reading
