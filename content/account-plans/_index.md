@@ -36,8 +36,10 @@ For a more formal overview, please see the [sign up page of the Alpaca Securitie
 
 **Account for LLC or other business entities?**
 
-We are currently working on supporting LLCs and other business entities and will be offering **early access to
-invited high-volume users**. If you would like to receive an invite, 
+We are currently working on supporting LLCs and other business entities. This feature and more will initially
+be available only as part of a new account plan designed specifically for high-volume algorithmic traders.
+This new account plan is not for everyone and may require certain conditions of your trading activity.
+Currently this program is only open to eligible U.S. residents. If you think this may be for you, 
 please **[complete this form](https://goo.gl/forms/D9k1MMNtY9awXcum1)** and we'll contact you.
 
 ## Paper Only Account vs Brokerage Account Features

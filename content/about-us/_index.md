@@ -24,8 +24,9 @@ Angel Network and two biggest Japanese banks (MUFG and SMBC) are investors in Al
 
 ## Who Is Alpaca For?
 
-Alpaca Securities provides brokerage services to all types of users with a variety of backgrounds. We have
-users come from two of the largest quantitative research platforms, Quantopian and QuantConnect. Others are experienced 
+Alpaca Securities provides brokerage services to technology-minded users with a variety of experiences 
+including general usage of APIs or automation of investing and trading. We have users come from two of 
+the largest quantitative research platforms, Quantopian and QuantConnect. Others are experienced 
 automated or manual traders coming from Interactive Brokers, TD Ameritrade, or Robinhood. Some are 
 crypto traders expanding into equities. Some have no background in trading at all and are just learning 
 to code. We even receive inquiries from boutique quant funds (corporate accounts are on our roadmap!). 
