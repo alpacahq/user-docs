@@ -103,3 +103,5 @@ API. It makes rapid trading algo development easy, with support for both the RES
 allows basic brokerage functions including submitting orders to buy/sell stocks, canceling orders,
 liquidating positions, and enabling and disabling your API access. Here is a [link to the working app in the 
 iOS App Store](https://itunes.apple.com/us/app/alpaca-dashboard/id1448888086).
+
+[user-docs](https://github.com/alpacahq/user-docs) - The repository that powers the documentation for Alpaca's users.
