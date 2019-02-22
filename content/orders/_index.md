@@ -23,8 +23,10 @@ handled as soon as the market is open.
 
 ## Extended Trading Hours
 Pre-market and after-hours trading are not yet available. We are currently working on supporting 
-extended hours trading and will be offering **early access to invited high-volume users**. If you would 
-like to receive an invite, please **[complete this form](https://goo.gl/forms/D9k1MMNtY9awXcum1)** 
+extended hours trading. This feature and more will initially be available only as part of a new account 
+plan designed specifically for high-volume algorithmic traders. This new account plan is not for everyone 
+and may require certain conditions of your trading activity. Currently this program is only open to 
+eligible U.S. residents. If you think this may be for you, please **[complete this form](https://goo.gl/forms/D9k1MMNtY9awXcum1)** 
 and we'll contact you.
 
 ## Order Types
@@ -94,6 +96,14 @@ or better.
 
 In order to submit a stop limit order, you will need to specify both the
 limit and stop price parameters in the API.
+
+### Advanced Order Types
+We are currently working on supporting advanced order types such as OCO (one-cancels-the-other) bracket
+orders. This feature and more will initially be available only as part of a new account plan designed 
+specifically for high-volume algorithmic traders. This new account plan is not for everyone and may require 
+certain conditions of your trading activity. Currently this program is only open to eligible U.S. residents. 
+If you think this may be for you, please **[complete this form](https://goo.gl/forms/D9k1MMNtY9awXcum1)** and 
+we'll contact you.
 
 ## Time in Force
 
