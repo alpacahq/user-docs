@@ -1,7 +1,7 @@
 # baseurl = "http://docs.alpaca.markets/"
 baseurl = "/"
 languageCode = "en-us"
-title = "Alpaca Documents"
+title = "Documentation | Alpaca"
 theme = "hugo-material-docs"
 metadataformat = "yaml"
 canonifyurls = true
