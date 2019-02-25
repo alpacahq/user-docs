@@ -101,5 +101,6 @@ API. It makes rapid trading algo development easy, with support for both the RES
 
 [alpaca-rn-mobile](https://github.com/alpacahq/alpaca-rn-mobile) - An example react native mobile app that 
 allows basic brokerage functions including submitting orders to buy/sell stocks, canceling orders,
-liquidating positions, and enabling and disabling your API access. Here is a [link to the working app in the 
-iOS App Store](https://itunes.apple.com/us/app/alpaca-dashboard/id1448888086).
+liquidating positions, and enabling and disabling your API access. Here are links to the [working app in the 
+iOS App Store](https://itunes.apple.com/us/app/alpaca-dashboard/id1448888086) and the [Android version in the
+Google Play Store](https://play.google.com/store/apps/details?id=app.alpaca.markets).
