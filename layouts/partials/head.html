@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
-    <title>{{ .Title }}{{ if not .IsHome }} - {{ .Site.Title }}{{ end }}</title>
+    <title>{{ .Title }}{{ if not .IsHome }} - {{ .Site.Title }}{{ end }} | Alpaca</title>
     {{ .Hugo.Generator }}
 
     {{ with .Site.Params.description }}
@@ -21,9 +21,17 @@
     {{ end }}
 
     <meta property="og:url" content="{{ .Permalink }}">
-    {{ with .Site.Title }}<meta property="og:title" content="{{ . }}">{{ end }}
+    {{ with .Site.Title }}<meta property="og:title" content="{{ . }} | Alpaca">{{ end }}
     {{ with .Site.Params.logo }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
-    {{ with .Site.Title }}<meta name="apple-mobile-web-app-title" content="{{ . }}">{{ end }}
+    {{ with .Site.Params.description }}<meta name="og:description" content="{{ . }}">{{ end }}
+    
+    <meta name="twitter:card" content="summary">
+    {{ with .Site.Params.logo }}<meta name="twitter:image" content="{{ . | absURL }}">{{ end }}
+    <meta name="twitter:site" content="@AlpacaHQ">
+    {{ with .Site.Title }}<meta name="twitter:title" content="{{ . }} | Alpaca">{{ end }}
+    {{ with .Site.Params.description }}<meta name="twitter:description" content="{{ . }}">{{ end }}
+
+    {{ with .Site.Title }}<meta name="apple-mobile-web-app-title" content="{{ . }} | Alpaca">{{ end }}
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 

@@ -1,7 +1,7 @@
 # baseurl = "http://docs.alpaca.markets/"
 baseurl = "/"
 languageCode = "en-us"
-title = "Documentation | Alpaca"
+title = "Documentation"
 theme = "hugo-material-docs"
 metadataformat = "yaml"
 canonifyurls = true
@@ -12,7 +12,7 @@ pygmentsUseClasses = true
 [params]
 	# General information
 	author = "Alpaca"
-	description = "All about Alpaca."
+	description = "Alpaca API lets you build and trade with real-time market data for free."
 	copyright = "Released under the MIT license"
 
 	# Repository
