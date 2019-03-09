@@ -26,7 +26,8 @@ Pre-market and after-hours trading are not yet available. We are currently worki
 extended hours trading. This feature and more will initially be available only as part of a new account 
 plan designed specifically for high-volume algorithmic traders. This new account plan is not for everyone 
 and may require certain conditions of your trading activity. Currently this program is only open to 
-eligible U.S. residents. If you think this may be for you, please **[complete this form](https://goo.gl/forms/D9k1MMNtY9awXcum1)** 
+eligible U.S. residents who deposit and maintain $25,000 equity (due to FINRA's Pattern Day Trader rule). 
+If you think this may be for you, please **[complete this form](https://goo.gl/forms/D9k1MMNtY9awXcum1)** 
 and we'll contact you.
 
 ## Order Types
@@ -101,7 +102,8 @@ limit and stop price parameters in the API.
 We are currently working on supporting advanced order types such as OCO (one-cancels-the-other) bracket
 orders. This feature and more will initially be available only as part of a new account plan designed 
 specifically for high-volume algorithmic traders. This new account plan is not for everyone and may require 
-certain conditions of your trading activity. Currently this program is only open to eligible U.S. residents. 
+certain conditions of your trading activity. Currently this program is only open to eligible U.S. residents
+who deposit and maintain $25,000 equity (due to FINRA's Pattern Day Trader rule). 
 If you think this may be for you, please **[complete this form](https://goo.gl/forms/D9k1MMNtY9awXcum1)** and 
 we'll contact you.
 
