@@ -9,6 +9,6 @@ closed_orders = api.list_orders(
 )
 
 # Get only the closed orders for a particular stock
-closed_aapl_orders = [o for o in closed_orders if o.symbol is 'AAPL']
+closed_aapl_orders = [o for o in closed_orders if o.symbol == 'AAPL']
 print(closed_aapl_orders)
 
