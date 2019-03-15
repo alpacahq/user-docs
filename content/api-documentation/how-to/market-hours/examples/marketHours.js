@@ -11,6 +11,6 @@ const date = '2018-12-01'
 alpaca.getCalendar({
     start: date,
     end: date
-}).then((calendar) => {
-    console.log(`The market opened at ${calendar.open} and closed at ${calendar.close} on ${date}.`)
+}).then((calendars) => {
+    console.log(`The market opened at ${calendars[0].open} and closed at ${calendars[0].close} on ${date}.`)
 })
