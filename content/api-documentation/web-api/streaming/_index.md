@@ -159,8 +159,8 @@ The above message was for a `fill` event, however, there are many different even
 through its life cycle. The most common events are described in detail below:
 
 - `new`
-- `partially_filled`
-- `filled`
+- `partial_fill`
+- `fill`
 - `done_for_day`
 - `canceled`
 - `expired`
