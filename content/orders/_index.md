@@ -22,13 +22,11 @@ are not yet supported at Alpaca, but orders can be placed around the clock to be
 handled as soon as the market is open.
 
 ## Extended Trading Hours
-Pre-market and after-hours trading are not yet available. We are currently working on supporting 
-extended hours trading. This feature and more will initially be available only as part of a new account 
-plan designed specifically for high-volume algorithmic traders. This new account plan is not for everyone 
-and may require certain conditions of your trading activity. Currently this program is only open to 
-eligible U.S. residents who deposit and maintain $25,000 equity (due to FINRA's Pattern Day Trader rule). 
-If you think this may be for you, please **[complete this form](https://goo.gl/forms/D9k1MMNtY9awXcum1)** 
-and we'll contact you.
+Pre-market and after-hours trading are coming soon as part of the Alpaca Power Account, a new account plan with our 
+latest features including margin trading, short selling, support for business entities, and more. We’ll be 
+onboarding users over the coming weeks and months, so 
+[reserve your spot today by completing this form](https://goo.gl/forms/D9k1MMNtY9awXcum1), or
+[solve our puzzle](https://alpaca.markets/#power) and gain priority access!
 
 ## Order Types
 When you submit an order, you can choose one of supported order types.
@@ -99,13 +97,11 @@ In order to submit a stop limit order, you will need to specify both the
 limit and stop price parameters in the API.
 
 ### Advanced Order Types
-We are currently working on supporting advanced order types such as OCO (one-cancels-the-other) bracket
-orders. This feature and more will initially be available only as part of a new account plan designed 
-specifically for high-volume algorithmic traders. This new account plan is not for everyone and may require 
-certain conditions of your trading activity. Currently this program is only open to eligible U.S. residents
-who deposit and maintain $25,000 equity (due to FINRA's Pattern Day Trader rule). 
-If you think this may be for you, please **[complete this form](https://goo.gl/forms/D9k1MMNtY9awXcum1)** and 
-we'll contact you.
+Advanced order types such as OCO(one-cancels-the-other) bracket orders are coming soon as part of the Alpaca Power 
+Account, a new account plan with our latest features including LLC and business entity support, margin trading, 
+short selling, and more. We’ll be onboarding users over the coming weeks and months, so 
+[reserve your spot today by completing this form](https://goo.gl/forms/D9k1MMNtY9awXcum1), or
+[solve our puzzle](https://alpaca.markets/#power) and gain priority access!
 
 ## Time in Force
 

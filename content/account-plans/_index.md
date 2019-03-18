@@ -36,12 +36,10 @@ For a more formal overview, please see the [sign up page of the Alpaca Securitie
 
 **Account for LLC or other business entities?**
 
-We are currently working on supporting LLCs and other business entities. This feature and more will initially
-be available only as part of a new account plan designed specifically for high-volume algorithmic traders.
-This new account plan is not for everyone and may require certain conditions of your trading activity.
-Currently this program is only open to eligible U.S. residents who deposit and maintain $25,000 equity 
-(due to FINRA's Pattern Day Trader rule). If you think this may be for you, 
-please **[complete this form](https://goo.gl/forms/D9k1MMNtY9awXcum1)** and we'll contact you.
+We've begun providing qualified U.S. residents with early access to the Alpaca Power Account, a new account 
+plan with our latest features including LLC and business entity support, margin trading, short selling, and more. 
+We’ll be onboarding users over the coming weeks and months, so [reserve your spot today by completing this form](https://goo.gl/forms/D9k1MMNtY9awXcum1), 
+or [solve our puzzle](https://alpaca.markets/#power) and gain priority access!
 
 ## Paper Only Account vs Brokerage Account Features
 
