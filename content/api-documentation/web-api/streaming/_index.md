@@ -48,7 +48,7 @@ Note that the `streams` field in the listen message is to tell
 the set of streams to listen, so if you want to stop receiving
 updates from the stream, you must send an empty list of streams
 values as a listen message.  Similarly, if you want to add more
-streams to get updates in in addition to the ones you are already
+streams to get updates in addition to the ones you are already
 doing so, you must send all the stream names not only the new
 ones.
 
