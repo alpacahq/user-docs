@@ -16,7 +16,7 @@ each other. Alpaca grows with our community and knowledge is built together.
 
 ## Community Slack
 
-[Alpaca’s community Slack](https://alpaca-community.slack.com) has grown to be the go-to place for Alpaca 
+[Alpaca’s community Slack](https://alpaca.markets/slack) has grown to be the go-to place for Alpaca 
 users regardless of experience or the stage of where they are in the journey of trading. The community 
 consists of both very experienced users and beginners. From questions about basic features and 
 API instructions to discussions about how the market works and analysis of algorithms they are 
