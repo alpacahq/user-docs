@@ -51,6 +51,7 @@ or [solve our puzzle](https://alpaca.markets/#power) and gain priority access!
 |API Access|<span style="color:#27e272;font-size:18px">&#10003;</span>|<span style="color:#27e272;font-size:18px">&#10003;</span>|
 |Free IEX Real-Time Data|<span style="color:#27e272;font-size:18px">&#10003;</span>|<span style="color:#27e272;font-size:18px">&#10003;</span>|
 |Free Consolidated Real-Time Data|&#10060;|<span style="color:#27e272;font-size:18px">&#10003;</span>|
+|Multi-Factor Authentication|<span style="color:#27e272;font-size:18px">&#10003;</span>|<span style="color:#27e272;font-size:18px">&#10003;</span>|
 
 ## Markets Supported
 

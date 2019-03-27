@@ -43,17 +43,17 @@ being routed to its execution venue. There is also the risk with market orders
 that they may get filled at unexpected prices due to short-term price spikes.
 
 To protect against excessive price impact, Alpaca converts buy market orders into 
-marketable limit orders with a price limit that is 5% higher than the current market price.
+marketable limit orders with a price limit that is 4% higher than the current market price.
 In most cases, this will have the same exact outcome as using a true market order.
-However, if the stock price moves more than 5% above the market price in the time that it 
+However, if the stock price moves more than 4% above the market price in the time that it 
 takes to route your order to the execution venue, then your order would not execute until 
-the price came back within the 5% collar. Sell market orders are **not** converted into
+the price came back within the 4% collar. Sell market orders are **not** converted into
 limit orders.
 
 If you submit a buy market order during pre-market or extended-hours trading, we use the 
-last traded price to determine the limit price. This means that if the stock opens more than 5% 
+last traded price to determine the limit price. This means that if the stock opens more than 4% 
 above the last traded price that existed at the time you submitted your order, your order 
-won’t be executed until the price came back within the 5% price collar.  
+won’t be executed until the price comes back within the 4% price collar.  
 
 ### Limit Order
 A limit order is an order to buy or sell at a specified price or better. A
@@ -76,7 +76,7 @@ A stop (market) order is an order to buy or sell a security when its price moves
 a particular point, ensuring a higher probability of achieving a predetermined
 entry or exit price. Once the market price crosses the specified stop price,
 the stop order becomes a market order. Alpaca converts buy stop orders into stop limit
-orders with a limit price that is 5% higher than the stop price. Sell stop orders are
+orders with a limit price that is 4% higher than the stop price. Sell stop orders are
 **not** converted into stop limit orders.
 
 A stop order does not guarantee the order will be filled at a certain price
