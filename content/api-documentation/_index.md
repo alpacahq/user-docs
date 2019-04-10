@@ -25,3 +25,6 @@ Basic usage examples showing [how to do specific tasks]({{< relref "/api-documen
 using the Alpaca API. 
 
 ### [API v2 Reference]({{< relref "/api-documentation/api-v2/_index.md" >}})
+
+Updates made to the API to support our newest features. **The information contained in this section only applies to
+Power Accounts and is subject to revision.**
