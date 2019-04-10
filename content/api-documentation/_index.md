@@ -23,3 +23,5 @@ for Python, C#, Go, and Node to help interact with the Alpaca Web API.
 
 Basic usage examples showing [how to do specific tasks]({{< relref "/api-documentation/how-to/_index.md" >}}) 
 using the Alpaca API. 
+
+### [API v2 Reference]({{< relref "/api-documentation/api-v2/_index.md" >}})

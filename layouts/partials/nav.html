@@ -33,7 +33,10 @@
       {{- if eq .Title "API Documentation"}}
       <i class="fa fa-book" style="display:inline; margin-right: 4px;" aria-hidden="true"></i>
       {{- end}}
-      {{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
+      {{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}
+      {{- if eq .Title "API v2 Reference"}}
+      <sup style="display:inline;" ><em>beta</em></sup>
+      {{- end}}</a>
         {{ if $isCurrent }}
         <ul id="scrollspy">
         </ul>

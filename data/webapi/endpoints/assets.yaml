@@ -29,3 +29,37 @@ endpoints:
       errors:
         - status: 404
           reason: Asset is not found.
+  /v2/assets:
+    GET:
+      title: Get assets
+      summary: |
+        Get a list of assets
+      params:
+        query:
+          - name: status
+            type: string
+            desc: e.g. "active". By default, all statuses are included.
+          - name: asset_class
+            type: string
+            desc: Defaults to `us_equity`.
+      returns: |
+        An array of [Asset](#asset-entity) object
+  /v2/assets/{symbol}:
+    GET:
+      title: Get an asset
+      summary: |
+        Get an asset for the given `symbol`.
+      params:
+        path:
+          - name: symbol
+            type: string
+            desc: symbol or asset_id
+      returns: |
+        An [Asset](#asset-entity) object
+      errors:
+        - status: 404
+          reason: Asset is not found.
+  /v2/assets/:id:
+    GET:
+      title: Get assets/:id
+      summary: Assets returned from this endpoint will have the same new fields `marginable`, `shortable`, and `easy_to_borrow` as the /assets endpoint.
