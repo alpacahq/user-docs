@@ -12,4 +12,4 @@ These are the basic SDKs for each language program to interact with our Web API.
 [NuGet](https://www.nuget.org/packages/Alpaca.Markets/)
 - Go: [alpaca-trade-api-go](https://github.com/alpacahq/alpaca-trade-api-go/)
 - Node: [alpaca-trade-api-js](https://github.com/alpacahq/alpaca-trade-api-js/)
-- R: [alpaca-trade-api-r](https://github.com/jagg19/AlpacaforR)
+- R: [alpaca-for-r](https://github.com/jagg19/AlpacaforR)
