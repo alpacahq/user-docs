@@ -17,7 +17,7 @@ financial services and technology industry experience at organizations such as F
 Wealthfront, Lehman Brothers, UBS. Alpaca is led by [Yoshi Yokokawa](https://www.linkedin.com/in/yoshiyokokawa/) (CEO),
 [Hitoshi Harada](https://www.linkedin.com/in/hitoshi-harada-02b01425/) (CTO), [John Torola](https://www.linkedin.com/in/johnttorola/) (COO/CCO), 
 and [Luke Lonergan](https://www.linkedin.com/in/lukelonergan/) (Chief Architect). Our investors include a group of 
-well-capitalized investors including Global Brain, the biggest Japanese independent venture capital firm, as well as 
+well-capitalized investors including Y Combinator, Global Brain, the biggest Japanese independent venture capital firm, as well as 
 highly experienced industry angel investors such as Joshua S. Levine (former CTO/COO of ETRADE) and 
 Eric Di Benedetto (a fintech angel investor with more than 30 IPO and M&A exits). Additionally, members of Berkeley 
 Angel Network and two biggest Japanese banks (MUFG and SMBC) are investors in Alpaca.
