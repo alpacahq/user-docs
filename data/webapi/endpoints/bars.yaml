@@ -30,22 +30,22 @@ endpoints:
               It can be between 1 and 1000.
               Default is 100 if parameter is unspecified or 0.
           - name: start
-            type: timestamp
+            type: "timestamp (ISO Format, ex: '2019-04-15T09:30:00-04:00')"
             desc: |
               Filter bars equal to or after this time.
               Cannot be used with `after`.
           - name: end
-            type: timestamp
+            type: "timestamp (ISO Format, ex: '2019-04-15T09:30:00-04:00')"
             desc: |
               Filter bars equal to or before this time.
               Cannot be used with `until`.
           - name: after
-            type: timestamp
+            type: "timestamp (ISO Format, ex: '2019-04-15T09:30:00-04:00')"
             desc: |
               Filter bars after this time.
               Cannot be used with `start`.
           - name: until
-            type: timestamp
+            type: "timestamp (ISO Format, ex: '2019-04-15T09:30:00-04:00')"
             desc: |
               Filter bars before this time.
               Cannot be used with `end`.
