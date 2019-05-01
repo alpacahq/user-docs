@@ -97,7 +97,7 @@ asset classes), the most commonly-used asset is assumed. To avoid
 the ambiguity, you can use the second or third form with suffixes joined
 by colons (:)   Alternatively, `asset_id` is guaranteed as unique, in the
 form of UUID v4. When the API accepts `symbols` to specify more than one
-symbol in one API call, the general rule is to to use commas (,) to separate
+symbol in one API call, the general rule is to use commas (,) to separate
 them.
 
 All of four symbol forms are case-sensitve.
