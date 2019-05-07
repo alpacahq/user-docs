@@ -27,7 +27,7 @@ spec:
     type: string<number>
     desc: Total cost basis in dollar
   - name: unrealized_pl
-    type: string<string>
+    type: string<number>
     desc: Unrealized profit/loss in dollar
   - name: unrealized_plpc
     type: string<number>
