@@ -42,18 +42,19 @@ each price level as well as any price moves that may occur while your order is
 being routed to its execution venue. There is also the risk with market orders 
 that they may get filled at unexpected prices due to short-term price spikes.
 
-To protect against excessive price impact, Alpaca converts buy market orders into 
-marketable limit orders with a price limit that is 4% higher than the current market price.
+To protect against excessive price impact and buying power violations, Alpaca converts buy market orders into 
+marketable limit orders with a price limit that is 4% higher than a current market price < $50 and 2.5% higher
+than a current market price >= $50.
 In most cases, this will have the same exact outcome as using a true market order.
-However, if the stock price moves more than 4% above the market price in the time that it 
+However, if the stock price moves more than 4% (or 2.5% for >=$50/share stocks) above the market price in the time that it 
 takes to route your order to the execution venue, then your order would not execute until 
-the price came back within the 4% collar. Sell market orders are **not** converted into
+the price came back within the collar. Sell market orders are **not** converted into
 limit orders.
 
 If you submit a buy market order during pre-market or extended-hours trading, we use the 
 last traded price to determine the limit price. This means that if the stock opens more than 4% 
-above the last traded price that existed at the time you submitted your order, your order 
-won’t be executed until the price comes back within the 4% price collar.  
+(or 2.5% for >=$50/share stocks) above the last traded price that existed at the time you submitted your order, your order 
+won’t be executed until the price comes back within the price collar.  
 
 ### Limit Order
 A limit order is an order to buy or sell at a specified price or better. A
@@ -76,8 +77,8 @@ A stop (market) order is an order to buy or sell a security when its price moves
 a particular point, ensuring a higher probability of achieving a predetermined
 entry or exit price. Once the market price crosses the specified stop price,
 the stop order becomes a market order. Alpaca converts buy stop orders into stop limit
-orders with a limit price that is 4% higher than the stop price. Sell stop orders are
-**not** converted into stop limit orders.
+orders with a limit price that is 4% higher than a stop price < $50 (or 2.5% higher than a
+stop price >= $50). Sell stop orders are **not** converted into stop limit orders.
 
 A stop order does not guarantee the order will be filled at a certain price
 after it is converted to a market order.
@@ -179,7 +180,7 @@ a state of either `filled`, `canceled`, or `expired`.
 
 In order to submit a buy order and have it accepted, your account must have sufficient buying power.
 Alpaca calculates the value of a buy order as the order's limit price (in the case of market orders,
-the limit price is 5% above the current market price as noted above) multiplied by the order's
+the limit price is 2.5% to 4% above the current market price as noted above) multiplied by the order's
 quantity. The value of the order is then checked against your available cash balance to determine if
 it can be accepted. Please note that your available cash balance is reduced by other open (pending) buy orders,
 while sell orders do not add to your available cash balance until they have executed.
