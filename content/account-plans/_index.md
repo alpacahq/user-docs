@@ -41,6 +41,13 @@ plan with our latest features including LLC and business entity support, margin 
 We’ll be onboarding users over the coming weeks and months, so [reserve your spot today by completing this form](https://goo.gl/forms/D9k1MMNtY9awXcum1), 
 or [solve our puzzle](https://alpaca.markets/#power) and gain priority access!
 
+**Account for non-U.S. residents?**
+
+We've begun collecting interest from non-U.S. residents seeking commission-free U.S. stock trading. 
+Please voice your interest by [completing this form](https://forms.gle/umPhEzWtUEuHAuVVA) 
+so we can move quickly to support your country!
+
+
 ## Paper Only Account vs Brokerage Account Features
 
 |<span style="font-size:14px">Feature</span>|<span style="font-size:14px">Alpaca Paper Only Account</span>|<span style="font-size:14px">Alpaca Brokerage Account</span>|
