@@ -2,8 +2,15 @@
 title: Install Pylivetrader on Windows
 weight: 50
 ---
+
+Two ways to install pylivetrader on Windows.  
+The first section uses Anaconda environments.  
+Or jump to ![](#without-conda-environments "Setup without using Anaconda environments")
+
+------------------------------------------------
 # Install Pylivetrader on Windows
-## Install with Anaconda (Recommended)
+## _Using Anaconda Environment_
+------------------------------------------------
 
 Pylivetrader packages for Windows are hosted on our channel on Anaconda. To get started, follow these steps.
 
@@ -44,136 +51,213 @@ You can reactivate this environment at any time by running `source activate pyli
 
 If you encounter issues with setting your environment up, feel free to ask for help in our community Slack. A link to join is in the sidebar.
 
-## Alternative: Install without Anaconda
-
-Note: we recommend trying the conda installation path first, as it does not involve compiling any dependencies.
+------------------------------------------------
+# Setup of pylivetrader on Windows  
+## _without conda environments_
+------------------------------------------------
+Anaconda is used here to place files but then `conda` is not used, just standard Python like `pip`.
 
 *These steps are from a Windows user who kept track while successfully setting up pylivetrader to run a Quantopian-like algorithm on Alpaca.*
 
-### OS
-This was on Windows 7 and should also apply to Windows 10.
+### Python, using Anaconda setup  
+I recommend Python 3.6 for now, to avoid potential problems. This is it, in Anaconda:  
+`Anaconda3-5.2.0-Windows-x86_64.exe 	631.3M 	2018-05-30 13:04:18 	62244c0382b8142743622fdc3526eda7`  
+https://repo.continuum.io/archive/Anaconda3-5.2.0-Windows-x86_64.exe  
+&nbsp; &nbsp;    from https://repo.continuum.io/archive/  
+&nbsp; &nbsp;    Install as Just Me or All Users  
+&nbsp; &nbsp;      to `C:\Python36` _(short simple paths make easier reading, copy/paste and everything else along the way)_  
+    
+&nbsp; &nbsp;    Check the boxes: Add to path and Register as default 
+    
+&nbsp; &nbsp;    Install VSCode at the end too, it can be useful (although it won't break in to breakpoints on dependent files).
 
-### Visual Studio and .NET
-Prerequisites are Python 3.6 or higher and some form of C++ compiler, which requires .NET Framework.
-
-**C++ compiler install**
-Various options are available to have a compiler available, I installed Visual Studio Community 2017 Preview (free).
-VS Code at the end of Anaconda might also work, not sure (.NET Framework is still needed for that).
-
-If a C++ compiler were not present, this is the error that would occur on `pip install pylivetrader`
-
+Open a new `cmd` prompt and verify path. I added some newlines here for clarity, showing my path as an example:
 ```
-Running setup.py clean for lru-dict
-  error: Microsoft Visual C++ 14.0 is required.
-Get it with "Microsoft Visual C++ Build Tools":
-http://landinghub.visualstudio.com/visual-cpp-build-tools, however instead of Build Tools, I'm opting for Visual Studio Community below.
-```
-
-(Note that link cited in the error message is 404, try instead https://visualstudio.microsoft.com/visual-cpp-build-tools/)
-
-Installed **.NET Framework** (needed for Visual Studio Community)
-
-- https://www.microsoft.com/net/download/dotnet-framework-runtime goes to (direct link ...)
-[https://www.microsoft.com/net/download/thank-you/net472](https://www.microsoft.com/net/download/thank-you/net472 ".NET Framework")
-
-Installed **Visual Studio Community**
-https://visualstudio.microsoft.com/downloads/ goes to (direct link ...)
-[https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?ch=pre&sku=Community&rel=15](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?ch=pre&sku=Community&rel=15 "Visual Studio Community")
-
-During the install, I selected these options:
-
-- Desktop development with C++
-- Python development
-
-### Install Python 3.6
-
-  One option is python.org: https://www.python.org/downloads/release/python-370/
-
-  I chose Anaconda (Python package) here:
-
-  [Anaconda 64-Bit Graphical Installer](https://repo.anaconda.com/archive/Anaconda3-5.2.0-Windows-x86_64.exe "Anaconda") (631 MB) ... installing that to `C:\Python36`
-
-Corrected **Path**
-
-In the Windows path, my previous `C:\python27` had not been removed. To correct the path (a list of locations Windows looks to, for finding certain things), I did the following:
-
-Start button > Computer > right click > Properties > Advanced system settings > Environment Variables > *User* > Path
-... setting that to:
-C:\Python36;C:\Python36\Library\mingw-w64\bin;C:\Python36\Library\usr\bin;C:\Python36\Library\bin;C:\Python36\Scripts;C:\Program Files\Docker Toolbox
-
-Start button > Computer > right click > Properties > Advanced system settings > Environment Variables > *System* > Path
-%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;C:\Program Files\Git\cmd
-
-Not certain about that but eventually typing `path` in the command prompt, the path wound up like this:
-
-```
-PATH=C:\Python36;C:\Python36\Library\mingw-w64\bin;C:\Python36\Library\usr\bin;C:\Python36\Library\bin;C:\Python36\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\
-System32\Wbem;C:\Program Files\Git\cmd;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Docker Toolbox
+C:\> path
+    PATH=C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;
+    C:\Program Files\Microsoft VS Code\bin;
+    C:\Python36;
+    C:\Python36\Library\mingw-w64\bin;
+    C:\Python36\Library\usr\bin;
+    C:\Python36\Library\bin;
+    C:\Python36\Scripts;
+    C:\Users\<user>\AppData\Local\Microsoft\WindowsApps	
 ```
 
-*To open a command prompt (command window):
-Start > Run > cmd
-or Windows key > r* > cmd
+### Visual C++ 2015 Build Tools
+**This is a key step that resolves the `lru-dict` compile snag.**  
+I found the answer here:  
+&nbsp; &nbsp;    https://stackoverflow.com/questions/44951456/pip-error-microsoft-visual-c-14-0-is-required  
+&nbsp; &nbsp;    ... in this link (in an answer) and it works. The link is unusual, and includes the period at the end:  
+&nbsp; &nbsp; &nbsp; &nbsp;        http://go.microsoft.com/fwlink/?LinkId=691126&fixForIE=.exe.
+    
+### Keys: Use keyz.cmd (see the contents of the `cmd` file below)  
+Obtain keys from https://app.alpaca.markets/paper/dashboard/overview (paper)  
+Paste your key and secret key into the file below.  
+Run that at `cmd` prompt.  
+Keys are now set for the current `cmd` window and all others going forward,  
+&nbsp; and any processes that rely on them.
 
-### Install Python modules and pylivetrader
+### Pylivetrader  
+On the Start menu, open 'Visual C++ 2015 MSBuild Command Prompt' _so the compiler will be found._
 
-Updated **pip** (python tool for installing things)
-`python -m pip install --upgrade pip`
-
-Installed **pylivetrader** ([link](https://github.com/alpacahq/pylivetrader "pylivetrader"))
-
-`pip install pathlib`
-
-`pip install pylivetrader`
-
-Message says:
-`Successfully built lru-dict`
-(because the C++ compiler ok)
-
-Installed **pipeline-live** ([link](https://github.com/alpacahq/pipeline-live "pipeline-live"))
-
-`pip install pipeline-live`
-
-### Set up Keys and Configure
-Obtain key from [Dashboard](https://app.alpaca.markets/dashboard/overview)
-
-The slider at the top of the page switches between paper trading and live, and results in different keys for the two separate purposes.
-
-The command to start trading includes an option/switch like `--backend-config ap.yaml` to specify the keys that will be used for live or paper. I chose the live trading yaml file name `ap.yaml`. My paper trading yaml file is called `paper.yaml`.
-
-Contents of the yaml files below.
-*These keys are trimmed for the example*
-Comments in the file are the `set` commands to also set the keys as environment variables. Notice on paper trading, the env variable `APCA_API_BASE_URL` is different from the yaml file `base_url` currently.
-
-**Keys Live**
-
+Run these:
 ```
-key_id: AKxxxxxx
-secret: FnvMxxxxxx
-
- # Live
- # set APCA_API_KEY_ID=AKxxxxxx
- # set APCA_API_SECRET_KEY=FnvMxxxxxx
+    python.exe -m pip install --upgrade pip
+    pip install zipline
+    pip install pylivetrader
+    pip install pipeline-live
+    pip install pipdeptree
+    pipdeptree -p pylivetrader
 ```
-
-**Keys Paper Trading**
-
+    
+In that last command, there are likely to be some conflicts, depending on one's own environment.  
+For example, mine:
 ```
-key_id: KMxxxxxx
-secret: Fvtxxxxxx
-base_url: https://paper-api.alpaca.markets
-
- # Paper
- # set APCA_API_BASE_URL=https://paper-api.alpaca.markets
- # set APCA_API_KEY_ID=KMxxxxxx
- # set APCA_API_SECRET_KEY=Fvtxxxxxx
+    C:\> pipdeptree -p pylivetrader
+    Warning!!! Possibly conflicting dependencies found:
+    * intervaltree==3.0.2
+     - sortedcontainers [required: >=2.0,<3.0, installed: 1.5.10]
+    * distributed==1.21.8
+     - msgpack [required: Any, installed: ?]
+```
+     
+Those are easy to resolve. I did so as follows. Just use the double-quote pattern for versions:
+```
+    pip install msgpack
+    pip install "sortedcontainers>=2.0"
 ```
 
-Make an **algorithm**. Find an example online.
-
-### Start algorithm at any time of day
-
+Try also:
 ```
-C:\ap> pylivetrader.exe run -f alpaca_test1.py --backend-config paper.yaml
-[2018-09-16 21:31:33.615813] INFO: Algorithm: livetrader start running with backend = alpaca data-frequency = minute
+    pipdeptree -p zipline
 ```
+        
+#### Now all set. Everything is clean.
+
+### Run an example to make sure it works:
+Grab the example at https://github.com/alpacahq/pylivetrader/blob/master/examples/q01/algo.py  
+&nbsp; &nbsp;    ... using the `Raw` button.
+
+Save that as `algo1.py`.  
+Open a new `cmd` window, command prompt (console window).  
+`cd` to the directory where you saved that `algo1.py` file. I use C:\ap  
+[The stock market doesn't need to be open to test this]
+
+Type at the prompt:  
+```
+pylivetrader run algo1.py
+```
+
+This output indicates it is fine:
+```
+[2019-05-08 01:16:42.080187] INFO: Algorithm: livetrader start running with backend = alpaca data-frequency = minute
+93
+[2019-05-08 01:16:52.327810] INFO: algo:
+Algorithm initialized variables:
+ context.MaxCandidates 100
+ LowVar 6
+ HighVar 40    
+```
+
+_That was a starter algorithm by Alapaca, you can ask around in 
+&nbsp;  https://alpaca-community.slack.com/ and might find alternatives._
+    
+### Other
+These are some other programs I use *a lot* on Windows for development:
+
+##### Notepad++  
+https://notepad-plus-plus.org/  
+Make sure the 32-bit version even on x64, for TextFX and Python support.  
+There's also a portable version out there if you search the web for it.
+
+TextFX Characters  
+&nbsp; &nbsp;    Plugins Admin > 'textfx' > Install  
+Settings > Preferences > Language > Python > Tab characters > Replace by 4 spaces
+
+##### CompareIt  
+&nbsp; &nbsp;    https://www.grigsoft.com/wincmp3.htm
+
+##### Search & Replace  
+&nbsp; &nbsp;    https://www.funduc.com/search_replace.htm
+    
+##### Paintshop Pro 4.14  
+(contact me, it is old. just the essentials)  
+For saving screen captures.  
+On start, one time:  
+&nbsp; &nbsp;    The first time, run it as administrator, right click the icon and dig for that option.  
+&nbsp; &nbsp;      (otherwise will say it can't update the registry [with its settings])  
+&nbsp; &nbsp;    Clear initial dialogs.  
+&nbsp; &nbsp;    Move toolbars all to the same line by dragging just off to the side of buttons, a tiny area available for that.  
+
+##### PyCharm
+https://www.jetbrains.com/pycharm/download/#section=windows  
+Another program I've been tinkering with, and would be very good for development purposes, except for one thing.  
+This can break into breakpoints set in dependent files too (unlike VS Code), not just the algo.  
+  However there's no known way for it to initiate debugging with pylivetrader.exe in use, currently.
+
+#### keyz.cmd file content
+```
+:: Sets Alpaca keys, the environment variables, 
+::   for both the current `cmd` window and/or other applications going forward.
+:: To obtain keys, visit https://app.alpaca.markets/paper/dashboard/overview
+:: I call this file keyz.cmd to be able to just type `keyz` at the prompt after changes
+::   because the word `keys` in Windows is already taken.
+
+@echo off
+
+:: Set keys for the current window
+set APCA_API_KEY_ID=PK85___YOUR_KEY___6PVN
+set APCA_API_SECRET_KEY=6waXwdMaTX___YOUR_KEY___nc1UQqkNlC
+set APCA_API_BASE_URL=https://paper-api.alpaca.markets
+
+:: Set them also for other windows and processes going forward
+setx APCA_API_KEY_ID     %APCA_API_KEY_ID%
+setx APCA_API_SECRET_KEY %APCA_API_SECRET_KEY%
+setx APCA_API_BASE_URL   %APCA_API_BASE_URL%
+
+:: Displaying what was just set.
+set apca
+
+:: Or for copy/paste manually ...
+:: setx APCA_API_KEY_ID     'PK85___YOUR_KEY___6PVN'
+:: setx APCA_API_SECRET_KEY '6waXwdMaTX___YOUR_KEY___nc1UQqkNlC'
+:: setx APCA_API_BASE_URL   'https://paper-api.alpaca.markets'
+```
+
+
+#### ap_files.cmd (Another script I use and recommend to make things easier)
+```
+:: I run a little `ap_files.cmd` file like this to copy some of the latest files used by pylivetrader to one place.
+:: Then with https://www.funduc.com/ftp/setupsr64.exe (Search & Replace) 
+::   I can quickly & easily look thru them all for whatever reason.
+:: When the need arises to find something, it saves a ton of time.
+:: Search & Replace is one of my main tools used most often, digging thru algorithms for bits code.
+:: mkdir will fail if already exists causing no problem.
+
+cd %USERPROFILE%\documents
+mkdir ap\site-packages
+cd %USERPROFILE%\documents\ap\site-packages
+
+xcopy /ifdryshck c:\python36\Lib\site-packages\alpaca_trade_api     alpaca_trade_api
+xcopy /ifdryshck c:\python36\Lib\site-packages\iexfinance           iexfinance
+xcopy /ifdryshck c:\python36\Lib\site-packages\pipeline_live        pipeline_live
+xcopy /ifdryshck c:\python36\Lib\site-packages\pylivetrader         pylivetrader
+xcopy /ifdryshck c:\python36\Lib\site-packages\requests             requests
+xcopy /ifdryshck c:\python36\Lib\site-packages\trading_calendars    trading_calendars
+xcopy /ifdryshck c:\python36\Lib\site-packages\urllib3              urllib3
+xcopy /ifdryshck c:\python36\Lib\site-packages\logbook              logbook
+xcopy /ifdryshck c:\python36\Lib\site-packages\zipline              zipline
+
+:: Another step, once those are copied, I delete all of the .pyc files.
+:: They are pre-compiled cache versions of .py files for faster startup, not needed there.
+del /s /q *.pyc
+
+:: Also deleting test files & directories.
+:: Files
+del /s /q test*
+:: Directories. (Sad that this line needed to be so complex)
+for /f %i in ('dir /a:d /s /b *test*') do rd /s /q %i
+```
+
+_Section written by G_Ha -- on https://alpaca-community.slack.com/_
