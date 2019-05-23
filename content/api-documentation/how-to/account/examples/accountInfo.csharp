@@ -1,0 +1,27 @@
+using Alpaca.Markets;
+using System;
+using System.Threading.Tasks;
+
+namespace CodeExamples
+{
+    internal static class Example
+    {
+        public static async Task Main(string[] args)
+        {
+            var restClient = new RestClient();
+
+            // Get our account information.
+            var account = await restClient.GetAccountAsync();
+
+            // Check if our account is restricted from trading.
+            if (account.IsTradingBlocked)
+            {
+                Console.WriteLine("Account is currently restricted from trading.");
+            }
+
+            Console.WriteLine(account.BuyingPower + " is available as buying power.");
+
+            Console.Read();
+        }
+    }
+}

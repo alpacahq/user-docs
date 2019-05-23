@@ -1,0 +1,22 @@
+using Alpaca.Markets;
+using System;
+using System.Threading.Tasks;
+
+namespace CodeExamples
+{
+    internal static class Example
+    {
+        public static async Task Main(string[] args)
+        {
+            var restClient = new RestClient();
+
+            // Get a list of all active assets.
+            var assets = await restClient.ListAssetsAsync(AssetStatus.Active);
+
+            // Filter the assets down to just those on NASDAQ.
+            var nasdaqAssets = assets.Where(asset => asset.Exchange == Exchange.NyseMkt);
+
+            Console.Read();
+        }
+    }
+}

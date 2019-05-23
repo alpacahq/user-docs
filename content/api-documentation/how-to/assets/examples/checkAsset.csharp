@@ -1,0 +1,30 @@
+using Alpaca.Markets;
+using System;
+using System.Threading.Tasks;
+
+namespace CodeExamples
+{
+    internal static class Example
+    {
+        public static async Task Main(string[] args)
+        {
+            var restClient = new RestClient();
+
+            // Check if AAPL is tradable on the Alpaca platform.
+            try
+            {
+                var asset = await restClient.GetAssetAsync("AAPL");
+                if (asset.IsTradable)
+                {
+                    Console.WriteLine("We can trade AAPL");
+                }
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Asset not found for AAPL.");
+            }
+
+            Console.Read();
+        }
+    }
+}

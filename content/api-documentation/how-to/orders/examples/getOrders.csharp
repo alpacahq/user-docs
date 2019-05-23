@@ -1,0 +1,23 @@
+using Alpaca.Markets;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace CodeExamples
+{
+    internal static class Example
+    {
+        public static async Task Main(string[] args)
+        {
+            var restClient = new RestClient();
+
+            // Get the last 100 of our closed orders
+            var closedOrders = await restClient.ListOrdersAsync(OrderStatusFilter.Closed, limitOrderNumber: 100);
+
+            // Get only the closed orders for a particular stock
+            var aaplOrders = closedOrders.Where(order => order.Symbol.equals("AAPL"));
+
+            Console.Read();
+        }
+    }
+}

@@ -1,0 +1,29 @@
+using Alpaca.Markets;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace CodeExamples
+{
+    internal static class Example
+    {
+        public static async Task Main(string[] args)
+        {
+            var restClient = new RestClient();
+
+            // Get our position in AAPL.
+            var aaplPosition = await restClient.GetPositionAsync("AAPL");
+
+            // Get a list of all of our positions.
+            var positions = await restClient.ListPositionsAsync();
+
+            // Print the quantity of shares for each position.
+            foreach (var position in positions)
+            {
+                Console.WriteLine($"{position.Quantity} shares of {position.Symbol}.");
+            }
+
+            Console.Read();
+        }
+    }
+}

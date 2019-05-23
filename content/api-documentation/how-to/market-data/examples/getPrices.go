@@ -23,6 +23,6 @@ func main() {
 	// See how much AAPL moved in that timeframe.
 	startPrice := bars[0].Open
 	endPrice := bars[len(bars)-1].Close
-	percentChange := (startPrice - endPrice) / startPrice
+	percentChange := (endPrice - startPrice) / startPrice * 100
 	fmt.Printf("AAPL moved %v%% over the last 5 days.", percentChange)
 }

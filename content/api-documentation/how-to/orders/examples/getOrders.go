@@ -18,10 +18,10 @@ func main() {
 	}
 
 	// Get only the closed orders for a particular stock
-	var aapl_orders []alpaca.Order
+	var aaplOrders []alpaca.Order
 	for _, order := range closed_orders {
 		if order.Symbol == "AAPL" {
-			aapl_orders = append(aapl_orders, order)
+			aaplOrders = append(aaplOrders, order)
 		}
 	}
 }

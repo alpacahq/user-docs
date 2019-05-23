@@ -1,0 +1,26 @@
+using Alpaca.Markets;
+using System;
+using System.Threading.Tasks;
+
+namespace CodeExamples
+{
+    internal static class Example
+    {
+        // Print a message to the console when the account's status changes.
+        public static async Task Main(string[] args)
+        {
+            // Prepare the websocket connection and subscribe to account_updates.
+            var sockClient = new SockClient();
+            await sockClient.ConnectAsync();
+            sockClient.OnAccountUpdate += HandleAccountUpdate;
+
+            Console.Read();
+        }
+
+        // Handle incoming account updates.
+        private void HandleAccountUpdate(IAccountUpdate update)
+        {
+            Console.WriteLine("New account status: " + update.Status.ToString());
+        }
+    }
+}
