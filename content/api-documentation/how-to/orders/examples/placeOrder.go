@@ -28,7 +28,7 @@ func main() {
 		Qty: decimal.NewFromFloat(1),
 		Side: alpaca.Sell,
 		Type: alpaca.Limit,
-		TimeInForce: alpaca.Day,
-		LimitPrice: decimal.NewFromFloat(20.50)
+		TimeInForce: alpaca.OPG,
+		LimitPrice: decimal.NewFromFloat(20.50),
 	})
 }

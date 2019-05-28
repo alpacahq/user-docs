@@ -1,0 +1,24 @@
+using Alpaca.Markets;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace CodeExamples
+{
+    internal static class Example
+    {
+        public static async Task Main(string[] args)
+        {
+            var restClient = new RestClient();
+
+            // Submit a market order to buy 1 share of Apple at market price
+            var order = await restClient.PostOrderAsync("AAPL", 1, OrderSide.Buy, OrderType.Market, TimeInForce.Day);
+
+            // Submit a limit order to attempt to sell 1 share of AMD at a
+            // particular price ($20.50) when the market opens
+            order = await restClient.PostOrderAsync("AMD", 1, OrderSide.Sell, OrderType.Limit, TimeInForce.Opg, 20.50);
+
+            Console.Read();
+        }
+    }
+}

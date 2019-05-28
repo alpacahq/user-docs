@@ -1,0 +1,26 @@
+using Alpaca.Markets;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace CodeExamples
+{
+    internal static class Example
+    {
+        public static async Task Main(string[] args)
+        {
+            var restClient = new RestClient();
+
+            // Get daily price data for AAPL over the last 5 trading days.
+            var bars = await restClient.GetBarsetAsync(new[] { "AAPL" }, TimeFrame.Day, 5);
+
+            // See how much AAPL moved in that timeframe.
+            var startPrice = bars.First().Open;
+            var endPrice = bars.Last().Close;
+            var percentChange = (endPrice - startPrice) / startPrice * 100;
+            Console.WriteLine($"AAPL moved {percentChange} over the last 5 days.");
+
+            Console.Read();
+        }
+    }
+}

@@ -1,0 +1,29 @@
+using Alpaca.Markets;
+using System;
+using System.Threading.Tasks;
+
+namespace CodeExamples
+{
+    internal static class Example
+    {
+        // Print a message to the console when the account's status changes.
+        public static async Task Main(string[] args)
+        {
+            // Prepare the websocket connection and subscribe to account_updates.
+            var sockClient = new SockClient();
+            await sockClient.ConnectAsync();
+            sockClient.OnTradeUpdate += HandleTradeUpdate;
+
+            Console.Read();
+        }
+
+        // Handle incoming trade updates.
+        private void HandleTradeUpdate(ITradeUpdate update)
+        {
+            if update.Order.ClientOrderId.Equals("my_client_order_id")
+            {
+                Console.WriteLine($"Update for {update.Order.ClientOrderId}. Event: {update.Event}");
+            }
+        }
+    }
+}
