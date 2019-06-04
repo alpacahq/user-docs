@@ -34,6 +34,7 @@ Currently, we supported the following extended hours:\
 **After-hours: 4:00 - 6:00pm**
 
 Additionally, please be aware of the following constraints.
+
 * If the order is submitted between 6:00pm and 8:00pm on a market day, the order request
 is returned with error. Alpaca reserves this time window for future expansion of supported hours.
 * If the order is submitted after 8:00pm but before 9:00am of the following trading day, the order request is queued 
@@ -41,13 +42,13 @@ and will be eligible for execution from the beginning of the next available supp
 
 ### Submitting an Extended Hours Eligible Order
 To indicate an order is eligible for extended hours trading, you need to supply a boolean
-parameter named “extended_hours” to your order request. By setting this parameter as true, the order is will be
+parameter named `extended_hours` to your order request. By setting this parameter as true, the order is will be
 eligible to execute in the pre-market or after-hours.
 
 Only `limit` `day` orders will be accepted as extended hours eligible. All other order types and TIFs will be rejected
 with an error. You must adhere to these settings in order to participate in extended hours:\
 1) The order type must be set to `limit` (with limit price). Any other type of orders will be rejected with an error.\
-2) Time-in-force must be set to be `day`. Any other time-in-force will will be rejected with an error.
+2) Time-in-force must be set to be `day`. Any other time-in-force will be rejected with an error.
 
 All symbols supported during regular market hours are also supported during extended hours. Short selling is also
 treated the same.
