@@ -5,3 +5,10 @@ endpoints:
       summary: Returns the market clock.
       returns: |
         A [Clock](#clock-entity) object
+
+  /v2/clock:
+    GET:
+      title: Get the clock
+      summary: Returns the market clock.
+      returns: |
+        A [Clock](#clock-entity) object

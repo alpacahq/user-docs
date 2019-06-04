@@ -1,8 +1,8 @@
 ---
-title: Web API
+title: Web API v1
 weight: 10
 ---
-# Web API
+# Web API v1
 Alpaca is a modern platform for algorithmic trading.  Alpaca's
 API is the interface for your trading algo to communicate with Alpaca's brokerage
 service.

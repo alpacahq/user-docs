@@ -26,7 +26,7 @@ will not flag the account for PDT.
 Alpaca Trading platform monitors the number of day trades for the account
 for the past 5 business days and rejects a newly submitted order if it
 could potentially result in the account being flagged for PDT. This
-protection triggers only when the account equity is less than $25,000 at
+protection triggers only when the previous day's closing account equity is less than $25,000 at
 the time of order submission.
 
 In addition to the filled orders, the system also takes into

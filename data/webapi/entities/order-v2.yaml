@@ -1,0 +1,82 @@
+spec:
+  - name: id
+    type: string<uuid>
+    desc: order id
+  - name: client_order_id
+    type: string
+    desc: client unique order id
+  - name: created_at
+    type: string<timestamp>
+  - name: updated_at
+    type: string<timestamp> (Nullable)
+  - name: submitted_at
+    type: string<timestamp> (Nullable)
+  - name: filled_at
+    type: string<timestamp> (Nullable)
+  - name: expired_at
+    type: string<timestamp> (Nullable)
+  - name: canceled_at
+    type: string<timestamp> (Nullable)
+  - name: asset_id
+    type: string<uuid>
+    desc: asset ID
+  - name: symbol
+    type: string
+    desc: Asset symbol
+  - name: asset_class
+    type: string
+    desc: Asset class
+  - name: qty
+    type: string<number>
+    desc: Ordered quantity
+  - name: filled_qty
+    type: string<number>
+    desc: Filled quantity
+  - name: type
+    type: string<order_type>
+    desc: |
+          Valid values: `market`, `limit`, `stop`, `stop_limit`
+  - name: side
+    type: string<side>
+    desc: |
+          Valid values: `buy`, `sell`
+  - name: time_in_force
+    type: string<time_in_force>
+    desc:  See [order page](/broker-functions/orders/#time-in-force).
+  - name: limit_price
+    type: string<number> (Nullable)
+    desc: Limit price
+  - name: stop_price
+    type: string<number> (Nullable)
+    desc: Stop price
+  - name: status
+    type: string<order_status>
+    desc: See [order page](/broker-functions/orders/#order-lifecycle).
+  - name: extended_hours
+    type: boolean
+    desc: If true, eligible for execution outside regular trading hours.
+example: |
+  {
+    "id": "904837e3-3b76-47ec-b432-046db621571b",
+    "client_order_id": "904837e3-3b76-47ec-b432-046db621571b",
+    "created_at": "2018-10-05T05:48:59Z",
+    "updated_at": "2018-10-05T05:48:59Z",
+    "submitted_at": "2018-10-05T05:48:59Z",
+    "filled_at": "2018-10-05T05:48:59Z",
+    "expired_at": "2018-10-05T05:48:59Z",
+    "canceled_at": "2018-10-05T05:48:59Z",
+    "failed_at": "2018-10-05T05:48:59Z",
+    "asset_id": "904837e3-3b76-47ec-b432-046db621571b",
+    "symbol": "AAPL",
+    "asset_class": "us_equity",
+    "qty": "15",
+    "filled_qty": "0",
+    "type": "market",
+    "side": "buy",
+    "time_in_force": "day",
+    "limit_price": "107.00",
+    "stop_price": "106.00",
+    "filled_avg_price": "106.00",
+    "status": "accepted"
+    "extended_hours": false
+  }

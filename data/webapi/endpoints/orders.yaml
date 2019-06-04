@@ -126,3 +126,134 @@ endpoints:
           reason: Order is not found.
         - status: 422
           reason: The order status is not cancelable.
+
+  /v2/orders:
+    GET:
+      title: Get a list of orders
+      summary: |
+        Retrieves a list of orders for the account, filtered by the supplied
+        query parameters.
+      params:
+        query:
+          - name: status
+            type: string
+            desc: |
+              Order status to be queried. `open`, `closed` or `all`.
+              Defaults to `open`.
+          - name: limit
+            type: int
+            desc: |
+              The maximum number of orders in response. Defaults to 50 and
+              max is 500.
+          - name: after
+            type: timestamp
+            desc: |
+              The response will include only ones submitted after this
+              timestamp (exclusive.)
+          - name: until
+            type: timestamp
+            desc: |
+              The response will include only ones submitted until this
+              timestamp (exclusive.)
+          - name: direction
+            type: string
+            desc: |
+              The chronological order of response based on the submission time.
+              `asc` or `desc`. Defaults to `desc`.
+      returns: |
+        An array of [Order](#order-entity) object
+    POST:
+      title: Request a new order
+      summary: |
+        Places a new order for the given account. An order request may be
+        rejected if the account is not authorized for trading, or if the
+        tradable balance is insufficient to fill the order.
+      params:
+        body:
+          - name: symbol
+            type: string
+            required: true
+            desc: symbol or asset ID to identify the asset to trade
+          - name: qty
+            type: string<int>
+            required: true
+            desc: number of shares to trade
+          - name: side
+            type: string
+            required: true
+            desc: |
+              `buy` or `sell`
+          - name: type
+            type: string
+            required: true
+            desc: |
+              `market`, `limit`, `stop`, or `stop_limit`
+          - name: time_in_force
+            type: string
+            required: true
+            desc: |
+              `day`, `gtc`, `opg`. See [order page](/broker-functions/orders/#time-in-force)
+          - name: limit_price
+            type: string<number>
+            required: true
+            desc: required if type is `limit` or `stop_limit`
+          - name: stop_price
+            type: string<number>
+            required: true
+            desc: required if type is `stop` or `stop_limit`
+          - name: extended_hours
+            type: boolean
+            desc: (default) false. If true, order will be eligible to execute in premarket/afterhours. Only works with type `limit` and time_in_force `day`.
+          - name: client_order_id
+            type: string (<= 48 characters)
+            desc: A unique identifier for the order. Automatically generated if not sent.
+      returns: |
+        The new [Order](#order-entity) object
+      errors:
+        - status: 403
+          reason: Buying power or shares is not sufficient.
+        - status: 422
+          reason: Input parameters are not recognized.
+
+  "/v2/orders:by_client_order_id":
+    GET:
+      title: Get an order by client order id
+      summary: |
+        Retrieves a single order for the given `client_order_id`.
+      returns:
+        The requested [Order](#order-entity) object
+      errors:
+        - status: 404
+          reason: Order is not found.
+  /v2/orders/{order_id}:
+    GET:
+      title: Get an order
+      summary: |
+        Retrieves a single order for the given `order_id`.
+      params:
+        path:
+          - name: order_id
+            type: string<uuid>
+            desc: Order ID
+      returns:
+        The requested [Order](#order-entity) object
+      errors:
+        - status: 404
+          reason: Order is not found.
+    DELETE:
+      title: Cancel an order
+      summary: |
+        Attempts to cancel an open order. If the order is no longer cancelable
+        (example: `status=order_filled`), the server will respond with status 422,
+        and reject the request.
+      params:
+        path:
+          - name: order_id
+            type: string<uuid>
+            desc: Order ID
+      returns: Null
+      errors:
+        - status: 404
+          reason: Order is not found.
+        - status: 422
+          reason: The order status is not cancelable.

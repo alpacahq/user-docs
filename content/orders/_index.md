@@ -15,18 +15,42 @@ or system-assigned unique ID to check the status. Updates on open orders
 at Alpaca will also be sent over the streaming interface, which is the
 recommended method of maintaining order state.
 
-## Orders Submitted Outside of Regular Trading Hours
-Orders submitted outside of market hours will be routed and made available for
-execution at the time of the next market open. Pre-market and extended-hours trading
-are not yet supported at Alpaca, but orders can be placed around the clock to be
-handled as soon as the market is open.
+## Orders Submitted Outside of Eligible Trading Hours
+Orders submitted outside of Regular Trading Hours (9:30am - 4:00pm) that are not eligible to be executed during
+extended hours will be queued and eligible for execution at the time of the next market open.
 
-## Extended Trading Hours
-Pre-market and after-hours trading are coming soon as part of the Alpaca Power Account, a new account plan with our 
-latest features including margin trading, short selling, support for business entities, and more. We’ll be 
-onboarding users over the coming weeks and months, so 
-[reserve your spot today by completing this form](https://goo.gl/forms/D9k1MMNtY9awXcum1), or
-[solve our puzzle](https://alpaca.markets/#power) and gain priority access!
+Orders eligible for extended hours submitted outside of 9:00am - 6:00pm are handled as described in the section below.
+
+## Extended Hours Trading
+Using API v2 (only available to Power Accounts), you can submit and fill orders during
+pre-market and after-hours. This feature is not available to legacy accounts or those using API v1. 
+Extended hours trading has
+specific risks due to the less liquidity. Please read through 
+[our disclosure](https://files.alpaca.markets/disclosures/library/FINRA+-+Extended+Hours+Trading+Risk+Disclosure.pdf) 
+for more details.
+
+Currently, we supported the following extended hours:\
+**Pre-market: 9:00 - 9:30am**\
+**After-hours: 4:00 - 6:00pm**
+
+Additionally, please be aware of the following constraints.
+* If the order is submitted between 6:00pm and 8:00pm on a market day, the order request
+is returned with error. Alpaca reserves this time window for future expansion of supported hours.
+* If the order is submitted after 8:00pm but before 9:00am of the following trading day, the order request is queued 
+and will be eligible for execution from the beginning of the next available supported pre-market hours at 9:00am.
+
+### Submitting an Extended Hours Eligible Order
+To indicate an order is eligible for extended hours trading, you need to supply a boolean
+parameter named “extended_hours” to your order request. By setting this parameter as true, the order is will be
+eligible to execute in the pre-market or after-hours.
+
+Only `limit` `day` orders will be accepted as extended hours eligible. All other order types and TIFs will be rejected
+with an error. You must adhere to these settings in order to participate in extended hours:\
+1) The order type must be set to `limit` (with limit price). Any other type of orders will be rejected with an error.\
+2) Time-in-force must be set to be `day`. Any other time-in-force will will be rejected with an error.
+
+All symbols supported during regular market hours are also supported during extended hours. Short selling is also
+treated the same.
 
 ## Order Types
 When you submit an order, you can choose one of supported order types.
@@ -71,6 +95,19 @@ your limit price, your order may or may not be filled; if the order cannot immed
 execute against resting liquidity, then it is deemed non-marketable and will only be filled 
 once a marketable order interacts with it. You could miss a trading opportunity if price
 moves away from the limit price before your order can be filled.
+
+#### Hyper-marketable Limit Order Rejection
+A limit orders with a limit price that significantly exceeds the current market price will be rejected as part of
+our risk checks to mitigate against "fat finger" errors. We currently use exchange guidelines for erroneous trades 
+to determine the thresholds at which orders are rejected:
+
+|<span style="font-size:14px">Share Price</span>|<span style="font-size:14px">Threshold</span>|
+|---|---|
+|Greater than $0.00 up to and including $25.00|10%|
+|Greater than $25.00 up to and including $50.00|5%|
+|Greater than $50.00|3%|
+
+The thresholds are doubled during pre-market and after-hours.
 
 ### Stop Order
 A stop (market) order is an order to buy or sell a security when its price moves past

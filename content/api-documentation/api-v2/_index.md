@@ -1,40 +1,121 @@
 ---
-title: API v2 Reference
-weight: 100
+title: Web API v2 (Power Accounts)
+weight: 20
 ---
-# API v2 Reference
+# Web API v2
+**The information contained in this section only applies to Power Accounts and is subject to revision.** 
+If you have a legacy account that does not have access to margin and shorting, 
+please refer to [Web API v1]({{< relref "/api-documentation/web-api/_index.md" >}}).
 
-**The information contained in this section only applies to Power Accounts and is subject to revision.**
-We've begun providing qualified U.S. residents with early access to the Alpaca Power Account, a new account plan with 
-our latest features including margin trading, short selling, support for business entities, and more. We’ll be 
-onboarding users over the coming weeks and months, so [reserve your spot today by completing this form](https://goo.gl/forms/D9k1MMNtY9awXcum1), 
-or [solve our puzzle](https://alpaca.markets/#power) and gain priority access!
+Alpaca is a modern platform for algorithmic trading.  Alpaca's
+API is the interface for your trading algo to communicate with Alpaca's brokerage
+service.
 
-## Release Notes
+The API allows your trading algo to access real-time price, fundamentals,
+place orders and manage your portfolio, in either REST (pull) or streaming
+(push) style.
 
-* Updated Account and Assets entities with new fields for short selling and margin trading
-* Updated Python SDK for API v2.0 support, example usage: 
-  `api = tradeapi.REST('<key_id>', '<secret_key>', api_version=’v2’)`
-* Orders that encounter account permissioning, insufficient buying power, or lack of available borrow will return 
-a 403 “forbidden” error with an existing or new log message describing the reject. 
-* Please also refer to Web API v1.0 documentation for existing API usage
+In order to start trading with Alpaca API, please sign up
+[here](https://alpaca.markets/).
 
-## Endpoint
-
-The endpoint host name will be the same as v1 (api.alpaca.markets/paper-api.alpaca.markets) but with different path (“/v2”).
+Once you have signed up and have familiarized yourself with our API, please
+check out our [python client](https://github.com/alpacahq/alpaca-trade-api-python)
+to begin writing your own algo!
 
 ## Authentication
+Every private API call requires key-based authentication. API keys can
+be acquired in the developer web console.  The client must provide a pair of API
+key ID and secret key in the HTTP request headers named
+`APCA-API-KEY-ID` and `APCA-API-SECRET-KEY` respectively.
 
-API key between v1 and v2 are interchangable.
+Here is an example using curl showing how to authenticate with the API.
 
-{{< rest-endpoint resource="account" method="GET" path="/v2/account" >}}
+```
+curl -X GET \
+    -H "APCA-API-KEY-ID: {YOUR_API_KEY_ID}" \
+    -H "APCA-API-SECRET-KEY: {YOUR_API_SECRET_KEY}"\
+    https://{apiserver_domain}/v2/account
+```
 
-## Account Entity
-### Example
-{{< rest-entity-example name="account-v2">}}
+Alpaca's live API domain is `api.alpaca.markets`.
 
-### Properties
-{{< rest-entity-desc name="account-v2">}}
+## Paper Trading
+Alpaca's paper trading service uses a different domain and different credentials from
+the live API. You'll need to connect to the right domain so that you don't
+run your paper trading algo on your live account.
+
+To use the paper trading api, set `APCA-API-KEY-ID` and
+`APCA-API-SECRET-KEY` to your paper credentials, and set the domain to `paper-api.alpaca.markets`.
+
+After you have tested your algo in the paper environment and are ready to start running your algo in the live
+environment, you can switch the domain to the live domain, and the credentials to your
+live credentials. Your algo will then start trading with real money.
+
+To learn more about paper trading, visit the [paper trading page]({{< relref "/paper-trading/_index.md" >}}).
+
+## Rate Limit
+There is a rate limit for the API requests.  When it is exceeded, the API
+server returns error response with HTTP status code 429.  **The rate limit is
+200 requests per every minute per API key.**
+
+## General Rules
+### Time Format and Time Zone
+All date time type inputs and outputs are serialized according to
+[ISO8601](https://www.iso.org/iso-8601-date-and-time-format.html)
+(more specifically [RFC3339](https://tools.ietf.org/html/rfc3339)).  The
+communication does not assume a particular time zone, and this date time
+serialization denominates the time offset of each value.
+
+### Numbers
+Decimal numbers are returned as strings to preserve full precision across
+platforms. When making a request, it is recommended that you also convert
+your numbers to strings to avoid truncation and precision errors.
+
+### IDs
+Object ID in Alpaca system uses UUID v4.  When making requests, the format
+with dashes is accepted.
+
+```
+904837e3-3b76-47ec-b432-046db621571b
+```
+
+### Assets and Symbology
+An asset in this API is a tradable or non-tradable financial instrument.
+Alpaca maintains our own asset database and assigns an internal
+ID for each asset which you can use to identify assets to specify in API
+calls.  Assets are also identified by a combination of symbol, exchange,
+and asset class.  The symbol of an asset may change over the time, but
+the symbol for an asset is always the one at the time API call is made.
+
+When the API accepts a parameter named `symbol`, you can use one of the
+following four different forms unless noted otherwise.
+
+    - "{symbol}"
+    - "{symbol}:{exchange}"
+    - "{symbol}:{exchange}:{asset_class}"
+    - "{asset_id}"
+
+Typically the first form is enough, but in the case multiple assets are
+found with a symbol (the same symbol may be used in different exchanges or
+asset classes), the most commonly-used asset is assumed. To avoid
+the ambiguity, you can use the second or third form with suffixes joined
+by colons (:)   Alternatively, `asset_id` is guaranteed as unique, in the
+form of UUID v4. When the API accepts `symbols` to specify more than one
+symbol in one API call, the general rule is to use commas (,) to separate
+them.
+
+All of four symbol forms are case-sensitve.
+
+## v2 Release Notes
+
+* Updated Account and Assets entities with new fields for short selling and margin trading
+* Updated 
+* Orders that encounter account permissioning, insufficient buying power, or lack of available borrow will return 
+a 403 “forbidden” error with an existing or new log message describing the reject. 
+* The endpoint host name will be the same as v1 (api.alpaca.markets/paper-api.alpaca.markets) but with different path (“/v2”).
+* API key between v1 and v2 are interchangeable.
+* Updated Python SDK for API v2.0 support, example usage: 
+  `api = tradeapi.REST('<key_id>', '<secret_key>', api_version=’v2’)`
 
 ## Notes on Orders and Positions
 * If your account is set to `shorting_enabled: false`, any attempt to place a sell order in a stock that you have no 
@@ -60,14 +141,3 @@ with `marginable:false` cannot use margin lending to purchase the asset.
 * Any order that would increase your position (e.g. buy orders when your position is >= 0, sell orders when your 
 position is <= 0) reduce buying power by their 104% of their order value (1.04 * qty * price). 
 * Short positions will be reported with negative quantities and negative market values.
-
-{{< rest-endpoint resource="assets" method="GET" path="/v2/assets" >}}
-{{< rest-endpoint resource="assets" method="GET" path="/v2/assets/:id" >}}
-{{< rest-endpoint resource="assets" method="GET" path="/v2/assets/{symbol}" >}}
-
-## Asset Entity
-### Example
-{{< rest-entity-example name="asset-v2">}}
-
-### Properties
-{{< rest-entity-desc name="asset-v2">}}
