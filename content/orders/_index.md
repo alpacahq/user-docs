@@ -16,10 +16,10 @@ at Alpaca will also be sent over the streaming interface, which is the
 recommended method of maintaining order state.
 
 ## Orders Submitted Outside of Eligible Trading Hours
-Orders submitted outside of Regular Trading Hours (9:30am - 4:00pm) that are not eligible to be executed during
+Orders submitted outside of Regular Trading Hours (9:30am - 4:00pm ET) that are not eligible to be executed during
 extended hours will be queued and eligible for execution at the time of the next market open.
 
-Orders eligible for extended hours submitted outside of 9:00am - 6:00pm are handled as described in the section below.
+Orders eligible for extended hours submitted outside of 9:00am - 6:00pm ET are handled as described in the section below.
 
 ## Extended Hours Trading
 Using API v2 (only available to Power Accounts), you can submit and fill orders during
@@ -35,9 +35,9 @@ Currently, we supported the following extended hours:\
 
 Additionally, please be aware of the following constraints.
 
-* If the order is submitted between 6:00pm and 8:00pm on a market day, the order request
+* If the order is submitted between 6:00pm and 8:00pm ET on a market day, the order request
 is returned with error. Alpaca reserves this time window for future expansion of supported hours.
-* If the order is submitted after 8:00pm but before 9:00am of the following trading day, the order request is queued 
+* If the order is submitted after 8:00pm but before 9:00am ET of the following trading day, the order request is queued 
 and will be eligible for execution from the beginning of the next available supported pre-market hours at 9:00am.
 
 ### Submitting an Extended Hours Eligible Order
@@ -97,7 +97,7 @@ execute against resting liquidity, then it is deemed non-marketable and will onl
 once a marketable order interacts with it. You could miss a trading opportunity if price
 moves away from the limit price before your order can be filled.
 
-#### Hyper-marketable Limit Order Rejection
+**Hyper-marketable Limit Order Rejection**
 A limit orders with a limit price that significantly exceeds the current market price will be rejected as part of
 our risk checks to mitigate against "fat finger" errors. We currently use exchange guidelines for erroneous trades 
 to determine the thresholds at which orders are rejected:
@@ -144,22 +144,30 @@ short selling, and more. We’ll be onboarding users over the coming weeks and m
 
 ## Time in Force
 
-The following are the types of time-in-force Alpaca supports.
+Alpaca supports the following Time-In-Force designations:
 
 - `day`<br>
-  The order is good for the day, and it will be canceled automatically
-  at the end of Regular Trading Hours if unfilled.
+  A day order is eligible for execution only on the day it is live. By default, the order is only valid
+  during Regular Trading Hours (9:30am - 4:00pm ET). If unfilled after the closing auction, it is automatically canceled.
+  If submitted after the close, it is queued and submitted the following trading day. 
+  However, if marked as eligible for extended hours, the order can also execute during supported extended hours.
 - `gtc`<br>
-  The order is good until canceled.
+  The order is good until canceled. Non-marketable GTC limit orders are subject to price adjustments to offset corporate
+  actions affecting the issue. We do not currently support Do Not Reduce(DNR) orders to opt out of such price adjustments.
 - `opg`<br>
-  The order is placed at the time the market opens. The order will be
-  accepted if it is received before 9:15AM (ET). The order can be
+  The order is eligible to execute only in the market opening auction. The order will be
+  accepted if it is received before 9:15AM ET. The order can be
   cancelled after 9:15AM, but it cannot be edited. After 9:28AM, OPG
   orders cannot be edited or cancelled. Any unfilled orders
-  after opening of the market will be cancelled. If you submit
-  OPG orders during the market hours, it will appear as "rejected"
+  after the open will be cancelled. If you submit an
+  OPG order during market hours, it will appear as "rejected"
   in your dashboard.
-
+- `ioc`<br>
+  An Immediate Or Cancel (IOC) order requires all or part of the order to be executed immediately. Any unfilled 
+  portion of the order is canceled. Only available to Power Accounts.
+- `fok`<br>
+  A Fill or Kill (FOK) order is only executed if the entire order quantity can be filled, otherwise the order is canceled. 
+  Only available to Power Accounts.
 
 ## Order Lifecycle
 An order executed through Alpaca can experience several status changes
