@@ -5,15 +5,9 @@ weight: 70
 
 # Margin & Short Selling
 
-We've begun providing qualified U.S. residents with early access to the Alpaca Power Account, a new account plan with 
-our latest features including margin trading, short selling, support for business entities, and more. We’ll be 
-onboarding users over the coming weeks and months, so [reserve your spot today by completing this form](https://goo.gl/forms/D9k1MMNtY9awXcum1), 
-or [solve our puzzle](https://alpaca.markets/#power) and gain priority access! 
-
-**The information contained in this section only applies to Power Accounts.**
-
-**Currently all Alpaca Power Accounts are Reg T margin accounts which must be funded and 
-maintained with at least $2,000 equity.**
+**The information contained in this section only applies to Alpaca accounts cleared by ETC. In order
+to trade on margin or sell short, you must have $2,000 or more account equity. Accounts with less than $2,000 will not
+have access to these features and will be restricted to 1x buying power.**
 
 ## How Margin Works
 

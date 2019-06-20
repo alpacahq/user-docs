@@ -22,7 +22,7 @@ extended hours will be queued and eligible for execution at the time of the next
 Orders eligible for extended hours submitted outside of 9:00am - 6:00pm ET are handled as described in the section below.
 
 ## Extended Hours Trading
-Using API v2 (only available to Power Accounts), you can submit and fill orders during
+Using API v2 (only available to ETC accounts), you can submit and fill orders during
 pre-market and after-hours. This feature is not available to legacy accounts or those using API v1. 
 Extended hours trading has
 specific risks due to the less liquidity. Please read through 
@@ -136,11 +136,7 @@ In order to submit a stop limit order, you will need to specify both the
 limit and stop price parameters in the API.
 
 ### Advanced Order Types
-Advanced order types such as OCO(one-cancels-the-other) bracket orders are coming soon as part of the Alpaca Power 
-Account, a new account plan with our latest features including LLC and business entity support, margin trading, 
-short selling, and more. We’ll be onboarding users over the coming weeks and months, so 
-[reserve your spot today by completing this form](https://goo.gl/forms/D9k1MMNtY9awXcum1), or
-[solve our puzzle](https://alpaca.markets/#power) and gain priority access!
+Advanced order types such as OCO(one-cancels-the-other), trailing stop, and MOC are coming soon. Stay tuned!
 
 ## Time in Force
 
@@ -164,10 +160,10 @@ Alpaca supports the following Time-In-Force designations:
   in your dashboard.
 - `ioc`<br>
   An Immediate Or Cancel (IOC) order requires all or part of the order to be executed immediately. Any unfilled 
-  portion of the order is canceled. Only available to Power Accounts.
+  portion of the order is canceled. Only available with API v2.
 - `fok`<br>
-  A Fill or Kill (FOK) order is only executed if the entire order quantity can be filled, otherwise the order is canceled. 
-  Only available to Power Accounts.
+  A Fill or Kill (FOK) order is only executed if the entire order quantity can be filled, otherwise the order is canceled.
+  Only available with API v2.
 
 ## Order Lifecycle
 An order executed through Alpaca can experience several status changes

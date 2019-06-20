@@ -11,13 +11,12 @@ it. Make sure you keep both in your hands.
 
 ### [Web API v1]({{< relref "/api-documentation/web-api/_index.md" >}})
 
-Web API v1 is used by legacy Alpaca accounts. It describes
+Web API v1 is used by legacy Alpaca accounts at Apex Clearing. It describes
 how our API works in detail so you can prepare for your algorithm to interact with it.
 
 ### [Web API v2]({{< relref "/api-documentation/api-v2/_index.md" >}})
-
-Web API v2 is used by the Alpaca Power Account. 
-The API has been updated to support our newest features, including margin, shorting, and extended hours.
+ 
+API v2 is used by Alpaca accounts at ETC. The API has been updated to support our newest features, including margin, shorting, and extended hours.
 
 ### [Client SDK]({{< relref "/api-documentation/client-sdk/_index.md" >}})
 

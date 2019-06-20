@@ -27,19 +27,18 @@ With a brokerage account, you will be able to fully utilize Alpaca for your auto
 Using the Alpaca API, you'll be able to buy and sell stocks in your brokerage account, and you'll receive 
 real-time consolidated market data. In addition, you will continue to be able to test your strategies and 
 simulate your trades in our paper trading environment. And with the Alpaca web dashboard, it's easy to monitor 
-both your paper trading and your real money brokerage account.
+both your paper trading and your real money brokerage account. All accounts are opened as margin accounts. Accounts with $2,000
+or more equity will have access to margin trading and short selling.
 
 **Individual Taxable Account**
 
-At this time, Alpaca Securities LLC only provides individual taxable brokerage accounts.
+Alpaca Securities LLC supports individual taxable brokerage accounts. At this time, we do not support retirement accounts.
 For a more formal overview, please see the [sign up page of the Alpaca Securities FAQ](https://support.alpaca.markets/hc/en-us/sections/360001817852-Account-Sign-Up).
 
-**Account for LLC or other business entities?**
+**Business Account**
 
-We've begun providing qualified U.S. residents with early access to the Alpaca Power Account, a new account 
-plan with our latest features including LLC and business entity support, margin trading, short selling, and more. 
-We’ll be onboarding users over the coming weeks and months, so [reserve your spot today by completing this form](https://goo.gl/forms/D9k1MMNtY9awXcum1), 
-or [solve our puzzle](https://alpaca.markets/#power) and gain priority access!
+We support select business accounts for U.S. and non-U.S. residents. Please [contact us](https://support.alpaca.markets/hc/en-us/requests/new)
+if you are interested in opening a business account.
 
 **Account for non-U.S. residents?**
 
@@ -59,6 +58,9 @@ so we can move quickly to support your country!
 |Free IEX Real-Time Data|<span style="color:#27e272;font-size:18px">&#10003;</span>|<span style="color:#27e272;font-size:18px">&#10003;</span>|
 |Free Consolidated Real-Time Data|&#10060;|<span style="color:#27e272;font-size:18px">&#10003;</span>|
 |Multi-Factor Authentication|<span style="color:#27e272;font-size:18px">&#10003;</span>|<span style="color:#27e272;font-size:18px">&#10003;</span>|
+|Margin Trading|<span style="color:#27e272;font-size:18px">&#10003;</span>|<span style="color:#27e272;font-size:18px">&#10003;</span>|
+|Short Selling|<span style="color:#27e272;font-size:18px">&#10003;</span>|<span style="color:#27e272;font-size:18px">&#10003;</span>|
+|Premarket/Afterhours Trading|<span style="color:#27e272;font-size:18px">&#10003;</span>|<span style="color:#27e272;font-size:18px">&#10003;</span>|
 
 ## Markets Supported
 

@@ -1,9 +1,8 @@
 ---
-title: Web API v2 (Power Accounts)
+title: Web API v2
 weight: 20
 ---
 # Web API v2
-**The information contained in this section only applies to Power Accounts and is subject to revision.** 
 If you have a legacy account that does not have access to margin and shorting, 
 please refer to [Web API v1]({{< relref "/api-documentation/web-api/_index.md" >}}).
 

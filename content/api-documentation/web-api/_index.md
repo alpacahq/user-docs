@@ -1,11 +1,11 @@
 ---
-title: Web API v1
+title: Web API v1 (legacy)
 weight: 10
 ---
-# Web API v1
+# Web API v1 (legacy)
 Alpaca is a modern platform for algorithmic trading.  Alpaca's
-API is the interface for your trading algo to communicate with Alpaca's brokerage
-service.
+API v1 is the interface for your trading algo to communicate with Alpaca's brokerage
+service at Apex Clearing. If your account is at ETC, please use [Web API v2]({{< relref "/api-documentation/api-v2/_index.md" >}}).
 
 The API allows your trading algo to access real-time price, fundamentals,
 place orders and manage your portfolio, in either REST (pull) or streaming
