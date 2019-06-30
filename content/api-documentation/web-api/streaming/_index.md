@@ -138,9 +138,6 @@ An example message sent over the `trade_updates` stream would look like:
     "stream": "trade_updates",
     "data": {
         "event": "fill",
-        "qty": "100",
-        "price": "179.08",
-        "timestamp": "2018-02-28T20:38:22Z"
         "order": {
             "id": "7b7653c4-7468-494a-aeb3-d5f255789473",
             "client_order_id": "7b7653c4-7468-494a-aeb3-d5f255789473",
