@@ -2,7 +2,7 @@ spec:
   - name: id
     type: string<uuid>
     desc: Asset ID.
-  - name: asset_class
+  - name: class
     type: string
     desc: '"us_equity"'
   - name: exchange
@@ -30,7 +30,7 @@ spec:
 example: |
   {
     "id": "904837e3-3b76-47ec-b432-046db621571b",
-    "asset_class": "us_equity",
+    "class": "us_equity",
     "exchange": "NASDAQ",
     "symbol": "AAPL",
     "status": "active",
