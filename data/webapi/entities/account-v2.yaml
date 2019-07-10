@@ -52,7 +52,7 @@ spec:
     desc: Buying power multiplier that represents account margin classification; valid values 1 (standard limited margin account with 1x buying power), 2 (reg T margin account with 2x intraday and overnight buying power; this is the default for all non-PDT accounts with $2,000 or more equity), 4 (PDT account with 4x intraday buying power and 2x reg T overnight buying power)
   - name: buying_power
     type: string<number>
-    desc: current available $ buying power; If multiplier = 4, this is your daytrade buying power which is calculated as (last_equity - (last) maintenance_margin) * 4; If multiplier = 2,  buying_power = max(equity – initial_margin,0) * 2; If multiplier = 1, buying_power = cash
+    desc: Current available $ buying power; If multiplier = 4, this is your daytrade buying power which is calculated as (last_equity - (last) maintenance_margin) * 4; If multiplier = 2,  buying_power = max(equity – initial_margin,0) * 2; If multiplier = 1, buying_power = cash
   - name: initial_margin
     type: string<number>
     desc: Reg T initial margin requirement (continuously updated value)
@@ -61,32 +61,44 @@ spec:
     desc: Maintenance margin requirement (continuously updated value)
   - name: sma
     type: string<number>
-    desc: value of special memorandum account (will be used at a later date to provide additional buying_power)
+    desc: Value of special memorandum account (will be used at a later date to provide additional buying_power)
   - name: daytrade_count
     type: string<int>
-    desc: the current number of daytrades that have been made in the last 5 trading days (inclusive of today)
+    desc: The current number of daytrades that have been made in the last 5 trading days (inclusive of today)
+  - name: last_maintenance_margin
+    type: string<number>
+    desc: Your maintenance margin requirement on the previous trading day
+  - name: daytrading_buying_power
+    type: string<number>
+    desc: Your buying power for day trades (continuously updated value)
+  - name: regt_buying_power
+    type: string<number>
+    desc: Your buying power under Regulation T (your excess equity - equity minus margin value - times your margin multiplier)
 example: |
   {
-    "id": "904837e3-3b76-47ec-b432-046db621571b",
-    "status": "ACTIVE",
+    "account_blocked": False,
+    "buying_power": "262113.632",
+    "cash": "-23140.2",
+    "created_at": "2019-06-12T22:47:07.99658Z",
     "currency": "USD",
-    "buying_power": "0.0",
-    "cash": "1000.00",
-    "portfolio_value": "5000.00",
-    "pattern_day_trader": false,
-    "trade_suspended_by_user": false,
-    "trading_blocked": false,
-    "transfers_blocked": false,
-    "account_blocked": false,
-    "created_at": "2018-10-01T13:35:25Z"
-    "shorting_enabled": true,
-    "multiplier": “2”,
-    "long_market_value": "7000.00",
-    "short_market_value": "-3000.00",
-    "equity": "5000.00",
-    "last_equity": "5000.00",
-    "initial_margin": "5000.00",
-    "maintenance_margin": "3000.00",
     "daytrade_count": 0,
-    "sma": "0.0"
+    "daytrading_buying_power": "262113.632",
+    "equity": "103820.56",
+    "id": "e6fe16f3-64a4-4921-8928-cadf02f92f98",
+    "initial_margin": "63480.38",
+    "last_equity": "103529.24",
+    "last_maintenance_margin": "38000.832",
+    "long_market_value": "126960.76",
+    "maintenance_margin": "38088.228",
+    "multiplier": "4",
+    "pattern_day_trader": False,
+    "portfolio_value": "103820.56",
+    "regt_buying_power": "80680.36",
+    "short_market_value": "0",
+    "shorting_enabled": True,
+    "sma": "0",
+    "status": "ACTIVE",
+    "trade_suspended_by_user": False,
+    "trading_blocked": False,
+    "transfers_blocked": False
   }
