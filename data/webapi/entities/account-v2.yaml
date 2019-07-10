@@ -8,9 +8,6 @@ spec:
   - name: currency
     type: string
     desc: “USD”
-  - name: buying_power
-    type: string<number>
-    desc: Tradable buying power
   - name: cash
     type: string<number>
     desc: Cash balance
