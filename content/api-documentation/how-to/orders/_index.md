@@ -13,6 +13,11 @@ Orders can be placed with a POST request to our [/v1/orders](https://docs.alpaca
 
 {{< code-example exampleId="placeOrder" pathURL="/api-documentation/how-to/orders/examples" >}}
 
+## Submit Short Orders
+Short orders can also be placed for securities which you do not hold an open long position in.
+
+{{< code-example exampleId="shortOrder" pathURL="/api-documentation/how-to/orders/examples" >}}
+
 ## Use Client Order IDs
 Client Order IDs can be used to organize and track specific orders in your client program.
 
