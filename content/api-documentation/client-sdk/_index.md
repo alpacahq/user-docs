@@ -19,3 +19,4 @@ In addition to the SDKs directly supported by Alpaca, individual members of our 
 
 - Java: [alpaca-java](https://github.com/mainstringargs/alpaca-java)
 - R: [alpaca-for-r](https://github.com/jagg19/AlpacaforR)
+- Ruby: [alpaca-trade-api](https://github.com/ccjr/alpaca-trade-api)
