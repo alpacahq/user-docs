@@ -135,8 +135,13 @@ or better.
 In order to submit a stop limit order, you will need to specify both the
 limit and stop price parameters in the API.
 
+### Opening and Closing Auction Orders
+Market on open and limit on open orders are only eligible to execute in the opening auction. 
+Market on close and limit on close orders are only eligible to execute in the closing auction.
+Please see the [Time in Force]({{< relref "#time-in-force" >}}) section for more details.
+
 ### Advanced Order Types
-Advanced order types such as OCO(one-cancels-the-other), trailing stop, and MOC are coming soon. Stay tuned!
+Advanced order types such as OCO(one-cancels-the-other) and trailing stop are coming soon. Stay tuned!
 
 ## Time in Force
 
@@ -151,13 +156,15 @@ Alpaca supports the following Time-In-Force designations:
   The order is good until canceled. Non-marketable GTC limit orders are subject to price adjustments to offset corporate
   actions affecting the issue. We do not currently support Do Not Reduce(DNR) orders to opt out of such price adjustments.
 - `opg`<br>
-  The order is eligible to execute only in the market opening auction. The order will be
-  accepted if it is received before 9:15AM ET. The order can be
-  cancelled after 9:15AM, but it cannot be edited. After 9:28AM, OPG
-  orders cannot be edited or cancelled. Any unfilled orders
-  after the open will be cancelled. If you submit an
-  OPG order during market hours, it will appear as "rejected"
-  in your dashboard.
+  Use this TIF with a market/limit order type to submit "market on open" (MOO) and "limit on open" (LOO) orders. 
+  This order is eligible to execute only in the market opening auction. Any unfilled orders after the open will be cancelled.
+  OPG orders submitted after 9:28am but before 7:00pm ET will be rejected. OPG orders submitted after 7:00pm will be queued
+  and routed to the following day's opening auction.
+- `cls`<br>
+  Use this TIF with a market/limit order type to submit "market on close" (MOC) and "limit on close" (LOC) orders. 
+  This order is eligible to execute only in the market closing auction. Any unfilled orders after the close will be cancelled.
+  CLS orders submitted after 4:00pm but before 7:00pm ET will be rejected. CLS orders submitted after 7:00pm will be queued
+  and routed to the following day's closing auction. Only available with API v2.
 - `ioc`<br>
   An Immediate Or Cancel (IOC) order requires all or part of the order to be executed immediately. Any unfilled 
   portion of the order is canceled. Only available with API v2.

@@ -192,7 +192,7 @@ endpoints:
             type: string
             required: true
             desc: |
-              `day`, `gtc`, `opg`, `ioc`, `fok`. Please see [Understand Orders](/broker-functions/orders/#time-in-force) for more info.
+              `day`, `gtc`, `opg`, `cls`, `ioc`, `fok`. Please see [Understand Orders](/broker-functions/orders/#time-in-force) for more info.
           - name: limit_price
             type: string<number>
             required: true
