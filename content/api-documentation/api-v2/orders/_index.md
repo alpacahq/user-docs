@@ -21,6 +21,7 @@ For further details on order functionality, please see the [Understand Orders pa
 {{< rest-endpoint resource="orders" method="POST" path="/v2/orders" >}}
 {{< rest-endpoint resource="orders" method="GET" path="/v2/orders/{order_id}" >}}
 {{< rest-endpoint resource="orders" method="GET" path="/v2/orders:by_client_order_id" >}}
+{{< rest-endpoint resource="orders" method="DELETE" path="/v2/orders" >}}
 {{< rest-endpoint resource="orders" method="DELETE" path="/v2/orders/{order_id}" >}}
 
 ## Order Entity
