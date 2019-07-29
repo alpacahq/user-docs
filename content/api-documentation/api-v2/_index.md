@@ -137,6 +137,8 @@ be permitted to submit a buy (sell) order. The order will return a 403 `Forbidde
 * In order to allow the use of margin, the /orders endpoint will use the `buying_power` field to determine whether 
 an account has enough buying power to buy/short a security. The exception to this rule is that assets marked 
 with `marginable:false` cannot use margin lending to purchase the asset. 
-* Any order that would increase your position (e.g. buy orders when your position is >= 0, sell orders when your 
-position is <= 0) reduce buying power by their 104% of their order value (1.04 * qty * price). 
+* Market buy orders that would increase your position (e.g. buy order for a stock where your position in that stock is >= 0)
+are converted to marketable limit orders with a 2.5% to 4% price collar.
+* Market sell orders that would increase your position (e.g. sell order for a stock when your position in that stock is <= 0) 
+are NOT converted but are subject to a pre-trade buying power risk check of 102.5 to 104% of the order value.
 * Short positions will be reported with negative quantities and negative market values.
