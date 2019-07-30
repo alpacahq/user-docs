@@ -29,6 +29,16 @@ endpoints:
         Retrieves a list of the account's open positions.
       returns: |
         An array of [Position](#position-entity) object
+    DELETE:
+      title: Close all positions
+      summary: |
+        Closes (liquidates) all of the account's open long and short positions. A response will be provided for each order that is attempted to be cancelled.
+        If an order is no longer cancelable, the server will respond with status 500 and reject the request.
+      returns:
+        HTTP 207 Multi-Status with body; an array of objects that include the order id and http status code for each status request.
+      errors:
+        - status: 500
+          reason: Failed to liquidate.
   /v2/positions/{symbol}:
     GET:
       title: Get an open position
@@ -44,3 +54,17 @@ endpoints:
       errors:
         - status: 404
           reason: Position is not found.
+    DELETE:
+      title: Close a position
+      summary: |
+        Closes (liquidates) the account's open position for the given `symbol`. Works for both long and short positions.
+      params:
+        path:
+          - name: symbol
+            type: string
+            desc: symbol or asset_id
+      returns: |
+        An Order object
+      errors:
+        - status: 404
+          reason: Order is not found.

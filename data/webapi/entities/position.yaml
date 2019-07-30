@@ -28,13 +28,13 @@ spec:
     desc: Total cost basis in dollar
   - name: unrealized_pl
     type: string<number>
-    desc: Unrealized profit/loss in dollar
+    desc: Unrealized profit/loss in dollars
   - name: unrealized_plpc
     type: string<number>
     desc: Unrealized profit/loss percent (by a factor of 1)
   - name: unrealized_intraday_pl
     type: string<number>
-    desc: Unrealized profit/loss in dollar for the day
+    desc: Unrealized profit/loss in dollars for the day
   - name: unrealized_intraday_plpc
     type: string<number>
     desc: Unrealized profit/loss percent (by a factor of 1)

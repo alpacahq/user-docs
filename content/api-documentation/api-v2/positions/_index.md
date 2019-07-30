@@ -9,6 +9,8 @@ The positions API provides information about an account's current open positions
 
 {{< rest-endpoint resource="positions" method="GET" path="/v2/positions" >}}
 {{< rest-endpoint resource="positions" method="GET" path="/v2/positions/{symbol}" >}}
+{{< rest-endpoint resource="positions" method="DELETE" path="/v2/positions" >}}
+{{< rest-endpoint resource="positions" method="DELETE" path="/v2/positions/{symbol}" >}}
 
 ## Position Entity
 
