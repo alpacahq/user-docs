@@ -9,7 +9,7 @@ weight: 50
 
 Paper trading is a real-time simulation environment where you can test
 your code. You can reset and test your algorithm as much as you want using
-free, real-time market data. Everything on the broker side behaves the same way 
+free, real-time market data. Everything on the broker side behaves the same way
 as the live account except the orders aren't routed to the real exchanges.
 Instead, the system simulates the order filling based on the real-time
 quotes.
@@ -24,8 +24,8 @@ in advance.
 ## Comparing Live Trading
 
 We are thrilled that many users have found paper trading useful, and we continue
-to work on improving our paper trading assumptions so that users may have a 
-superior experience. However, please note that paper trading is only a simulation. 
+to work on improving our paper trading assumptions so that users may have a
+superior experience. However, please note that paper trading is only a simulation.
 It provides a good approximation for what one might expect in real trading, but it is
 not a substitute for real trading and performance may differ. Specifically,
 paper trading does **not** account for:
@@ -42,7 +42,7 @@ If you are interested to incorporate these issues into your testing, you may
 do so by trading a live brokerage account. Even small amounts of real
 money can often provide insight into issues not seen in a simulation environment.
 
-## Comparing Other Simulators 
+## Comparing Other Simulators
 
 Users may be interested to compare their paper trading results on Alpaca with
 their paper trading results on other platforms such as Quantopian or Interactive Brokers.
@@ -82,7 +82,7 @@ valid any longer after you reset it.
 - Paper trading account simulates our Pattern Day Trader checks. Orders
   that would generate a 4th Day Trade within 5 business days will be rejected
   if the real-time net worth is below $25,000. Please read the
-  [Pattern Day Trader Protection page]({{< relref "/orders/pdt-protection" >}}) for more details.
+  [Pattern Day Trader Protection page]({{< relref "/user-protections" >}}) for more details.
 - Paper trading account does NOT simulate dividends.
 - Paper trading account does NOT send order fill emails.
 - Market Data API works identically.
