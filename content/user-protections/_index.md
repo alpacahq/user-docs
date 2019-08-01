@@ -16,7 +16,7 @@ result in the account being flagged as a PDT, the order is rejected, and API
 returns error with HTTP status code 403 (Forbidden).
 
 ### The Rule
-A day trade is defined as a round-trip pair of trades within the same day. A
+A day trade is defined as a round-trip pair of trades within the same day (including extended hours). A
 buy must be occur first and then a sell of the same security must come later
 in the day. The inverse does not make a day trade. Selling short and
 covering the short on the same day is also considered a day trade.
@@ -27,7 +27,7 @@ will not flag the account for PDT.
 
 ### Alpaca’s Order Rejection
 Alpaca Trading platform monitors the number of day trades for the account
-for the past 5 business days and rejects a newly submitted order if it
+for the past 5 business days and rejects a newly submitted orders **on exit** of a position if it
 could potentially result in the account being flagged for PDT. This
 protection triggers only when the previous day's closing account equity is less than $25,000 at
 the time of order submission.
@@ -65,8 +65,10 @@ Day traders are required to have a minimum of $25,000 OR 25% of the total market
 The buying power of a pattern day trader is 4x the excess of the maintenance margin from the closing of the previous day. If you exceed this amount, you will receive a day trading margin call.
 
 ### How Alpaca's DTMC Protection Settings Work
-Users only receive day trading buying power when marked as a pattern day trade. If the user is designated a
+Users only receive day trading buying power when marked as a pattern day trader. If the user is designated a
 pattern day trader, the `account.multiplier` is equal to 4.
+
+Daytrading buying power cannot increase beyond its start of day value. In other words, closing an overnight position will not add to your daytrading buying power.
 
 The following scenarios and protections are applicable only for accounts that are designated as pattern day traders.
 Please check your Account API result for the `multiplier` field.
@@ -103,7 +105,7 @@ This option is the more conservative of the two DTMC protections that our users 
 The second DTMC protection option is protection **on exit** of a position. This means that Alpaca will block
 the exit of positions that would cause a Day Trading Margin Call. This may cause users to be unable to liquidate a position until the next day.
 
-One of the two protections will be enabled for all users (you cannot have neither protection enabled). If you would like to switch your protection option, please contact [our support](https://support.alpaca.markets/hc/en-us/requests/new).
+One of the two protections will be enabled for all users (you cannot have both protections disabled). If you would like to switch your protection option, please contact [our support](https://support.alpaca.markets/hc/en-us/requests/new).
 
 We are working towards features to allow users to change their DTMC protection setting on their own without support help.
 
