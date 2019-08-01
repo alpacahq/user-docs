@@ -5,8 +5,8 @@ weight: 200
 # User Protections
 We have enabled several types of protections to enhance your trading experience.
 
-* [Pattern Day Trader (PDT) Protection] ({{<relref "#pattern-day-trader-protection-pdt-at-alpaca">}})
-* [Day Trade Margin Call (DTMC) Protection] ({{<relref "#day-trade-margin-call-dtmc-at-alpaca">}})
+* [Pattern Day Trader (PDT) Protection] ({{<relref "#pattern-day-trader-pdt-protection-at-alpaca">}})
+* [Day Trade Margin Call (DTMC) Protection] ({{<relref "#day-trade-margin-call-dtmc-protection-at-alpaca">}})
 
 ## Pattern Day Trader (PDT) Protection at Alpaca
 In order to prevent Alpaca Brokerage Account customers from unintentionally being
@@ -55,52 +55,58 @@ For more details of Pattern Day Trader rule, please read
 
 ## Day Trade Margin Call (DTMC) Protection at Alpaca
 In order to prevent Alpaca Brokerage Account customers from unintentionally receiving day
-trading margin calls, Alpaca implements two forms of DTMC protections (We will be enabling these
-protections beginning Monday 8/5/2019).
+trading margin calls, Alpaca implements two forms of DTMC protection. (These
+protections will be enabled beginning Monday 8/5/2019.)
 
-Day trading buying power is produced only when your `account.multiplier` is 4 as pattern day trader.
-The following is applicable only for the accounts desginated as pattern day traders.
-Please check your Account API result for the `multiplier` field.
-
-Every trading day, you start with the new `day_trading_buying_power`. This beginning value is
-calculated as `4 * (last_equity - last_maintenance_margin)`. Throughout day, every time you enter
-the new position, this value is reduced and the same amount (regardless of position's P/L) is credited
-back when you exit the position that you entered the samy day.
-
-The maximum exposure of your day trading position is checked once as of the day close and DTMC is
-issued next day if the maximum exposure of day trades exceeded your day trading
-buying power at the beginning of day.
-
-The `buying_power` value is bigger of `regt_buying_power` and `day_trading_buying_power`. Since
-the basic buying power check runs on this `buying_power` value, you may exceed your `day_trading_buying_power`
-when you enter the position, if `regt_buying_power` is bigger at one point of the day.
-
-A particular example is as follows.
-
-- Your equity is 50k
-- You hold overnight positions up to 100k
-- Your maintenance margin is 30k, therefore your day trading buying power at the beginning of day is 80k (50k - 30k)
-- You sold all of 100k in the morning, which brings up your `regt_buying_power` up to 100k
-- You now buy and sell the same security up to 100k
-- At the end of day, 20k = 100k - 80k is the amount of DTMC
-
-By default, Alpaca users have DTMC protections **on entry** of a position. This means that if
-your entering order would exceed `day_trading_buying_power` at the moment, it will be blocked, even if
-`regt_buying_power` still has room for it. This is based on the assumption that any entering position
-could be day trades later in the day.
-This option is the more conservative of the two DTMC protections that our users have.
-
-The second DTMC protection option is protection **on exit** of a position. This means that Alpaca will block
-the exit of positions that would cause a Day Trading Margin Call. This may cause users of this protection
-method to be unable to liquidate a position until the next day.
-
-One of the two protections will be enabled for all users (you cannot have neither protection enabled). If you would like to switch your protection option, please contact [our support](https://support.alpaca.markets/hc/en-us/requests/new).
-Self-service protection change will be available to your dashboard later.
 
 ### The Rule
 Day traders are required to have a minimum of $25,000 OR 25% of the total market value of securities (whichever is higher) maintained in their account.
 
 The buying power of a pattern day trader is 4x the excess of the maintenance margin from the closing of the previous day. If you exceed this amount, you will receive a day trading margin call.
+
+### How Alpaca's DTMC Protection Settings Work
+Users only receive day trading buying power when marked as a pattern day trade. If the user is designated a
+pattern day trader, the `account.multiplier` is equal to 4.
+
+The following scenarios and protections are applicable only for accounts that are designated as pattern day traders.
+Please check your Account API result for the `multiplier` field.
+
+Every trading day, you start with the new `daytrading_buying_power`. This beginning value is
+calculated as `4 * (last_equity - last_maintenance_margin)`. The `last_equity` and `last_maintenance_margin` values
+can be accessed through Account API. These values are stored from the end of the previous trading day.
+
+Throughout the day, each time you enter a new position, your `daytrading_buying_power` is reduced by that amount. When you exit
+that position within the same day, that same amount is credited back, regardless of position's P/L.
+
+At the end of the trading day, on close, the maximum exposure of your day trading position is checked. A Day Trade Margin Call (DTMC) is
+issued the next day if the maximum exposure of day trades exceeded your day trading buying power from the beginning of that day.
+
+The `buying_power` value is the larger of `regt_buying_power` and `daytrading_buying_power`. Since
+the basic buying power check runs on this `buying_power` value, you could be exceeding your `daytrading_buying_power`
+when you enter the position if `regt_buying_power` is larger than your `daytrading_buying_power` at one point in the day.
+
+The following is an example scenario:
+
+- Your equity is $50k
+- You hold overnight positions up to $100k
+- Your maintenance margin is $30k (~30%), therefore your day trading buying power at the beginning of day is $80k using the calculation of `4 * ($50k - $30k)`
+- You sell all of the overnight positions ($100k value) in the morning, which brings your `regt_buying_power` up to $100k
+- You now buy and sell the same security up to $100k
+- At the end of the day, you have a $20k Day Trade Margin Call ($100k - $80k)
+
+By default, Alpaca users have DTMC protections **on entry** of a position. This means that if
+your entering order would exceed `daytrading_buying_power` at the moment, it will be blocked, even if
+`regt_buying_power` still has room for it. This is based on the assumption that any entering position
+could be day trades later in the day.
+This option is the more conservative of the two DTMC protections that our users have.
+
+The second DTMC protection option is protection **on exit** of a position. This means that Alpaca will block
+the exit of positions that would cause a Day Trading Margin Call. This may cause users to be unable to liquidate a position until the next day.
+
+One of the two protections will be enabled for all users (you cannot have neither protection enabled). If you would like to switch your protection option, please contact [our support](https://support.alpaca.markets/hc/en-us/requests/new).
+
+We are working towards features to allow users to change their DTMC protection setting on their own without support help.
+
 
 ### Paper Trading
 The same protection triggers in your paper trading account. It is
