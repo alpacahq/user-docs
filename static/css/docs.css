@@ -11,6 +11,9 @@ p code{
     padding:0.2em 0.4em;
 }
 
-code{
-      font-family:'Roboto Mono', monospace;
+ul li code{
+    font-family:'Roboto Mono', monospace;
+    border-radius:3px;
+    font-size:85%;
+    padding:0.2em 0.4em;
 }
