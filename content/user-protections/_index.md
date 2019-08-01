@@ -65,7 +65,7 @@ Day traders are required to have a minimum of $25,000 OR 25% of the total market
 The buying power of a pattern day trader is 4x the excess of the maintenance margin from the closing of the previous day. If you exceed this amount, you will receive a day trading margin call.
 
 ### How Alpaca's DTMC Protection Settings Work
-Users only receive day trading buying power when marked as a pattern day trade. If the user is designated a
+Users only receive day trading buying power when marked as a pattern day trader. If the user is designated a
 pattern day trader, the `account.multiplier` is equal to 4.
 
 The following scenarios and protections are applicable only for accounts that are designated as pattern day traders.
