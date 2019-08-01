@@ -163,7 +163,7 @@ Alpaca supports the following Time-In-Force designations:
 - `cls`<br>
   Use this TIF with a market/limit order type to submit "market on close" (MOC) and "limit on close" (LOC) orders. 
   This order is eligible to execute only in the market closing auction. Any unfilled orders after the close will be cancelled.
-  CLS orders submitted after 4:00pm but before 7:00pm ET will be rejected. CLS orders submitted after 7:00pm will be queued
+  CLS orders submitted after 3:50pm but before 7:00pm ET will be rejected. CLS orders submitted after 7:00pm will be queued
   and routed to the following day's closing auction. Only available with API v2.
 - `ioc`<br>
   An Immediate Or Cancel (IOC) order requires all or part of the order to be executed immediately. Any unfilled 
