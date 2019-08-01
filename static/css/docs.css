@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+body {
+  font-family: Gilroy;
+}
+
+p code{
+    font-family:'Roboto Mono', monospace;
+    border-radius:3px;
+    font-size:85%;
+    padding:0.2em 0.4em;
+}
+
+code{
+      font-family:'Roboto Mono', monospace;
+}
