@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
 
 body {
-  font-family: Gilroy;
+  font-family: Gilroy, Icon, sans-serif;
 }
 
 p code{
