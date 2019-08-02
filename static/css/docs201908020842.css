@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+@import url("//hello.myfonts.net/count/3533c7");
+
+@font-face {font-family: 'Gilroy-Thin';src: url('webfonts/3533C7_0_0.eot');src: url('webfonts/3533C7_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3533C7_0_0.woff2') format('woff2'),url('webfonts/3533C7_0_0.woff') format('woff'),url('webfonts/3533C7_0_0.ttf') format('truetype');}
+
+@font-face {font-family: 'Gilroy-UltraLightItalic';src: url('webfonts/3533C7_1_0.eot');src: url('webfonts/3533C7_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3533C7_1_0.woff2') format('woff2'),url('webfonts/3533C7_1_0.woff') format('woff'),url('webfonts/3533C7_1_0.ttf') format('truetype');}
+
+@font-face {font-family: 'Gilroy-ThinItalic';src: url('webfonts/3533C7_2_0.eot');src: url('webfonts/3533C7_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3533C7_2_0.woff2') format('woff2'),url('webfonts/3533C7_2_0.woff') format('woff'),url('webfonts/3533C7_2_0.ttf') format('truetype');}
+
+@font-face {font-family: 'Gilroy-SemiBoldItalic';src: url('webfonts/3533C7_3_0.eot');src: url('webfonts/3533C7_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3533C7_3_0.woff2') format('woff2'),url('webfonts/3533C7_3_0.woff') format('woff'),url('webfonts/3533C7_3_0.ttf') format('truetype');}
+
+@font-face {font-family: 'Gilroy-SemiBold';src: url('webfonts/3533C7_4_0.eot');src: url('webfonts/3533C7_4_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3533C7_4_0.woff2') format('woff2'),url('webfonts/3533C7_4_0.woff') format('woff'),url('webfonts/3533C7_4_0.ttf') format('truetype');}
+
+@font-face {font-family: 'Gilroy-UltraLight';src: url('webfonts/3533C7_5_0.eot');src: url('webfonts/3533C7_5_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3533C7_5_0.woff2') format('woff2'),url('webfonts/3533C7_5_0.woff') format('woff'),url('webfonts/3533C7_5_0.ttf') format('truetype');}
+
+@font-face {font-family: 'Gilroy-Regular';src: url('webfonts/3533C7_6_0.eot');src: url('webfonts/3533C7_6_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3533C7_6_0.woff2') format('woff2'),url('webfonts/3533C7_6_0.woff') format('woff'),url('webfonts/3533C7_6_0.ttf') format('truetype');}
+
+@font-face {font-family: 'Gilroy-RegularItalic';src: url('webfonts/3533C7_7_0.eot');src: url('webfonts/3533C7_7_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3533C7_7_0.woff2') format('woff2'),url('webfonts/3533C7_7_0.woff') format('woff'),url('webfonts/3533C7_7_0.ttf') format('truetype');}
+
+@font-face {font-family: 'Gilroy-MediumItalic';src: url('webfonts/3533C7_8_0.eot');src: url('webfonts/3533C7_8_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3533C7_8_0.woff2') format('woff2'),url('webfonts/3533C7_8_0.woff') format('woff'),url('webfonts/3533C7_8_0.ttf') format('truetype');}
+
+@font-face {font-family: 'Gilroy-Medium';src: url('webfonts/3533C7_9_0.eot');src: url('webfonts/3533C7_9_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3533C7_9_0.woff2') format('woff2'),url('webfonts/3533C7_9_0.woff') format('woff'),url('webfonts/3533C7_9_0.ttf') format('truetype');}
+
+@font-face {font-family: 'Gilroy-LightItalic';src: url('webfonts/3533C7_A_0.eot');src: url('webfonts/3533C7_A_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3533C7_A_0.woff2') format('woff2'),url('webfonts/3533C7_A_0.woff') format('woff'),url('webfonts/3533C7_A_0.ttf') format('truetype');}
+
+@font-face {font-family: 'Gilroy-Light';src: url('webfonts/3533C7_B_0.eot');src: url('webfonts/3533C7_B_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3533C7_B_0.woff2') format('woff2'),url('webfonts/3533C7_B_0.woff') format('woff'),url('webfonts/3533C7_B_0.ttf') format('truetype');}
+
+@font-face {font-family: 'Gilroy-HeavyItalic';src: url('webfonts/3533C7_C_0.eot');src: url('webfonts/3533C7_C_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3533C7_C_0.woff2') format('woff2'),url('webfonts/3533C7_C_0.woff') format('woff'),url('webfonts/3533C7_C_0.ttf') format('truetype');}
+
+@font-face {font-family: 'Gilroy-Heavy';src: url('webfonts/3533C7_D_0.eot');src: url('webfonts/3533C7_D_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3533C7_D_0.woff2') format('woff2'),url('webfonts/3533C7_D_0.woff') format('woff'),url('webfonts/3533C7_D_0.ttf') format('truetype');}
+
+@font-face {font-family: 'Gilroy-ExtraBoldItalic';src: url('webfonts/3533C7_E_0.eot');src: url('webfonts/3533C7_E_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3533C7_E_0.woff2') format('woff2'),url('webfonts/3533C7_E_0.woff') format('woff'),url('webfonts/3533C7_E_0.ttf') format('truetype');}
+
+@font-face {font-family: 'Gilroy-ExtraBold';src: url('webfonts/3533C7_F_0.eot');src: url('webfonts/3533C7_F_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3533C7_F_0.woff2') format('woff2'),url('webfonts/3533C7_F_0.woff') format('woff'),url('webfonts/3533C7_F_0.ttf') format('truetype');}
+
+@font-face {font-family: 'Gilroy-BoldItalic';src: url('webfonts/3533C7_10_0.eot');src: url('webfonts/3533C7_10_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3533C7_10_0.woff2') format('woff2'),url('webfonts/3533C7_10_0.woff') format('woff'),url('webfonts/3533C7_10_0.ttf') format('truetype');}
+
+@font-face {font-family: 'Gilroy-Bold';src: url('webfonts/3533C7_11_0.eot');src: url('webfonts/3533C7_11_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3533C7_11_0.woff2') format('woff2'),url('webfonts/3533C7_11_0.woff') format('woff'),url('webfonts/3533C7_11_0.ttf') format('truetype');}
+
+@font-face {font-family: 'Gilroy-BlackItalic';src: url('webfonts/3533C7_12_0.eot');src: url('webfonts/3533C7_12_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3533C7_12_0.woff2') format('woff2'),url('webfonts/3533C7_12_0.woff') format('woff'),url('webfonts/3533C7_12_0.ttf') format('truetype');}
+
+@font-face {font-family: 'Gilroy-Black';src: url('webfonts/3533C7_13_0.eot');src: url('webfonts/3533C7_13_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3533C7_13_0.woff2') format('woff2'),url('webfonts/3533C7_13_0.woff') format('woff'),url('webfonts/3533C7_13_0.ttf') format('truetype');}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+p code{
+    font-family:'Roboto Mono', monospace;
+    border-radius:3px;
+    font-size:85%;
+    padding:0.2em 0.4em;
+}
+
+ul li code{
+    font-family:'Roboto Mono', monospace;
+    border-radius:3px;
+    font-size:85%;
+    padding:0.2em 0.4em;
+}
