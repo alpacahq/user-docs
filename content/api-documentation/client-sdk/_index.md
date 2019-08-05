@@ -19,3 +19,4 @@ In addition to the SDKs directly supported by Alpaca, individual members of our 
 
 - Java: [alpaca-java](https://github.com/mainstringargs/alpaca-java)
 - R: [alpaca-for-r](https://github.com/jagg19/AlpacaforR)
+- Scala: [Alpaca Scala](https://github.com/cynance/alpaca-scala)
