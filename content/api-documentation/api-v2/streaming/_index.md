@@ -161,12 +161,12 @@ code around them, but you may still wish to account for the possibility that the
 - `rejected`: Sent when your order has been rejected.
     - *timestamp*: The time at which the rejection occurred.
 - `pending_new`: Sent when the order has been received by Alpaca and routed to the exchanges, but has not yet been accepted for execution.
-- `stopped`: Setn when your order has been stopped, and a trade is guaranteed for the order, usually at a stated price or better, but has not yet occurred.
+- `stopped`: Sent when your order has been stopped, and a trade is guaranteed for the order, usually at a stated price or better, but has not yet occurred.
 - `pending_cancel`: Sent when the order is awaiting cancelation. Most cancelations will occur without the order entering this state.
 - `calculated`: Sent when the order has been completed for the day - it is either "filled" or "done_for_day" - but remaining settlement calculations are still pending.
 - `suspended`: Sent when the order has been suspended and is not eligible for trading.
 
-### *Example*
+### Example
 An example message sent over the `trade_updates` stream would look like:
 ```
 {
