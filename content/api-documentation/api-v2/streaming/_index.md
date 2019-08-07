@@ -132,15 +132,50 @@ data payload will include the list of streams the client is currently listening 
 }
 ```
 
+The fields present in a message sent over the `trade_updates` stream depend on the type of event they are communicating. All messages
+contain an `event` type and an `order` field, which is the same as the [order object](https://docs.alpaca.markets/api-documentation/api-v2/orders/#properties) that is returned from the REST API.
+Potential event types and additional fields that will be in their messages are listed below.
+
+### Common events:
+These are the events that are the expected results of actions you may have taken by sending API requests.
+
+- `new`: Sent when an order has been routed to exchanges for execution.
+- `fill`: Sent when your order has been completely filled.
+    - *timestamp*: The time at which the order was filled.
+    - *price*: The average price per share at which the order was filled.
+    - *position_qty*: The size of your total position, after this fill event, in shares. Positive for long positions, negative for short positions.
+- `partial_fill`: Sent when a number of shares less than the total remaining quantity on your order has been filled.
+    - *timestamp*: The time at which the shares were filled.
+    - *price*: The average price per share at which the shares werre filled.
+    - *position_qty*: The size of your total position, after this fill event, in shares. Positive for long positions, negative for short positions.
+- `canceled`: Sent when your requested cancelation of an order is processed.
+    - *timestamp*: The time at which the order was canceled.
+- `expired`: Sent when an order has reached the end of its lifespan, as determined by the order's time in force value.
+    - *timestamp*: The time at which the order expired.
+- `done_for_day`: Sent when the order is done executing for the day, and will not receive further updates until the next trading day.
+
+### Rarer events:
+These are events that may rarely be sent due to unexpected circumstances on the exchanges. It is unlikely you will need to design your
+code around them, but you may still wish to account for the possibility that they will occur.
+
+- `rejected`: Sent when your order has been rejected.
+    - *timestamp*: The time at which the rejection occurred.
+- `pending_new`: Sent when the order has been received by Alpaca and routed to the exchanges, but has not yet been accepted for execution.
+- `stopped`: Setn when your order has been stopped, and a trade is guaranteed for the order, usually at a stated price or better, but has not yet occurred.
+- `pending_cancel`: Sent when the order is awaiting cancelation. Most cancelations will occur without the order entering this state.
+- `calculated`: Sent when the order has been completed for the day - it is either "filled" or "done_for_day" - but remaining settlement calculations are still pending.
+- `suspended`: Sent when the order has been suspended and is not eligible for trading.
+
+### *Example*
 An example message sent over the `trade_updates` stream would look like:
 ```
 {
     "stream": "trade_updates",
     "data": {
         "event": "fill",
-        "qty": "100",
         "price": "179.08",
-        "timestamp": "2018-02-28T20:38:22Z"
+        "timestamp": "2018-02-28T20:38:22Z",
+        "position_qty": "100",
         "order": {
             "id": "7b7653c4-7468-494a-aeb3-d5f255789473",
             "client_order_id": "7b7653c4-7468-494a-aeb3-d5f255789473",
@@ -154,29 +189,6 @@ An example message sent over the `trade_updates` stream would look like:
     }
 }
 ```
-
-The above message was for a `fill` event, however, there are many different events that can occur as an order progresses
-through its life cycle. The most common events are described in detail below:
-
-- `new`
-- `partial_fill`
-- `fill`
-- `done_for_day`
-- `canceled`
-- `expired`
-
-Less common events are described below. Note that these states only occur on rare occasions, and most users will likely never
-receive stream messages for these events.
-
-- `pending_cancel`
-- `stopped`
-- `rejected`
-- `suspended`
-- `pending_new`
-- `calculated`
-
-The common and rare events all correspond to order statuses. For more information on what those statuses mean, please refer
-back to the [Orders]({{< relref "/orders/_index.md#order-lifecycle" >}}).
 
 ## Account Updates
 Users may also listen to the account updates stream under: `account_updates`. This stream provides clients with updates pertaining
