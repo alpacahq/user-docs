@@ -43,7 +43,7 @@ spec:
     desc: Current asset price per share
   - name: lastday_price
     type: string<number>
-    desc: Last day's asset price per share
+    desc: Last day's asset price per share based on the closing value of the last trading day
   - name: change_today
     type: string<number>
     desc: Percent change from last day price (by a factor of 1)
