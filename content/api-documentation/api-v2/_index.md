@@ -3,7 +3,7 @@ title: Web API v2
 weight: 20
 ---
 # Web API v2
-If you have a legacy account that does not have access to margin and shorting, 
+If you have a legacy account (a live brokerage account that begins with "3A"), 
 please refer to [Web API v1]({{< relref "/api-documentation/web-api/_index.md" >}}).
 
 Alpaca is a modern platform for algorithmic trading.  Alpaca's

@@ -11,8 +11,7 @@ it. Make sure you keep both in your hands.
 
 ### [Web API v1]({{< relref "/api-documentation/web-api/_index.md" >}})
 
-Web API v1 is used by legacy Alpaca accounts at Apex Clearing. It describes
-how our API works in detail so you can prepare for your algorithm to interact with it.
+Web API v1 is used by legacy Alpaca brokerage accounts at Apex Clearing. Legacy accounts begin with "3A".
 
 ### [Web API v2]({{< relref "/api-documentation/api-v2/_index.md" >}})
  
