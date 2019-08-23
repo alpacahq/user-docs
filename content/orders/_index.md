@@ -15,6 +15,26 @@ or system-assigned unique ID to check the status. Updates on open orders
 at Alpaca will also be sent over the streaming interface, which is the
 recommended method of maintaining order state.
 
+## Buying Power
+
+In order to accept your orders that would open new positions or add to existing ones, your account must have sufficient buying power.
+Alpaca applies a "buying" power check to both buy long and sell short positions.
+
+The calculated value of an opening buy order is the order's limit price multiplied by the order's
+quantity. In the case of market buy orders, the limit price is 2.5% to 4% above the current market price as noted above.
+
+The calculated value of an opening sell short order is MAX(order's limit price, 3% above the current ask price)
+multiplied by the order's quantity. In the case of market short orders, the value is simply 3% above the current ask price * order quantity.
+
+The order's calculated value is then checked against your available buying power to determine if it can be accepted. 
+Please note that your available buying power is reduced by your existing open buy long and sell short orders,
+whereas your sell long and buy to cover orders do not replenish your available buying power until they have executed.
+
+For example, if your buying power is $10,000 and you submit a limit buy order with an order 
+value of $3,000, your order will be accepted and your remaining available buying power will 
+be $7,000. Even if this order is unfilled, as long as it is open and has not been cancelled, it will count against
+your available buying power. If you then submitted another order with an order value of $8,000, it would be rejected.
+
 ## Orders Submitted Outside of Eligible Trading Hours
 Orders submitted outside of Regular Trading Hours (9:30am - 4:00pm ET) that are not eligible to be executed during
 extended hours will be queued and eligible for execution at the time of the next market open.
@@ -224,17 +244,3 @@ orders reach these states:
 
 An order may be canceled through the API up until the point it reaches
 a state of either `filled`, `canceled`, or `expired`.
-
-## Buying Power
-
-In order to submit a buy order and have it accepted, your account must have sufficient buying power.
-Alpaca calculates the value of a buy order as the order's limit price (in the case of market orders,
-the limit price is 2.5% to 4% above the current market price as noted above) multiplied by the order's
-quantity. The value of the order is then checked against your available cash balance to determine if
-it can be accepted. Please note that your available cash balance is reduced by other open (pending) buy orders,
-while sell orders do not add to your available cash balance until they have executed.
-
-For example, if your cash balance is $10,000 and you submit a limit buy order with an order 
-value of $3,000, your order will be accepted and your remaining available cash balance will 
-be $7,000. Even if this order is unfilled, as long as it is open and has not been cancelled, it will count against
-your available buying power. If you then submitted another order with an order value of $8,000, it would be rejected.

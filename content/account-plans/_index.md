@@ -37,8 +37,9 @@ For a more formal overview, please see the [sign up page of the Alpaca Securitie
 
 **Business Account**
 
-We support select business accounts for U.S. and non-U.S. residents. Please [contact us](https://support.alpaca.markets/hc/en-us/requests/new)
-if you are interested in opening a business account.
+We support select business accounts for U.S. and non-U.S. residents. Hedge funds, RIAs, app developers, and service
+providers, please [contact us](https://support.alpaca.markets/hc/en-us/requests/new) if you are interested in opening a business account.
+You can also [read more](https://medium.com/automation-generation/trading-through-a-business-account-at-alpaca-6ccb79709797) about some of the entities we support.
 
 **Account for non-U.S. residents?**
 

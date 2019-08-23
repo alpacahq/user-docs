@@ -5,9 +5,8 @@ weight: 70
 
 # Margin & Short Selling
 
-**The information contained in this section only applies to Alpaca accounts cleared by ETC. In order
-to trade on margin or sell short, you must have $2,000 or more account equity. Accounts with less than $2,000 will not
-have access to these features and will be restricted to 1x buying power.**
+**In order to trade on margin or sell short, you must have $2,000 or more account equity. 
+Accounts with less than $2,000 will not have access to these features and will be restricted to 1x buying power.**
 
 ## How Margin Works
 
@@ -71,9 +70,10 @@ We are pleased to offer a competitive and low annual margin interest rate of **3
 
 The rate is charged **only** on your account’s **end of day** (overnight) debit balance using the following calculation:
 
-**daily margin interest charge = (debit balance * 0.0375) / 360**
+**daily margin interest charge = (settlement date debit balance * 0.0375) / 360**
 
-Interest will accrue daily and post to your account at the end of each month.
+Interest will accrue daily and post to your account at the end of each month. Note that if you have a settlement date
+debit balance as of the end of day Friday, you will incur interest charges for 3 days (Fri, Sat, Sun).
 
 As an example, if you deposited $10,000 into your account and bought $15,000 worth of securities that you held at 
 the end of the day, you would be borrowing $5,000 overnight and would incur a daily interest expense of 
@@ -86,7 +86,7 @@ power for intraday trading without any cost.
 
 ## Stock Borrow Rates
 
-Alpaca currently **only** supports **opening** short positions in easy to borrow (“ETB”) securities. 
+Alpaca currently **only** supports **opening** short positions in easy to borrow (“ETB”) securities.
 
 We are pleased to offer a competitive and low annual ETB stock borrow rate of **0.20%**.
 
@@ -106,8 +106,10 @@ HTB shorts held at any point during the day, calculated as:
 
 Where,
 
-**Daily ETB stock borrow fee = (end of day total ETB short $ market value * 0.002) / 360**
+**Daily ETB stock borrow fee = (settlement date end of day total ETB short $ market value * 0.002) / 360**
 
 And
 
 **Daily HTB stock borrow fee = <span style="font-size:18px">&#931;</span>((each stock’s HTB short $ market value * that stock’s HTB rate) / 360)**
+
+Note that if you hold short positions as of a Friday settlement date, you will incur stock borrow fees for 3 days (Fri, Sat, Sun).
