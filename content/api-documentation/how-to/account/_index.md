@@ -8,6 +8,11 @@ By sending a GET request to our [`/v1/account`](https://docs.alpaca.markets/api-
 
 {{< code-example exampleId="accountInfo" pathURL="/api-documentation/how-to/account/examples">}}
 
+## View Gain/Loss of Portfolio
+You can use the information from the account endpoint to do things like calculating the daily profit or loss of your account.
+
+{{< code-example exampleId="gainloss" pathURL="/api-documentation/how-to/account/examples">}}
+
 ## Listen for Account Updates with Websockets
 You can use Websockets to receive real-time updates about the status of your account. You can see the full documentation [here](https://docs.alpaca.markets/web-api/streaming/#account-updates).
 

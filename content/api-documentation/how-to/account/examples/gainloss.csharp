@@ -1,0 +1,34 @@
+using Alpaca.Markets;
+using System;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
+
+// With the Alpaca API, you can check on your daily profit or loss by
+// comparing your current balance to yesterday's balance.
+
+namespace GetPnLExample
+{
+    internal class GetPnL
+    {
+        private static string API_KEY = "your_api_key";
+
+        private static string API_SECRET = "your_secret_key";
+
+        private static string API_URL = "https://paper-api.alpaca.markets";
+
+        private static RestClient restClient;
+        public static async Task Main(string[] args)
+        {
+            // First, open the API connection
+            restClient = new RestClient(API_KEY, API_SECRET, API_URL, apiVersion: 2);
+
+            // Get account info
+            var account = await restClient.GetAccountAsync();
+
+            # Check our current balance vs. our balance at the last market close
+            var balance_change = account.Equity - account.LastEquity;
+            Console.WriteLine($"Today's portfolio balance change: ${balance_change}");
+        }
+    }
+}
