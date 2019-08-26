@@ -4,7 +4,7 @@
       <a href="https://alpaca.markets" target="_blank"><img src="{{ "images/alpaca_logotype_white.svg" | absURL }}" class="alpaca-docs-subtitle-image" alt="Alpaca Documentation" /></a> <span class="alpaca-docs-subtitle"><a href="/">Docs</a></span>
     </div>
   </a>
-  
+
   <div class="scrollable">
     <div class="wrapper">
       {{ if (eq (trim .Site.Params.provider " " | lower) "github") | and (isset .Site.Params "repo_url") }}
@@ -34,49 +34,54 @@
 
         {{ if isset .Site.Params "author" }}
         <hr>
-        <span class="section">Find Alpaca</span>
+        <!---<span class="section">Alpaca Sites & Social</span>--->
 
         <ul>
-          <li>
-            <a href="https://alpaca.markets/slack" target="_blank">
-              Alpaca Community Slack
-            </a>
-          </li>
-          {{ with .Site.Social.twitter }}
-          <li>
-            <a href="https://twitter.com/{{ . }}" target="_blank" title="@{{ . }} on Twitter">
-              @{{ . }} on Twitter
-            </a>
-          </li>
-          {{ end }}
-
-          {{ with .Site.Social.github }}
-          <li>
-            <a href="https://github.com/{{ . }}" target="_blank" title="@{{ . }} on GitHub">
-              @{{ . }} on GitHub
-            </a>
-          </li>
-          {{ end }}
-
-          {{ with .Site.Social.email }}
-          <li>
-            <a href="mailto:{{ . }}" title="Email of {{ . }}">
-              Contact via email
-            </a>
-          </li>
-          {{ end }}
+                <a href="https://forum.alpaca.markets/" target="_blank" rel="noopener noreferrer" class="social__item">
+                    <svg width="25" height="25" viewBox="-3 -5 25 30" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.083 4.375c5.264 0 9.543 4.399 9.543 9.623 0 5.222-4.275 9.617-9.545 9.617l-9.705 0.010v-9.794c0-5.222 4.437-9.457 9.708-9.457zM14.176 8.035c-2.080-0.002-4.007 1.084-5.083 2.863-1.067 1.771-1.113 3.976-0.119 5.791l-1.070 3.415 3.845-0.861c2.202 0.983 4.784 0.542 6.526-1.115 1.741-1.648 2.294-4.193 1.393-6.414-0.91-2.228-3.080-3.682-5.486-3.678h-0.006z" fill="#454545"></path>
+                    </svg>
+                </a>
+                	&nbsp;	&nbsp;
+                <a href="https://alpaca.markets/slack" target="_blank" rel="noopener noreferrer" class="social__item">
+                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.9718 9.13776C17.7818 8.87477 18.6597 9.30318 18.9227 10.1091C19.1856 10.9151 18.7573 11.7931 17.9515 12.0476L16.0261 12.6881L16.6919 14.6817C16.9506 15.4919 16.5265 16.3657 15.7165 16.6287C14.8131 16.8875 14.0158 16.3742 13.7656 15.6574L13.0998 13.6637L9.13021 14.9914L9.79604 16.985C10.0547 17.7952 9.63064 18.669 8.82061 18.932C7.91728 19.1907 7.11997 18.6775 6.86975 17.9606L6.20391 15.967C5.80795 16.0987 5.48367 16.2081 5.21587 16.2985C4.17283 16.6504 3.98633 16.7134 3.75686 16.6796C3.14191 16.6542 2.54393 16.2512 2.33188 15.6361C2.07318 14.8302 2.50152 13.9522 3.30731 13.6892L5.23272 13.0487L3.9477 9.23107C3.55174 9.36279 3.22747 9.47221 2.95967 9.56257C1.91662 9.91451 1.73011 9.97744 1.50064 9.94369C0.885699 9.91824 0.287717 9.51527 0.0756672 8.90022C-0.183034 8.09004 0.241066 7.21623 1.0511 6.95324L2.97227 6.31698L2.30643 4.32335C2.04773 3.51317 2.47183 2.63937 3.28186 2.37638C4.0919 2.11339 4.96978 2.5418 5.23272 3.34774L5.89856 5.34137L9.85966 4.01794L9.19382 2.02431C8.93512 1.21413 9.35922 0.340327 10.1693 0.0773372C10.9793 -0.185653 11.8572 0.242766 12.1201 1.0487L12.7859 3.04233L14.7114 2.40183C15.5214 2.13884 16.3993 2.56726 16.6622 3.37319C16.9209 4.18337 16.4968 5.05717 15.6868 5.32016L13.7614 5.96067L15.0464 9.77826L16.9718 9.13776ZM6.86127 8.28516L8.14629 12.1112L12.1116 10.7836L10.8266 6.95749L6.86127 8.28516Z" fill="#454545"></path>
+                    </svg>
+                </a>
+                	&nbsp;	&nbsp;
+                <a href="https://twitter.com/AlpacaHQ" target="_blank" rel="noopener noreferrer" class="social__item">
+                    <svg width="23" height="19" viewBox="0 0 23 19" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.2433 4.52581C20.2576 4.72443 20.2576 4.92309 20.2576 5.1217C20.2576 11.1798 15.6049 18.1601 7.10091 18.1601C4.48101 18.1601 2.04725 17.4081 0 16.1029C0.372239 16.1454 0.730111 16.1596 1.11667 16.1596C3.27841 16.1596 5.26841 15.4361 6.85753 14.2018C4.8246 14.1592 3.12095 12.8397 2.53397 11.0237C2.82032 11.0663 3.10663 11.0946 3.4073 11.0946C3.82246 11.0946 4.23767 11.0379 4.62418 10.9386C2.50537 10.5129 0.916209 8.66858 0.916209 6.44114V6.38441C1.53179 6.72491 2.24767 6.93772 3.00638 6.96607C1.76085 6.14317 0.944852 4.73862 0.944852 3.1496C0.944852 2.29837 1.17387 1.51805 1.57475 0.837044C3.85106 3.6178 7.27269 5.43378 11.1094 5.63244C11.0379 5.29193 10.9949 4.93728 10.9949 4.58258C10.9949 2.05717 13.0565 0 15.6191 0C16.9505 0 18.1531 0.553313 18.9977 1.44713C20.0428 1.24851 21.0449 0.86543 21.9326 0.340504C21.589 1.40459 20.8588 2.29841 19.8997 2.86587C20.8302 2.76661 21.7322 2.51118 22.5625 2.15652C21.9327 3.06449 21.1452 3.87315 20.2433 4.52581Z" fill="#454545"></path>
+                    </svg>
+                </a>
+                	&nbsp;	&nbsp;
+                <a href="https://business.facebook.com/alpacahq" target="_blank" rel="noopener noreferrer" class="social__item">
+                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19 1.04754V17.9482C19 18.5292 18.5292 18.9958 17.9525 18.9958H13.1092V11.6417H15.5775L15.9464 8.77478H13.1049V6.94263C13.1049 6.11138 13.3339 5.54732 14.5257 5.54732H16.044V2.98147C15.781 2.94754 14.8819 2.86696 13.8301 2.86696C11.6417 2.86696 10.1404 4.2029 10.1404 6.65848V8.77478H7.66362V11.6417H10.1404V19H1.04754C0.470759 19 0 18.5292 0 17.9525V1.04754C0 0.470759 0.470759 0 1.04754 0H17.9482C18.5292 0 19 0.470759 19 1.04754Z" fill="#454545"></path>
+                    </svg>
+                </a>
+                	&nbsp;	&nbsp;
+                <a href="https://www.linkedin.com/company/9300556/" target="_blank" rel="noopener noreferrer" class="social__item">
+                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.28119 4.5846C1.02187 4.5846 0 3.54129 0 2.2817C0 1.0221 1.02187 0 2.28119 0C3.5405 0 4.56237 1.0221 4.56237 2.2817C4.56237 3.54129 3.5405 4.5846 2.28119 4.5846ZM4.25285 19H0.313769V6.31496H4.25285V19ZM15.0652 19H18.9958H19V12.0319C19 8.6221 18.2665 5.99687 14.2807 5.99687C12.3642 5.99687 11.0794 7.04866 10.5537 8.04531H10.4985V6.31496H6.7206V19H10.6554V12.719C10.6554 11.065 10.9692 9.46607 13.0172 9.46607C15.0355 9.46607 15.0652 11.3533 15.0652 12.825V19Z" fill="#454545"></path>
+                    </svg>
+                </a>
         </ul>
         {{ end }}
         <hr>
         <span class="section">Suggestions for Alpaca?</span>
         <ul>
+          <li>
+            <a href="https://forum.alpaca.markets/c/alpaca/feature-requests">Feature Requests</a>
+          </li>
+
           <li style="display: flex; align-items: center; padding-left: 20px">
             <img src="/images/githublogo.png" width="16" height="16">
-            <a href="https://github.com/alpacahq/Alpaca-API" style="padding-left:5px">Tech Issues and Feature Requests</a>
+            <a href="https://github.com/alpacahq/Alpaca-API" style="padding-left:5px">Tech Issues</a>
           </li>
           <li style="display: flex; align-items: center; padding-left: 20px">
             <img src="/images/githublogo.png" width="16" height="16">
-            <a href="https://github.com/alpacahq/user-docs" style="padding-left:5px">Edit docs on GitHub</a>
+            <a href="https://github.com/alpacahq/user-docs" style="padding-left:5px">Contribute to docs on GitHub</a>
           </li>
         </ul>
       </div>

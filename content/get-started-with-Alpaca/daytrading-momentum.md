@@ -1,9 +1,8 @@
 ---
 title: Build a Day-Trading Algorithm and Run it in the Cloud Using Only Free Services
-weight: 40
+weight: 50
 ---
-
-# Build a Day-Trading Algorithm and Run it in the Cloud Using Only Free Services
+*This example only works with live trading.*
 
 An example algorithm for a momentum-based day trading strategy.
 

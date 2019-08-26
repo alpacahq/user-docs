@@ -1,9 +1,9 @@
 ---
 title: HFT-ish Order Book Imbalance Algorithm Using Streaming
-weight: 30
+weight: 40
 ---
 
-# HFT-ish Order Book Imbalance Algorithm Using Streaming
+*This example only works with live trading.*
 
 This algorithm is an active, daytrading strategy that captures small moves frequently using
 order book imbalance as an indicator. The idea is not secret or new - it's a strategy that has

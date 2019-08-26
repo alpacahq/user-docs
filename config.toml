@@ -26,7 +26,7 @@ pygmentsUseClasses = true
 	permalink = "#"
 
 	# Custom assets
-	custom_css = ["css/docs2019080208.css", "css/custom.css", "fontello/css/fontello.css"]
+	custom_css = ["css/docs2019082613.css", "css/custom.css", "fontello/css/fontello.css"]
 	custom_js  = []
 
 	# Syntax highlighting theme

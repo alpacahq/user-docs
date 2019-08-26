@@ -1,9 +1,9 @@
 ---
 title: Benjamin Graham's Value Investment using pylivetrader
-weight: 20
+weight: 30
 ---
 
-# Benjamin Graham's Value Investment using pylivetrader
+*This example only works with live trading.*
 
 This algorithm implements Benjamin Graham's teaching using [pylivetrader](https://github.com/alpacahq/pylivetrader),
 a python library that helps write trading algorithms in Quantopian style. This example also tells you

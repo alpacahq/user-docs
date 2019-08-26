@@ -22,17 +22,20 @@
 			{{ .Content }}
 
 			{{ if gt (len .Data.Pages) 0 }}
-			<h1>Pages in {{ .Title | singularize }}</h1>
-
+			<br><br><br>
+				<h3>Pages in {{ .Title }}</h3>
 			{{ range .Data.Pages }}
-			<a href="{{ .Permalink }}" title="{{ .Title }}">
-				<h2>{{ .Title }}</h2>
-			</a>
+			<div class="flex-grid homepage-category-links">
 
-			<br>
-			{{ printf "%s" .Summary | markdownify }}
-
-			<hr>
+							<div class="col homepage-category-box">
+								<a href="{{ .Permalink }}" title="{{ .Title }}">
+									<div class="title">{{ .Title }}</div>
+								</a>
+									<p>
+										{{ printf "%s" .Summary | markdownify }}
+									</p>
+							</div>
+			</div>
 			{{ end }}
 			{{ end }}
 			{{ partial "suggestions" .}}

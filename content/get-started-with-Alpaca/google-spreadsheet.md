@@ -1,9 +1,9 @@
 ---
 title: Google Spreadsheet Trading
-weight: 40
+weight: 20
 ---
 
-# Google Spreadsheet Trading
+*This example works with both paper and live trading.*
 
 Alpaca's trading API is not just about automation and frequency. Using a simple REST interface, you can build
 your own user interface suitable for your own trading needs. Google Spreadsheet is a great software

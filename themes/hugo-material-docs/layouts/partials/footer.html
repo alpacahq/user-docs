@@ -1,5 +1,6 @@
-{{ if .IsPage }}
+<!---{{ if .IsPage }}
 {{ if .Prev | or .Next }}
+
 <nav class="pagination" aria-label="Footer">
   <div class="previous">
   {{ if .Prev }}
@@ -43,6 +44,7 @@
 </nav>
 {{ end }}
 {{ end }}
+--->
 
 {{ if .IsHome }}
 {{ if gt (len .Site.Pages) 2 }}
