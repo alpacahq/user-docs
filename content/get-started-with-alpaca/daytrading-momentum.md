@@ -1,6 +1,6 @@
 ---
 title: Build a Day-Trading Algorithm and Run it in the Cloud Using Only Free Services
-weight: 50
+weight: 60
 ---
 *This example only works with live trading.*
 

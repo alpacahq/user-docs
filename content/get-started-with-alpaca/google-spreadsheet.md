@@ -1,6 +1,6 @@
 ---
 title: Google Spreadsheet Trading
-weight: 20
+weight: 30
 ---
 
 *This example works with both paper and live trading.*

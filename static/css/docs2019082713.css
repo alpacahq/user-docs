@@ -10,7 +10,18 @@ p code{
     font-family:'Roboto Mono', monospace;
     border-radius:3px;
     font-size:85%;
-    padding:0.2em 0.4em;
+    padding:0.4em 0.5em;
+}
+
+pre code{
+    font-family:'Roboto Mono', monospace;
+    border-radius:5px;
+    font-size:90%;
+    padding:0.8em 0.8em;
+}
+
+pre, code {
+    background: #fff;
 }
 
 ul li code{

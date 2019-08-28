@@ -26,12 +26,12 @@ quantity. In the case of market buy orders, the limit price is 2.5% to 4% above 
 The calculated value of an opening sell short order is MAX(order's limit price, 3% above the current ask price)
 multiplied by the order's quantity. In the case of market short orders, the value is simply 3% above the current ask price * order quantity.
 
-The order's calculated value is then checked against your available buying power to determine if it can be accepted. 
+The order's calculated value is then checked against your available buying power to determine if it can be accepted.
 Please note that your available buying power is reduced by your existing open buy long and sell short orders,
 whereas your sell long and buy to cover orders do not replenish your available buying power until they have executed.
 
-For example, if your buying power is $10,000 and you submit a limit buy order with an order 
-value of $3,000, your order will be accepted and your remaining available buying power will 
+For example, if your buying power is $10,000 and you submit a limit buy order with an order
+value of $3,000, your order will be accepted and your remaining available buying power will
 be $7,000. Even if this order is unfilled, as long as it is open and has not been cancelled, it will count against
 your available buying power. If you then submitted another order with an order value of $8,000, it would be rejected.
 
@@ -43,10 +43,10 @@ Orders eligible for extended hours submitted outside of 9:00am - 6:00pm ET are h
 
 ## Extended Hours Trading
 Using API v2 (only available to ETC accounts), you can submit and fill orders during
-pre-market and after-hours. This feature is not available to legacy accounts or those using API v1. 
+pre-market and after-hours. This feature is not available to legacy accounts or those using API v1.
 Extended hours trading has
-specific risks due to the less liquidity. Please read through 
-[our disclosure](https://files.alpaca.markets/disclosures/library/FINRA+-+Extended+Hours+Trading+Risk+Disclosure.pdf) 
+specific risks due to the less liquidity. Please read through
+[our disclosure](https://files.alpaca.markets/disclosures/library/FINRA+-+Extended+Hours+Trading+Risk+Disclosure.pdf)
 for more details.
 
 Currently, we supported the following extended hours:\
@@ -57,7 +57,7 @@ Additionally, please be aware of the following constraints.
 
 * If the order is submitted between 6:00pm and 8:00pm ET on a market day, the order request
 is returned with error. Alpaca reserves this time window for future expansion of supported hours.
-* If the order is submitted after 8:00pm but before 9:00am ET of the following trading day, the order request is queued 
+* If the order is submitted after 8:00pm but before 9:00am ET of the following trading day, the order request is queued
 and will be eligible for execution from the beginning of the next available supported pre-market hours at 9:00am.
 
 ### Submitting an Extended Hours Eligible Order
@@ -79,27 +79,29 @@ Currently, Alpaca supports four different types of orders.
 
 ### Market Order
 A market order is a request to buy or sell a security at the currently available
-market price. It provides the most likely method of filling an order. Market orders 
+market price. It provides the most likely method of filling an order. Market orders
 fill nearly instantaneously.
 
-As a trade-off, your fill price may slip depending on the available liquidity at 
-each price level as well as any price moves that may occur while your order is 
-being routed to its execution venue. There is also the risk with market orders 
+As a trade-off, your fill price may slip depending on the available liquidity at
+each price level as well as any price moves that may occur while your order is
+being routed to its execution venue. There is also the risk with market orders
 that they may get filled at unexpected prices due to short-term price spikes.
 
-To protect against excessive price impact and buying power violations, Alpaca converts buy market orders into 
+To protect against excessive price impact and buying power violations, Alpaca converts buy market orders into
 marketable limit orders with a price limit that is 4% higher than a current market price < $50 and 2.5% higher
 than a current market price >= $50.
 In most cases, this will have the same exact outcome as using a true market order.
-However, if the stock price moves more than 4% (or 2.5% for >=$50/share stocks) above the market price in the time that it 
-takes to route your order to the execution venue, then your order would not execute until 
+However, if the stock price moves more than 4% (or 2.5% for >=$50/share stocks) above the market price in the time that it
+takes to route your order to the execution venue, then your order would not execute until
 the price came back within the collar. Sell market orders are **not** converted into
 limit orders.
 
-If you submit a buy market order during pre-market or extended-hours trading, we use the 
-last traded price to determine the limit price. This means that if the stock opens more than 4% 
-(or 2.5% for >=$50/share stocks) above the last traded price that existed at the time you submitted your order, your order 
+If you submit a buy market order during pre-market or extended-hours trading, we use the
+last traded price to determine the limit price. This means that if the stock opens more than 4%
+(or 2.5% for >=$50/share stocks) above the last traded price that existed at the time you submitted your order, your order
 won’t be executed until the price comes back within the price collar.  
+
+*Alpaca uses the following rounding mechanics with respect to buy orders: the last trade price is (1) multiplied by up to 1.05 (depending on prices of instruments, market conditions, and other factors); (2) rounded down to two decimal places if the last trade price is over $1.00; otherwise, rounded down to four decimal places.*
 
 ### Limit Order
 A limit order is an order to buy or sell at a specified price or better. A
@@ -109,17 +111,17 @@ to sell) is executed at the specified limit price or higher (better). Unlike
 a market order, you have to specify the limit price parameter when submitting
 your order.
 
-While a limit order can prevent slippage, it may not be filled for a quite a bit 
-of time, if at all. For a buy limit order, if the market price is **within** your specified 
-limit price, you can expect the order to be filled. If the market price is **equivalent** to 
+While a limit order can prevent slippage, it may not be filled for a quite a bit
+of time, if at all. For a buy limit order, if the market price is **within** your specified
+limit price, you can expect the order to be filled. If the market price is **equivalent** to
 your limit price, your order may or may not be filled; if the order cannot immediately
-execute against resting liquidity, then it is deemed non-marketable and will only be filled 
+execute against resting liquidity, then it is deemed non-marketable and will only be filled
 once a marketable order interacts with it. You could miss a trading opportunity if price
 moves away from the limit price before your order can be filled.
 
 **Hyper-marketable Limit Order Rejection**
 A limit orders with a limit price that significantly exceeds the current market price will be rejected as part of
-our risk checks to mitigate against "fat finger" errors. We currently use exchange guidelines for erroneous trades 
+our risk checks to mitigate against "fat finger" errors. We currently use exchange guidelines for erroneous trades
 to determine the thresholds at which orders are rejected:
 
 |<span style="font-size:14px">Share Price</span>|<span style="font-size:14px">Threshold</span>|
@@ -156,7 +158,7 @@ In order to submit a stop limit order, you will need to specify both the
 limit and stop price parameters in the API.
 
 ### Opening and Closing Auction Orders
-Market on open and limit on open orders are only eligible to execute in the opening auction. 
+Market on open and limit on open orders are only eligible to execute in the opening auction.
 Market on close and limit on close orders are only eligible to execute in the closing auction.
 Please see the [Time in Force]({{< relref "#time-in-force" >}}) section for more details.
 
@@ -170,23 +172,23 @@ Alpaca supports the following Time-In-Force designations:
 - `day`<br>
   A day order is eligible for execution only on the day it is live. By default, the order is only valid
   during Regular Trading Hours (9:30am - 4:00pm ET). If unfilled after the closing auction, it is automatically canceled.
-  If submitted after the close, it is queued and submitted the following trading day. 
+  If submitted after the close, it is queued and submitted the following trading day.
   However, if marked as eligible for extended hours, the order can also execute during supported extended hours.
 - `gtc`<br>
   The order is good until canceled. Non-marketable GTC limit orders are subject to price adjustments to offset corporate
   actions affecting the issue. We do not currently support Do Not Reduce(DNR) orders to opt out of such price adjustments.
 - `opg`<br>
-  Use this TIF with a market/limit order type to submit "market on open" (MOO) and "limit on open" (LOO) orders. 
+  Use this TIF with a market/limit order type to submit "market on open" (MOO) and "limit on open" (LOO) orders.
   This order is eligible to execute only in the market opening auction. Any unfilled orders after the open will be cancelled.
   OPG orders submitted after 9:28am but before 7:00pm ET will be rejected. OPG orders submitted after 7:00pm will be queued
   and routed to the following day's opening auction.
 - `cls`<br>
-  Use this TIF with a market/limit order type to submit "market on close" (MOC) and "limit on close" (LOC) orders. 
+  Use this TIF with a market/limit order type to submit "market on close" (MOC) and "limit on close" (LOC) orders.
   This order is eligible to execute only in the market closing auction. Any unfilled orders after the close will be cancelled.
   CLS orders submitted after 3:50pm but before 7:00pm ET will be rejected. CLS orders submitted after 7:00pm will be queued
   and routed to the following day's closing auction. Only available with API v2.
 - `ioc`<br>
-  An Immediate Or Cancel (IOC) order requires all or part of the order to be executed immediately. Any unfilled 
+  An Immediate Or Cancel (IOC) order requires all or part of the order to be executed immediately. Any unfilled
   portion of the order is canceled. Only available with API v2.
 - `fok`<br>
   A Fill or Kill (FOK) order is only executed if the entire order quantity can be filled, otherwise the order is canceled.

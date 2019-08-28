@@ -1,6 +1,6 @@
 ---
 title: Benjamin Graham's Value Investment using pylivetrader
-weight: 30
+weight: 40
 ---
 
 *This example only works with live trading.*

@@ -1,6 +1,6 @@
 ---
 title: HFT-ish Order Book Imbalance Algorithm Using Streaming
-weight: 40
+weight: 50
 ---
 
 *This example only works with live trading.*
