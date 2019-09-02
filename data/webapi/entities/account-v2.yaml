@@ -2,6 +2,9 @@ spec:
   - name: id
     type: string<uuid>
     desc: Account ID.
+  - name: account_number
+    type: string
+    desc: Account number.
   - name: status
     type: string<account_status>
     desc: See Account Status
@@ -77,6 +80,7 @@ spec:
 example: |
   {
     "account_blocked": False,
+    "account_number": "010203ABCD",
     "buying_power": "262113.632",
     "cash": "-23140.2",
     "created_at": "2019-06-12T22:47:07.99658Z",
