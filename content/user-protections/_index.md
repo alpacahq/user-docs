@@ -55,8 +55,7 @@ For more details of Pattern Day Trader rule, please read
 
 ## Day Trade Margin Call (DTMC) Protection at Alpaca
 In order to prevent Alpaca Brokerage Account customers from unintentionally receiving day
-trading margin calls, Alpaca implements two forms of DTMC protection. (These
-protections will be enabled beginning Monday 8/5/2019.)
+trading margin calls, Alpaca implements two forms of DTMC protection.
 
 
 ### The Rule
