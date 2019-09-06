@@ -1,23 +1,9 @@
 ---
-title: Web API v1 (legacy)
-weight: 10
+title: API v1 (deprecated)
+weight: 50
 ---
-# Web API v1 (legacy)
-Alpaca is a modern platform for algorithmic trading.  Alpaca's
-API v1 is the interface for your trading algo to communicate with Alpaca's brokerage
-service at Apex Clearing. If your account number begins with "3A", it is a legacy
-account. If your account is at ETC, please use [Web API v2]({{< relref "/api-documentation/api-v2/_index.md" >}}).
-
-The API allows your trading algo to access real-time price, fundamentals,
-place orders and manage your portfolio, in either REST (pull) or streaming
-(push) style.
-
-In order to start trading with Alpaca API, please sign up
-[here](https://alpaca.markets/).
-
-Once you have signed up and have familiarized yourself with our API, please
-check out our [python client](https://github.com/alpacahq/alpaca-trade-api-python)
-to begin writing your own algo!
+# API v1
+**No longer actively supported, please use [Web API v2]({{< relref "/api-documentation/api-v2/_index.md" >}}).**
 
 ## Authentication
 Every private API call requires key-based authentication. API keys can

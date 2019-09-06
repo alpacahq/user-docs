@@ -1,11 +1,8 @@
 ---
-title: Web API v2
-weight: 20
+title: API v2
+weight: 10
 ---
-# Web API v2
-If you have a legacy account (a live brokerage account that begins with "3A"), 
-please refer to [Web API v1]({{< relref "/api-documentation/web-api/_index.md" >}}).
-
+# API v2
 Alpaca is a modern platform for algorithmic trading.  Alpaca's
 API is the interface for your trading algo to communicate with Alpaca's brokerage
 service.

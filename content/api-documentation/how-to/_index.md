@@ -1,6 +1,6 @@
 ---
 title: How-To Code Examples
-weight: 50
+weight: 20
 ---
 
 # How-To
