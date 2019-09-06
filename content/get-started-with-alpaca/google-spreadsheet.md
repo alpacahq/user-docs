@@ -13,3 +13,5 @@ management spreadsheet.
 [Detailed Explanation on Medium](https://medium.com/automation-generation/manage-your-stocks-from-google-spreadsheet-using-api-43026db44289)
 
 [Working Spreadsheet You Can Copy](https://docs.google.com/spreadsheets/d/1RLvSmDEfS7U2OrqlUYvv_8KpHJ15tzACK_JvmRYXm1k/edit#gid=0)
+
+[Spreadsheet Updated to v2, Additional Features](https://docs.google.com/spreadsheets/d/1eRtF49KybhtLlnBi0kgTcZBq00nWLEmT36Yk_RUhEpE/edit?usp=sharing)
