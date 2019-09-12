@@ -23,8 +23,6 @@ discretion.*
 
 [//]: # (**[Trading in your Browser with Python]({{< relref "/get-started-with-alpaca/trade-through-your-browser.md" >}})**)
 
-[//]: # (**The examples below can only be tested if you have an Alpaca Live Brokerage Account (if you try to run these without an Alpaca Brokerage Account, you will receive an error that mentions that algo cannot pull the appropriate market data source):**)
-
 [//]: # (**[HFT-ish Order Book Imbalance Algorithm Using Streaming]({{< relref "/get-started-with-alpaca/order-imbal.md" >}})**)
 
 [//]: # (**[Build a Day-Trading Algorithm and Run it in the Cloud Using Only Free Services]({{< relref "/get-started-with-alpaca/daytrading-momentum.md" >}})**)
