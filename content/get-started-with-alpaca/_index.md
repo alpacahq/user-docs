@@ -13,16 +13,18 @@ purposes.
 the Alpaca platform. They have not been analyzed or tested for profitability. Use in live trading at your own
 discretion.*
 
-[//]: # (**The following tutorials can be tested if you have an Alpaca Paper Only Account or an Alpaca Brokerage Account:**)
+[//]: # (**The following examples can be tested whether or not you have a funded brokerage account:**)
+
+[//]: # (**[Testing the API with Postman]({{< relref "/get-started-with-alpaca/testing-with-postman.md" >}})**)
 
 [//]: # (**[Google Spreadsheet Trading]({{< relref "/get-started-with-alpaca/google-spreadsheet.md" >}})**)
 
-[//]: # (**The examples below can only be tested if you have an Alpaca Live Brokerage Account (if you try to run these without an Alpaca Brokerage Account, you will receive an error that mentions the algo cannot pull the appropriate market data source):**)
+[//]: # (**[SDK Example Algorithms]({{< relref "/get-started-with-alpaca/long-short.md" >}})**)
 
-[//]: # (**[Benjamin Graham's Value Investment using pylivetrader]({{< relref "/get-started-with-alpaca/graham-value.md" >}})**)
+[//]: # (**[Trading in your Browser with Python]({{< relref "/get-started-with-alpaca/trade-through-your-browser.md" >}})**)
 
 [//]: # (**[HFT-ish Order Book Imbalance Algorithm Using Streaming]({{< relref "/get-started-with-alpaca/order-imbal.md" >}})**)
 
 [//]: # (**[Build a Day-Trading Algorithm and Run it in the Cloud Using Only Free Services]({{< relref "/get-started-with-alpaca/daytrading-momentum.md" >}})**)
 
-Got an interesting idea? Tell us about it in our [Forum](https://forum.alpaca.markets), and we can list it here.
+Got another interesting idea? Tell us about it in our [Forum](https://forum.alpaca.markets), and we can list it here.

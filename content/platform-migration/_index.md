@@ -6,12 +6,12 @@ weight: 90
 
 This page is meant to serve as a guide to existing algo traders and researchers
 currently using other platforms or brokers including but not limited to Quantopian,
-Interactive Brokers, TD Ameritrade, Robinhood, Backtrader, and QuantConnect.
+Interactive Brokers, TD Ameritrade, Robinhood, and Backtrader.
 
 We provide several open source libraries to aid in the platform integration process and
 help expedite the time it takes for you to get up and running with Alpaca. Below is a list of
 our official platform integration libraries. If you would like to see us provide integration support
-for a platform not listed here, please let us know at our Feature Request and Issues repo 
+for a platform not listed here, please let us know at our Feature Request and Issues repo
 [here](https://github.com/alpacahq/Alpaca-API).
 
 ### Python
@@ -42,10 +42,3 @@ today and you can run your backtrader algo with our API.
 
 [backtrader integrated with Alpaca SDK](https://github.com/alpacahq/alpaca-backtrader-api/)
 
-### .NET/C\#
-
-### Lean
-We have integrated with [Lean](https://github.com/QuantConnect/Lean/)
-which is a big player in the .NET algo trading space. If you are
-already testing your algorithm in QuantConnect, this is the tool
-you can use to run it in live with our API.

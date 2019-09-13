@@ -2,8 +2,7 @@
 title: HFT-ish Order Book Imbalance Algorithm Using Streaming
 weight: 50
 ---
-
-*This example only works with live trading.*
+*This example only works if you have a funded brokerage account or another means of accessing Polygon data.*
 
 This algorithm is an active, daytrading strategy that captures small moves frequently using
 order book imbalance as an indicator. The idea is not secret or new - it's a strategy that has
