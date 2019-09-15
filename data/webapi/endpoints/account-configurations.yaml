@@ -13,5 +13,5 @@ endpoints:
       returns: |
         [AccountConfigurations](#account-configurations-entity) object
       errors:
-        - status: 401
+        - status: 400
           reason: One of the new values is unacceptable.

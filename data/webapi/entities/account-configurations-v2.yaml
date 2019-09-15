@@ -7,7 +7,7 @@ spec:
     type: string
     desc: |
       `all` or `none`. If `none`, emails for order fills are not sent.
-  - name: trade_suspended_by_user
+  - name: suspend_trade
     type: bool
     desc: If true, new orders are blocked.
   - name: no_shorting
