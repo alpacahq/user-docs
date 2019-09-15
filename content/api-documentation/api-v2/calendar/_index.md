@@ -1,6 +1,6 @@
 ---
 title: Calendar
-weight: 40
+weight: 50
 ---
 
 # Calendar API

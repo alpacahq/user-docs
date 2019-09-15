@@ -250,6 +250,41 @@ endpoints:
       errors:
         - status: 404
           reason: Order is not found.
+    PATCH:
+      title: Replace an order
+      summary: |
+        Replaces a single order with updated parameters. Each parameter overrides
+        the corresponding attribute of the existing order. The other attributes
+        remain the same as the existing order.
+      params:
+        path:
+          - name: order_id
+            type: string<uuid>
+            desc: Order ID
+        body:
+          - name: qty
+            type: string<int>
+            desc: number of shares to trade
+          - name: time_in_force
+            type: string
+            desc: |
+              `day`, `gtc`, `opg`, `cls`, `ioc`, `fok`. Please see [Understand Orders](/broker-functions/orders/#time-in-force) for more info.
+          - name: limit_price
+            type: string<number>
+            desc: required if type is `limit` or `stop_limit`
+          - name: stop_price
+            type: string<number>
+            desc: required if type is `stop` or `stop_limit`
+          - name: client_order_id
+            type: string (<= 48 characters)
+            desc: A unique identifier for the order. Automatically generated if not sent.
+      returns: |
+        The new [Order](#order-entity) object with the new order ID.
+      errors:
+        - status: 403
+          reason: Buying power or shares is not sufficient.
+        - status: 422
+          reason: Input parameters are not recognized.
     DELETE:
       title: Cancel an order
       summary: |

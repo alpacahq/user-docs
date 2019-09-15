@@ -1,0 +1,17 @@
+endpoints:
+  /v2/account/configurations:
+    GET:
+      title: Get the account configurations
+      summary: |
+        Returns the current account configuration values
+      returns: |
+        [AccountConfigurations](#account-configurations-entity) object
+    PATCH:
+      title: Update the account configurations
+      summary: |
+        Returns the current account configuration values
+      returns: |
+        [AccountConfigurations](#account-configurations-entity) object
+      errors:
+        - status: 401
+          reason: One of the new values is unacceptable.

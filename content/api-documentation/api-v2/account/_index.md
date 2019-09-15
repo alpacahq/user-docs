@@ -5,7 +5,7 @@ weight: 10
 
 # Account API
 
-The accounts API serves important information related to an account,
+The account API serves important information related to an account,
 including account status, funds available for trade, funds available for
 withdrawal, and various flags relevant to an account's ability to trade.
 An account maybe be blocked for just for trades (`trades_blocked` flag) or for both

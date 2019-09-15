@@ -1,0 +1,22 @@
+spec:
+  - name: dtbp_check
+    type: string
+    desc: |
+      `both`, `entry`, or `exit`. Controls Day Trading Margin Call (DTMC) checks.
+  - name: trade_confirm_email
+    type: string
+    desc: |
+      `all` or `none`. If `none`, emails for order fills are not sent.
+  - name: trade_suspended_by_user
+    type: bool
+    desc: If true, new orders are blocked.
+  - name: no_shorting
+    type: bool
+    desc: If true, account becomes long-only mode.
+example: |
+  {
+    "dtbp_check": "entry",
+    "no_shorting": false,
+    "suspend_trade": false,
+    "trade_confirm_email": "all"
+  }
