@@ -3,7 +3,6 @@ title: Calendar
 weight: 50
 ---
 
-# Calendar API
 The calendar API serves the full list of market days from 1970 to 2029.
 It can also be queried by specifying a start and/or end time to narrow
 down the results. In addition to the dates, the response also contains

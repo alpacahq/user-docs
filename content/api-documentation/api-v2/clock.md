@@ -3,7 +3,6 @@ title: Clock
 weight: 70
 ---
 
-# Clock API
 The clock API serves the current market timestamp, whether or not
 the market is currently open, as well as the times of the next market
 open and close.

@@ -3,8 +3,6 @@ title: Streaming
 weight: 40
 ---
 
-# Streaming
-
 ## Overview
 Alpaca's API offers WebSocket streaming for account and order updates which follows the [RFC6455 WebSocket protocol](https://tools.ietf.org/html/rfc6455).
 
@@ -153,6 +151,8 @@ These are the events that are the expected results of actions you may have taken
 - `expired`: Sent when an order has reached the end of its lifespan, as determined by the order's time in force value.
     - *timestamp*: The time at which the order expired.
 - `done_for_day`: Sent when the order is done executing for the day, and will not receive further updates until the next trading day.
+- `replaced`: Sent when your requested replacement of an order is processed.
+    - *timestamp*: The time at which the order was replaced.
 
 ### Rarer events:
 These are events that may rarely be sent due to unexpected circumstances on the exchanges. It is unlikely you will need to design your
@@ -163,8 +163,11 @@ code around them, but you may still wish to account for the possibility that the
 - `pending_new`: Sent when the order has been received by Alpaca and routed to the exchanges, but has not yet been accepted for execution.
 - `stopped`: Sent when your order has been stopped, and a trade is guaranteed for the order, usually at a stated price or better, but has not yet occurred.
 - `pending_cancel`: Sent when the order is awaiting cancelation. Most cancelations will occur without the order entering this state.
+- `pending_replace`: Sent when the order is awaiting replacement.
 - `calculated`: Sent when the order has been completed for the day - it is either "filled" or "done_for_day" - but remaining settlement calculations are still pending.
 - `suspended`: Sent when the order has been suspended and is not eligible for trading.
+- `order_replace_rejected`: Sent when the order replace has been rejected.
+- `order_cancel_rejected`: Sent when the order cancel has been rejected.
 
 ### Example
 An example message sent over the `trade_updates` stream would look like:

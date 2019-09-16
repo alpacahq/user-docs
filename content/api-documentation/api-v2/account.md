@@ -3,8 +3,6 @@ title: Account
 weight: 10
 ---
 
-# Account API
-
 The account API serves important information related to an account,
 including account status, funds available for trade, funds available for
 withdrawal, and various flags relevant to an account's ability to trade.

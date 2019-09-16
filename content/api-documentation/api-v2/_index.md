@@ -105,37 +105,39 @@ All of four symbol forms are case-sensitve.
 ## v2 Release Notes
 
 * Updated Account and Assets entities with new fields for short selling and margin trading
-* Updated 
-* Orders that encounter account permissioning, insufficient buying power, or lack of available borrow will return 
-a 403 “forbidden” error with an existing or new log message describing the reject. 
+* Updated
+* Orders that encounter account permissioning, insufficient buying power, or lack of available borrow will return
+a 403 “forbidden” error with an existing or new log message describing the reject.
 * The endpoint host name will be the same as v1 (api.alpaca.markets/paper-api.alpaca.markets) but with different path (“/v2”).
 * API key between v1 and v2 are interchangeable.
-* Updated Python SDK for API v2.0 support, example usage: 
+* Updated Python SDK for API v2.0 support, example usage:
   `api = tradeapi.REST('<key_id>', '<secret_key>', api_version=’v2’)`
 
 ## Notes on Orders and Positions
-* If your account is set to `shorting_enabled: false`, any attempt to place a sell order in a stock that you have no 
-position or with a quantity that exceeds your current position will result in a 403 `Forbidden` error. 
-In the future, users who are approved for shorting will be able to set the shorting_enabled flag in their dashboard. 
-This will extend to the creation of sub-accounts and help ensure strategies that are not supposed to short are never 
+* If your account is set to `shorting_enabled: false`, any attempt to place a sell order in a stock that you have no
+position or with a quantity that exceeds your current position will result in a 403 `Forbidden` error.
+In the future, users who are approved for shorting will be able to set the shorting_enabled flag in their dashboard.
+This will extend to the creation of sub-accounts and help ensure strategies that are not supposed to short are never
 allowed to accidentally short.
-* For accounts with `shorting_enabled: true`, if you place a sell order for an asset on which you are flat, or 
-one that you have a short position in, it will be treated as a short sell. There are no new “side” parameters 
+* For accounts with `shorting_enabled: true`, if you place a sell order for an asset on which you are flat, or
+one that you have a short position in, it will be treated as a short sell. There are no new “side” parameters
 added for short selling or short covering. The existing values of “sell” and “buy” will be used, respectively.
-* At this time, you are only allowed to short easy-to-borrow assets. Assets that are easy to borrow are marked 
-with `easy_to_borrow: true`. A short sell order will be rejected with a 403 `Forbidden` status if the asset being 
-sold is hard to borrow or not shortable at all. 
-* At this time, an order that would flip your position in that stock from long to short or short to long is not 
-supported and will return a 403 `Forbidden` error. Your position must first be <= 0 for shorts and must first 
-be >= 0 for longs. In the future, we plan to support selling (buying) beyond an existing long (short) position 
+* At this time, you are only allowed to short easy-to-borrow assets. Assets that are easy to borrow are marked
+with `easy_to_borrow: true`. A short sell order will be rejected with a 403 `Forbidden` status if the asset being
+sold is hard to borrow or not shortable at all.
+* At this time, an order that would flip your position in that stock from long to short or short to long is not
+supported and will return a 403 `Forbidden` error. Your position must first be <= 0 for shorts and must first
+be >= 0 for longs. In the future, we plan to support selling (buying) beyond an existing long (short) position
 directly into a short (long) position.
-* At this time, if you have no position in a stock, but you have a pending short sell (buy) order, you will not 
+* At this time, if you have no position in a stock, but you have a pending short sell (buy) order, you will not
 be permitted to submit a buy (sell) order. The order will return a 403 `Forbidden` error.
-* In order to allow the use of margin, the /orders endpoint will use the `buying_power` field to determine whether 
-an account has enough buying power to buy/short a security. The exception to this rule is that assets marked 
-with `marginable:false` cannot use margin lending to purchase the asset. 
+* In order to allow the use of margin, the /orders endpoint will use the `buying_power` field to determine whether
+an account has enough buying power to buy/short a security. The exception to this rule is that assets marked
+with `marginable:false` cannot use margin lending to purchase the asset.
 * Market buy orders that would increase your position (e.g. buy order for a stock where your position in that stock is >= 0)
 are converted to marketable limit orders with a 2.5% to 4% price collar.
-* Market sell orders that would increase your position (e.g. sell order for a stock when your position in that stock is <= 0) 
+* Market sell orders that would increase your position (e.g. sell order for a stock when your position in that stock is <= 0)
 are NOT converted but are subject to a pre-trade buying power risk check of 102.5 to 104% of the order value.
 * Short positions will be reported with negative quantities and negative market values.
+
+# API Endpoints
