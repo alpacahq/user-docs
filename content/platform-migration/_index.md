@@ -14,7 +14,7 @@ our official platform integration libraries. If you would like to see us provide
 for a platform not listed here, please let us know at our Feature Request and Issues repo
 [here](https://github.com/alpacahq/Alpaca-API).
 
-### Python
+## Python
 
 ### pylivetrader
 [pylivetrader](https://github.com/alpacahq/pylivetrader/) is a live trading framework in
@@ -42,3 +42,6 @@ today and you can run your backtrader algo with our API.
 
 [backtrader integrated with Alpaca SDK](https://github.com/alpacahq/alpaca-backtrader-api/)
 
+## Slack
+
+*Alpaca for Slack* is the official Slack integration for Alpaca. It allows you to manage your Alpaca portfolio from any Slack community where it's installed. It's already available in our community Slack - just type `/alpaca help` there to get started, or check [this page](../platform-migration/alpaca-for-slack) for more details.

@@ -56,6 +56,10 @@ existing Quantopian algorithms.
 **#zipline-strategies** - This is another Quantopian influenced channel where members talk about
 compatibility and Quantopian’s open source zipline resources.
 
+### Slack Integration
+
+*Alpaca for Slack* is the official Slack integration for Alpaca. It allows you to manage your Alpaca portfolio from any Slack community where it's installed. It's already available in our community Slack - just type `/alpaca help` there to get started, or check [this page](../platform-migration/alpaca-for-slack) for more details.
+
 ## Medium Publication - Automation Generation
 
 [Automation Generation](https://medium.com/automation-generation) has become a publication where community members contribute their experience
