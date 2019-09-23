@@ -5,7 +5,7 @@ weight: 50
 
 # Alpaca for Slack
 
-With Alpaca for Slack, you can quickly manage your account right inside the chat window. With simple commands, you can have AlpacaBot get your orders and positions, and you can even tell it to place orders for you.
+With Alpaca for Slack, you can quickly manage your Alpaca brokerage account right inside the chat window. With simple commands, you can have AlpacaBot get your orders and positions, and you can even tell it to place orders for you.
 
 The app is already installed in our [community Slack](https://alpaca.markets/slack). If you'd like to add it to another workspace you're in, just click this button to get started!
 
