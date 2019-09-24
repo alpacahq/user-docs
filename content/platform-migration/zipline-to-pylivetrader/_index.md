@@ -52,7 +52,7 @@ pylivetrader does not provide direct replacement for pipeline, but you can
 use [pipeline-live](https://github.com/alpacahq/pipeline-live). You need to
 install this package separately as pylivetrader does not automatically
 include it.  For more information,
-please read [pipeline-live's migration document](https://github.com/alpacahq/pipeline-live/migration.md).
+please read [pipeline-live's migration document](https://github.com/alpacahq/pipeline-live/blob/master/migration.md).
 
 Under `attach_pipeline` and `pipeline_output`, pylivetrader uses
 the pipeline-live package if it is installed, otherwise throws `RuntimeError`.
@@ -121,8 +121,6 @@ one by the following snippet.
 import logbook
 log = logbook.Logger('algo')
 ```
-
-See more usages in [the example algo script](https://github.com/alpacahq/pylivetrader/blob/master/examples/q01/algo.py#L30).
 
 ## Deal with Restart
 In the live trading environment, you possible need to restart the
