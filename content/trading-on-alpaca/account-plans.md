@@ -1,6 +1,6 @@
 ---
 title: Account Plans
-weight: 40
+weight: 50
 ---
 
 # Account Plans
@@ -14,7 +14,7 @@ An Alpaca Paper Only Account is for **paper trading only**. It allows you to ful
 run your algorithm in our paper trading environment only. You won't be trading real money, but you will be able
 to track your simulated activity and balance in the Alpaca web dashboard. As an Alpaca Paper Only Account
 holder, you are only entitled to receive and make use of IEX market data. For more information about our paper
-trading environment, please refer to [Paper Trading Specification]({{< relref "/paper-trading/_index.md" >}}).
+trading environment, please refer to [Paper Trading Specification]({{< relref "/trading-on-alpaca/paper-trading.md" >}}).
 
 ## Alpaca Brokerage Account
 

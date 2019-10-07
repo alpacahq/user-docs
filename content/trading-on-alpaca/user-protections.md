@@ -2,7 +2,7 @@
 title: User Protections
 weight: 200
 ---
-# User Protections
+
 We have enabled several types of protections to enhance your trading experience.
 
 * [Pattern Day Trader (PDT) Protection] ({{<relref "#pattern-day-trader-pdt-protection-at-alpaca">}})

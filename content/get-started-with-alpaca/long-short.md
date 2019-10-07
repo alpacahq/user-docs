@@ -1,6 +1,6 @@
 ---
 title: SDK Algorithm Examples
-weight: 10
+weight: 40
 ---
 *This example works with both paper and live trading.*
 
