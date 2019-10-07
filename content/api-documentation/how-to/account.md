@@ -16,4 +16,4 @@ You can use the information from the account endpoint to do things like calculat
 ## Listen for Account Updates with Websockets
 You can use Websockets to receive real-time updates about the status of your account. You can see the full documentation [here](https://docs.alpaca.markets/web-api/streaming/#account-updates).
 
-{{< code-example exampleId="streaming" pathURL="/api-documentation/how-to/account/examples">}}
+{{< code-example exampleId="streaming" pathURL="/api-documentation/how-to/account">}}
