@@ -77,7 +77,7 @@
     </style>
 
     {{ range .Site.Params.custom_css }}
-    <link rel="stylesheet" href="{{ . | absURL }}?v=2">
+    <link rel="stylesheet" href="{{ . | absURL }}?v={{ printf "/static/%s" . | readFile | sha256 }}">
     {{ end }}
     <script src="{{ "javascripts/modernizr.js" | absURL }}"></script>
 
