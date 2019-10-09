@@ -82,7 +82,7 @@
      {{- if eq .URL $currentNode.URL}} active{{end -}}
       ">
         <div>
-          <a href="{{ .RelPermalink}}">
+          <a href="{{ .RelPermalink}}" style="{{ if eq $isCurrent true }} font-weight: bold; {{ end }}}}">
             {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}
           </a>
           {{- if $showvisitedlinks}}<i class="fa fa-circle-thin read-icon"></i>{{end}}

@@ -329,6 +329,10 @@ h1.homepage-title {
     top: 60px !important;
 }
 
+.main > .drawer .toc li a {
+    font-weight: normal;
+}
+
 @media (min-width: 1025px) {
     .hide-sm-only {
         display: block;
