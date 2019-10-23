@@ -5,6 +5,9 @@ weight: 15
 
 The account activities API provides access to a historical record of transaction activities that have impacted your account. Trade execution activities and non-trade activities, such as dividend payments, are both reported through this endpoint. See the bottom of this page for a full list of the types of activities that may be reported.
 
+### Paging of Results
+Pagination is handled using the `page_token` and `page_size` parameters. `page_token` represents the ID of the end of your current page of results. If specified with a direction of `desc`, for example, the results will end before the activity with the specified ID. If specified with a direction of `asc`, results will begin with the activity immediately after the one specified. `page_size` is the maximum number of entries to return in the response. If `date` is not specified, the default and maximum value is 100. If `date` is specified, the default behavior is to return all results, and there is no maximum page size.
+
 {{< rest-endpoint resource="account-activities" method="GET" path="/v2/account/activities/{activity_type}" >}}
 
 {{< rest-endpoint resource="account-activities" method="GET" path="/v2/account/activities" >}}
@@ -17,7 +20,7 @@ The account activities API provides access to a historical record of transaction
 ### Properties
 {{< rest-entity-desc name="account-trade-activity-v2">}}
 
-## Nontrade Account Activity Entity
+## Non-Trade Account Activity Entity
 
 ### Example
 {{< rest-entity-example name="account-nontrade-activity-v2">}}
