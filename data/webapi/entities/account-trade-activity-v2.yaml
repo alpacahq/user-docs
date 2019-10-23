@@ -1,0 +1,47 @@
+spec:
+  - name: activity_type
+    type: string
+    desc: |
+      `FILL`
+  - name: id
+    type: string
+    desc: An id for the activity. Always in "<date>::<uuid>" format. Can be sent as page_token in requests to facilitate the paging of results.
+  - name: cum_qty
+    type: string<number>
+    desc: The cumulative quantity of shares involved in the execution.
+  - name: leaves_qty
+    type: string<number>
+    desc: For partially_filled orders, the quantity of shares that are left to be filled.
+  - name: price
+    type: string<number>
+    desc: The per-share price that the trade was executed at.
+  - name: qty
+    type: string<number>
+    desc: The number of shares involved in the trade execution.
+  - name: side
+    type: string
+    desc: |
+      `buy` or `sell`
+  - name: symbol
+    type: string
+    desc: The symbol of the security being traded.
+  - name: transaction_time
+    type: string<timestamp>
+    desc: The time at which the execution occurred.
+  - name: type
+    type: string
+    desc: |
+      `fill` or `partial_fill`
+example: |
+  {
+    'activity_type': 'FILL',
+    'cum_qty': '1',
+    'id': '20190524113406977::8efc7b9a-8b2b-4000-9955-d36e7db0df74',
+    'leaves_qty': '0',
+    'price': '1.63',
+    'qty': '1',
+    'side': 'buy',
+    'symbol': 'LPCN',
+    'transaction_time': '2019-05-24T15:34:06.977Z',
+    'type': 'fill'
+  }
