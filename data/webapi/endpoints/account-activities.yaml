@@ -1,0 +1,45 @@
+endpoints:
+  /v2/account/activities/{activity_type}:
+    GET:
+      title: Get account activities of one type
+      summary: |
+        Returns account activity entries for a specific type of activity.
+      params:
+        path:
+          - name: activity_type
+            type: string
+            desc: The activity type you want to view entries for. A list of valid activity types can be found at the bottom of this page.
+        query:
+          - name: date
+            type: string<timestamp>
+            desc: The date for which you want to see activities.
+          - name: until
+            type: string<timestamp>
+            desc: The response will contain only activities submitted before this date. (Cannot be used with `date`.)
+          - name: after
+            type: string<timestamp>
+            desc: The response will contain only activities submitted after this date. (Cannot be used with `date`.)
+          - name: direction
+            type: string
+            desc: |
+              `asc` or `desc` (default `desc` if unspecified.)
+          - name: page_size
+            type: int
+            desc: The maximum number of entries to return in the response. (See the section on paging above.)
+          - name: page_token
+            type: string
+            desc: The ID of the end of your current page of results. (See the section on paging above.)
+      returns: |
+        Array of [TradeActivty](#trade-activity-entity) or [NonTradeActivity](#non-trade-activity-entity) objects
+  /v2/account/activities:
+    GET:
+      title: Get account activities of multiple types
+      summary: |
+        Returns account activity entries for many types of activities. Body parameters are the same as the above endpoint, with one addition (listed below.)
+      params:
+        query:
+          - name: activity_types
+            type: string
+            desc: A comma-separated list of the activity types to include in the response. If unspecified, activities of all types will be returned.
+      returns: |
+        Array of [TradeActivty](#trade-activity-entity) and [NonTradeActivity](#non-trade-activity-entity) objects
