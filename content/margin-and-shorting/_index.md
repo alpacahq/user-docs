@@ -86,7 +86,8 @@ power for intraday trading without any cost.
 
 ## Stock Borrow Rates
 
-Alpaca currently **only** supports **opening** short positions in easy to borrow (“ETB”) securities.
+Alpaca currently **only** supports **opening** short positions in easy to borrow (“ETB”) securities. **Any open short order
+in a stock that changes from ETB to HTB overnight will be automatically cancelled prior to market open**.
 
 We are pleased to offer a competitive and low annual ETB stock borrow rate of **0.20%**.
 
