@@ -1,0 +1,112 @@
+endpoints:
+  /v2/watchlists:
+    GET:
+      title: Get a list of watchlists
+      summary: Returns the list of watchlists registered under the account.
+      returns: |
+        An array of [Watchlist](#watchlist-entity) object
+    POST:
+      title: Create a watchlist
+      summary: Create a new watchlist with initial set of assets.
+      params:
+        body:
+          - name: name
+            type: string
+            required: true
+            desc: arbitrary name string, up to 64 characters
+          - name: symbols
+            type: array[string]
+            desc: set of symbol string
+      returns: |
+        An array of [Watchlist](#watchlist-entity) object
+      errors:
+        - status: 404
+          reason: one of the symbol is not found in the assets
+        - status: 422
+          reason: watchlist name is not unique, or some parameters are not valid
+
+  /v2/watchlists/{watchlist_id}:
+    GET:
+      title: Get a watchlist
+      summary: Returns a watchlist identified by the ID.
+      params:
+        path:
+          - name: watchlist_id
+            type: string<uuid>
+            desc: Watchlist ID
+      returns: |
+        A [Watchlist](#watchlist-entity) object
+      errors:
+        - status: 404
+          reason: the requested watchlist is not found
+    PUT:
+      title: Update watchlist 
+      summary: Update the name and/or content of watchlist.
+      params:
+        path:
+          - name: watchlist_id
+            type: string<uuid>
+            desc: Watchlist ID
+        body:
+          - name: name
+            type: string
+            desc: the new watchlist name
+          - name: string
+            type: array[string]
+            desc: the new list of symbol names to replace the watchlist content
+      returns: |
+        A [Watchlist](#watchlist-entity) object with updated content
+      errors:
+        - status: 404
+          reason: the requested watchlist is not found, or one of the symbol is not found in the assets
+        - status: 422
+          reason: some parameters are not valid
+    POST:
+      title: Add an asset
+      summary: Append an asset for the symbol to the end of watchlist asset list
+      params:
+        path:
+          - name: watchlist_id
+            type: string<uuid>
+            desc: Watchlist ID
+        body:
+          - name: string
+            type: array[string]
+            required: true
+            desc: the new list of symbol names to replace the watchlist content
+      returns: |
+        A [Watchlist](#watchlist-entity) object with updated content
+      errors:
+        - status: 404
+          reason: the requested watchlist is not found, or one of the symbol is not found in the assets
+        - status: 422
+          reason: some parameters are not valid
+    DELETE:
+      title: Delete a watchlist
+      summary: Delete a watchlist. This is a permantent deletion.
+      params:
+        path:
+          - name: watchlist_id
+            type: string<uuid>
+            desc: Watchlist ID
+      returns: Null
+      errors:
+        - status: 404
+          reason: the requested watchlist is not found, or one of the symbol is not found in the assets
+
+  /v2/watchlists/{watchlist_id}/{symbol}:
+    DELETE:
+      title: Remove a symbol from the watchlist
+      summary: Delete one entry for an asset by symbol name
+      params:
+        path:
+          - name: watchlist_id
+            type: string<uuid>
+            desc: Watchlist ID
+          - name: symbol
+            type: string
+            desc: symbol name to remove from the watchlist content
+      returns: Null
+      errors:
+        - status: 404
+          reason: the requested watchlist is not found, or one of the symbol is not found in the assets
