@@ -1,40 +1,27 @@
 ---
-title: Who is Alpaca?
+title: About Alpaca
 weight: 10
 ---
 
-# Who is Alpaca?
+# About Alpaca
 
 ## Who We Are
 
-Alpaca started in 2015 as a pure technology company building a database solution for unstructured data, initially
-visual data and ultimately time-series data. We then launched an API-first commission-free stock trading platform
-in early 2018 to serve the needs of the growing community of software developers and technology-minded individuals.
-We offer a robust, user-friendly API which can be used to automate your trading and investing of U.S. equities.
+Alpaca is a technology company headquartered in Silicon Valley that modularizes the world’s asset management activities. We are a team of diverse background individuals with deep financial and technology expertise, backed by some of the top investors in the industry globally. We are proud to be supported by the love of enthusiastic community members on various platforms.
 
 Alpaca's team consists of developers, traders, and brokerage business specialists, who collectively have decades of
-financial services and technology industry experience at organizations such as FINRA, Wealthfront, Google, IBM, EMC, Greenplum, 
+financial services and technology industry experience at organizations such as FINRA, Wealthfront, Google, IBM, EMC, Greenplum,
 Lehman Brothers, and UBS. Alpaca is led by [Yoshi Yokokawa](https://www.linkedin.com/in/yoshiyokokawa/) (CEO),
 [Hitoshi Harada](https://www.linkedin.com/in/hitoshi-harada-02b01425/) (CTO), [John Torola](https://www.linkedin.com/in/johnttorola/) (COO/CCO),
-and [Luke Lonergan](https://www.linkedin.com/in/lukelonergan/) (Chief Architect). Our investors include a group of well-capitalized 
-investors including Spark Capital, Y Combinator, Social Leverage, Portag3, as well as highly experienced industry angel investors 
-such as Joshua S. Levine (former CTO/COO of ETRADE), Eric Di Benedetto (a fintech angel investor with more than 30 IPO and M&A exits), 
-and several YC alumni angels. Additionally, members of the Berkeley Angel Network and two of the largest Japanese banks (MUFG and SMBC) are 
+and [Luke Lonergan](https://www.linkedin.com/in/lukelonergan/) (Chief Architect). Our investors include a group of well-capitalized
+investors including Spark Capital, Y Combinator, Social Leverage, Portag3, as well as highly experienced industry angel investors
+such as Joshua S. Levine (former CTO/COO of ETRADE), Eric Di Benedetto (a fintech angel investor with more than 30 IPO and M&A exits),
+and several YC alumni angels. Additionally, members of the Berkeley Angel Network and two of the largest Japanese banks (MUFG and SMBC) are
 investors in Alpaca.
 
 ## Who Is Alpaca For?
 
-Alpaca Securities provides brokerage services to technology-minded users with a variety of experiences
-including general usage of APIs or automation of investing and trading. We have users come from two of
-the largest quantitative research platforms, Quantopian and QuantConnect. Others are experienced
-automated or manual traders coming from Interactive Brokers, TD Ameritrade, or Robinhood. Some are
-crypto traders expanding into equities. Some have no background in trading at all and are just learning
-to code. We even receive inquiries from boutique quant funds (corporate accounts are on our roadmap!).
-We welcome them all and seek to provide a platform for anyone, novice or experienced, to automate their
-investing and trading.
-
-Alpaca users trade a variety of strategies ranging from passive to active, long-term to short-term intraday.
-As a point of reference, we have some users who execute hundreds of trades worth millions of dollars a day.
+Alpaca Securities provides brokerage services to technology-minded users with a variety of experiences including general usage of APIs or automation of investing and trading. Our paper trading API is open to everyone, and our live brokerage API is available for U.S. residents. Please voice your interest by [completing this form](https://forms.gle/umPhEzWtUEuHAuVVA) if you are a non-U.S. resident and interested in opening an account.
 
 With an Alpaca brokerage account, users have access to:
 
@@ -77,7 +64,7 @@ brokerages. These include:
 market makers and exchanges. PFOF helps us offset the expense that occurs when clearing and executing our
 customers' trades. You can read more about PFOF in our Medium post
 [here](https://medium.com/automation-generation/commission-free-trading-is-it-helping-or-hurting-you-dc5fdc22ca6a).
-For Alpaca Securities SEC Rule 606 disclosures, please click [here](https://alpaca.markets/disclosures). *It is important to note that our customers are not charged.
+For Alpaca Securities SEC Rule 606 disclosures, please click [here](https://alpaca.markets/disclosures). *It is important to note that our customers are not charged.*
 * Margin financing - Alpaca may charge interest for margin loans.
 * Stock loan - Alpaca may charge stock loan fees for users who want to borrow stock to short sell.
 
@@ -101,12 +88,9 @@ claims for cash). Explanatory brochure available upon request or at [www.sipc.or
 
 ## Systems and Technology
 We initially started Alpaca in 2015 as a pure technology company building a database solution for unstructured data,
-initially visual data and ultimately time-series data. One of our achievements, which is being improved on an ongoing
-basis, is [MarketStore](https://github.com/alpacahq/marketstore), a dedicated open source database written in Go designed
+initially visual data and ultimately time-series data. One of our achievements, which continues to be improved on an ongoing basis, is [MarketStore](https://github.com/alpacahq/marketstore), a dedicated open source database written in Go designed
 specifically to handle financial markets time series data. This led us to provide our technology to financial
 institutions including Bank of Tokyo Mitsubishi, Japan's largest bank. We also managed a deep neural net trading
 algorithm service, AlpacaAlgo, that had more than 25,000 deep neural net trading algorithms simultaneously constantly
 generating trade signals to the users. This required processing a large volume of time series data efficiently.
-Hitoshi and Luke lead Alpaca's technology team and are responsible for the data intensive system architecture.
-Both of them come from Greenplum (Luke is a co-founder/CTO of Greenplum), a parallel distributed database company,
-that is used globally by major financial institutions and their quant desks.
+Hitoshi and Luke, who lead Alpaca's technology team, both come from Greenplum (Luke is a co-founder/CTO of Greenplum), a parallel distributed database company that is used globally by major financial institutions and their quant desks. With their relevant experience from Greenplum, they lead the effort in building and supporting Alpaca's data intensive system architecture.

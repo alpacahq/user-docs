@@ -1,5 +1,5 @@
 ---
-title: Trying out the Alpaca API
+title: Try Out and Test the Alpaca API
 weight: 10
 ---
 *This example works with both paper and live trading.*

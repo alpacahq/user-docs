@@ -5,31 +5,31 @@ weight: 70
 
 # Margin & Short Selling
 
-**In order to trade on margin or sell short, you must have $2,000 or more account equity. 
+**In order to trade on margin or sell short, you must have $2,000 or more account equity.
 Accounts with less than $2,000 will not have access to these features and will be restricted to 1x buying power.**
 
 ## How Margin Works
 
 Trading on margin allows you to trade and hold securities with a value that exceeds your account equity. This is made
 possible by funds loaned to you by your broker, who uses your account's cash and securities as collateral.
-For example, a Reg T Margin Account holding $10,000 cash may purchase and hold up to $20,000 in marginable securities 
-overnight (Note: some securities may have a higher maintenance margin requirement making the full 2x overnight buying power 
-effectively unavailable). In addition to the 2x buying power afforded to margin accounts, a Reg T Margin Account 
+For example, a Reg T Margin Account holding $10,000 cash may purchase and hold up to $20,000 in marginable securities
+overnight (Note: some securities may have a higher maintenance margin requirement making the full 2x overnight buying power
+effectively unavailable). In addition to the 2x buying power afforded to margin accounts, a Reg T Margin Account
 flagged as a Pattern Day Trader(PDT) with $25,000 or greater equity will further be allowed to use up to 4x *intraday*
 buying power. As an example, a PDT account holding $50,000 cash may purchase and hold up to $200,000 in securities
-intraday; however, to avoid receiving a margin call the next morning, the securities held would need to be reduced 
+intraday; however, to avoid receiving a margin call the next morning, the securities held would need to be reduced
 to $100,000 or less depending on the maintenance margin requirement by the end of the day.
 
 ### Initial Margin
-Initial margin denotes the percentage of the purchase price of a security or basket of securities (purchased on margin) 
-that an account holder must pay for with available cash in the margin account, additions to cash in the margin account 
+Initial margin denotes the percentage of the purchase price of a security or basket of securities (purchased on margin)
+that an account holder must pay for with available cash in the margin account, additions to cash in the margin account
 or other marginable securities.
 
-Alpaca uses the minimum initial margin requirement of 50% (of the purchase price of a security or basket of securities 
+Alpaca uses the minimum initial margin requirement of 50% (of the purchase price of a security or basket of securities
 that can be purchased on margin) set by Regulation T of the Federal Reserve Board.
 
 ### Maintenance Margin
-Maintenance margin is the amount of cash or marginable securities required to continue holding an open position. FINRA 
+Maintenance margin is the amount of cash or marginable securities required to continue holding an open position. FINRA
 has set the minimum maintenance requirement to at least 25% of the total market value of the securities, but brokers
 are free to set higher requirements as part of their risk management.
 
@@ -44,13 +44,13 @@ Alpaca uses the following table to calculate the overnight maintenance margin ap
 |Short|share price < $5.00|Greater of $2.50/share or 100%|
 |Short|share price >= $5.00|Greater of $5.00/share or 30%|
 
-### Margin Calls 
+### Margin Calls
 If your account does not satisfy its initial and maintenance margin requirements at the end of
 the day, you will receive a margin call the following morning. We will contact you and advise you
 of the call amount that you will need to satisfy either by depositing new funds or liquidating
 some or all of your positions to reduce your margin requirement sufficiently.
 
-We may contact you prior to the end of the day and ask you to liquidate your positions 
+We may contact you prior to the end of the day and ask you to liquidate your positions
 immediately in the event that your account equity is materially below your maintenance requirement.
 Furthermore, although we will make every effort to contact you so that you can determine how to best
 resolve your margin call, we reserve the right to liquidate your holdings in the event we cannot
@@ -75,12 +75,12 @@ The rate is charged **only** on your account’s **end of day** (overnight) debi
 Interest will accrue daily and post to your account at the end of each month. Note that if you have a settlement date
 debit balance as of the end of day Friday, you will incur interest charges for 3 days (Fri, Sat, Sun).
 
-As an example, if you deposited $10,000 into your account and bought $15,000 worth of securities that you held at 
-the end of the day, you would be borrowing $5,000 overnight and would incur a daily interest expense of 
-($5000 * 0.0375) / 360 = **$0.52**. 
+As an example, if you deposited $10,000 into your account and bought $15,000 worth of securities that you held at
+the end of the day, you would be borrowing $5,000 overnight and would incur a daily interest expense of
+($5000 * 0.0375) / 360 = **$0.52**.
 
-On the other hand, if you deposited $10,000 and bought $15,000 worth of stock that you liquidated the same day, 
-you would not incur any interest expense. In other words, this allows you to make use of the additional buying 
+On the other hand, if you deposited $10,000 and bought $15,000 worth of stock that you liquidated the same day,
+you would not incur any interest expense. In other words, this allows you to make use of the additional buying
 power for intraday trading without any cost.
 
 
@@ -91,16 +91,16 @@ in a stock that changes from ETB to HTB overnight will be automatically cancelle
 
 We are pleased to offer a competitive and low annual ETB stock borrow rate of **0.20%**.
 
-However, please note that stock borrow availability changes daily, and we update our assets table each morning, so 
-please use our API to check each stock’s borrow status daily. It is infrequent but names can go from ETB → HTB and 
+However, please note that stock borrow availability changes daily, and we update our assets table each morning, so
+please use our API to check each stock’s borrow status daily. It is infrequent but names can go from ETB → HTB and
 vice versa.
 
-While we do not currently support opening short positions in hard to borrow (“HTB”) securities, we will not 
-force you to close out a position in a stock that has gone from ETB to HTB unless the lender has called the stock. 
-**If a stock you hold short has gone from ETB to HTB, you will incur a higher daily stock borrow fee for that stock 
+While we do not currently support opening short positions in hard to borrow (“HTB”) securities, we will not
+force you to close out a position in a stock that has gone from ETB to HTB unless the lender has called the stock.
+**If a stock you hold short has gone from ETB to HTB, you will incur a higher daily stock borrow fee for that stock
 than the 0.20% ETB rate**. We do not currently provide HTB rates via our API, so please contact us in these cases.
 
-Daily stock borrow fees are the fees incurred for all ETB shorts held in your account as of end of day plus any 
+Daily stock borrow fees are the fees incurred for all ETB shorts held in your account as of end of day plus any
 HTB shorts held at any point during the day, calculated as:
 
 **Daily stock borrow fee = Daily ETB stock borrow fee + Daily HTB stock borrow fee**

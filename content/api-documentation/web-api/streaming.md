@@ -173,7 +173,7 @@ receive stream messages for these events.
 - `calculated`
 
 The common and rare events all correspond to order statuses. For more information on what those statuses mean, please refer
-back to the [Orders]({{< relref "/orders/_index.md#order-lifecycle" >}}).
+to [Trading On Alpaca - Orders page]({{< ref path="/trading-on-alpaca/orders.md#order-lifecycle" >}}).
 
 ## Account Updates
 Users may also listen to the account updates stream under: `account_updates`. This stream provides clients with updates pertaining

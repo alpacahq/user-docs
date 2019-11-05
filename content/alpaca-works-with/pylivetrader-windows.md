@@ -43,4 +43,3 @@ pylivetrader run exampleAlgorithm.py --backend-config exampleConfig.yaml
 You can reactivate this environment at any time by running `source activate pylivetraderenv` inside the Anaconda prompt.
 
 If you encounter issues with setting your environment up, feel free to ask for help in our community Slack. A link to join is in the sidebar.
-

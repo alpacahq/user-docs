@@ -3,8 +3,6 @@ title: Bars
 weight: 10
 ---
 
-# Bars API
-
 The bars API provides time-aggregated price and volume data.
 
 {{< rest-endpoint resource="bars" method="GET" path="/v1/bars/{timeframe}" >}}
