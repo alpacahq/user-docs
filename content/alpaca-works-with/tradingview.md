@@ -34,11 +34,11 @@ This will take you to a specific chart within TradingView.
 ### <a name="stepfour"></a>Step 4: Open TradingView trade panel and Select Alpaca
 Once the trade panel is open, you will see various brokerages and platforms integrated with TradingView. Find and select Alpaca.
 
-<center><img src="./Select-Alpaca.png" width="80%"></center>
+<center><img src="./starttrading.png" width="80%"></center>
 
 This will open up the Alpaca specific panel. Click continue.
 
-<center><img src="./Alpaca-Continue.png" width="80%"></center>
+<center><img src="./continue.png" width="80%"></center>
 
 <br>
 ### <a name="stepfive"></a>Step 5: Connect and Authorize
