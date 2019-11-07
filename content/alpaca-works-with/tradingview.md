@@ -3,7 +3,7 @@ title: TradingView
 weight: 10
 ---
 
-We are happy to announce that TradingView is now integrated with Alpaca! You can connect with TradingView to enact trades directly from TradingView charts. Please follow the steps below to enable TradingView.
+We are happy to announce that TradingView is now integrated with Alpaca as of November 7, 2019! You can connect with TradingView to enact trades directly from TradingView charts. Please follow the steps below to enable TradingView.
 
 * [Step 1: Set Up and Log In on Alpaca]({{< relref "#stepone" >}})
 * [Step 2: Set Up and Log In on TradingView]({{< relref "#steptwo" >}})
