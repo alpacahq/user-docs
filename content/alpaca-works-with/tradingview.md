@@ -45,6 +45,6 @@ This will open up the Alpaca specific panel. Click continue.
 
 If you are logged in to Alpaca, the Authorization screen will come up through a pop-up. Click Authorize to complete the connection.
 
-If you are not logged in, you will be prompted to log in. After you have logged in, you will need to close the pop-up window and retry step 4 (click the **CONTINUE** button from TradingView chart Trade panel).
+<center><img src="./Authorize-TradingView.png" width="400"></center>
 
-<center><img src="./Alpaca-Continue.png" width="80%"></center>
+If you are not logged in, you will be prompted to log in. After you have logged in, you will need to close the pop-up window and retry step 4 (click the **CONTINUE** button from TradingView chart Trade panel).
