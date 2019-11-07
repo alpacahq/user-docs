@@ -19,11 +19,11 @@ Sign up for an Alpaca account and complete brokerage onboarding. To enable Tradi
 
 <br>
 ### <a name="steptwo"></a>Step 2: Set Up and Log In on TradingView
-Once your account is approved, set up your account on TradingView. Log in to TradingView.
+Once your account is approved, set up your account on TradingView. Log in to [TradingView](https://www.tradingview.com/).
 
 <br>
 ### <a name="stepthree"></a>Step 3: Visit a TradingView Chart
-To initiate the integration, visit TradingView site and open a chart by clicking the "**Chart**" tab on TradingView's dashboard.
+To initiate the integration, visit [TradingView](https://www.tradingview.com/chart/) and open a [chart](https://www.tradingview.com/chart/) by clicking the "**Chart**" tab on TradingView's dashboard.
 <center><img src="./TradingView-Chart-Page.png" width="80%"></center>
 
 This will take you to a specific chart within TradingView.
@@ -32,7 +32,7 @@ This will take you to a specific chart within TradingView.
 
 <br>
 ### <a name="stepfour"></a>Step 4: Open TradingView trade panel and Select Alpaca
-Once to trade panel is open, you will see various brokerages and platforms integrated with TradingView. Find and select Alpaca.
+Once the trade panel is open, you will see various brokerages and platforms integrated with TradingView. Find and select Alpaca.
 
 <center><img src="./Select-Alpaca.png" width="80%"></center>
 
