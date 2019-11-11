@@ -16,6 +16,8 @@ state.
 
 For further details on order functionality, please see the [Trading On Alpaca - Orders page]({{< ref path="/trading-on-alpaca/orders.md" >}}).
 
+Please note that body parameters should be passed using a JSON encoded body.
+
 {{< rest-endpoint resource="orders" method="GET" path="/v2/orders" >}}
 {{< rest-endpoint resource="orders" method="POST" path="/v2/orders" >}}
 {{< rest-endpoint resource="orders" method="GET" path="/v2/orders/{order_id}" >}}
