@@ -56,11 +56,13 @@ server returns error response with HTTP status code 429.  **The rate limit is
 
 ## General Rules
 ### Time Format and Time Zone
-All date time type inputs and outputs are serialized according to
+Most date time type inputs and outputs are serialized according to
 [ISO8601](https://www.iso.org/iso-8601-date-and-time-format.html)
 (more specifically [RFC3339](https://tools.ietf.org/html/rfc3339)).  The
 communication does not assume a particular time zone, and this date time
-serialization denominates the time offset of each value.
+serialization denominates the time offset of each value. An exception to
+this rule is the Calendar endpoint, which for example, accepts date
+strings of the format "%Y-%m-%d".
 
 ### Numbers
 Decimal numbers are returned as strings to preserve full precision across
