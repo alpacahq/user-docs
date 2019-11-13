@@ -105,7 +105,6 @@ All of four symbol forms are case-sensitve.
 ## v2 Release Notes
 
 * Updated Account and Assets entities with new fields for short selling and margin trading
-* Updated
 * Orders that encounter account permissioning, insufficient buying power, or lack of available borrow will return
 a 403 “forbidden” error with an existing or new log message describing the reject.
 * The endpoint host name will be the same as v1 (api.alpaca.markets/paper-api.alpaca.markets) but with different path (“/v2”).
