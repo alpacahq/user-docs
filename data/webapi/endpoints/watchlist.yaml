@@ -70,7 +70,7 @@ endpoints:
             type: string<uuid>
             desc: Watchlist ID
         body:
-          - name: string
+          - name: symbols
             type: array[string]
             required: true
             desc: the new list of symbol names to replace the watchlist content
