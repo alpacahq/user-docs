@@ -85,21 +85,7 @@ each price level as well as any price moves that may occur while your order is
 being routed to its execution venue. There is also the risk with market orders
 that they may get filled at unexpected prices due to short-term price spikes.
 
-To protect against excessive price impact and buying power violations, Alpaca converts buy market orders into
-marketable limit orders with a price limit that is 4% higher than a current market price < $50 and 2.5% higher
-than a current market price >= $50.
-In most cases, this will have the same exact outcome as using a true market order.
-However, if the stock price moves more than 4% (or 2.5% for >=$50/share stocks) above the market price in the time that it
-takes to route your order to the execution venue, then your order would not execute until
-the price came back within the collar. Sell market orders are **not** converted into
-limit orders.
-
-If you submit a buy market order during pre-market or extended-hours trading, we use the
-last traded price to determine the limit price. This means that if the stock opens more than 4%
-(or 2.5% for >=$50/share stocks) above the last traded price that existed at the time you submitted your order, your order
-won’t be executed until the price comes back within the price collar.  
-
-*Alpaca uses the following rounding mechanics with respect to buy orders: the last trade price is (1) multiplied by up to 1.05 (depending on prices of instruments, market conditions, and other factors); (2) rounded down to two decimal places if the last trade price is over $1.00; otherwise, rounded down to four decimal places.*
+*Alpaca uses the following rounding mechanics with respect to buy orders: (1) rounded down to two decimal places if the last trade price is over $1.00; otherwise, rounded down to four decimal places.*
 
 ### Limit Order
 A limit order is an order to buy or sell at a specified price or better. A
