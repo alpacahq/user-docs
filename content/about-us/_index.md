@@ -33,7 +33,7 @@ With an Alpaca brokerage account, users have access to:
 * Fully working, example algorithms that can be deployed immediately
 * Multiple support channels
 
-Please see the bottom of the [Alpaca homepage](https://alpaca.markets/) for disclosures.
+Please see the footer of the [Alpaca homepage](https://alpaca.markets/) for disclosures.
 
 ## How Alpaca Works
 

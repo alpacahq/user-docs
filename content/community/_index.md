@@ -5,22 +5,18 @@ weight: 100
 
 # Community
 
-At Alpaca, we truly believe open source and the community around it can change financial systems and
-how we interact with them. It is our commitment to contribute to the community as much as possible.
-With that in mind, we set up a few initiatives where you can learn from and contribute to the community.
+At Alpaca, we believe that open source and the community around it can change financial systems and how we interact with them. It is our commitment to contribute to the community as much as possible. To start, we have set up a few initiatives where you can learn from and contribute.
 
-As you get deeper into trading and automation, there are many questions and hurdles that you may face
-while trying things out. We find that our community has been growing rapidly to share what they do with
-each other. Alpaca grows with our community and knowledge is built together.
+As you continue on your journey of automated trading, there are many questions and hurdles that might arise while trying things out. Because of this, we have set up several community spaces for automated traders to gather and share knowledge.
 
 ## Alpaca Forum
 [Alpaca's community forum](https://forum.alpaca.markets) is recommended venue for Alpaca users to discuss topics ranging from trading, algorithms, programming, market data, etc. The forum is also a place to find up-to-date announcements about Alpaca and its features. The forum is the recommended place for discussion, since it has more advanced indexing and search functionality compared to our other community channels.
 
 There are various topics set up for users to discuss, including:
 
-**Alpaca - Alpaca Questions** - Users can ask questions specifically about Alpaca.
+[**Ask the Community**](https://forum.alpaca.markets/c/questions) - Start here if you have any questions on how to use Alpaca, questions about code, etc.
 
-**Alpaca - Feature Requests** - Users can add different feature requests here.
+[**Alpaca - Feature Requests**](https://forum.alpaca.markets/c/alpaca/feature-requests) - This category is for discussion on types of features you’d like to see implemented. What new features would you like to see implemented? What is the use case for this feature? How would it be helpful for you?
 
 **Programming - Questions & Issues** - Users can post questions or issues regarding Alpaca technology and receive help.
 

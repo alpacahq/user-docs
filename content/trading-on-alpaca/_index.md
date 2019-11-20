@@ -1,4 +1,4 @@
 ---
 title: Trading on Alpaca
-weight: 40
+weight: 30
 ---

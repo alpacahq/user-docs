@@ -1,6 +1,6 @@
 ---
 title: Get Started With Alpaca
-weight: 30
+weight: 40
 ---
 
 # Get Started With Alpaca
