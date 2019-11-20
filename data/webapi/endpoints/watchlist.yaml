@@ -51,7 +51,7 @@ endpoints:
           - name: name
             type: string
             desc: the new watchlist name
-          - name: string
+          - name: symbols
             type: array[string]
             desc: the new list of symbol names to replace the watchlist content
       returns: |
