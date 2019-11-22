@@ -7,9 +7,6 @@ outputs:
  - json
 ---
 
-TradingView is now integrated with Alpaca! To learn more, read about it here.
-
-
 ## Where Should I Start?
 
 If you need help in getting started, [check out our examples and tutorials](/get-started-with-alpaca).
