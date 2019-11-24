@@ -83,7 +83,7 @@ endpoints:
           reason: some parameters are not valid
     DELETE:
       title: Delete a watchlist
-      summary: Delete a watchlist. This is a permantent deletion.
+      summary: Delete a watchlist. This is a permanent deletion.
       params:
         path:
           - name: watchlist_id
