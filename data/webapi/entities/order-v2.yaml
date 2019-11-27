@@ -1,10 +1,10 @@
 spec:
   - name: id
     type: string<uuid>
-    desc: order id
+    desc: Order id
   - name: client_order_id
     type: string
-    desc: client unique order id
+    desc: Client unique order id
   - name: created_at
     type: string<timestamp>
   - name: updated_at
@@ -17,9 +17,11 @@ spec:
     type: string<timestamp> (Nullable)
   - name: canceled_at
     type: string<timestamp> (Nullable)
+  - name: failed_at
+    type: string<timestamp> (Nullable)
   - name: asset_id
     type: string<uuid>
-    desc: asset ID
+    desc: Asset ID
   - name: symbol
     type: string
     desc: Asset symbol
@@ -49,6 +51,9 @@ spec:
   - name: stop_price
     type: string<number> (Nullable)
     desc: Stop price
+  - name: filled_avg_price
+    type: string<number> (Nullable)
+    desc: Filled average price
   - name: status
     type: string<order_status>
     desc: See [Orders page](/broker-functions/orders/#order-lifecycle)
