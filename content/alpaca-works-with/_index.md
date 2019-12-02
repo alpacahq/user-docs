@@ -9,7 +9,7 @@ Alpaca works with many ways to trade! We pride ourselves in enabling many partne
 **We currently support the following integrations through OAuth 2.0:**
 
 * [TradingView](https://tradingview.com/broker/Alpaca)
-* IFTTT (Coming Soon)
+* [IFTTT](https://ifttt.com/alpaca)
 * [Zapier (Early Access)](https://zapier.com/apps/alpaca/integrations)
 * [Slack](./alpaca-for-slack)
 
