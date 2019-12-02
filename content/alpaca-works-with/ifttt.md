@@ -22,7 +22,7 @@ Once your account is approved, set up your account on IFTTT. Log in to [IFTTT](h
 
 <br>
 ### <a name="stepthree"></a>Step 3: Visit Alpaca's Page on IFTTT
-To initiate the integration, visit log into IFTTT and visit [Alpaca's page on IFTTT](https://www.ifttt.com/). On this page, click 'Connect'.
+To initiate the integration, visit log into IFTTT and visit [Alpaca's page on IFTTT](https://www.ifttt.com/alpaca). On this page, click 'Connect'.
 
 
 <center><img src="./1-IFTTT-Alpaca-Page.png" width="80%"></center>
@@ -39,6 +39,6 @@ If you are logged in to Alpaca, the Authorization screen will come up through a 
 
 <center><img src="./3-Authorize.png" width="50%"></center>
 
-Now that you're connected, you can return to [Alpaca's page on IFTTT](https://www.ifttt.com/) and start automating!
+Now that you're connected, you can return to [Alpaca's page on IFTTT](https://www.ifttt.com/alpaca) and start automating!
 
 <center><img src="./4-Connected.png" width="80%"></center>
