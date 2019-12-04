@@ -13,7 +13,7 @@ Rest assured that our team actively reviews all inquiries and will reach out to 
 
 We look forward to working with you!
 
-<a class="toggle-button cta-button-key" href="https://forms.gle/Wwt99XgK9t9a9x8y9" style="background-color: gold; color: #303030; float: none; margin: 0 auto; border: none; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);">
+<a class="toggle-button cta-button-key" href="https://forms.gle/Wwt99XgK9t9a9x8y9" style="background-color: gold; color: #303030; float: none; margin: 0 auto; border: none; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5); font-weight: normal;">
 Fill Out The Request Form
 </a>
 
