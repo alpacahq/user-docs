@@ -14,7 +14,7 @@ We are happy to announce that IFTTT is now integrated with Alpaca as of November
 
 
 ### <a name="stepone"></a>Step 1: Set Up and Log In on Alpaca
-Sign up for an Alpaca account and complete brokerage onboarding. To enable IFTTT, we recommend that you use a live brokerage Alpaca account. Log in to Alpaca.
+Sign up for an Alpaca account and complete brokerage onboarding. Log in to Alpaca.
 
 <br>
 ### <a name="steptwo"></a>Step 2: Set Up and Log In on IFTTT
@@ -22,7 +22,7 @@ Once your account is approved, set up your account on IFTTT. Log in to [IFTTT](h
 
 <br>
 ### <a name="stepthree"></a>Step 3: Visit Alpaca's Page on IFTTT
-To initiate the integration, visit log into IFTTT and visit [Alpaca's page on IFTTT](https://www.ifttt.com/alpaca). On this page, click 'Connect'.
+To initiate the integration, log into IFTTT and visit [Alpaca's page on IFTTT](https://www.ifttt.com/alpaca). On this page, click 'Connect'.
 
 
 <center><img src="./1-IFTTT-Alpaca-Page.png" width="80%"></center>
