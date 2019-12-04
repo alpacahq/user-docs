@@ -13,7 +13,10 @@ Rest assured that our team actively reviews all inquiries and will reach out to 
 
 We look forward to working with you!
 
-<span style="font-size:150%;">[Click Here to Fill Out The Request Form](https://forms.gle/Wwt99XgK9t9a9x8y9)</span>
+<a class="toggle-button cta-button-key" href="https://forms.gle/Wwt99XgK9t9a9x8y9" style="background-color: gold; color: #303030; float: none; margin: 0 auto; border: none; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);">
+Fill Out The Request Form
+</a>
+
 
 ## FAQs
 
@@ -39,3 +42,5 @@ We look forward to working with you!
 
 - Q: I have a request for a feature that is not listed in the [API documentation](https://docs.alpaca.markets/api-documentation/). How can I request a feature?
 - A: We’re always working on building a lot of exciting stuff here at Alpaca and the team continues to collect feature requests. Please submit the [request form](https://forms.gle/mUXFdKFvbKxPADjXA) and include your use case/request to help us determine next steps.  
+
+<i>\* This is not an offer, solicitation of an offer, or advice to open a brokerage account. https://alpaca.markets/#disclosures </i>
