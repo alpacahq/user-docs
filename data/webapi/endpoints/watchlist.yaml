@@ -40,7 +40,7 @@ endpoints:
         - status: 404
           reason: the requested watchlist is not found
     PUT:
-      title: Update watchlist 
+      title: Update watchlist
       summary: Update the name and/or content of watchlist.
       params:
         path:
@@ -70,15 +70,15 @@ endpoints:
             type: string<uuid>
             desc: Watchlist ID
         body:
-          - name: symbols
-            type: array[string]
+          - name: symbol
+            type: string
             required: true
-            desc: the new list of symbol names to replace the watchlist content
+            desc: the symbol name to add to the watchlist
       returns: |
         A [Watchlist](#watchlist-entity) object with updated content
       errors:
         - status: 404
-          reason: the requested watchlist is not found, or one of the symbol is not found in the assets
+          reason: the requested watchlist is not found, or the symbol is not found in the assets
         - status: 422
           reason: some parameters are not valid
     DELETE:
@@ -92,7 +92,7 @@ endpoints:
       returns: Null
       errors:
         - status: 404
-          reason: the requested watchlist is not found, or one of the symbol is not found in the assets
+          reason: the requested watchlist is not found
 
   /v2/watchlists/{watchlist_id}/{symbol}:
     DELETE:
@@ -109,4 +109,4 @@ endpoints:
       returns: Null
       errors:
         - status: 404
-          reason: the requested watchlist is not found, or one of the symbol is not found in the assets
+          reason: the requested watchlist is not found, or the symbol is not found in the assets
