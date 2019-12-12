@@ -1,11 +1,8 @@
-+++
-aliases = [
-    "/account-plans.md"
-]
-+++
 ---
 title: Account Plans
 weight: 50
+aliases:
+    - /account-plans.md
 ---
 
 ## Alpaca Paper Only Account
