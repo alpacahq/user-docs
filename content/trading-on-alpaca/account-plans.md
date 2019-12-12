@@ -3,8 +3,6 @@ title: Account Plans
 weight: 50
 ---
 
-# Account Plans
-
 ## Alpaca Paper Only Account
 
 Anyone globally can create an Alpaca Paper Only Account! All you need to do is [sign up](https://app.alpaca.markets/signup)

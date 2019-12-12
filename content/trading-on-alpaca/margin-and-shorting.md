@@ -3,8 +3,6 @@ title: Margin & Short Selling
 weight: 70
 ---
 
-# Margin & Short Selling
-
 **In order to trade on margin or sell short, you must have $2,000 or more account equity.
 Accounts with less than $2,000 will not have access to these features and will be restricted to 1x buying power.**
 

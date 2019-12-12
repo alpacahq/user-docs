@@ -3,8 +3,6 @@ title: Paper Trading Specification
 weight: 50
 ---
 
-# Paper Trading Specification
-
 **Paper trading is free and available to all Alpaca users**
 
 Paper trading is a real-time simulation environment where you can test
