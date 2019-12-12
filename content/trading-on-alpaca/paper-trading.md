@@ -1,3 +1,8 @@
++++
+aliases = [
+    "/paper-trading.md"
+]
++++
 ---
 title: Paper Trading Specification
 weight: 50

@@ -1,3 +1,9 @@
++++
+aliases = [
+    "/margin-and-shorting.md"
+]
++++
+
 ---
 title: Margin & Short Selling
 weight: 70

@@ -1,3 +1,8 @@
++++
+aliases = [
+    "/market-data.md"
+]
++++
 ---
 title: Market Data
 weight: 45
