@@ -4,4 +4,4 @@ build:
 	hugo
 
 publish:
-	aws s3 sync --acl public-read public $(DEPLOYMENT_TARGET)
+	aws s3 sync --delete --acl public-read public $(DEPLOYMENT_TARGET)
