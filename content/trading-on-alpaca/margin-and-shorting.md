@@ -1,12 +1,8 @@
-+++
-aliases = [
-    "/margin-and-shorting.md"
-]
-+++
-
 ---
 title: Margin & Short Selling
 weight: 70
+aliases:
+    - /margin-and-shorting.md
 ---
 
 **In order to trade on margin or sell short, you must have $2,000 or more account equity.

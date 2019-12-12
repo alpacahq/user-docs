@@ -1,11 +1,8 @@
-+++
-aliases = [
-    "/paper-trading.md"
-]
-+++
 ---
 title: Paper Trading Specification
 weight: 50
+aliases:
+    - /paper-trading.md
 ---
 
 **Paper trading is free and available to all Alpaca users**
