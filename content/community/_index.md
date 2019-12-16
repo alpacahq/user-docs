@@ -36,7 +36,7 @@ members and is a place where you can find feature updates and read official anno
 
 **#dev-all** - Everyone automatically joins here. All development languages are welcome here, whether it's Python, Go, JavaScript, or more. Just specify what you're working in and get feedback or chat about your code in this channel.
 
-**##feedback** - Everyone automatically joins here. Provide feedback to the Alpaca team! Whether it's about the logo, login flow, feature requests, or something else, leave a note here. The team really appreciates your time, effort and thoughts. 
+**#feedback** - Everyone automatically joins here. Provide feedback to the Alpaca team! Whether it's about the logo, login flow, feature requests, or something else, leave a note here. The team really appreciates your time, effort and thoughts. 
 
 **#q-and-a** - Everyone automatically joins here. A dedicated channel for questions. 
 
