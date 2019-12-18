@@ -24,33 +24,25 @@ There are various topics set up for users to discuss, including:
 ## Community Slack
 
 [Alpaca’s community Slack](https://alpaca.markets/slack) has grown to be the go-to place for Alpaca
-users regardless of experience or the stage of where they are in the journey of trading. The community
-consists of both very experienced users and beginners. From questions about basic features and
-API instructions to discussions about how the market works and analysis of algorithms they are
-building, the community Slack is the place where you can chat with other community members with
-similar experience as well as those who are already running profitable strategies.
+users regardless of experience or where they are in the journey of trading. The community
+consists a variety of users, from experienced traders to beginners and many in-between. The community Slack is the place where community members can chat, ask questions, provide feedback, discuss the market, analyze algorithms and more together.
 
-There are multiple community-built channels in the community Slack. Popular channels that you may want to
-subscribe to include:
-
-**#random** - Everyone who joins the community Slack automatically joins here. Jump right in to discussions
-ranging from simple coding questions to specific features that Alpaca offers.
+There are multiple channels that all new users automatically are added to in the community Slack: #announcements, #community, #dev-all, #feedback, #q-and-a, and #trading. 
 
 **#announcement** - Everyone automatically joins here. This is a ready-only channel for the community
 members and is a place where you can find feature updates and read official announcements from Alpaca.
 
-**#api** - Technical focused discussions regarding the Alpaca API including issues and findings encountered
-by the community.
+**#community** - Everyone automatically joins here. Jump right in to discussions, ask questions, and maybe, make new friends!
 
-**#algo-development & #algotrading** - Highly technical channels where members share and
-discuss their code, ask questions, and solicit feedback of their strategies.
+**#dev-all** - Everyone automatically joins here. All development languages are welcome here, whether it's Python, Go, JavaScript, or more. Just specify what you're working in and get feedback or chat about your code in this channel.
 
-**#python** - Python is a popular language for writing trading strategies thanks to Quantopian. Many
-Quantopian users are active in our community Slack and discuss open source resources used to support
-existing Quantopian algorithms.
+**#feedback** - Everyone automatically joins here. Provide feedback to the Alpaca team! Whether it's about the logo, login flow, feature requests, or something else, leave a note here. The team really appreciates your time, effort and thoughts. 
 
-**#zipline-strategies** - This is another Quantopian influenced channel where members talk about
-compatibility and Quantopian’s open source zipline resources.
+**#q-and-a** - Everyone automatically joins here. A dedicated channel for questions. 
+
+**#trading** - Everyone automatically joins here. "Trading" normally refers to live trading in the Alpaca community, but you're more than welcome to join #trading-papertrading or #trading-algo to discuss paper trading or algorithmic trading, respectively.
+
+**Any #project- channels** - Any channels that start with "project" are user-created channels for Alpaca-based projects. You are welcome to create one, too! 
 
 ### Slack Integration
 
