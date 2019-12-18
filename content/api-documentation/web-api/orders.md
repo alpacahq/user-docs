@@ -15,7 +15,7 @@ the status. Updates on open orders at Alpaca will also be sent over the
 streaming interface, which is the recommended method of maintaining order
 state.
 
-For further details on order functionality, please see the [Trading On Alpaca - Orders page]({{< ref path="/trading-on-alpaca/orders.md" >}}).
+For further details on order functionality, please see the [Trading On Alpaca - Orders page]({{< ref path="/trading-on-alpaca/orders" >}}).
 
 {{< rest-endpoint resource="orders" method="GET" path="/v1/orders" >}}
 {{< rest-endpoint resource="orders" method="POST" path="/v1/orders" >}}
