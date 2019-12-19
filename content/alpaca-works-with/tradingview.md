@@ -15,7 +15,7 @@ We are happy to announce that TradingView is now integrated with Alpaca as of No
 
 
 ### <a name="stepone"></a>Step 1: Set Up and Log In on Alpaca
-Sign up for an Alpaca account and complete brokerage onboarding. To enable TradingView, we recommend that you use a live brokerage Alpaca account. Log in to Alpaca.
+Sign up for an Alpaca account and complete brokerage onboarding. Log in to Alpaca.
 
 <br>
 ### <a name="steptwo"></a>Step 2: Set Up and Log In on TradingView
