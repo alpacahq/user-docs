@@ -122,7 +122,7 @@ The thresholds are doubled during pre-market and after-hours.
 A stop (market) order is an order to buy or sell a security when its price moves past
 a particular point, ensuring a higher probability of achieving a predetermined
 entry or exit price. Once the market price crosses the specified stop price,
-the stop order becomes a market order. Alpaca converts buy stop orders into stop limit
+the stop order becomes a market order. Alpaca converts buy stop orders into svtop limit
 orders with a limit price that is 4% higher than a stop price < $50 (or 2.5% higher than a
 stop price >= $50). Sell stop orders are **not** converted into stop limit orders.
 
@@ -165,9 +165,9 @@ Alpaca supports the following Time-In-Force designations:
   actions affecting the issue. We do not currently support Do Not Reduce(DNR) orders to opt out of such price adjustments.
 - `opg`<br>
   Use this TIF with a market/limit order type to submit "market on open" (MOO) and "limit on open" (LOO) orders.
-  This order is eligible to execute only in the market opening auction. Any unfilled orders after the open will be cancelled.
-  OPG orders submitted after 9:28am but before 7:00pm ET will be rejected. OPG orders submitted after 7:00pm will be queued
-  and routed to the following day's opening auction.
+  This order is eligible to execute only in the market opening auction. Any unfilled orders after the open will be cancelled. OPG orders submitted after 9:28am but before 7:00pm ET will be rejected. OPG orders submitted after 7:00pm will be queued and routed to the following day's opening auction.
+
+  On open/on close orders are routed to the primary exchange. Such orders do not necessarily execute exactly at 9:30am / 4:00pm ET but execute per the exchange’s auction rules.
 - `cls`<br>
   Use this TIF with a market/limit order type to submit "market on close" (MOC) and "limit on close" (LOC) orders.
   This order is eligible to execute only in the market closing auction. Any unfilled orders after the close will be cancelled.
