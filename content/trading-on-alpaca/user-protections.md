@@ -19,7 +19,7 @@ returns error with HTTP status code 403 (Forbidden).
 
 ### The Rule
 A day trade is defined as a round-trip pair of trades within the same day (including extended hours). A
-buy must be occur first and then a sell of the same security must come later
+buy must occur first and then a sell of the same security must come later
 in the day. The inverse does not make a day trade. Selling short and
 covering the short on the same day is also considered a day trade.
 
