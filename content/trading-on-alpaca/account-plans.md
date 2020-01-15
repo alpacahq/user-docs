@@ -35,11 +35,10 @@ or more equity will have access to margin trading and short selling.
 Alpaca Securities LLC supports individual taxable brokerage accounts. At this time, we do not support retirement accounts.
 For a more formal overview, please see the [sign up page of the Alpaca Securities FAQ](https://support.alpaca.markets/hc/en-us/sections/360001817852-Account-Sign-Up).
 
+{{< hash-link business>}}
 **Business Account**
 
-We support select business accounts for U.S. and non-U.S. residents. Hedge funds, RIAs, app developers, and service
-providers, please [contact us](https://support.alpaca.markets/hc/en-us/requests/new) if you are interested in opening a business account.
-You can also [read more](https://medium.com/automation-generation/trading-through-a-business-account-at-alpaca-6ccb79709797) about some of the entities we support.
+We support select business accounts for U.S. and non-U.S. residents. Hedge funds, RIAs, app developers, and service providers, please [complete the form](https://docs.google.com/forms/d/e/1FAIpQLScH_5wylQNILGedoS_mAS7-djbU24hDqaOERMLiBVRRn9IaJA/viewform?usp=sf_link) if you are interested in opening a business account (currently available by invite-only).  You can also [read more](https://medium.com/automation-generation/trading-through-a-business-account-at-alpaca-6ccb79709797) about some of the entities we support.
 
 **Account for non-U.S. residents?**
 
