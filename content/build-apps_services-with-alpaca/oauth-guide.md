@@ -3,7 +3,8 @@ title: Integration Guide
 weight: 10
 ---
 
-## <a name="introduction"></a> Introduction
+## <a name="introduction"></a>Introduction
+
 We welcome developers to build applications and products that are powered by Alpaca while also protecting the privacy and security of our users. To build using Alpaca's APIs, please follow the guide below.
 
 Alpaca implements OAuth 2.0 to allow third party applications to access Alpaca Trading API on
@@ -14,17 +15,18 @@ behalf of the end-users. This document describes how you can integrate with Alpa
 * [Terms of Access and Use]({{< relref "#terms" >}})
 * [Registering Your Application]({{< relref "#registration" >}})
 * [Integration]({{< relref "#integration" >}})
-* [Making API Calls]({{<relref "#APIcall"}})
-
+* [Making API Calls]({{< relref "#APIcall" >}})
 
 ## <a name="terms"></a>Terms of Access and Use
+
 * You must read the terms and register in order to connect and use Alpaca's APIs
 * All API clients must authenticate with OAuth 2.0
 * You may not imply that the app was developed by Alpaca.
 * If you are building a commercial application that makes money (including ads, in-app purchases, etc), you must disclose it in the registration form and receive written approval.
 
 ## <a name="registration"></a>Application Creation and Registration
-Currently, in order to use the OAuth integration, each application has to be approved and registered by Alpaca personnel. Please read our terms and conditions and submit a e-signature for our API agreement.
+
+Before integrating with Alpaca, you'll first need to create a new OAuth app under your (https://app.alpaca.markets/brokerage/apps/manage)[OAuth Apps] page.
 
 To register your app, click the 'Apps' icon on the left side menu. From here, you can access the apps you have authorized as well as the apps you have developed.
 
@@ -34,13 +36,13 @@ Once you add your relevant information and create the app, you will receive your
 
 <center><img src="./application_info.png" width="80%"></center>
 
-
 ## <a name="integration"></a>Integration
-Once the application is registered, we will issue a Client ID and Client Secret.
+
+Once the application is registered, we will issue a Client ID and Client Secret for it.
 
 To integrate your application with Alpaca, use the following flow:
 
-<center><img src="./flow.png" width="80%"></center>
+<center><img src="./Flow.png" width="80%"></center>
 
 1. *End user requests service from application. Application redirect users to request Alpaca access*
 
@@ -64,7 +66,6 @@ Example authorization URL:
 GET https://app.alpaca.markets/oauth/authorize?response_type=code&client_id=fc9c55efa3924f369d6c1148e668bbe8&redirect_uri=https%3A%2F%2Fexample.com%2Foauth%2Fcallback&state=8e02c9c6a3484fadaaf841fb1df290e1&scope=account:write%20trading
 ```
 
-
 2. *End user authorizes API access for the applications*
 
 From the user side, they will see the following authorization screen:
@@ -81,11 +82,12 @@ Example of the redirect:
 GET https://example.com/oauth/callback?code=67f74f5a-a2cc-4ebd-88b4-22453fe07994&state=8e02c9c6a3484fadaaf841fb1df290e1
 ```
 
-4. *Application receives the authorization code from end user*
+4. *Application receives the authorization code*
 
 You can use this code to exchange for an access token.
 
-5. *Application exchanges the authorization code with the access token from Alpaca*
+5. *Application exchanges the authorization code with an access token from Alpaca*
+
 After you have received the temporary `code`, you can exchange it for an access token. This can be done by making a POST call:
 
 ```
@@ -122,7 +124,8 @@ After a successful request, a valid access token will be returned in the respons
 ```
 
 ## <a name="APIcall"></a>API Call
-Once you have integrated and have a valid access token you can make API calls to Alpaca's server.
+
+Once you have integrated and have a valid access token you can start make calls to Alpaca Trading API v2 on behalf of the end-user.
 
 Example requests:
 
