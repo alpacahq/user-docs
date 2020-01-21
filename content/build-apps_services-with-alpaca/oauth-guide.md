@@ -1,5 +1,5 @@
 ---
-title: Integration Guide
+title: OAuth Integration Guide
 weight: 10
 ---
 
