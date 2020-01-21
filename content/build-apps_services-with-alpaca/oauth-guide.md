@@ -26,15 +26,19 @@ behalf of the end-users. This document describes how you can integrate with Alpa
 
 ## <a name="registration"></a>Application Creation and Registration
 
-Before integrating with Alpaca, you'll first need to create a new OAuth app under your (https://app.alpaca.markets/brokerage/apps/manage)[OAuth Apps] page.
+* Before integrating with Alpaca, you'll first need to create a new OAuth app under your [OAuth Apps](https://app.alpaca.markets/brokerage/apps/manage) page.
 
-To register your app, click the 'Apps' icon on the left side menu. From here, you can access the apps you have authorized as well as the apps you have developed.
+* To register your app, click the 'OAuth Apps' icon on the left side menu. From here, you can access the apps you have authorized as well as the apps you have developed.
 
-Use the "Create New App" flow to register your new application. The first step will be to agree and sign our API Agreement.
+<center><img src="./apps_page.png" width="80%"></center>
 
-Once you add your relevant information and create the app, you will receive your Client ID and Client Secret.
 
-<center><img src="./application_info.png" width="80%"></center>
+* Use the "Create New App" flow to register your new application. The first step will be to agree and sign our API Agreement.
+
+* Once you add your relevant information and create the app, you will receive your Client ID and Client Secret.
+
+<center><img src="./application_info.png" width="60%"></center>
+
 
 ## <a name="integration"></a>Integration
 
@@ -70,7 +74,7 @@ GET https://app.alpaca.markets/oauth/authorize?response_type=code&client_id=fc9c
 
 From the user side, they will see the following authorization screen:
 
-<center><img src="./Authorization_Page.png" width="80%"></center>
+<center><img src="./Authorization_Page.png" width="40%"></center>
 
 3. *Alpaca redirects end user to application with an authorization code.*
 
