@@ -32,13 +32,11 @@ behalf of the end-users. This document describes how you can integrate with Alpa
 
 <center><img src="./apps_page.png" width="80%"></center>
 
-
 * Use the "Create New App" flow to register your new application. The first step will be to agree and sign our API Agreement.
 
 * Once you add your relevant information and create the app, you will receive your Client ID and Client Secret.
 
 <center><img src="./application_info.png" width="60%"></center>
-
 
 ## <a name="integration"></a>Integration
 
@@ -48,8 +46,7 @@ To integrate your application with Alpaca, use the following flow:
 
 <center><img src="./Flow.png" width="80%"></center>
 
-
- 1. ***End user requests service from application. Application redirect users to request Alpaca access***
+### 1. ***End user requests service from application. Application redirect users to request Alpaca access***
 
 ```
 GET https://app.alpaca.markets/oauth/authorize?response_type=code&client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URL&state=SOMETHING_RANDOM&scope=account:write%20trading
@@ -63,7 +60,17 @@ When redirecting a user to Alpaca to authorize access to your application, youâ€
 | `client_id` | **Required** The Client ID you received when you registered the application. |
 | `redirect_uri` | **Required** The URL where the user will be sent after authorization. It must match one of the whitelisted redirect URIs for your application. |
 | `state` | **Optional** An unguessable random string, used to protect against request forgery attacks.  |
-| `scope` | **Optional** A space-delimited list of [scopes]() your application requests access to. If not provided, `scope` defaults to read only access. |
+| `scope` | **Optional** A space-delimited list of scopes your application requests access to. Read-only endpoint access is assumed by default. |
+
+**Allowed Scopes**:
+
+| Scope           | Description                                             |
+| --------------- | ------------------------------------------------------- |
+| `account:write` | Write access for account configurations and watchlists. |
+| `trading`       | Place, cancel or modify orders.                         |
+| `data`          | Access to the Data API.                                 |
+
+
 
 Example authorization URL:
 
@@ -71,13 +78,13 @@ Example authorization URL:
 GET https://app.alpaca.markets/oauth/authorize?response_type=code&client_id=fc9c55efa3924f369d6c1148e668bbe8&redirect_uri=https%3A%2F%2Fexample.com%2Foauth%2Fcallback&state=8e02c9c6a3484fadaaf841fb1df290e1&scope=account:write%20trading
 ```
 
- 2. ***End user authorizes API access for the applications***
+### 2. ***End user authorizes API access for the applications***
 
 From the user side, they will see the following authorization screen:
 
 <center><img src="./Authorization_Page.png" width="40%"></center>
 
- 3. ***Alpaca redirects end user to application with an authorization code.***
+### 3. ***Alpaca redirects end user to application with an authorization code.***
 
 If the user approves access, Alpaca will redirect them back to your `redirect_uri` with a temporary `code` parameter. If you specified a state parameter in step 1, it will be returned as well. The parameter will always match the value specified in step 1. If the values donâ€™t match, the request should not be trusted.
 
@@ -87,11 +94,11 @@ Example of the redirect:
 GET https://example.com/oauth/callback?code=67f74f5a-a2cc-4ebd-88b4-22453fe07994&state=8e02c9c6a3484fadaaf841fb1df290e1
 ```
 
- 4. ***Application receives the authorization code***
+### 4. ***Application receives the authorization code***
 
 You can use this code to exchange for an access token.
 
- 5. ***Application exchanges the authorization code with an access token from Alpaca***
+### 5. ***Application exchanges the authorization code with an access token from Alpaca***
 
 After you have received the temporary `code`, you can exchange it for an access token. This can be done by making a POST call:
 
