@@ -37,6 +37,7 @@ behalf of the end-users. This document describes how you can integrate with Alpa
 * Once you add your relevant information and create the app, you will receive your Client ID and Client Secret.
 
 <center><img src="./application_info.png" width="60%"></center>
+<center><img src="./client_id_secret.png" width="30%"></center>
 
 ## <a name="integration"></a>Integration
 
