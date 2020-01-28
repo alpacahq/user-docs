@@ -42,7 +42,7 @@ spec:
           Valid values: `buy`, `sell`
   - name: time_in_force
     type: string<time_in_force>
-    desc:  See [order page](/broker-functions/orders/#time-in-force).
+    desc:  See [order page](/trading-on-alpaca/orders/#time-in-force).
   - name: limit_price
     type: string<number> (Nullable)
     desc: Limit price
@@ -51,7 +51,7 @@ spec:
     desc: Stop price
   - name: status
     type: string<order_status>
-    desc: See [order page](/broker-functions/orders/#order-lifecycle).
+    desc: See [order page](/trading-on-alpaca/orders/#order-lifecycle).
 example: |
   {
     "id": "904837e3-3b76-47ec-b432-046db621571b",

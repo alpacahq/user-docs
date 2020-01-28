@@ -44,7 +44,7 @@ spec:
           Valid values: `buy`, `sell`
   - name: time_in_force
     type: string<time_in_force>
-    desc:  See [Orders page](/broker-functions/orders/#time-in-force)
+    desc:  See [Orders page](/trading-on-alpaca/orders/#time-in-force)
   - name: limit_price
     type: string<number> (Nullable)
     desc: Limit price
@@ -56,7 +56,7 @@ spec:
     desc: Filled average price
   - name: status
     type: string<order_status>
-    desc: See [Orders page](/broker-functions/orders/#order-lifecycle)
+    desc: See [Orders page](/trading-on-alpaca/orders/#order-lifecycle)
   - name: extended_hours
     type: boolean
     desc: If true, eligible for execution outside regular trading hours.
