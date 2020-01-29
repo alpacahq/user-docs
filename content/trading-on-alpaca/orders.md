@@ -199,6 +199,10 @@ during its lifecycle. The most common statuses are described in detail below:
    the order has been canceled by the exchanges due to its time-in-force.
 - `expired`<br>
    The order has expired, and no further updates will occur for the order.
+- `pending_cancel`<br>
+   The order is waiting to be canceled.
+- `pending_replace`<br>
+   The order is waiting to be replaced by another order. The order will reject cancel request while in this state.
 
 Less common states are described below. Note that these states only occur
 on very rare occasions, and most users will likely never see their
@@ -213,8 +217,6 @@ orders reach these states:
 - `accepted_for_bidding`<br>
    The order has been received by exchanges, and is evaluated for pricing.
    This state only occurs on rare occasions.
-- `pending_cancel`<br>
-   The order is waiting to be canceled. This state only occurs on rare occasions.
 - `stopped`<br>
    The order has been stopped, and a trade is guaranteed for the order,
    usually at a stated price or better, but has not yet occurred. This state only occurs on rare occasions.
