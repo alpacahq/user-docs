@@ -213,7 +213,7 @@ You may also want to understand details about how it works.
 - Bracket orders do not accept `extended_hours` to be "true".
 - `time_in_force` must be "day" or "gtc".
 - Each order of such a group is sent with DNR (Do Not Reduce) instruction to the venue.
-Therefore, the order parameters will not be adjusted in case of dividends pay out or
+Therefore, the order parameters will not be adjusted in case of dividend payout or
 similar corporate action events.
 - In the case the take-profit order is partially filled, stop-loss order will be adjusted to the remained quantity.
 - Order replacement is not supported for bracket orders.
