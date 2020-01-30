@@ -42,7 +42,7 @@ extended hours will be queued and eligible for execution at the time of the next
 Orders eligible for extended hours submitted outside of 9:00am - 6:00pm ET are handled as described in the section below.
 
 ## Extended Hours Trading
-Using API v2 (only available to ETC accounts), you can submit and fill orders during
+Using API v2, you can submit and fill orders during
 pre-market and after-hours. This feature is not available to legacy accounts or those using API v1.
 Extended hours trading has
 specific risks due to the less liquidity. Please read through
