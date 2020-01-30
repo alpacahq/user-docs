@@ -169,13 +169,13 @@ concurrently, but with bracket orders, Alpaca's system understands these
 three orders are grouped and queued for execution appropriately.
 
 In order to submit a bracket order, you need to supply additional parameters
-to the API. First, add a parameter `class` as "bracket". Second, give two
+to the API. First, add a parameter `order_class` as "bracket". Second, give two
 additional fields `take_profit` and `stop_loss` both of which is a nested
 JSON object. The `take_profit` object needs `limit_price` as a field value that
 specifies limit price of the take-profit order, and the `stop_loss` object
 needs a mandatory `stop_price` and optional `limit_price` fields. If
 `limit_price` is specified in `stop_loss`, the stop-loss order is queued
-as a stop-limit order, but otherwise as a limit order.
+as a stop-limit order, but otherwise as a stop order.
 
 An example JSON body parameter to submit a bracket order is as follows.
 
@@ -186,7 +186,7 @@ An example JSON body parameter to submit a bracket order is as follows.
   "type": "market",
   "qty": "100",
   "time_in_force": "gtc",
-  "class": "bracket",
+  "order_class": "bracket",
   "take_profit": {
     "limit_price": "301"
   },
