@@ -60,6 +60,11 @@ spec:
   - name: extended_hours
     type: boolean
     desc: If true, eligible for execution outside regular trading hours.
+  - name: legs
+    type: array<Order>
+    desc: |
+          When querying non-simple order_class orders in a nested style, an
+          array of Order entities associated with this order. Otherwise, null.
 example: |
   {
     "id": "904837e3-3b76-47ec-b432-046db621571b",
@@ -83,5 +88,6 @@ example: |
     "stop_price": "106.00",
     "filled_avg_price": "106.00",
     "status": "accepted",
-    "extended_hours": false
+    "extended_hours": false,
+    "legs": null
   }
