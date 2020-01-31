@@ -122,7 +122,7 @@ With following parameters:
 Example request:
 
 ```
-curl -X POST https://api.coinbase.com/oauth/token \
+curl -X POST https://api.alpaca.markets/oauth/token \
   -d 'grant_type=authorization_code&code=67f74f5a-a2cc-4ebd-88b4-22453fe07994&client_id=fc9c55efa3924f369d6c1148e668bbe8&client_secret=5b8027074d8ab434882c0806833e76508861c366&redirect_uri=https://example.com/oauth/callback'
 ```
 
