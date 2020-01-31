@@ -149,33 +149,33 @@ Market on close and limit on close orders are only eligible to execute in the cl
 Please see the [Time in Force]({{< relref "#time-in-force" >}}) section for more details.
 
 ### Bracket Orders
-A bracket order is a chain of three orders that can help your trading strategy
-in some scenarios, and it is sometimes called OTOCO (One Triggers OCO {One
-Cancels Other}).
+A bracket order is a chain of three orders that can be used to manage your
+position entry and exit. It is a common use case of an OTOCO (One Triggers
+OCO {One Cancels Other}) order.
 
-The first order is to open a new position and the other two are to close
-the position under certain conditions. One of the two closing orders is
-called a take-profit which is a limit order, and the other is called
-a stop-loss order which is either a stop or stop-limit order. After the
-first order is filled and you obtain the position, depending on the price
-movement of the stock, only one of the two orders is executed and the
-other is canceled.
+The first order is used to enter a new long or short position, and once it is
+completely filled, two conditional exit orders are activated. One of the two
+closing orders is called a take-profit order, which is a limit order, and the
+other is called a stop-loss order, which is either a stop or stop-limit order.
+Importantly, only one of the two exit orders can be executed. Once one of the
+exit orders is filled, the other is canceled.
 
-Without bracket orders, you would need to wait for the first order to be
-executed to submit the second (closing) order, since the closing order would
-be rejected as you don't have enough shares to liquidate. When you have
-an open position, you would still not be able to submit two closing orders
-concurrently, but with bracket orders, Alpaca's system understands these
-three orders are grouped and queued for execution appropriately.
+Without a bracket order, you would not be able to submit both entry and exit
+orders simultaneously since Alpaca's system only accepts exit orders for
+existing positions. Additionally, even if you had an open position, you would
+not be able to submit two conditional closing orders since Alpaca's system
+would view one of the two orders as exceeding the available position quantity.
+Bracket orders address both of these issues, as Alpaca's system recognizes
+the entry and exit orders as a group and queues them for execution appropriately.
 
 In order to submit a bracket order, you need to supply additional parameters
-to the API. First, add a parameter `order_class` as "bracket". Second, give two
-additional fields `take_profit` and `stop_loss` both of which is a nested
-JSON object. The `take_profit` object needs `limit_price` as a field value that
-specifies limit price of the take-profit order, and the `stop_loss` object
-needs a mandatory `stop_price` and optional `limit_price` fields. If
-`limit_price` is specified in `stop_loss`, the stop-loss order is queued
-as a stop-limit order, but otherwise as a stop order.
+to the API. First, add a parameter order_class as "bracket". Second, give two
+additional fields take_profit and stop_loss both of which are nested
+JSON objects. The take_profit object needs limit_price as a field value that
+specifies limit price of the take-profit order, and the stop_loss object
+needs a mandatory stop_price and optional limit_price fields. If
+limit_price is specified in stop_loss, the stop-loss order is queued
+as a stop-limit order, but otherwise it is queued as a stop order.
 
 An example JSON body parameter to submit a bracket order is as follows.
 
@@ -203,24 +203,25 @@ This creates three orders.
 - A sell limit order for the same 100 SPY, with limit price = 301
 - A sell stop-limit order, with stop price = 299 and limit price = 298.5
 
-The second and third orders won't be active until the first order is filled,
-and will be wait for the price change to execute once it becomes active.
-You may also want to understand details about how it works.
+The second and third orders won't be active until the first order is completely
+filled. Additional bracket order details include:
 
-- If one of the orders is canceled, all three gets canceled unless one is already closed.
-- take_profit.limit_price must be higher than stop_loss.stop_price for a buy bracket order, and vice versa for a sell.
+- If any one of the orders is canceled, any remaining open order in the group is canceled.
+- `take_profit.limit_price` must be higher than `stop_loss.stop_price` for a buy bracket order, and vice versa for a sell.
 - Both take_profit.limit_price and stop_loss.stop_price must be present.
-- Bracket orders do not accept `extended_hours` to be "true".
+- Extended hours are not supported. `extended_hours` must be "false" or omitted.
 - `time_in_force` must be "day" or "gtc".
-- Each order of such a group is sent with DNR (Do Not Reduce) instruction to the venue.
-Therefore, the order parameters will not be adjusted in case of dividend payout or
-similar corporate action events.
-- In the case the take-profit order is partially filled, stop-loss order will be adjusted to the remained quantity.
-- Order replacement is not supported for bracket orders.
+- Each order in the group is always sent with a DNR/DNC
+(Do Not Reduce/Do Not Cancel) instruction. Therefore, the order price will not
+be adjusted and the order will not be canceled in the event ofa dividend or
+other corporate action.
+- If the take-profit order is partially filled, the stop-loss order will
+be adjusted to the remaining quantity.
+- Order replacement is not supported.
 
-Each order of the group is reported as an independent order in `GET /v2/orders` endpoint.
-But if you specify additional parameter `nested=true`, the order response will nest
-the result to include child orders under the parent order with an array field `legs` in
+Each order of the group is reported as an independent order in GET /v2/orders endpoint.
+But if you specify additional parameter nested=true, the order response will nest
+the result to include child orders under the parent order with an array field legs in
 the order entity.
 
 ## Time in Force
