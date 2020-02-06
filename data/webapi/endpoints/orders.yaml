@@ -160,6 +160,11 @@ endpoints:
             desc: |
               The chronological order of response based on the submission time.
               `asc` or `desc`. Defaults to `desc`.
+          - name: nested
+            type: boolean
+            desc: |
+              If true, the result will roll up multi-leg orders under the
+              `legs` field of primary order.
       returns: |
         An array of [Order](#order-entity) object
     POST:
@@ -207,6 +212,31 @@ endpoints:
           - name: client_order_id
             type: string (<= 48 characters)
             desc: A unique identifier for the order. Automatically generated if not sent.
+          - name: order_class
+            type: string
+            desc: |
+              `simple` or `bracket`. For details of non-simple order classes,
+              please see [Bracket Order Overview](/trading-on-alpaca/orders#bracket-orders)
+          - name: take_profit
+            type: object
+            desc: Additional parameters for take-profit leg of advanced orders
+            children:
+              - name: limit_price
+                type: string<number>
+                required: true
+                desc: required for bracket orders
+          - name: stop_loss
+            type: object
+            desc: Additional parameters for stop-loss leg of advanced orders
+            children:
+              - name: stop_price
+                type: string<number>
+                required: true
+                desc: required for bracket orders
+              - name: limit_price
+                type: string<number>
+                desc: the stop-loss order becomes a stop-limit order if specified
+
       returns: |
         The new [Order](#order-entity) object
       errors:
@@ -245,6 +275,12 @@ endpoints:
           - name: order_id
             type: string<uuid>
             desc: Order ID
+        query:
+          - name: nested
+            type: boolean
+            desc: |
+              If true, the result will roll up multi-leg orders under the
+              `legs` field of primary order.
       returns:
         The requested [Order](#order-entity) object
       errors:
