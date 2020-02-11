@@ -36,20 +36,23 @@ be $7,000. Even if this order is unfilled, as long as it is open and has not bee
 your available buying power. If you then submitted another order with an order value of $8,000, it would be rejected.
 
 ## Orders Submitted Outside of Eligible Trading Hours
-Orders submitted outside of Regular Trading Hours (9:30am - 4:00pm ET) that are not eligible to be executed during
-extended hours will be queued and eligible for execution at the time of the next market open.
+Orders not eligible for extended hours submitted between 4:00pm - 7:00pm ET
+will be **rejected**.
+
+Orders not eligible for extended hours submitted after 7:00pm ET 
+will be queued and eligible for execution at the time of the next market open.
 
 Orders eligible for extended hours submitted outside of 9:00am - 6:00pm ET are handled as described in the section below.
 
 ## Extended Hours Trading
 Using API v2, you can submit and fill orders during
-pre-market and after-hours. This feature is not available to legacy accounts or those using API v1.
+pre-market and after-hours.
 Extended hours trading has
 specific risks due to the less liquidity. Please read through
 [our disclosure](https://files.alpaca.markets/disclosures/library/FINRA+-+Extended+Hours+Trading+Risk+Disclosure.pdf)
 for more details.
 
-Currently, we supported the following extended hours:\
+Currently, we support the following extended hours:\
 **Pre-market: 9:00 - 9:30am**\
 **After-hours: 4:00 - 6:00pm**
 
