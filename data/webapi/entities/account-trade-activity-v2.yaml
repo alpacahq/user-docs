@@ -28,6 +28,9 @@ spec:
   - name: transaction_time
     type: string<timestamp>
     desc: The time at which the execution occurred.
+  - name:  order_id
+    type: string<uuid>
+    desc: The id for the order that filled.
   - name: type
     type: string
     desc: |
@@ -43,5 +46,6 @@ example: |
     "side": "buy",
     "symbol": "LPCN",
     "transaction_time": "2019-05-24T15:34:06.977Z",
+    "order_id": "904837e3-3b76-47ec-b432-046db621571b",
     "type": "fill"
   }
