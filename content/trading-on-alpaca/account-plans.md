@@ -38,7 +38,15 @@ For a more formal overview, please see the [sign up page of the Alpaca Securitie
 {{< hash-link business>}}
 **Business Account**
 
-We support select business accounts for U.S. and non-U.S. residents. Hedge funds, RIAs, app developers, and service providers, please [complete the form](https://docs.google.com/forms/d/e/1FAIpQLScH_5wylQNILGedoS_mAS7-djbU24hDqaOERMLiBVRRn9IaJA/viewform?usp=sf_link) if you are interested in opening a business account (currently available by invite-only).  You can also [read more](https://medium.com/automation-generation/trading-through-a-business-account-at-alpaca-6ccb79709797) about some of the entities we support.
+We support select business accounts for U.S. and non-U.S. residents. There's no charge to open a business account,
+but it does have a **$30,000 account minimum**. Additionally, please note that business accounts are considered
+professional data subscribers for which we currently are **unable** to provide Polygon's consolidated market data.
+You would still have access to our free IEX real-time data, but if you wanted a consolidated market data feed,
+you'd need to obtain this through another provider.
+
+Hedge funds, RIAs, app developers, and service providers, please [complete the form](https://docs.google.com/forms/d/e/1FAIpQLScH_5wylQNILGedoS_mAS7-djbU24hDqaOERMLiBVRRn9IaJA/viewform?usp=sf_link)
+if you are interested in opening a business account (currently available by invite-only).  You can also [read more](https://medium.com/automation-generation/trading-through-a-business-account-at-alpaca-6ccb79709797)
+about some of the entities we support.
 
 **Account for non-U.S. residents?**
 
