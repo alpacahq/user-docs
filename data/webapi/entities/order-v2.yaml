@@ -19,6 +19,14 @@ spec:
     type: string<timestamp> (Nullable)
   - name: failed_at
     type: string<timestamp> (Nullable)
+  - name: replaced_at
+    type: string<timestamp> (Nullable)
+  - name: replaced_by
+    type: string<uuid> (Nullable)
+    desc: The order ID that this order was replaced by
+  - name: replaces
+    type: string<uuid> (Nullable)
+    desc: The order ID that this order replaces
   - name: asset_id
     type: string<uuid>
     desc: Asset ID
@@ -76,6 +84,9 @@ example: |
     "expired_at": "2018-10-05T05:48:59Z",
     "canceled_at": "2018-10-05T05:48:59Z",
     "failed_at": "2018-10-05T05:48:59Z",
+    "replaced_at": "2018-10-05T05:48:59Z",
+    "replaced_by": "904837e3-3b76-47ec-b432-046db621571b",
+    "replaces": null,
     "asset_id": "904837e3-3b76-47ec-b432-046db621571b",
     "symbol": "AAPL",
     "asset_class": "us_equity",
