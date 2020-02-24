@@ -21,7 +21,7 @@ Please note that body parameters should be passed using a **JSON encoded body**.
 {{< rest-endpoint resource="orders" method="GET" path="/v2/orders" >}}
 {{< rest-endpoint resource="orders" method="POST" path="/v2/orders" >}}
 {{< rest-endpoint resource="orders" method="GET" path="/v2/orders/{order_id}" >}}
-{{< rest-endpoint resource="orders" method="GET" path="/v2/orders:by_client_order_id" >}}
+{{< rest-endpoint resource="orders" method="GET" path="/v2/orders:by_client_order_id/{client_order_id}" >}}
 {{< rest-endpoint resource="orders" method="PATCH" path="/v2/orders/{order_id}" >}}
 {{< rest-endpoint resource="orders" method="DELETE" path="/v2/orders" >}}
 {{< rest-endpoint resource="orders" method="DELETE" path="/v2/orders/{order_id}" >}}
