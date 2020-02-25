@@ -89,6 +89,11 @@ endpoints:
       title: Get an order by client order id
       summary: |
         Retrieves a single order for the given `client_order_id`.
+      params:
+        query:
+          - name: client_order_id
+            type: string<uuid>
+            desc: Client Order ID
       returns:
         The requested [Order](#order-entity) object
       errors:
