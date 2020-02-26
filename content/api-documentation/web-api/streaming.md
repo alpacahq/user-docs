@@ -161,6 +161,7 @@ through its life cycle. The most common events are described in detail below:
 - `done_for_day`
 - `canceled`
 - `expired`
+- `replaced`
 
 Less common events are described below. Note that these states only occur on rare occasions, and most users will likely never
 receive stream messages for these events.

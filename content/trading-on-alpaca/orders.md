@@ -275,6 +275,8 @@ during its lifecycle. The most common statuses are described in detail below:
    the order has been canceled by the exchanges due to its time-in-force.
 - `expired`<br>
    The order has expired, and no further updates will occur for the order.
+- `replaced`<br>
+   The order was replaced by another order, or was updated due to a market event such as corporate action.
 - `pending_cancel`<br>
    The order is waiting to be canceled.
 - `pending_replace`<br>
