@@ -12,7 +12,7 @@ available. **Currently, we only provide data for U.S. listed equities.**
 **This is available to all Alpaca users**
 
 Users that have signed up with Alpaca but have not opened a real money brokerage account are able to receive free
-real-time data from [IEX](https://iextrading.com/). Please note that this data feed only includes quotes and trades
+real-time data from [IEX](https://iexcloud.io/). Please note that this data feed only includes quotes and trades
 occurring on the IEX (one of the U.S. stock exchanges) order book.
 
 ## Consolidated Market Data
