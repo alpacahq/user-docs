@@ -7,15 +7,21 @@ namespace CodeExamples
 {
     internal static class Example
     {
+        private static string API_KEY = "your_api_key";
+
+        private static string API_SECRET = "your_secret_key";
+
         public static async Task Main(string[] args)
         {
-            var restClient = new RestClient();
+            // First, open the API connection
+            var client = Alpaca.Markets.Environments.Paper
+                .GetAlpacaTradingClient(API_KEY, new SecretKey(API_SECRET));
 
             // Get our position in AAPL.
-            var aaplPosition = await restClient.GetPositionAsync("AAPL");
+            var aaplPosition = await client.GetPositionAsync("AAPL");
 
             // Get a list of all of our positions.
-            var positions = await restClient.ListPositionsAsync();
+            var positions = await client.ListPositionsAsync();
 
             // Print the quantity of shares for each position.
             foreach (var position in positions)

@@ -6,13 +6,17 @@ namespace CodeExamples
 {
     internal static class Example
     {
+        private static string API_KEY = "your_api_key";
+
+        private static string API_SECRET = "your_secret_key";
+
         // Print a message to the console when the account's status changes.
         public static async Task Main(string[] args)
         {
             // Prepare the websocket connection and subscribe to account_updates.
-            var sockClient = new SockClient();
-            await sockClient.ConnectAsync();
-            sockClient.OnAccountUpdate += HandleAccountUpdate;
+            var alpacaStreamingClient = Environments.Paper.GetAlpacaStreamingClient(API_KEY, API_SECRET);
+            alpacaStreamingClient.ConnectAndAuthenticateAsync().Wait();
+            alpacaStreamingClient.OnAccountUpdate += HandleAccountUpdate;
 
             Console.Read();
         }

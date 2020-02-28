@@ -6,12 +6,18 @@ namespace CodeExamples
 {
     internal static class Example
     {
+        private static string API_KEY = "your_api_key";
+
+        private static string API_SECRET = "your_secret_key";
+
         public static async Task Main(string[] args)
         {
-            var restClient = new RestClient();
+            // First, open the API connection
+            var client = Alpaca.Markets.Environments.Paper
+                .GetAlpacaTradingClient(API_KEY, new SecretKey(API_SECRET));
 
             // Get a list of all active assets.
-            var assets = await restClient.ListAssetsAsync(AssetStatus.Active);
+            var assets = await client.ListAssetsAsync(AssetStatus.Active);
 
             // Filter the assets down to just those on NASDAQ.
             var nasdaqAssets = assets.Where(asset => asset.Exchange == Exchange.NyseMkt);

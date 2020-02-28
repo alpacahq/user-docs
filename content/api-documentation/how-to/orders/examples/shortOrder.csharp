@@ -15,36 +15,35 @@ namespace ShortingExample
 
         private static string API_SECRET = "your_secret_key";
 
-        private static string API_URL = "https://paper-api.alpaca.markets";
-
         // The security we'll be shorting
         private static string symbol = "TSLA";
 
-        private static RestClient restClient;
+        private static AlpacaTradingClient client;
         public static async Task Main(string[] args)
         {
             // First, open the API connection
-            restClient = new RestClient(API_KEY, API_SECRET, API_URL, apiVersion: 2);
+            client = Alpaca.Markets.Environments.Paper
+                .GetAlpacaTradingClient(API_KEY, new SecretKey(API_SECRET));
 
             // Submit a market order to open a short position of one share
-            var order = await restClient.PostOrderAsync(symbol, 1, OrderSide.Sell, OrderType.Market, TimeInForce.Day);
+            var order = await client.PostOrderAsync(symbol, 1, OrderSide.Sell, OrderType.Market, TimeInForce.Day);
             Console.WriteLine("Market order submitted.");
 
             // Submit a limit order to attempt to grow our short position
             // First, get an up-to-date price for our security
-            var barSet = await restClient.GetBarSetAsync(new[] { symbol }, TimeFrame.Minute, 1);
+            var barSet = await client.GetBarSetAsync(new[] { symbol }, TimeFrame.Minute, 1);
             var bars = barSet[symbol].ToList();
             var price = bars[0].Close;
 
             // Submit another order for one share at that price
-            order = await restClient.PostOrderAsync(symbol, 1, OrderSide.Sell, OrderType.Limit, TimeInForce.Day, price);
+            order = await client.PostOrderAsync(symbol, 1, OrderSide.Sell, OrderType.Limit, TimeInForce.Day, price);
             Console.WriteLine($"Limit order submitted. Limit price = {order.LimitPrice}");
 
             // Wait a few seconds for our orders to fill...
             Thread.Sleep(2000);
 
             // Check on our position
-            var position = await restClient.GetPositionAsync(symbol);
+            var position = await client.GetPositionAsync(symbol);
             if (position.Quantity < 0)
             {
                 Console.WriteLine($"Short position open for {symbol}");

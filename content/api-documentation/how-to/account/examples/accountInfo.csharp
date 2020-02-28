@@ -6,12 +6,18 @@ namespace CodeExamples
 {
     internal static class Example
     {
+        private static string API_KEY = "your_api_key";
+
+        private static string API_SECRET = "your_secret_key";
+
         public static async Task Main(string[] args)
         {
-            var restClient = new RestClient();
+            // First, open the API connection
+            var client = Alpaca.Markets.Environments.Paper
+                .GetAlpacaTradingClient(API_KEY, new SecretKey(API_SECRET));
 
             // Get our account information.
-            var account = await restClient.GetAccountAsync();
+            var account = await client.GetAccountAsync();
 
             // Check if our account is restricted from trading.
             if (account.IsTradingBlocked)

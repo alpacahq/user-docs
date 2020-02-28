@@ -15,16 +15,15 @@ namespace GetPnLExample
 
         private static string API_SECRET = "your_secret_key";
 
-        private static string API_URL = "https://paper-api.alpaca.markets";
-
-        private static RestClient restClient;
+        private static AlpacaTradingClient client;
         public static async Task Main(string[] args)
         {
             // First, open the API connection
-            restClient = new RestClient(API_KEY, API_SECRET, API_URL, apiVersion: 2);
+            var client = Alpaca.Markets.Environments.Paper
+                .GetAlpacaTradingClient(API_KEY, new SecretKey(API_SECRET));
 
             // Get account info
-            var account = await restClient.GetAccountAsync();
+            var account = await client.GetAccountAsync();
 
             # Check our current balance vs. our balance at the last market close
             var balance_change = account.Equity - account.LastEquity;
