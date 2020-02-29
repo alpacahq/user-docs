@@ -16,6 +16,7 @@ behalf of the end-users. This document describes how you can integrate with Alpa
 * [Registering Your Application]({{< relref "#registration" >}})
 * [Integration]({{< relref "#integration" >}})
 * [Making API Calls]({{< relref "#APIcall" >}})
+* [How to Use Polygon with OAuth]({{< relref "#how-to-use-polygon-with-oauth" >}})
 
 ## <a name="terms"></a>Terms of Access and Use
 
