@@ -227,6 +227,74 @@ But if you specify additional parameter nested=true, the order response will nes
 the result to include child orders under the parent order with an array field legs in
 the order entity.
 
+### OCO Orders
+OCO (One-Cancels-Other) is another type of advanced order type. This is a set of
+two orders with the same side (buy/buy or sell/sell) and currently only exit order
+is supported. In other words, this is the second part of the bracket orders
+where the entry order is already filled, and you can submit the take-profit
+and stop-loss in one order submission.
+
+With OCO orders, you can add take-profit and stop-loss after you open the
+position, without thinking about those two legs upfront.
+
+In order to submit an OCO order, specify "oco" for the `order_class` parameter.
+
+```
+{
+  "side": "sell",
+  "symbol": "SPY",
+  "type": "limit",
+  "qty": "100",
+  "time_in_force": "gtc",
+  "order_class": "oco",
+  "take_profit": {
+    "limit_price": "301"
+  },
+  "stop_loss": {
+    "stop_price": "299",
+    "limit_price": "298.5"
+  }
+}
+```
+
+The `type` parameter must always be "limit", indicating the take-profit order
+type is a limit order. The stop-loss order is a limit order if only `limit_price` is
+specified, and is a stop-limit order if both `limit_price` and `stop_price` are
+specified (i.e. `limit_price` must be present in any case). Those two orders work
+exactly the same way as the two legs of the bracket orders.
+
+Note that when you retrieve the list of orders with the `nested` parameter true,
+the take-profit order shows up as the parent order while the stop-loss order appears
+as a child order.
+
+### OTO Orders
+OTO (One-Triggers-Other) is a variant of bracket order. It takes one of the
+take-profit or stop-loss order in addition to the entry order. For example,
+if you want to set only a stop-loss order attached to the position, without
+a take-profit, you may want to consider OTO orders.
+
+The order submission is done with the `order_class` parameter be "oto".
+
+```
+{
+  "side": "buy",
+  "symbol": "SPY",
+  "type": "market",
+  "qty": "100",
+  "time_in_force": "gtc",
+  "order_class": "bracket",
+  "stop_loss": {
+    "stop_price": "299",
+    "limit_price": "298.5"
+  }
+}
+```
+
+Either of `take_profit` or `stop_loss` must be present (the above example is
+for take-profit case), and the rest of requirements are the same as the
+bracket orders.
+
+
 ## Time in Force
 
 Alpaca supports the following Time-In-Force designations:

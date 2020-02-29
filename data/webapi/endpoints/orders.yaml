@@ -220,7 +220,7 @@ endpoints:
           - name: order_class
             type: string
             desc: |
-              `simple` or `bracket`. For details of non-simple order classes,
+              `simple`, `bracket`, `oco` or `oto`. For details of non-simple order classes,
               please see [Bracket Order Overview](/trading-on-alpaca/orders#bracket-orders)
           - name: take_profit
             type: object
