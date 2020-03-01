@@ -1,0 +1,27 @@
+spec:
+  - name: timestamp
+    type: array of epoch int (in seconds)
+    desc: time of each data element, left-labled (the beginnig of time window)
+  - name: equity
+    type: array of number
+    desc: equity value of the account in dollar amount as of the end of each time window
+  - name: profit_loss
+    type: array of number
+    desc: profit/loss in dollar from the base value
+  - name: profit_loss_pct
+    type: array of number
+    desc: profit/loss in percentage from the base value
+  - name: base_value
+    type: number
+    desc: basis in dollar of the profit loss calculation
+  - name: timeframe
+    desc: time window size of each data element
+example: |
+  {
+    "timestamp": [1580826600000, 1580827500000, 1580828400000],
+    "equity": [11.8, -3.74, 104.04],
+    "profit_loss": [0.000430469507254688, -0.0001364369455197062, 0.0037954277571845543],
+    "profit_loss_pct": [27423.73, 27408.19, 27515.97],
+    "base_value": 27411.93,
+    "timeframe": "15Min"
+  }
