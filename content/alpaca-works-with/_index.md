@@ -10,6 +10,7 @@ Alpaca works with many ways to trade! We pride ourselves in enabling many partne
 
 * [TradingView](https://tradingview.com/broker/Alpaca)
 * [IFTTT](https://ifttt.com/alpaca)
+* [Blueshift](./blueshift)
 * [Zapier (Early Access)](https://zapier.com/apps/alpaca/integrations)
 * [Slack](./alpaca-for-slack)
 
