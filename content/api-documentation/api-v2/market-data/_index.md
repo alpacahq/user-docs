@@ -13,7 +13,7 @@ set is IEX price data, but we are working on adding more.
 
 
 ## Authentication
-The authentication is done the same way as [Trading API]({{< relref "/api-documentation/web-api/_index.md#authentication" >}}),
+The authentication is done the same way as [Trading API]({{< relref "/api-documentation/api-v2/_index.md#authentication" >}}),
 and make sure you set the following fields in the HTTP header:
 
 - `APCA-API-KEY-ID`
