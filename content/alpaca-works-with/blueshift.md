@@ -1,6 +1,7 @@
 ---
 title: Blueshift
 weight: 40 
+description: Using Blueshift, you can write trading algorithms with your web browser and run backtesting, and convert it to a live trading algorithm.
 ---
 
 [Blueshift](https://blueshift.quantinsti.com/) is an algo trading platform with seamless backtesting and live trading

@@ -10,26 +10,25 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
     <title>{{ .Title }}{{ if not .IsHome }} - {{ .Site.Title }}{{ end }} | Alpaca</title>
-    {{ .Hugo.Generator }}
+    {{- .Hugo.Generator }}
 
-    {{ with .Site.Params.description }}
-    <meta name="description" content="{{ . }}">
-    {{ end }}
+    {{- $description := (printf "%s %s" .Page.Description $.Site.Params.description) }}
+    <meta name="description" content="{{ $description }} ">
     <link rel="canonical" href="{{ .Permalink }}">
     {{ with .Site.Params.author }}
     <meta name="author" content="{{ . }}">
     {{ end }}
 
     <meta property="og:url" content="{{ .Permalink }}">
-    {{ with .Site.Title }}<meta property="og:title" content="{{ . }} | Alpaca">{{ end }}
+    <meta property="og:title" content="{{ .Title }}{{ if not .IsHome }} - {{ .Site.Title }}{{ end }} | Alpaca">
     {{ with .Site.Params.logo }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
-    {{ with .Site.Params.description }}<meta name="og:description" content="{{ . }}">{{ end }}
+    <meta name="og:description" content="{{ $description }}">
     
     <meta name="twitter:card" content="summary">
     {{ with .Site.Params.logo }}<meta name="twitter:image" content="{{ . | absURL }}">{{ end }}
     <meta name="twitter:site" content="@AlpacaHQ">
     {{ with .Site.Title }}<meta name="twitter:title" content="{{ . }} | Alpaca">{{ end }}
-    {{ with .Site.Params.description }}<meta name="twitter:description" content="{{ . }}">{{ end }}
+    <meta name="twitter:description" content="{{ $description }}">
 
     {{ with .Site.Title }}<meta name="apple-mobile-web-app-title" content="{{ . }} | Alpaca">{{ end }}
     <meta name="apple-mobile-web-app-capable" content="yes">
