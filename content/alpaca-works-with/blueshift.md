@@ -3,7 +3,7 @@ title: Blueshift
 weight: 40 
 ---
 
-Blueshift is an algo trading platform with seamless backtesting and live trading
+[Blueshift](https://blueshift.quantinsti.com/) is an algo trading platform with seamless backtesting and live trading
 experiences, provided by one of the leading quant finance schools, QuantInsti.
 
 Using Blueshift, you can write trading algorithms with your web browser and run
