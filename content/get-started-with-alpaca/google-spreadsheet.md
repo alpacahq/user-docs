@@ -1,7 +1,7 @@
 ---
 title: Google Spreadsheet Trading
 weight: 30
-description: Guide for how to use Google Sheet with Alpaca API and example
+description: Guide for how to use Google Sheet with Alpaca API and example.
 ---
 
 *This example works with both paper and live trading.*

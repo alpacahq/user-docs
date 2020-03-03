@@ -1,7 +1,7 @@
 ---
 title: Concurrent Scalping Algo Using Async Python
 weight: 70
-description: An example of scalping trading algorithm to capture fast market movement
+description: An example of scalping trading algorithm to capture fast market movement.
 ---
 
 *This example only works if you have a funded brokerage account or another means of accessing Polygon data.*

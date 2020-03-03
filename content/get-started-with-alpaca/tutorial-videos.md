@@ -1,7 +1,7 @@
 ---
 title: Step by Step Tutorial Videos
 weight: 9
-description: A list of community-recorded tutorial video
+description: A list of community-recorded tutorial video.
 ---
 
 Here are some great tutorial videos created by Alpaca community.
