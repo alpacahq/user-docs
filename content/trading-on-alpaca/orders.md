@@ -258,7 +258,7 @@ In order to submit an OCO order, specify "oco" for the `order_class` parameter.
 ```
 
 The `type` parameter must always be "limit", indicating the take-profit order
-type is a limit order. The stop-loss order is a limit order if only `limit_price` is
+type is a limit order. The stop-loss order is a stop order if only `stop_price` is
 specified, and is a stop-limit order if both `limit_price` and `stop_price` are
 specified (i.e. `limit_price` must be present in any case). Those two orders work
 exactly the same way as the two legs of the bracket orders.
