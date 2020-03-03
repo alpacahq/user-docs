@@ -1,6 +1,7 @@
 ---
 title: SDK Algorithm Examples
 weight: 40
+description: Long-short strategy example using official SDK in Python, Node, Golang and C#.
 ---
 *This example works with both paper and live trading.*
 

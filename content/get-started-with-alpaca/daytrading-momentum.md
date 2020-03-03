@@ -1,6 +1,7 @@
 ---
 title: Build a Day-Trading Algorithm and Run it in the Cloud Using Only Free Services
 weight: 60
+description: An example algorithm for a momentum-based day trading strategy.
 ---
 
 *This example only works if you have a funded brokerage account or another means of accessing Polygon data.*

@@ -1,6 +1,7 @@
 ---
 title: Trade Through Your Browser
 weight: 20
+description: How to build python data science in Google Colab for Alpaca API
 ---
 
 *This example works with both paper and live trading.*

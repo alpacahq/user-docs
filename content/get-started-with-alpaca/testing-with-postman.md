@@ -1,6 +1,7 @@
 ---
 title: Try Out and Test the Alpaca API
 weight: 10
+description: How to test Alpaca API without coding
 ---
 *This example works with both paper and live trading.*
 

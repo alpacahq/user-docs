@@ -1,6 +1,7 @@
 ---
 title: HFT-ish Order Book Imbalance Algorithm Using Streaming
 weight: 50
+description: An example trading algorithm using order imbalance using HFT-like technique
 ---
 *This example only works if you have a funded brokerage account or another means of accessing Polygon data.*
 

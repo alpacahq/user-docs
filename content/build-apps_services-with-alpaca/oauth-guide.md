@@ -1,6 +1,7 @@
 ---
 title: OAuth Integration Guide
 weight: 10
+description: Alpaca supports OAuth for anyone who builds apps and services using trading API.
 ---
 
 ## <a name="introduction"></a>Introduction
