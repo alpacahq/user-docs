@@ -12,7 +12,7 @@ Pagination is handled using the `page_token` and `page_size` parameters. `page_t
 
 {{< rest-endpoint resource="account-activities" method="GET" path="/v2/account/activities" >}}
 
-## Trade Account Activity Entity
+## TradeActivity Entity
 
 ### Example
 {{< rest-entity-example name="account-trade-activity-v2">}}
@@ -20,7 +20,7 @@ Pagination is handled using the `page_token` and `page_size` parameters. `page_t
 ### Properties
 {{< rest-entity-desc name="account-trade-activity-v2">}}
 
-## Non-Trade Account Activity Entity
+## NonTradeActivity Entity
 
 ### Example
 {{< rest-entity-example name="account-nontrade-activity-v2">}}

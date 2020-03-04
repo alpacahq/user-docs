@@ -5,7 +5,7 @@ endpoints:
       summary: |
         Returns the current account configuration values
       returns: |
-        [AccountConfigurations](#account-configurations-entity) object
+        [AccountConfigurations](#accountconfigurations-entity) object
     PATCH:
       title: Update the account configurations
       summary: |

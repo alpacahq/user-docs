@@ -9,13 +9,15 @@ endpoints:
           - name: period
             type: string
             desc: |
-              &lt;number&gt; + &lt;unit&gt;, such as `1D`, where &lt;unit&gt; can be `D` for day, `W` for week, `M`
+              The duration of the data in &lt;number&gt; + &lt;unit&gt;, such as
+              `1D`, where &lt;unit&gt; can be `D` for day, `W` for week, `M`
               for month and `A` for year. Defaults to `1M`.
           - name: timeframe
             type: string
             desc: |
-              `1Min`, `5Min`, `15Min`, `1H`, or `1D`. If omitted, `1Min` for less than 7 days period,
-              `15Min` for less than 30 days, or otherwise `1D`.
+              The resolution of time window. `1Min`, `5Min`, `15Min`, `1H`, or `1D`.
+              If omitted, `1Min` for less than 7 days period, `15Min` for less
+              than 30 days, or otherwise `1D`.
           - name: date_end
             type: string<date>
             desc: |
@@ -27,4 +29,4 @@ endpoints:
             desc: If true, include extended hours in the result. This is effective only for timeframe less than `1D`.
 
       returns: |
-        [PortfolioHistory](#portfolio-history) object
+        [PortfolioHistory](#portfoliohistory-entity) object

@@ -11,7 +11,7 @@ For DTMC protection, see [Day Trade Margin Call Protection]({{< ref path="/tradi
 {{< rest-endpoint resource="account-configurations" method="GET" path="/v2/account/configurations" >}}
 {{< rest-endpoint resource="account-configurations" method="PATCH" path="/v2/account/configurations" >}}
 
-## Account Configurations Entity
+## AccountConfigurations Entity
 
 ### Example
 {{< rest-entity-example name="account-configurations-v2">}}
