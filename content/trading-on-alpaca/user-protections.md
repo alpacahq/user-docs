@@ -119,4 +119,4 @@ this DTMC protection as well.
 
 For more details of Pattern Day Trader rule, please read
 [FINRA's margin requirements](http://www.finra.org/investors/day-trading-margin-requirements-know-rules).
-For more details on day trade margins, please read [FINRA's Mind Your Margin article](https://www.finra.org/investors/highlights/day-traders-mind-your-margin).
+For more details on day trade margins, please read [FINRA's Mind Your Margin article](https://www.finra.org/investors/day-trading).
