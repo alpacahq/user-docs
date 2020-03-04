@@ -282,7 +282,7 @@ The order submission is done with the `order_class` parameter be "oto".
   "type": "market",
   "qty": "100",
   "time_in_force": "gtc",
-  "order_class": "bracket",
+  "order_class": "oto",
   "stop_loss": {
     "stop_price": "299",
     "limit_price": "298.5"
