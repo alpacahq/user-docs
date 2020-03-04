@@ -7,7 +7,7 @@ The portfolio history API returns the timeseries data for equity and profit loss
 
 {{< rest-endpoint resource="portfolio-history" method="GET" path="/v2/account/portfolio/history" >}}
 
-## Portfolio Entity
+## PortfolioHistory Entity
 
 ### Example
 {{< rest-entity-example name="portfolio-history-v2">}}

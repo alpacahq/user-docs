@@ -27,4 +27,4 @@ endpoints:
             desc: If true, include extended hours in the result. This is effective only for timeframe less than `1D`.
 
       returns: |
-        [PortfolioHistory](#portfolio-history) object
+        [PortfolioHistory](#portfoliohistory-entity) object
