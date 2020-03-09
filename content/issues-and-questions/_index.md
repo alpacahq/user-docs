@@ -74,3 +74,13 @@ If you want to read more about the market, trading strategies, and coding, pleas
 [Automation Generation](https://medium.com/automation-generation), Alpaca's Medium publication.
 [Automation Generation](https://medium.com/automation-generation) consists of posts coming from the Alpaca Team as
 well as its community members.
+
+## Service Status Page
+
+Alpaca keeps posted about ongoing status of the service [here](http://status.alpaca.markets).
+If you are unsure whether the service is working as expected or not, please check
+the latest notices on this status page.
+
+In the case you are experiences issues specifically to your account, or
+have further questions, please email to [support@alpaca.markets](mailto:support@alpaca.markets).
+
