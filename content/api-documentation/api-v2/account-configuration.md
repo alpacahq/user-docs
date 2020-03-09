@@ -1,6 +1,6 @@
 ---
 title: Account Configurations
-weight: 15
+weight: 70
 ---
 
 The account configuration API provides custom configurations about your

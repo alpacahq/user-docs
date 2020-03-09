@@ -1,6 +1,6 @@
 ---
 title: Portfolio History
-weight: 15
+weight: 80
 ---
 
 The portfolio history API returns the timeseries data for equity and profit loss information of the account.

@@ -1,6 +1,6 @@
 ---
 title: Clock
-weight: 70
+weight: 60
 ---
 
 The clock API serves the current market timestamp, whether or not
