@@ -1,16 +1,22 @@
 .palette-primary-yellow,
 .palette-primary-yellow .footer, .palette-primary-yellow .header {
-    background: #FCD503;
+    background: #ffffff;
     color: #030303;
 }
-.palette-primary-yellow .article a, .palette-primary-yellow .article code, .palette-primary-yellow .article h1, .palette-primary-yellow .article h2 {
-    color: #947120;
+.palette-primary-yellow .article a, .palette-primary-yellow .article code {
+    color: #ffa800;
 }
+
 .palette-primary-yellow .drawer .toc a.current, .palette-primary-yellow .drawer .toc a:focus, .palette-primary-yellow .drawer .toc a:hover {
-    color: #947120; /*#FCD503; #BA9527; */
+    color: #bb7534; /*#FCD503; #BA9527; */
 }
+
+.palette-primary-yellow .article h1, .palette-primary-yellow .article h2 {
+  color: #bb7534;
+}
+
 .palette-primary-yellow .drawer .anchor a {
-    border-color: #947120;
+    border-color: #ffa800;
 }
 @media only screen and (max-width: 959px) {
     .palette-primary-yellow .project  {
@@ -98,7 +104,7 @@ pre.entity li {
 }
 
 .example-tab {
-    border-left: 2px solid #947120;
+    border-left: 2px solid #bb7534;
     padding: 0 7px;
     display: flex;
     align-items: center;
@@ -113,7 +119,7 @@ pre.entity li {
 .example-tab.active {
     height: 45px;
     background-color: #FFE765;
-    border-left: 4px solid #947120;
+    border-left: 4px solid #bb7534;
     font-weight:bold;
 }
 
@@ -183,10 +189,16 @@ pre.entity li {
 }
 
 .link-key-community {
-    font-size: 14px;
-    line-height: 28px;
+    font-size: 20px;
+    font-family: 'Carnas';
+
+    /* line-height: 28px; */
+    font-weight: 500;
+
     text-decoration: none;
     margin-right: 10px;
+    margin: 0px;
+    margin-left: 4px;
     text-decoration: none;
 }
 .link-key-community:hover {
@@ -195,41 +207,57 @@ pre.entity li {
 
 .cta-button-key {
     display: table-cell;
-    font-size: 18px;
-    line-height: 36px;
-    margin: 4px;
+    font-size: 20px;
+    margin: 0px 4px;
+    margin-left: 30px;
     text-decoration: none;
     letter-spacing: 0.025em;
-    margin-left: 30px;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.5);
     border-radius: 4px;
     text-transform: none;
     text-align: center;
     vertical-align: middle;
-    background: #000000;
-    color: #fff;
-    padding: 2px 16px 0 16px;
-    font-family: "Gilroy-ExtraBold";
-    min-width: 150px;
+    background: #FFD700;
+    color: #030303;
+    padding: 10px 35px;
+    min-width: 181px;
+    font-family: 'Carnas';
+    font-weight: 500;
     float: right;
-    height: 40px;
+    /* color: white */
+    /* line-height: 36px; */
+    /* margin-left: 30px; */
+    /* background: #000000; */
+    /* padding: 2px 16px 0 16px; */
+    /* font-family: "Gilroy-ExtraBold"; */
+    /* font-family: 'Roboto', sans-serif; */
+    /* min-width: 150px; */
+    /* height: 40px; */
 }
 .cta-button-key:hover {
-    background: #333;
+    /* background: #333; */
+    background: #ffdf33
 }
 
-nav div.bar {
+/* nav div.bar {
     padding-top: 2px;
-}
+} */
 nav div.title {
     padding-top: 0 !important;
 }
 img.alpaca-docs-subtitle-image {
     float: left;
-    height: 43px;
+    height: 40px;
+    margin-top: 4px;
+}
+img.alpaca-docs-subtitle-image:hover{
+    opacity: 0.7;
+
 }
 span.alpaca-docs-subtitle {
-    font-family: "Gilroy-ExtraBold", sans-serif;
+    /* font-family: "Gilroy-ExtraBold", sans-serif; */
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
     font-size: 27px;
     line-height: 44px;
     padding-top: 1px;
@@ -240,7 +268,9 @@ span.alpaca-docs-subtitle {
 }
 span.alpaca-docs-subtitle a {
     text-decoration: none;
-    font-family: "Gilroy-ExtraBold", sans-serif;
+    /* font-family: "Gilroy-ExtraBold", sans-serif; */
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
 }
 span.alpaca-docs-subtitle a:hover {
     color: #000;
@@ -282,9 +312,11 @@ h1.homepage-title {
 }
 
 .homepage-category-box h2 {
-    font-family: "Gilroy-Bold", sans-serif;
+    /* font-family: "Gilroy-Bold", sans-serif; */
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
     font-size: 16px;
-    font-weight: 400 !important;
+    /* font-weight: 400 !important; */
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
