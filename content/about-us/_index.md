@@ -12,8 +12,7 @@ Alpaca is a technology company headquartered in Silicon Valley that modularizes 
 Alpaca's team consists of developers, traders, and brokerage business specialists, who collectively have decades of
 financial services and technology industry experience at organizations such as FINRA, Wealthfront, Google, IBM, EMC, Greenplum,
 Lehman Brothers, and UBS. Alpaca is led by [Yoshi Yokokawa](https://www.linkedin.com/in/yoshiyokokawa/) (CEO),
-[Hitoshi Harada](https://www.linkedin.com/in/hitoshi-harada-02b01425/) (CTO), [John Torola](https://www.linkedin.com/in/johnttorola/) (COO/CCO),
-and [Luke Lonergan](https://www.linkedin.com/in/lukelonergan/) (Chief Architect). Our investors include a group of well-capitalized
+[Hitoshi Harada](https://www.linkedin.com/in/hitoshi-harada-02b01425/) (CTO), and [John Torola](https://www.linkedin.com/in/johnttorola/) (COO/CCO). Our investors include a group of well-capitalized
 investors including Spark Capital, Y Combinator, Social Leverage, Portag3, as well as highly experienced industry angel investors
 such as Joshua S. Levine (former CTO/COO of ETRADE), Eric Di Benedetto (a fintech angel investor with more than 30 IPO and M&A exits),
 and several YC alumni angels. Additionally, members of the Berkeley Angel Network and two of the largest Japanese banks (MUFG and SMBC) are
