@@ -242,20 +242,8 @@ pre.entity li {
 nav div.bar {
     padding-top: 2px;
   padding-left: 15px;
-
-
-
 }
 
-/* @media (min-width: 576px) {
-  div.bar {
-    max-width: 540px; } }
-@media (min-width: 768px) {
-  div.bar {
-    max-width: 720px; } } */
-/* @media (min-width: 992px) {
-  div.bar {
-    max-width: 980px; } } */
 @media (min-width: 1200px) {
   div.bar {
     max-width: 1170px; } }
