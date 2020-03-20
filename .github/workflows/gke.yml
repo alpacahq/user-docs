@@ -1,0 +1,90 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+    - master
+    - staging
+
+# Environment variables available to all jobs and steps in this workflow
+env:
+  GKE_PROJECT: ${{ secrets.GKE_PROJECT }}
+  GKE_CLUSTER: ${{ secrets.GKE_CLUSTER }}
+  GKE_ZONE: ${{ secrets.GKE_ZONE }}
+
+jobs:
+  setup-build-publish-deploy:
+    name: Setup, Build, and Deploy
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Extract branch name
+      shell: bash
+      run: echo "::set-env name=BRANCH_NAME::$(echo ${GITHUB_REF#refs/heads/} | sed 's/\//-/g')"
+
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: get commit message
+      run: |
+        echo ::set-env name=commitmsg::$(git log --format=%B -n 1 ${{ github.event.after }})
+
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: '0.67.1'
+        # extended: true
+
+    - name: Setup gcloud CLI
+      uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+      with:
+        version: '281.0.0'
+        service_account_email: ${{ secrets.GCP_SA_EMAIL }}
+        service_account_key: ${{ secrets.GCP_SA_KEY }}
+        export_default_credentials: true
+
+    - name: Build
+      run: hugo
+
+    - name: Deploy
+      run: |
+        gcloud auth configure-docker
+        gcloud container clusters get-credentials $GKE_CLUSTER \
+          --zone $GKE_ZONE --project $GKE_PROJECT
+        kubectl -n webroot delete pod -lapp=user-docs,branch=$BRANCH_NAME
+        kubectl get pod -o wide
+
+    - name: Notify
+      run: |
+        sha_short=$(echo ${{ github.sha }} | cut -c -6)
+        curl -X POST ${{ secrets.SLACK_WEBHOOK }} -d "
+          {
+            \"blocks\": [
+              {
+                \"type\": \"section\",
+                \"text\": {
+                  \"text\": \"Documentation[$BRANCH_NAME] is updated.\",
+                  \"type\": \"mrkdwn\"
+                },
+                \"fields\": [
+                  {
+                    \"type\": \"mrkdwn\",
+                    \"text\": \"branch: <https://github.com/${{ github.repository }}/tree/$BRANCH_NAME|$BRANCH_NAME>\"
+                  },
+                  {
+                    \"type\": \"mrkdwn\",
+                    \"text\": \"author: ${{ github.actor }}\"
+                  },
+                  {
+                    \"type\": \"mrkdwn\",
+                    \"text\": \"commit: $commitmsg <https://github.com/${{ github.repository }}/commit/${{ github.sha }}|$sha_short>\"
+                  }
+                ]
+              }
+            ]
+          }
+        "
+    # - name: Slack Notification
+    #   uses: Ilshidur/action-slack@master
+    #   env:
+    #     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
