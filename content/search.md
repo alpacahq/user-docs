@@ -12,4 +12,4 @@ sitemap:
         <p>${snippet}</p>
     </div>
 </script>
-{{< /safe-html >}}>
+{{< /safe-html >}}
