@@ -4,6 +4,7 @@ sitemap:
   priority : 0.1
 ---
 
+{{< safe-html >}}
 <div id="search-results"></div>
 <script id="search-result-template" type="text/x-js-template">
     <div id="summary-${key}">
@@ -11,3 +12,4 @@ sitemap:
         <p>${snippet}</p>
     </div>
 </script>
+{{< /safe-html >}}>

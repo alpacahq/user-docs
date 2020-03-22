@@ -1,6 +1,6 @@
 [{{ range $index, $page := .Site.Pages }}{{ if ne $page.Type "json" }}{{ if $index }},{{ end }}
 {
-    "permalink": "{{ $page.RelPermalink }}",
+    "permalink": "{{ $page.Permalink }}",
     "title": "{{ $page.Title }}",
     "contents": {{ $page.PlainWords | jsonify}}
 }{{ end }}{{ end }}
