@@ -21,7 +21,7 @@ namespace CodeExamples
             var closedOrders = await client.ListOrdersAsync(OrderStatusFilter.Closed, limitOrderNumber: 100);
 
             // Get only the closed orders for a particular stock
-            var aaplOrders = closedOrders.Where(order => order.Symbol.equals("AAPL"));
+            var aaplOrders = closedOrders.Where(order => order.Symbol.Equals("AAPL"));
 
             Console.Read();
         }

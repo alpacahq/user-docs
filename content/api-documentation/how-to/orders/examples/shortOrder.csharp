@@ -18,32 +18,34 @@ namespace ShortingExample
         // The security we'll be shorting
         private static string symbol = "TSLA";
 
-        private static AlpacaTradingClient client;
         public static async Task Main(string[] args)
         {
             // First, open the API connection
-            client = Alpaca.Markets.Environments.Paper
+            var tradingClient = Alpaca.Markets.Environments.Paper
                 .GetAlpacaTradingClient(API_KEY, new SecretKey(API_SECRET));
 
+            var dataClient = Alpaca.Markets.Environments.Paper
+                .GetAlpacaDataClient(API_KEY, new SecretKey(API_SECRET));
+
             // Submit a market order to open a short position of one share
-            var order = await client.PostOrderAsync(symbol, 1, OrderSide.Sell, OrderType.Market, TimeInForce.Day);
+            var order = await tradingClient.PostOrderAsync(symbol, 1, OrderSide.Sell, OrderType.Market, TimeInForce.Day);
             Console.WriteLine("Market order submitted.");
 
             // Submit a limit order to attempt to grow our short position
             // First, get an up-to-date price for our security
-            var barSet = await client.GetBarSetAsync(new[] { symbol }, TimeFrame.Minute, 1);
+            var barSet = await dataClient.GetBarSetAsync(new[] { symbol }, TimeFrame.Minute, 1);
             var bars = barSet[symbol].ToList();
             var price = bars[0].Close;
 
             // Submit another order for one share at that price
-            order = await client.PostOrderAsync(symbol, 1, OrderSide.Sell, OrderType.Limit, TimeInForce.Day, price);
+            order = await tradingClient.PostOrderAsync(symbol, 1, OrderSide.Sell, OrderType.Limit, TimeInForce.Day, price);
             Console.WriteLine($"Limit order submitted. Limit price = {order.LimitPrice}");
 
             // Wait a few seconds for our orders to fill...
             Thread.Sleep(2000);
 
             // Check on our position
-            var position = await client.GetPositionAsync(symbol);
+            var position = await tradingClient.GetPositionAsync(symbol);
             if (position.Quantity < 0)
             {
                 Console.WriteLine($"Short position open for {symbol}");

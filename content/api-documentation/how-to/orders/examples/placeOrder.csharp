@@ -22,7 +22,7 @@ namespace CodeExamples
 
             // Submit a limit order to attempt to sell 1 share of AMD at a
             // particular price ($20.50) when the market opens
-            order = await client.PostOrderAsync("AMD", 1, OrderSide.Sell, OrderType.Limit, TimeInForce.Opg, 20.50);
+            order = await client.PostOrderAsync("AMD", 1, OrderSide.Sell, OrderType.Limit, TimeInForce.Opg, 20.50M);
 
             Console.Read();
         }

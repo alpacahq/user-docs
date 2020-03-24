@@ -14,15 +14,17 @@ namespace CodeExamples
         public static async Task Main(string[] args)
         {
             // Prepare the websocket connection and subscribe to account_updates.
-            var alpacaStreamingClient = Environments.Paper.GetAlpacaStreamingClient(API_KEY, API_SECRET);
-            alpacaStreamingClient.ConnectAndAuthenticateAsync().Wait();
+            var alpacaStreamingClient = Environments.Paper
+                .GetAlpacaStreamingClient(API_KEY, API_SECRET);
+
+            await alpacaStreamingClient.ConnectAndAuthenticateAsync();
             alpacaStreamingClient.OnAccountUpdate += HandleAccountUpdate;
 
             Console.Read();
         }
 
         // Handle incoming account updates.
-        private void HandleAccountUpdate(IAccountUpdate update)
+        private static void HandleAccountUpdate(IAccountUpdate update)
         {
             Console.WriteLine("New account status: " + update.Status.ToString());
         }
