@@ -15,7 +15,6 @@ namespace GetPnLExample
 
         private static string API_SECRET = "your_secret_key";
 
-        private static AlpacaTradingClient client;
         public static async Task Main(string[] args)
         {
             // First, open the API connection
@@ -25,8 +24,9 @@ namespace GetPnLExample
             // Get account info
             var account = await client.GetAccountAsync();
 
-            # Check our current balance vs. our balance at the last market close
+            // Check our current balance vs. our balance at the last market close
             var balance_change = account.Equity - account.LastEquity;
+
             Console.WriteLine($"Today's portfolio balance change: ${balance_change}");
         }
     }
