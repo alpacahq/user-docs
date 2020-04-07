@@ -15,10 +15,11 @@ namespace CodeExamples
         {
             // First, open the API connection
             var client = Alpaca.Markets.Environments.Paper
-                .GetAlpacaDataClient(API_KEY, new SecretKey(API_SECRET));
+                .GetAlpacaDataClient(new SecretKey(API_KEY, API_SECRET));
 
             // Get daily price data for AAPL over the last 5 trading days.
-            var bars = await client.GetBarSetAsync(new[] { "AAPL" }, TimeFrame.Day, 5);
+            var bars = await client.GetBarSetAsync(
+              new BarSetRequest("AAPL", TimeFrame.Day) { Limit = 5 });
 
             // See how much AAPL moved in that timeframe.
             var startPrice = bars["AAPL"].First().Open;

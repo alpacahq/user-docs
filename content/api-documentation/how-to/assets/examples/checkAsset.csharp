@@ -14,7 +14,7 @@ namespace CodeExamples
         {
             // First, open the API connection
             var client = Alpaca.Markets.Environments.Paper
-                .GetAlpacaTradingClient(API_KEY, new SecretKey(API_SECRET));
+                .GetAlpacaTradingClient(new SecretKey(API_KEY, API_SECRET));
 
             // Check if AAPL is tradable on the Alpaca platform.
             try

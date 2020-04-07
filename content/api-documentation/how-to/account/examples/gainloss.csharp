@@ -19,7 +19,7 @@ namespace GetPnLExample
         {
             // First, open the API connection
             var client = Alpaca.Markets.Environments.Paper
-                .GetAlpacaTradingClient(API_KEY, new SecretKey(API_SECRET));
+                .GetAlpacaTradingClient(new SecretKey(API_KEY, API_SECRET));
 
             // Get account info
             var account = await client.GetAccountAsync();

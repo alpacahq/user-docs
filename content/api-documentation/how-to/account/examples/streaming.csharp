@@ -15,7 +15,7 @@ namespace CodeExamples
         {
             // Prepare the websocket connection and subscribe to account_updates.
             var alpacaStreamingClient = Environments.Paper
-                .GetAlpacaStreamingClient(API_KEY, API_SECRET);
+                .GetAlpacaStreamingClient(new SecretKey(API_KEY, API_SECRET));
 
             await alpacaStreamingClient.ConnectAndAuthenticateAsync();
             alpacaStreamingClient.OnAccountUpdate += HandleAccountUpdate;
