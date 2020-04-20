@@ -8,12 +8,19 @@ aliases:
 Alpaca provides you with different market data depending upon your account type. Below is a summary of the data feeds
 available. **Currently, we only provide data for U.S. listed equities.**
 
-## IEX Data
+## Alpaca Data API
 **This is available to all Alpaca users**
+**Part of the new API is currently beta and invite-only.**
 
 Users that have signed up with Alpaca but have not opened a real money brokerage account are able to receive free
-real-time data from [IEX](https://iexcloud.io/). Please note that this data feed only includes quotes and trades
-occurring on the IEX (one of the U.S. stock exchanges) order book.
+real-time data from five exchanges. Please note that this data feed only includes quotes and trades
+occurring on the order books on these exchanges.
+
+- IEX (Investors Exchange LLC)
+- NYSE National, Inc.
+- Nasdaq BX, Inc.
+- Nasdaq PHLX LLC
+- NYSE Chicago, Inc.
 
 ## Consolidated Market Data
 **This is available only to Alpaca Brokerage Accounts (Alpaca Securities brokerage account customers,
@@ -37,4 +44,5 @@ and Polygon.
 
 ## Further Reading
 
+For more details about how to access each data API, please read the [API Documentation]({{< relref "/api-documentation/api-v2/market-data/_index.md" >}}).
 For more information about market data feeds, please see our [Medium post](https://medium.com/automation-generation/exploring-the-differences-between-u-s-stock-market-data-feeds-3da26946cbd6).
