@@ -61,7 +61,7 @@ from all exchanges in the U.S., Alpaca Data API consists of five
 exchanges listed above. That said, Alpaca Data API satisfies most of
 the daily uses with enough accuracy as to the real time price needs.
 
-Due to the exchange requiremenrts, it is necessary to have a live trading
+Due to the exchange requirements, it is necessary to have a live trading
 account and sign the agreement to start accessing Polygon data.
 Users without a live brokerage account must use Alpaca Data API.
 

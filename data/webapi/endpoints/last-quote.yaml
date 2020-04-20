@@ -1,17 +1,17 @@
 endpoints:
   /v1/last_quote/stocks/{symbol}:
     GET:
-      title: Get the last trade
+      title: Get the last quote
       summary: |
-        Retrieves the last trade for the requested symbol.
+        Retrieves the last quote for the requested symbol.
 
       params:
         path:
           - name: symbol
             type: string
-            desc: A stock ticker symbol to retrieve the last trade of
+            desc: A stock ticker symbol to retrieve the last quote of
       returns: |
-        A [Last Trade](#last-trade-entity) object enclosed by
+        A [Last Quote](#last-quote-entity) object enclosed by
         a response object. See [example](#response)
       errors:
         - status: 401
