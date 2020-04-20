@@ -1,0 +1,46 @@
+spec:
+  - name: ev
+    type: string
+    desc: event name, always "Q"
+  - name: T
+    type: string
+    desc: symbol
+  - name: x
+    type: int
+    desc: exchange code for bid quote
+  - name: p
+    type: number
+    desc: bid price
+  - name: s
+    type: int
+    desc: bid size
+  - name: X
+    type: int
+    desc: exchange code for ask quote
+  - name: P
+    type: number
+    desc: ask price
+  - name: S
+    type: int
+    desc: ask size
+  - name: c
+    type: array of int
+    desc: condition flags
+  - name: t
+    type: int
+    desc: epoch timestamp in milliseconds
+example: |
+  {
+    "ev": "Q",
+    "T": "SPY",
+    "x": 17,
+    "p": 283.35,
+    "s": 1,
+    "X": 17,
+    "P": 283.4,
+    "S": 1,
+    "c": [
+      1
+    ],
+    "t": 1587407015152775000
+  }

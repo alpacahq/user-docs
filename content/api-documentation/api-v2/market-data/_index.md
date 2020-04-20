@@ -8,9 +8,14 @@ weight: 120
 ## Alpaca Data API
 
 Alpaca Data API provides the market data available to the client user through
-the REST and websocket streaming interfaces. Currently, the supported data
-set is IEX price data, but we are working on adding more.
+the REST and websocket streaming interfaces. Alpaca Data API consolidates
+data sources from five different exchanges.
 
+- IEX (Investors Exchange LLC)
+- NYSE National, Inc.
+- Nasdaq BX, Inc.
+- Nasdaq PHLX LLC
+- NYSE Chicago, Inc.
 
 ## Authentication
 The authentication is done the same way as [Trading API]({{< relref "/api-documentation/api-v2/_index.md#authentication" >}}),
@@ -30,63 +35,46 @@ https://data.alpaca.markets/v1
 
 This URL is the same between paper trading and live trading.
 
+## Streaming trades, quotes and bars
+
+{{< info-box >}}
+Alpaca Data API streaming is currently beta and invite-only.
+{{< /info-box >}}
+
+Alpaca Data API provides websocket streaming for trades,
+quotes and minute bars with the same API key. For the details about
+the streaming, plase see [the reference page]({{<
+ relref "/api-documentation/api-v2/market-data/streaming.md" >}})
+
 
 ## Polygon Integration
 
-All Alpaca customers with live brokerage accounts can access various kinds of market data in [Polygon](https://polygon.io/).
-(This data is not available to users who have not yet set up live accounts.) For the RESTful interface,
-you need to give the `apiKey` parameter with the same API key ID you use for Alpaca, as demonstrated below.
-You will see an authentication error message saying "invalid API key" if your account does not have Polygon access.
-
-```sh
-$ curl "https://api.polygon.io/v2/aggs/ticker/AAPL/range/1/day/2019-01-01/2019-02-01?apiKey=$APCA_API_KEY_ID"
-```
-
-(Note that your Alpaca API secret key is not required and should not be provided as a parameter in this call.)
-
-Using Polygon, you can query quotes, bars, and fundamentals data from both historical and real-time datasets.
-To see everything you have access to through their API, you can view [Polygon's documentation](https://polygon.io/docs/).
-
-With the same API key ID, you can subscribe your algorithm to Polygon's Websocket streaming for market data updates.
-Put your API key ID as the `params` value in the `auth` action at the beginning
-of the communication as the example below.
-
-```
-$ wscat wss://alpaca.socket.polygon.io/stocks
-[{"ev":"status","status":"connected","message":"Connected Successfully"}]
-{"action":"auth","params":"$APCA_API_KEY_ID"}
-[{"ev":"status","status":"success","message":"authenticated"}]
-{"action":"subscribe","params":"T.MSFT"}
-[{"ev":"status","status":"success","message":"subscribed to: T.MSFT"}]
-[{"ev":"T","sym":"MSFT","p":114.170,"x":"10","s":467,"t":1577413831740, .... }]
-```
-
-The Websocket server address for Alpaca users is as follows.
-
-- wss://alpaca.socket.polygon.io/stocks
-
-For the further description and specification of each REST API endpoint, please find more details [here](https://polygon.io/docs/).
-For Websocket specification, please read [Polygon's socket documentation](https://polygon.io/sockets),
-as well as refer to the documentation provided by
-[each language SDK]({{< relref "/api-documentation/client-sdk/_index.md" >}}).
+Alpaca integrates with Polygon service, provided for the users who
+have funded live trading accounts. For details, please see
+[another page]({{< relref "/api-documentation/api-v2/polygon-integration/_index.md" >}})
 
 ## Which API should I use?
 
-You may wonder which of the two above - IEX or Polygon - to use. First of all, the full
-volume data provided by Polygon is not immediately available to everyone. You first need
-to create a live trading account - users without live brokerage accounts must use IEX -\
-and agree with the exchange agreements.
+The biggest difference between Alpaca Data API and Polygon is the
+density of the data. While Polygon data is full volume consolidated
+from all exchanges in the U.S., Alpaca Data API consists of five
+exchanges listed above. That said, Alpaca Data API satisfies most of
+the daily uses with enough accuracy as to the real time price needs.
 
-<object type="image/svg+xml" data="flowchart.svg">
-</object>
+Due to the exchange requiremenrts, it is necessary to have a live trading
+account and sign the agreement to start accessing Polygon data.
+Users without a live brokerage account must use Alpaca Data API.
 
-If what you need is only daily bars, there is not much difference between the IEX
-and the full volume Polygon data. However, for the intraday real-time bars, the IEX data
-provides price information coming only from the IEX exchange trades,
-while the full volume data reflects trades from all exchanges.
+For those who have Polygon access via Alpaca API key, Alpaca Data
+API still works with the same key, and applies separate constraint
+for the concurrent connection. You can also use Alpaca Data API
+streaming for the purpose of backup and redundancy.
 
-Aside from the actual data contents, Alpaca Data API, which uses IEX, provides more
-flexible query capability such as multi-symbol and precise time range parameters.
+Alpaca Data API provides more flexible query capability such as multi-symbol and precise time range parameters, in addition to
+the real time trade & quotes data. Alpaca's intention is always
+to extend the API such that different use cases are easily met.
+If you find different needs for API design, please send us
+any feedbacks, too.
 
 ### Can I get the full volume data from Alpaca Data API?
 

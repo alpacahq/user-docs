@@ -1,0 +1,14 @@
+example: |
+  {
+    "status": "success",
+    "symbol": "SPY",
+    "last": {
+      "askprice": 279.1,
+      "asksize": 1,
+      "askexchange": 15,
+      "bidprice": 287.05,
+      "bidsize": 10,
+      "bidexchange": 17,
+      "timestamp": 1587229119000
+    }
+  }

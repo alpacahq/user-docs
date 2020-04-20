@@ -1,0 +1,57 @@
+spec:
+  - name: ev
+    type: string
+    desc: event name, always "AM"
+  - name: sym
+    type: string
+    desc: symbol
+  - name: v
+    type: int
+    desc: volume (shares)
+  - name: av
+    type: int
+    desc: accumulated volume (shares)
+  - name: op
+    type: number
+    desc: official open price of the bar
+  - name: vw
+    type: number
+    desc: VWAP
+  - name: o
+    type: number
+    desc: open price of the bar
+  - name: h
+    type: number
+    desc: high price of the bar
+  - name: l
+    type: number
+    desc: low price of the bar
+  - name: c
+    type: number
+    desc: close price of the bar
+  - name: a
+    type: number
+    desc: average price of the bar
+  - name: s
+    type: int
+    desc: epoch time at the beginning of the window in milliseconds
+  - name: e
+    type: int
+    desc: epoch time at the ending of the window in milliseconds
+example: |
+  {
+    "ev": "AM",
+    "sym": "SPY",
+    "v": 48526,
+    "av": 9663586,
+    "op": 282.6,
+    "vw": 282.0362,
+    "o": 282.13,
+    "c": 281.94,
+    "h": 282.14,
+    "l": 281.86,
+    "a": 284.4963,
+    "s": 1587409020000,
+    "e": 1587409080000
+  }
+

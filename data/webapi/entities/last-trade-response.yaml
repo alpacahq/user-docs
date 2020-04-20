@@ -1,0 +1,15 @@
+example: |
+  {
+    "status": "success",
+    "symbol": "SPY",
+    "last": {
+      "price": 286.84,
+      "size": 100,
+      "exchange": 2,
+      "cond1": 12,
+      "cond2": 0,
+      "cond3": 0,
+      "cond4": 0,
+      "timestamp": 1587159270000
+    }
+  }

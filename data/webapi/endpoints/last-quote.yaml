@@ -1,0 +1,20 @@
+endpoints:
+  /v1/last_quote/stocks/{symbol}:
+    GET:
+      title: Get the last trade
+      summary: |
+        Retrieves the last trade for the requested symbol.
+
+      params:
+        path:
+          - name: symbol
+            type: string
+            desc: A stock ticker symbol to retrieve the last trade of
+      returns: |
+        A [Last Trade](#last-trade-entity) object enclosed by
+        a response object. See [example](#response)
+      errors:
+        - status: 401
+          reason: The API key is not valid, or the feature is not enabled.
+        - status: 404
+          reason: symbol is not known

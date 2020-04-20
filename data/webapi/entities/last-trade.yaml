@@ -1,0 +1,36 @@
+spec:
+  - name: price
+    type: number
+    desc: last trade price
+  - name: size
+    type: init
+    desc: last trade volume size
+  - name: exchange
+    type: int
+    desc: exchange code where the last trade was made
+  - name: cond1
+    type: int
+    desc: condition flag 1
+  - name: cond2
+    type: int
+    desc: condition flag 2
+  - name: cond3
+    type: int
+    desc: condition flag 3
+  - name: cond4
+    type: int
+    desc: condition flag 4
+  - name: timestamp
+    type: int
+    desc: epoch timestamp in milliseconds
+example: |
+  {
+    "price": 286.84,
+    "size": 100,
+    "exchange": 2,
+    "cond1": 12,
+    "cond2": 0,
+    "cond3": 0,
+    "cond4": 0,
+    "timestamp": 1587159270000
+  }

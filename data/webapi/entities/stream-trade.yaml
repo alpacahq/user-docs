@@ -1,0 +1,44 @@
+spec:
+  - name: ev
+    type: string
+    desc: event name, always "T"
+  - name: sym
+    type: string
+    desc: symbol
+  - name: i
+    type: int
+    desc: trade ID
+  - name: x
+    type: int
+    desc: exchange code where the trade occurred
+  - name: p
+    type: number
+    desc: trade price
+  - name: s
+    type: int
+    desc: trade size (shares)
+  - name: t
+    type: int
+    desc: epoch timestamp in milliseconds
+  - name: c
+    type: array of int
+    desc: condition flags
+  - name: z
+    type: int
+    desc: tape ID
+example: |
+  {
+    "ev": "T",
+    "sym": "SPY",
+    "i": 117537207,
+    "x": 2,
+    "p": 283.63,
+    "s": 2,
+    "t": 1587406829644,
+    "c": [
+      14,
+      37,
+      41
+    ],
+    "z": 2
+  }

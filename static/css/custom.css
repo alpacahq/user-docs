@@ -404,3 +404,9 @@ h1.homepage-title {
         display: table-cell;
     }
 }
+
+.info-box {
+    background-color: #f0cccc;
+    padding: 20px;
+    border: 2px solid #fc9999;
+}

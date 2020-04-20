@@ -1,0 +1,32 @@
+spec:
+  - name: askprice
+    type: number
+    desc: the current ask price
+  - name: asksize
+    type: int
+    desc: the current ask size
+  - name: askexchange
+    type: int
+    desc: the exchange code of the ask quote
+  - name: bidprice
+    type: number
+    desc: the current bid price
+  - name: bidsize
+    type: int
+    desc: the current bid size
+  - name: bidexchange
+    type: int
+    desc: the exchange code of the bid quote
+  - name: timestamp
+    type: int
+    desc: epoch timestamp in milliseconds
+example: |
+  {
+    "askprice": 279.1,
+    "asksize": 1,
+    "askexchange": 15,
+    "bidprice": 287.05,
+    "bidsize": 10,
+    "bidexchange": 17,
+    "timestamp": 1587229119000
+  }
