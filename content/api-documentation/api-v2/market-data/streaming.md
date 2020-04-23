@@ -93,7 +93,7 @@ receiving the messages for the channels you want to receive.
 }
 {{< /snippet >}}
 
-The stream names can optionally be suffixed by `polyfeed/`
+The stream names can optionally be prefixed by `polyfeed/`
 {{< snippet >}}
 {
     "action": "listen",
