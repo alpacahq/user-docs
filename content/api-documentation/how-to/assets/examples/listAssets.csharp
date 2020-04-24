@@ -15,10 +15,11 @@ namespace CodeExamples
         {
             // First, open the API connection
             var client = Alpaca.Markets.Environments.Paper
-                .GetAlpacaTradingClient(API_KEY, new SecretKey(API_SECRET));
+                .GetAlpacaTradingClient(new SecretKey(API_KEY, API_SECRET));
 
             // Get a list of all active assets.
-            var assets = await client.ListAssetsAsync(AssetStatus.Active);
+            var assets = await client.ListAssetsAsync(
+                new AssetsRequest { AssetStatus = AssetStatus.Active });
 
             // Filter the assets down to just those on NASDAQ.
             var nasdaqAssets = assets.Where(asset => asset.Exchange == Exchange.NyseMkt);

@@ -15,10 +15,15 @@ namespace CodeExamples
         {
             // First, open the API connection
             var client = Alpaca.Markets.Environments.Paper
-                .GetAlpacaTradingClient(API_KEY, new SecretKey(API_SECRET));
+                .GetAlpacaTradingClient(new SecretKey(API_KEY, API_SECRET));
 
             // Get the last 100 of our closed orders
-            var closedOrders = await client.ListOrdersAsync(OrderStatusFilter.Closed, limitOrderNumber: 100);
+            var closedOrders = await client.ListOrdersAsync(
+                new ListOrdersRequest
+                {
+                    LimitOrderNumber = 100,
+                    OrderStatusFilter = OrderStatusFilter.Closed
+                });
 
             // Get only the closed orders for a particular stock
             var aaplOrders = closedOrders.Where(order => order.Symbol.Equals("AAPL"));

@@ -22,23 +22,29 @@ namespace ShortingExample
         {
             // First, open the API connection
             var tradingClient = Alpaca.Markets.Environments.Paper
-                .GetAlpacaTradingClient(API_KEY, new SecretKey(API_SECRET));
+                .GetAlpacaTradingClient(new SecretKey(API_KEY, API_SECRET));
 
             var dataClient = Alpaca.Markets.Environments.Paper
-                .GetAlpacaDataClient(API_KEY, new SecretKey(API_SECRET));
+                .GetAlpacaDataClient(new SecretKey(API_KEY, API_SECRET));
 
             // Submit a market order to open a short position of one share
-            var order = await tradingClient.PostOrderAsync(symbol, 1, OrderSide.Sell, OrderType.Market, TimeInForce.Day);
+            var order = await tradingClient.PostOrderAsync(
+                new NewOrderRequest(symbol, 1, OrderSide.Sell, OrderType.Market, TimeInForce.Day));
             Console.WriteLine("Market order submitted.");
 
             // Submit a limit order to attempt to grow our short position
             // First, get an up-to-date price for our security
-            var barSet = await dataClient.GetBarSetAsync(new[] { symbol }, TimeFrame.Minute, 1);
+            var barSet = await dataClient.GetBarSetAsync(
+                new BarSetRequest(symbol, TimeFrame.Minute) { Limit = 1 });
             var bars = barSet[symbol].ToList();
             var price = bars[0].Close;
 
             // Submit another order for one share at that price
-            order = await tradingClient.PostOrderAsync(symbol, 1, OrderSide.Sell, OrderType.Limit, TimeInForce.Day, price);
+            order = await tradingClient.PostOrderAsync(
+                new NewOrderRequest(symbol, 1, OrderSide.Sell, OrderType.Limit, TimeInForce.Day)
+                {
+                    LimitPrice = price
+                });
             Console.WriteLine($"Limit order submitted. Limit price = {order.LimitPrice}");
 
             // Wait a few seconds for our orders to fill...
