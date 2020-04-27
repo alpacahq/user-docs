@@ -22,7 +22,7 @@ upon certain market movement.
 ### How to connect the websocket streaming
 
 The message protocol is almost the same as trade API stream, but
-please note the endpoint is `wss://data.alpaca.markets` (papertrading API key works with this URL, too). At the
+please note the endpoint is `wss://data.alpaca.markets/stream` (papertrading API key works with this URL, too). At the
 beginning of connection, send API key as part of the "authenticate" `action`.
 
 {{< snippet >}}
