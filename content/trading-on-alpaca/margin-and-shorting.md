@@ -66,7 +66,7 @@ part of the Account API to help users better manage their risk.
 
 ## Margin Interest Rate
 
-We are pleased to offer a competitive and low annual margin interest rate of **3.75%** (Check "Alpaca Securities Brokerage Fee Schedule" on [Important Disclosures](https://alpaca.markets/disclosures) for the most recent rate).
+We are pleased to offer a competitive and low annual margin interest rate of **3.75%** (check "Alpaca Securities Brokerage Fee Schedule" on [Important Disclosures](https://alpaca.markets/disclosures) for the most up to dated rate).
 
 The rate is charged **only** on your account’s **end of day** (overnight) debit balance using the following calculation:
 
