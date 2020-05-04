@@ -5,10 +5,10 @@ const alpaca = new Alpaca()
 aaplPosition = alpaca.getPosition('AAPL')
 
 // Get a list of all of our positions.
-alpaca.listPositions()
+alpaca.getPositions()
     .then((portfolio) => {
         // Print the quantity of shares for each position.
-        portfolio.foreach(function (position) {
+        portfolio.forEach(function (position) {
             console.log(`${position.qty} shares of ${position.symbol}`)
         })
     })
