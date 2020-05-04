@@ -120,7 +120,7 @@ When you want to stop certain channels to stream, send a `unlisten` message.
 
 {{< snippet >}}
 {
-    "action": "listen",
+    "action": "unlisten",
     "data": {
         "streams": ["T.SPY", "Q.SPY"]
     }
