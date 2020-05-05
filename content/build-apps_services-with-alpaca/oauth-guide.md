@@ -121,7 +121,7 @@ With following parameters:
 
 *Note: this request should take place behind-the-scenes from your backend server and shouldn't be visible to the end users for security purposes.*
 
-The content type must be `application/x-www-form-urlencoded` as defined in [RFC](https://tools.ietf.org/html/rfc6749#section-3.2)
+The content type must be `application/x-www-form-urlencoded` as defined in [RFC](https://tools.ietf.org/html/rfc6749#section-3.2).
 
 Example request:
 
