@@ -220,7 +220,7 @@ be adjusted and the order will not be canceled in the event ofa dividend or
 other corporate action.
 - If the take-profit order is partially filled, the stop-loss order will
 be adjusted to the remaining quantity.
-- Order replacement is not supported.
+- Order replacement (PATCH /v2/orders) is not supported yet.
 
 Each order of the group is reported as an independent order in GET /v2/orders endpoint.
 But if you specify additional parameter nested=true, the order response will nest
@@ -260,12 +260,14 @@ In order to submit an OCO order, specify "oco" for the `order_class` parameter.
 The `type` parameter must always be "limit", indicating the take-profit order
 type is a limit order. The stop-loss order is a stop order if only `stop_price` is
 specified, and is a stop-limit order if both `limit_price` and `stop_price` are
-specified (i.e. `limit_price` must be present in any case). Those two orders work
+specified (i.e. `stop_price` must be present in any case). Those two orders work
 exactly the same way as the two legs of the bracket orders.
 
 Note that when you retrieve the list of orders with the `nested` parameter true,
 the take-profit order shows up as the parent order while the stop-loss order appears
 as a child order.
+
+Like bracket orders, order replacement is not supported yet.
 
 ### OTO Orders
 OTO (One-Triggers-Other) is a variant of bracket order. It takes one of the
@@ -294,6 +296,10 @@ Either of `take_profit` or `stop_loss` must be present (the above example is
 for take-profit case), and the rest of requirements are the same as the
 bracket orders.
 
+Like bracket orders, order replacement is not supported yet.
+
+### Training Stop Orders
+This is one of the highly requested features. We are working hard to support it soon. Stay tuned!
 
 ## Time in Force
 
