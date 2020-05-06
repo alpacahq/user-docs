@@ -2,7 +2,7 @@ spec:
   - name: ev
     type: string
     desc: event name, always "AM"
-  - name: sym
+  - name: T
     type: string
     desc: symbol
   - name: v
@@ -41,7 +41,7 @@ spec:
 example: |
   {
     "ev": "AM",
-    "sym": "SPY",
+    "T": "SPY",
     "v": 48526,
     "av": 9663586,
     "op": 282.6,

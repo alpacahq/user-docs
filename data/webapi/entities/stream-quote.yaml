@@ -28,7 +28,7 @@ spec:
     desc: condition flags
   - name: t
     type: int
-    desc: epoch timestamp in milliseconds
+    desc: epoch timestamp in nanoseconds
 example: |
   {
     "ev": "Q",

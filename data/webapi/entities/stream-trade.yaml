@@ -2,7 +2,7 @@ spec:
   - name: ev
     type: string
     desc: event name, always "T"
-  - name: sym
+  - name: T
     type: string
     desc: symbol
   - name: i
@@ -19,7 +19,7 @@ spec:
     desc: trade size (shares)
   - name: t
     type: int
-    desc: epoch timestamp in milliseconds
+    desc: epoch timestamp in nanoseconds
   - name: c
     type: array of int
     desc: condition flags
@@ -29,12 +29,12 @@ spec:
 example: |
   {
     "ev": "T",
-    "sym": "SPY",
+    "T": "SPY",
     "i": 117537207,
     "x": 2,
     "p": 283.63,
     "s": 2,
-    "t": 1587406829644,
+    "t": 1587407015152775000,
     "c": [
       14,
       37,

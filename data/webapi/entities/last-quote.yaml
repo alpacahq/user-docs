@@ -19,7 +19,7 @@ spec:
     desc: the exchange code of the bid quote
   - name: timestamp
     type: int
-    desc: epoch timestamp in milliseconds
+    desc: epoch timestamp in nanoseconds
 example: |
   {
     "askprice": 279.1,
@@ -28,5 +28,5 @@ example: |
     "bidprice": 287.05,
     "bidsize": 10,
     "bidexchange": 17,
-    "timestamp": 1587229119000
+    "timestamp": 1588770424970329400
   }
