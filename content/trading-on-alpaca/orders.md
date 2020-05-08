@@ -298,7 +298,7 @@ bracket orders.
 
 Like bracket orders, order replacement is not supported yet.
 
-### Training Stop Orders
+### Trailing Stop Orders
 This is one of the highly requested features. We are working hard to support it soon. Stay tuned!
 
 ## Time in Force
