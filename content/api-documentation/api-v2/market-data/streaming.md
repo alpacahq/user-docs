@@ -3,10 +3,6 @@ title: Market Data Streaming
 weight: 40
 ---
 
-{{< info-box >}}
-Alpaca Data API streaming is currently beta and invite-only.
-{{< /info-box >}}
-
 Alpaca Data API provides websocket streaming for trades,
 quotes and minute bars. This helps receive the most up to date
 market information that could help your trading strategy to act

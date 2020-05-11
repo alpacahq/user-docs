@@ -11,8 +11,6 @@ available. **Currently, we only provide data for U.S. listed equities.**
 ## Alpaca Data API
 **This is available to all Alpaca users.**
 
-**Part of the new API is currently beta and invite-only.**
-
 Users that have signed up with Alpaca but have not opened a real money brokerage account are able to receive free
 real-time data from five exchanges. Please note that this data feed only includes quotes and trades
 occurring on the order books on these exchanges.

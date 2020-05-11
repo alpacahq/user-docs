@@ -37,10 +37,6 @@ This URL is the same between paper trading and live trading.
 
 ## Streaming trades, quotes and bars
 
-{{< info-box >}}
-Alpaca Data API streaming is currently beta and invite-only.
-{{< /info-box >}}
-
 Alpaca Data API provides websocket streaming for trades,
 quotes and minute bars with the same API key. For the details about
 the streaming, plase see [the reference page]({{<
