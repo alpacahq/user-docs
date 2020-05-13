@@ -14,7 +14,7 @@ data sources from five different exchanges.
 - IEX (Investors Exchange LLC)
 - NYSE National, Inc.
 - Nasdaq BX, Inc.
-- Nasdaq PHLX LLC
+- Nasdaq PSX
 - NYSE Chicago, Inc.
 
 ## Authentication
