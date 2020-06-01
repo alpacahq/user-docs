@@ -54,7 +54,6 @@ alpaca.getBars(
         limit_price: currentPrice,
     });
 
-
     // wait for it to buy position and then
     alpaca.createOrder({
         symbol: symbol,
@@ -71,7 +70,4 @@ alpaca.getBars(
             limit_price: currentPrice * 1.05
         }
     });
-
-
-
 });
