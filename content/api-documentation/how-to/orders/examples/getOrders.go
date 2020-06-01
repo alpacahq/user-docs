@@ -12,7 +12,8 @@ func main() {
 	// Get the last 100 of our closed orders
 	status := "closed"
 	limit := 100
-	closed_orders, err := alpaca.ListOrders(&status, nil, &limit)
+	nested := true // show nested multi-leg orders
+	closed_orders, err := alpaca.ListOrders(&status, nil, &limit, &nested)
 	if err != nil {
 		panic(err)
 	}
