@@ -109,5 +109,4 @@ func main() {
 	order, err := client.PlaceOrder(req)
 	fmt.Println(order)
 	fmt.Println(err)
-
 }
