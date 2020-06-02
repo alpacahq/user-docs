@@ -43,7 +43,7 @@ alpaca.getBars(
         }
     });
 
-    // We could split it tp 2 orders. first buy a stock,
+    // We could split it to 2 orders. first buy a stock,
     // and then add the stop/profit prices (OCO Orders)
     alpaca.createOrder({
         symbol: symbol,

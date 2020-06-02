@@ -30,7 +30,7 @@ api.submit_order(
     stop_loss={'stop_price': symbol_price * 0.95}
 )
 
-# We could split it tp 2 orders. first buy a stock,
+# We could split it to 2 orders. first buy a stock,
 # and then add the stop/profit prices (OCO Orders)
 api.submit_order(symbol, 1, 'buy', 'limit', 'day', symbol_price)
 

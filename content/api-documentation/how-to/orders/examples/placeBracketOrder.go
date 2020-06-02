@@ -70,7 +70,7 @@ func main() {
 	fmt.Println(order)
 	fmt.Println(err)
 
-	// We could split it tp 2 orders. first buy a stock,
+	// We could split it to 2 orders. first buy a stock,
     // and then add the stop/profit prices (OCO Orders)
     limit := decimal.NewFromFloat(318.)
 	req := alpaca.PlaceOrderRequest{
