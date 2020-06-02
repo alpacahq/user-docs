@@ -5,7 +5,8 @@ api = tradeapi.REST()
 # Get the last 100 of our closed orders
 closed_orders = api.list_orders(
     status='closed',
-    limit=100
+    limit=100,
+    nested=True  # show nested multi-leg orders
 )
 
 # Get only the closed orders for a particular stock

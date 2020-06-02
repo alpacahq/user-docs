@@ -23,6 +23,13 @@ Client Order IDs can be used to organize and track specific orders in your clien
 
 {{< code-example exampleId="useClientOrderId" pathURL="/api-documentation/how-to/orders/examples">}}
 
+## Submit Bracket Orders
+Bracket orders allow you to create a chain of orders that react to execution
+ and stock price.
+For more details, go to [Bracket Order Overview]({{< relref"/trading-on-alpaca/orders.md#bracket-orders" >}})
+
+{{< code-example exampleId="placeBracketOrder" pathURL="/api-documentation/how-to/orders/examples">}}
+
 ## Get a List of Existing Orders
 If you'd like to see a list of your existing orders, you can send a get request to our [/v2/orders]({{< relref "/api-documentation/api-v2/orders.md#get-a-list-of-orders" >}}) endpoint.
 
