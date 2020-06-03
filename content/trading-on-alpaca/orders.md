@@ -362,7 +362,7 @@ orders reach these states:
 
 - `accepted`<br>
    The order has been received by Alpaca, but hasn't yet been routed to
-   the execution venue. This state only occurs on rare occasions.
+   the execution venue. This could be seen often out side of trading session hours.
 - `pending_new`<br>
    The order has been received by Alpaca, and routed to the exchanges,
    but has not yet been accepted for execution. This state only occurs on rare occasions.
