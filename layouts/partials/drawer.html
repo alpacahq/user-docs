@@ -28,20 +28,14 @@
         {{ if gt (len .Site.Menus.main) 0 }}
         <ul>
           {{ partial "nav" . }}
-          <li><a href="https://alpaca.markets/learn/" target="_blank" class="current">💡Alpaca Resources</a></li>
-          <li><a href="https://alpaca.markets/learn/" target="_blank" class="current">🙌Alpaca Forum</a></li>          
+          <li><a href="https://alpaca.markets/learn/" target="_blank" class="current">Alpaca Resources💡</a></li>
+          <li><a href="https://alpaca.markets/learn/" target="_blank" class="current">Alpaca Forum🙌</a></li>          
         </ul>
         {{ end }}
 
         {{ if isset .Site.Params "author" }}
         <hr>
         <!---<span class="section">Alpaca Sites & Social</span>--->
-        <ul>
-          {{ partial "nav" . }}
-          <li><a href="https://alpaca.markets/learn/" target="_blank" class="current">Alpaca Resources💡</a></li>
-          <li><a href="https://alpaca.markets/learn/" target="_blank" class="current">Alpaca Forum🙌</a></li>          
-        </ul>
-
         <ul>
                 <a href="https://forum.alpaca.markets/" target="_blank" rel="noopener noreferrer" class="social__item">
                     <svg width="25" height="25" viewBox="-3 -5 25 30" fill="none">
