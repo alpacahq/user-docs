@@ -36,6 +36,11 @@
         {{ if isset .Site.Params "author" }}
         <hr>
         <!---<span class="section">Alpaca Sites & Social</span>--->
+        <ul>
+          {{ partial "nav" . }}
+          <li><a href="https://alpaca.markets/learn/" target="_blank" class="current">Alpaca Resources💡</a></li>
+          <li><a href="https://alpaca.markets/learn/" target="_blank" class="current">Alpaca Forum🙌</a></li>          
+        </ul>
 
         <ul>
                 <a href="https://forum.alpaca.markets/" target="_blank" rel="noopener noreferrer" class="social__item">
@@ -75,10 +80,13 @@
           <li>
             <a href="https://forum.alpaca.markets/c/alpaca/feature-requests">Feature Requests</a>
           </li>
+          <li>          
             <a href="https://github.com/alpacahq/Alpaca-API">Tech Issues</a>
           </li>
+          <li>
             <a href="https://github.com/alpacahq/user-docs">Contribute to Docs</a>
           </li>
+          <li>          
             <a href="https://alpaca.markets/disclosures">Disclosures</a>
           </li>
         <!---
