@@ -1,7 +1,7 @@
 spec:
   - name: timestamp
     type: array of epoch int (in seconds)
-    desc: time of each data element, left-labled (the beginnig of time window)
+    desc: time of each data element, left-labeled (the beginning of time window)
   - name: equity
     type: array of number
     desc: equity value of the account in dollar amount as of the end of each time window
