@@ -47,7 +47,7 @@ Pagination is handled using the `page_token` and `page_size` parameters. `page_t
 * `DIVTW`: Dividend adjusted (Tefra Withheld)
 * `DIVTXEX`: Dividend (tax exempt)
 * `INT`: Interest (credit/margin)
-* `INTNRA` Interest adjusted (NRA Withheld)
+* `INTNRA`: Interest adjusted (NRA Withheld)
 * `INTTW`: Interest adjusted (Tefra Withheld)
 * `JNL`: Journal entry
 * `JNLC`: Journal entry (cash)
