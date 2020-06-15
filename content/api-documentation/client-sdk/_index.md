@@ -22,3 +22,4 @@ In addition to the SDKs directly supported by Alpaca, individual members of our 
 - R: [alpaca-for-r](https://github.com/jagg19/AlpacaforR)
 - Scala: [Alpaca Scala](https://github.com/cynance/alpaca-scala)
 - Ruby: [alpaca-trade-api](https://github.com/ccjr/alpaca-trade-api)
+- Elixir: [alpaca_elixir](https://github.com/jrusso1020/alpaca_elixir)
