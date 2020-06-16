@@ -23,13 +23,12 @@ and issues so that they may resolve them as quickly as possible.
 ### Support
 
 If you are wondering why your brokerage application is stuck in processing, or if you are having trouble depositing
-money to your brokerage account, then please send an email to our brokerage operations team at **support@alpaca.markets**. By law, we must
+money to your brokerage account, please visit [Getting Started (Alpaca Securities LLC)](https://alpaca.markets/learn/tag/getting-started-alpaca-securities/) of [Alpaca Resources](https://alpaca.markets/learn/), or reach out to us at **support@alpaca.markets**. By law, we must
 have licensed representatives handle such brokerage-related issues and requests.
 
 Questions and issues that often arise include trouble linking a bank account, updating an address on file, and
-correcting erroneous information provided during onboarding. But please do not email our operations team
-if, for example, you are having trouble getting your API key to work (instead, check out our
-[tech-related support channels]({{< relref "#tech-related-questions-and-issues" >}})).
+correcting erroneous information provided during onboarding. If, for example, you are having trouble getting your API key to work (check out our
+[tech-related support channels]({{< relref "#tech-related-questions-and-issues" >}})), getting support from the community members on [Alpaca Slack](https://alpaca-community.slack.com/), or reach out to us at **support@alpaca.markets**. 
 
 ### Alpaca Resources
 
