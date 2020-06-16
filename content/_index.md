@@ -36,7 +36,7 @@ getting a list of existing orders.
 
 In order to start trading, you need to deposit your money into your account. Go to your dashboard, link your bank
 account, and initiate an ACH transfer from your bank to your Alpaca account. Please also read our
-[FAQ page for banking](https://support.alpaca.markets/hc/en-us/sections/360001964091-Banking-and-Transfers), too.
+[FAQ page for banking](https://alpaca.markets/learn/tag/banking/), too.
 
 ## Start live trading
 
@@ -47,5 +47,5 @@ live trading.
 For you to start live trading, you need to open an Alpaca Securities brokerage account. Currently, Alpaca Securities
 brokerage account is available only for the US residents, and requires you to complete the account application.
 Once you complete the application, your information is going to be reviewed and approved if everything is good.
-For more information about account review process, please read [Alpaca Securities FAQ](https://support.alpaca.markets/hc/en-us/)
-page.
+For more information about account review process, please read [Getting Started (Alpaca Securities LLC)
+](https://alpaca.markets/learn/tag/getting-started-alpaca-securities/) section of [Alpaca Resources](https://alpaca.markets/learn/).
