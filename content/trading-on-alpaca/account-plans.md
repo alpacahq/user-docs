@@ -33,7 +33,7 @@ or more equity will have access to margin trading and short selling.
 **Individual Taxable Account**
 
 Alpaca Securities LLC supports individual taxable brokerage accounts. At this time, we do not support retirement accounts.
-For a more formal overview, please see the [sign up page of the Alpaca Securities FAQ](https://support.alpaca.markets/hc/en-us/sections/360001817852-Account-Sign-Up).
+
 
 {{< hash-link business>}}
 **Business Account**
