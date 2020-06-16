@@ -28,7 +28,7 @@ have licensed representatives handle such brokerage-related issues and requests.
 
 Questions and issues that often arise include trouble linking a bank account, updating an address on file, and
 correcting erroneous information provided during onboarding. If, for example, you are having trouble getting your API key to work (check out our
-[tech-related support channels]({{< relref "#tech-related-questions-and-issues" >}})), getting support from the community members on [Alpaca Slack](https://alpaca-community.slack.com/), or reach out to us at **support@alpaca.markets**. 
+[tech-related support channels]({{< relref "#tech-related-questions-and-issues" >}}), getting support from the community members on [Alpaca Slack](https://alpaca-community.slack.com/), or reach out to us at **support@alpaca.markets**. 
 
 ### Alpaca Resources
 
