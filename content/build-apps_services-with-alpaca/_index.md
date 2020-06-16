@@ -25,7 +25,7 @@ Fill Out The Request Form
 ## FAQs
 
 - Q: I have some general questions about Alpaca and your product offerings and/or API. Where should I begin? 
-- A: Please click [here](https://support.alpaca.markets/hc/en-us/) for our general FAQs and [here](https://docs.alpaca.markets/) for our documentation.
+- A: Please visit [Alpaca Resources](https://alpaca.markets/learn/) for our general FAQs and [here](https://alpaca.markets/docs/) for our documentation.
 
 ----
 
