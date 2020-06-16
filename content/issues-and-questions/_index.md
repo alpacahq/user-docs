@@ -31,12 +31,11 @@ correcting erroneous information provided during onboarding. But please do not e
 if, for example, you are having trouble getting your API key to work (instead, check out our
 [tech-related support channels]({{< relref "#tech-related-questions-and-issues" >}})).
 
-### Alpaca Securities FAQ
+### Alpaca Resources
 
-If you have questions about certain brokerage-related terminology or how Alpaca's brokerage business works, please read
-our [Alpaca Securities FAQ](https://support.alpaca.markets/hc/en-us/). It is managed by Alpaca's brokerage operations team and
-only contains information about our brokerage operations. For example, you can find content such as information about
-pattern day trading, but not about how you can port your Quantopian algos to Alpaca.
+If you have questions about certain terminology or how Alpaca's business works, please see
+[Alpaca Resources](https://alpaca.markets/learn/). For example, you can find information about
+pattern day trading, wash sale, tax-reporting as well as code examples and use cases with Alpaca API.
 
 
 
@@ -44,7 +43,9 @@ pattern day trading, but not about how you can port your Quantopian algos to Alp
 
 ### Forum & Community Slack
 
-If you are looking for a community to voice your questions and discuss certain issues, please visit [our forum](https://forum.alpaca.markets) or [our community Slack](https://alpaca-community.slack.com). The community consists of both experienced users and beginners. We have set up a variety of topics for users to discuss. Join in on the conversation and find relevant topics around trading, market data, Alpaca product, programming, trading personal projects, and more!
+If you are looking for a community to voice your questions and discuss certain issues, please visit [our forum](https://forum.alpaca.markets) or [our community Slack](https://alpaca-community.slack.com). For general feature and/or enhancement requests, check out the [Feature Requests category](https://forum.alpaca.markets/c/alpaca/feature-requests) in the Alpaca Forum.
+
+The community consists of both experienced users and beginners. We have set up a variety of topics for users to discuss. Join in on the conversation and find relevant topics around trading, market data, Alpaca product, programming, trading personal projects, and more!
 
 Since most of brokerage-related issues can be solved only by Alpaca’s brokerage operations team, you will want to contact the brokerage operations team directly by sending an email to **support@alpaca.markets**. Brokerage operations team members are not permitted to answer
 questions or provide support on our forum due to regulatory reasons.
@@ -52,28 +53,25 @@ questions or provide support on our forum due to regulatory reasons.
 
 ### GitHub
 
-If you are wondering why some features that you think should be there are not there yet, you may find others who also
+In addition to the [Feature Requests category](https://forum.alpaca.markets/c/alpaca/feature-requests) in the Alpaca Forum, if you are wondering why some API features that you think should be there are not there yet, you may find others who also
 thought about the same thing. If you are stuck with a bug and did not get any answers in the community Slack, you may
 see how others have found the same issue.
 
-The [Alpaca API GitHub repository](https://github.com/alpacahq/Alpaca-API) is the place for you to file feature requests
+The [Alpaca API GitHub repository](https://github.com/alpacahq/Alpaca-API) is the place for you to file API feature requests
 and issues you are experiencing. Users can see what issues others have encountered and contribute their own experiences
 in the comments section of the reported issue. Users can also view and comment on requested features.
 
 If you have technical issues specific to one of our [client SDKs]({{< relref "/api-documentation/client-sdk/_index.md" >}}),
 please file the issue directly in the relevant SDK GitHub repo.
 
-Lastly, please note that the GitHub repository is **not** a good place to report or find information regarding Alpaca's brokerage
-service. Instead, you'll want to read our [Brokerage Service FAQ](https://support.alpaca.markets/hc/en-us/), which
-specifically acts as our brokerage-related knowledge base.
+Lastly, please note that the GitHub repository is **not** a good place to report or find information regarding Alpaca's business or FAQ. Instead, you'll want to visit [Alpaca Resources](https://alpaca.markets/learn/), which includes general FAQ, code examples, use cases, and more.
 
 
-### Medium
+### Blog
 
-If you want to read more about the market, trading strategies, and coding, please check out
-[Automation Generation](https://medium.com/automation-generation), Alpaca's Medium publication.
-[Automation Generation](https://medium.com/automation-generation) consists of posts coming from the Alpaca Team as
-well as its community members.
+If you want to read more about Alpaca's product announcements and newsletters, please check out
+[Alpaca Blog](https://alpaca.markets/blog/).
+
 
 ## Service Status Page
 
