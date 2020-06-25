@@ -14,16 +14,18 @@ First thing first, you need to create a python script. Go to your Quantopian
 algorithm page, copy the entire source code, paste and save it as a
 python script. Here we name it `algo.py` as an example.
 
-## Python 2 and 3
-The next thing you need to know is that Quantopian's environment, as of
-writing, is based on Python 2.  Python 2 is ending its life by [2020](https://pythonclock.org/).
-pylivetrader currently supports only Python 3, so you need to convert
-your Python 2 script for Python 3.  While those two are not compatible,
-there are not so many differences. And the good news is that the Python community
-has been putting so much effort to make it easy to migrate from 2 to 3.
+## Python 2 and 3 (if applicable)
+Quantopian's environment, as of writing, supports both Python 2 and 3.
+pylivetrader currently supports only Python 3, so if your algorithm is
+currently Python 2, you need to convert your Python 2 script to Python 3.
+(If your script is already Python 3, you may skip to the next section)
+
+While those two versions are not compatible, there are not so many differences.
+Fortunately, the Python community has been putting so much effort to make it 
+easy to migrate from version 2 to 3.
 
 In short, the `2to3` command will help here.  You should have this program
-if you have installed Python 3. For more details of this script, you can
+if you have installed Python 3. For more details on this script, you can
 read the [official document](https://docs.python.org/3.6/library/2to3.html).
 
 ```sh
