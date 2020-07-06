@@ -25,7 +25,7 @@ Put your API key ID as the `params` value in the `auth` action at the beginning
 of the communication as the example below.
 
 ```
-$ wscat wss://alpaca.socket.polygon.io/stocks
+$ wscat wss://socket.polygon.io/stocks
 [{"ev":"status","status":"connected","message":"Connected Successfully"}]
 {"action":"auth","params":"$APCA_API_KEY_ID"}
 [{"ev":"status","status":"success","message":"authenticated"}]
@@ -36,7 +36,7 @@ $ wscat wss://alpaca.socket.polygon.io/stocks
 
 Note the Websocket server address for Alpaca users is as follows.
 
-- wss://alpaca.socket.polygon.io/stocks
+- wss://socket.polygon.io/stocks
 
 For the further description and specification of each REST API endpoint, please find more details [here](https://polygon.io/docs/).
 For Websocket specification, please read [Polygon's socket documentation](https://polygon.io/sockets),
