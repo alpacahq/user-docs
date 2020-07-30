@@ -27,4 +27,6 @@ discretion.*
 
 [//]: # (**[Build a Day-Trading Algorithm and Run it in the Cloud Using Only Free Services]({{< relref "/get-started-with-alpaca/daytrading-momentum.md" >}})**)
 
+Also, you can always go back to a list of [How-To Code Examples](https://alpaca.markets/docs/api-documentation/how-to/) where you’ll find examples of how to do specific tasks using the Alpaca API in supported programming languages.
+
 Got another interesting idea? Tell us about it in our [Forum](https://forum.alpaca.markets), and we can list it here.
