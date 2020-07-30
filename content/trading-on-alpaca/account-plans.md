@@ -39,7 +39,7 @@ Alpaca Securities LLC supports individual taxable brokerage accounts. At this ti
 
 We started an invite-only beta program for non-U.S. residents to open live-trading accounts. Due to the nature of this beta program, there are several restrictions including that the Alpaca Securities LLC brokerage is available internationally on a limited basis for "non-solicited" customers* only (* Any customer onboarding for live brokerage must electronically sign a Non-Solicitation Agreement certifying that the customer was not directly solicited to open a live brokerage account and must indicate how they became aware of Alpaca).
 
-Although we are working to remove certain restrictions that we have with today’s beta program, we start sending invites to the users who are okay with **$30,000 initial funding** and **using international-wire transfer to deposit funds** (This beta program does not support TransferWise or Revolut. ACH does not work with a bank account outside the US). Please read [this announcement](https://alpaca.markets/blog/business-brokerage-account-beta/) to learn more about the beta program.
+Although we are working to remove certain restrictions that we have with today’s beta program, we start sending invites to the users who are okay with **$30,000 initial funding** and **using international-wire transfer to deposit funds** (This beta program does not support TransferWise or Revolut. ACH does not work with a bank account outside the US). Please read [this announcement](https://alpaca.markets/blog/non-us-live-trading-beta/) to learn more about the beta program.
 
 Please fill out [this form](https://forms.gle/vV96nn5zFBtHSrfU9) to be on the invite list.
 
@@ -53,7 +53,7 @@ Today’s beta program accepts select US Corporations, LLCs, and we continue to 
 professional data subscribers for which we currently are **unable** to provide Polygon's consolidated market data. You would still have access to [Alpaca Data API](https://alpaca.markets/docs/trading-on-alpaca/market-data/), but if you wanted a consolidated market data feed,
 you'd need to obtain this through another provider. Please read [this announcement](https://alpaca.markets/blog/business-brokerage-account-beta/) to learn more about the beta program.
 
-Please [complete this form](https://docs.google.com/forms/d/e/1FAIpQLScH_5wylQNILGedoS_mAS7-djbU24hDqaOERMLiBVRRn9IaJA/viewform?usp=sf_link) to get on the list to receve an invite.
+Please [complete this form](https://docs.google.com/forms/d/e/1FAIpQLScH_5wylQNILGedoS_mAS7-djbU24hDqaOERMLiBVRRn9IaJA/viewform?usp=sf_link) to get on the list to receive an invite.
 
 
 ## Paper Only Account vs Brokerage Account Features
