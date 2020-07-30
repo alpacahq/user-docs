@@ -23,7 +23,7 @@ occurring on the order books on these exchanges.
 
 ## Consolidated Market Data
 **This is available only to Alpaca Brokerage Accounts (Alpaca Securities brokerage account customers,
-currently U.S. residents only)**
+currently U.S. residents and non-U.S. residents by invite-only basis)**
 
 Alpaca Securities brokerage account customers are provided with a consolidated U.S. equity market data feed.
 Currently we provide this data for free.
