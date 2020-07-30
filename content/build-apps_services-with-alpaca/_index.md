@@ -7,8 +7,8 @@ weight: 70
 
 Thank you for your interest in building your project using the Alpaca API! Please read through the following FAQs before submitting the form. 
 
-You are welcome to begin development using Alpaca’s [API documentation](https://docs.alpaca.markets/api-documentation/) at any time. 
-In addition, you can visit [this guide](https://docs.alpaca.markets/build-apps_services-with-alpaca/oauth-guide/) to learn more about connecting with OAuth. 
+You are welcome to begin development using Alpaca’s [API documentation](https://docs.alpaca.markets/api-documentation/) at any time. By using your paper trading API key, you can build and test your projects without opening a live trading account. Please read [Account Plans](https://alpaca.markets/docs/trading-on-alpaca/account-plans/) for your eligiblity.  
+In addition, you can visit [OAuth Integration Guide](https://docs.alpaca.markets/build-apps_services-with-alpaca/oauth-guide/) to learn more about using OAuth to connect your applications with Alpaca. 
 We appreciate your understanding that brokerage API integration support, such as features that are not 
 currently in our documentation, is currently available by invite-only. Please complete the form once you 
 are ready to move forward or have any questions about building your project using the Alpaca API.
