@@ -9,18 +9,6 @@ At Alpaca, we believe that open source and the community around it can change fi
 
 As you continue on your journey of automated trading, there are many questions and hurdles that might arise while trying things out. Because of this, we have set up several community spaces for automated traders to gather and share knowledge.
 
-## Alpaca Forum
-[Alpaca's community forum](https://forum.alpaca.markets) is recommended venue for Alpaca users to discuss topics ranging from trading, algorithms, programming, market data, etc. The forum is also a place to find up-to-date announcements about Alpaca and its features. The forum is the recommended place for discussion, since it has more advanced indexing and search functionality compared to our other community channels.
-
-There are various topics set up for users to discuss, including:
-
-[**Ask the Community**](https://forum.alpaca.markets/c/questions) - Start here if you have any questions on how to use Alpaca, questions about code, etc.
-
-[**Alpaca - Feature Requests**](https://forum.alpaca.markets/c/alpaca/feature-requests) - This category is for discussion on types of features you’d like to see implemented. What new features would you like to see implemented? What is the use case for this feature? How would it be helpful for you?
-
-**Programming - Questions & Issues** - Users can post questions or issues regarding Alpaca technology and receive help.
-
-
 ## Community Slack
 
 [Alpaca’s community Slack](https://alpaca.markets/slack) has grown to be the go-to place for Alpaca
@@ -48,9 +36,20 @@ members and is a place where you can find feature updates and read official anno
 
 *Alpaca for Slack* is the official Slack integration for Alpaca. It allows you to manage your Alpaca portfolio from any Slack community where it's installed. It's already available in our community Slack - just type `/alpaca help` there to get started, or check [this page](../platform-migration/alpaca-for-slack) for more details.
 
-## Medium Publication - Automation Generation
+## Forum
+[Alpaca's community forum](https://forum.alpaca.markets) is recommended venue for Alpaca users to discuss topics ranging from trading, algorithms, programming, market data, etc. The forum is also a place to find up-to-date announcements about Alpaca and its features. The forum is the recommended place for discussion, since it has more advanced indexing and search functionality compared to our other community channels.
 
-[Automation Generation](https://medium.com/automation-generation) has become a publication where community members contribute their experience
+There are various topics set up for users to discuss, including:
+
+[**Ask the Community**](https://forum.alpaca.markets/c/questions) - Start here if you have any questions on how to use Alpaca, questions about code, etc.
+
+[**Alpaca - Feature Requests**](https://forum.alpaca.markets/c/alpaca/feature-requests) - This category is for discussion on types of features you’d like to see implemented. What new features would you like to see implemented? What is the use case for this feature? How would it be helpful for you?
+
+[**Programming - Questions & Issues**](https://forum.alpaca.markets/c/programming/) - Users can post questions or issues regarding Alpaca technology and receive help.
+
+## Alpaca Resources: Code Examples & Use Cases
+
+[Alpaca Resources](https://alpaca.markets/learn/) has become a publication where community members contribute their experience
 and know-how in a more comprehensive format. There are a number of comprehensive instructions and
 how-to guides such as full code snippets of trading strategies and an infrastructure setup overview
 covering which cloud services to use.
@@ -59,21 +58,21 @@ If you want to read more about the market, trading strategies, coding, and other
 community Slack, Automation Generation offers you many comprehensive posts that should help you along the
 way.
 
-Popular posts from Automation Generation include:
+Popular posts from Alpaca Resources include:
 
-[Manage Your Stocks from Google Spreadsheet Using API](https://medium.com/automation-generation/manage-your-stocks-from-google-spreadsheet-using-api-43026db44289)
+[Google Spreadsheet to Manage Your Stocks Using API](https://alpaca.markets/learn/google-spreadsheet-to-manage-your-stocks-using-api/)
 
-[HFT-like Trading Algorithm in 300 Lines of Code You Can Run Now](https://medium.com/automation-generation/hft-like-trading-algorithm-in-300-lines-of-code-you-can-run-now-983bede4f13a)
+[HFT-like Trading Algorithm in 300 Lines of Code You Can Run Now](https://alpaca.markets/learn/hft-like-trading-algorithm/)
 
-[This is How I Implemented Benjamin Graham’s Teachings into an Automated Investing Strategy in Python](https://medium.com/automation-generation/teaching-your-computer-to-invest-with-python-commission-free-automated-investing-5ade10961e08)
+[How to Build a DIY Socially Responsible Investing Robo - A Farewell to Swell](https://alpaca.markets/learn/swell-socially-responsible-investing/)
 
-[Exploring the Differences between U.S. Stock Market Data Feeds](https://medium.com/automation-generation/exploring-the-differences-between-u-s-stock-market-data-feeds-3da26946cbd6)
+[Exploring the Differences between U.S. Stock Market Data Feeds](https://alpaca.markets/learn/understanding-stock-market-data/)
 
-[Commission Free Trading: Is it helping or hurting you?](https://medium.com/automation-generation/commission-free-trading-is-it-helping-or-hurting-you-dc5fdc22ca6a)
+[Concurrent Scalping Algo Using Async Python](https://alpaca.markets/learn/concurrent-scalping-algo-async-python/)
 
-[Algorithmically Detecting (and Trading) Technical Chart Patterns with Python](https://medium.com/automation-generation/algorithmically-detecting-and-trading-technical-chart-patterns-with-python-c577b3a396ed)
+[Algorithmically Detecting (and Trading) Technical Chart Patterns with Python](https://alpaca.markets/learn/algorithmic-trading-chart-pattern-python/)
 
-[Ultimate List of Automated Trading Strategies You Should Know — Part 1](https://medium.com/automation-generation/ultimate-list-of-automated-trading-strategies-you-should-know-part-1-c9a333f58930)
+[Ultimate List of Automated Trading Strategies You Should Know — Part 1](https://alpaca.markets/learn/automated-trading-list-1/)
 
 ## GitHub
 
@@ -107,3 +106,13 @@ allows basic brokerage functions including submitting orders to buy/sell stocks,
 liquidating positions, and enabling and disabling your API access. Here are links to the [working app in the
 iOS App Store](https://itunes.apple.com/us/app/alpaca-dashboard/id1448888086) and the [Android version in the
 Google Play Store](https://play.google.com/store/apps/details?id=app.alpaca.markets).
+
+## Medium Publication - Automation Generation
+
+[Automation Generation](https://medium.com/automation-generation) has several popular posts for quants and algorithmic traders.
+
+Popular posts from Automation Generation include:
+
+[This is How I Implemented Benjamin Graham’s Teachings into an Automated Investing Strategy in Python](https://medium.com/automation-generation/teaching-your-computer-to-invest-with-python-commission-free-automated-investing-5ade10961e08)
+
+[Commission Free Trading: Is it helping or hurting you?](https://medium.com/automation-generation/commission-free-trading-is-it-helping-or-hurting-you-dc5fdc22ca6a)
