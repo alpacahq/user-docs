@@ -7,19 +7,19 @@ weight: 10
 
 ## Who We Are
 
-Alpaca is a technology company headquartered in Silicon Valley that modularizes the world’s investing activities. We are a team of diverse background individuals with deep financial and technology expertise, backed by some of the top investors in the industry globally. We are proud to be supported by the love of enthusiastic community members on [various platforms](https://alpaca.markets/community).
+Alpaca is a technology company headquartered in Silicon Valley that builds commission-free stock trading API (Brokerage services are provided by Alpaca Securities LLC, member FINRA/SIPC). We are a team of diverse background individuals with deep financial and technology expertise, backed by some of the top investors in the industry globally. We are proud to be supported by the love of enthusiastic community members on [various platforms](https://alpaca.markets/community).
 
-Alpaca's team consists of developers, traders, and brokerage business specialists, who collectively have decades of
-financial services and technology industry experience at organizations such as FINRA, Wealthfront, EMC, Greenplum, Cloudera, and Lehman Brothers. Alpaca is led by [Yoshi Yokokawa](https://www.linkedin.com/in/yoshiyokokawa/) (CEO),
+Alpaca's globally distributed team consists of developers, traders, and brokerage business specialists, who collectively have decades of
+financial services and technology industry experience at organizations such as FINRA, Wealthfront, EMC, Greenplum, Cloudera, IBM, Brevan Howard and Lehman Brothers. Alpaca is led by [Yoshi Yokokawa](https://www.linkedin.com/in/yoshiyokokawa/) (CEO),
 [Hitoshi Harada](https://www.linkedin.com/in/hitoshi-harada-02b01425/) (CTO/CPO), and [John Torola](https://www.linkedin.com/in/johnttorola/) (CCO). Our investors include a group of well-capitalized
-investors including Spark Capital, Y Combinator, Social Leverage, Portag3, as well as highly experienced industry angel investors
+investors including Spark Capital, Portag3, Social Leverage, Y Combinator as well as highly experienced industry angel investors
 such as Joshua S. Levine (former CTO/COO of ETRADE), Eric Di Benedetto (a fintech angel investor with more than 30 IPO and M&A exits),
 and several YC alumni angels. Additionally, members of the Berkeley Angel Network and two of the largest Japanese banks (MUFG and SMBC) are
 investors in Alpaca.
 
 ## Who Is Alpaca For?
 
-Alpaca Securities provides brokerage services to technology-minded users with a variety of experiences including general usage of APIs or automation of investing and trading. Our paper trading API is open to everyone, and our live brokerage API is available for U.S. residents. Please voice your interest by [completing this form](https://forms.gle/umPhEzWtUEuHAuVVA) if you are a non-U.S. resident and interested in opening an account.
+Alpaca Securities provides brokerage services to technology-minded users with a variety of experiences including general usage of APIs or automation of investing and trading. Our paper trading API is open to everyone, and our live trading API is available for U.S. residents and is an invite-only beta for non-U.S. residents and business entities globally. Please read [Account Plans](https://alpaca.markets/docs/trading-on-alpaca/account-plans/) to learn more about your eligibility.
 
 With an Alpaca brokerage account, users have access to:
 
@@ -74,7 +74,7 @@ membership and registration, we had to go through rigorous paperwork and procedu
 Securities’ brokerage service and operations are led by John Torola, who is a FINRA veteran with more than
 25+ years of financial services experience. He most recently led the compliance team at one of the biggest
 robo advisory firms, WealthFront. John oversees a brokerage operations team consisting of licensed
-professionals who came from such firms as UBS, Morgan Stanley, and Wells Fargo.
+professionals who came from such firms as Waddell & Reed, Charles Schwab, and Morgan Stanley.
 
 You can check the background of Alpaca on FINRA’s [BrokerCheck](https://brokercheck.finra.org/firm/summary/288202).
 
