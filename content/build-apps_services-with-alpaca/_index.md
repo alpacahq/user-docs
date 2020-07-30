@@ -5,20 +5,19 @@ weight: 70
 
 ## Build Apps/Services with Alpaca
 
-Thank you for your interest in building your project using the Alpaca API! Please read through the following FAQs before submitting the form. 
+Thank you for your interest in building your project using the Alpaca API. Currently, we are asking you to firstly fill out [Support Request Form](https://alpacamarkets.typeform.com/to/y2O8bdBA) so that we can better understand you and your projects to serve you better. Please read through the following FAQs before submitting the form.
 
 You are welcome to begin development using Alpaca’s [API documentation](https://docs.alpaca.markets/api-documentation/) at any time. By using your paper trading API key, you can build and test your projects without opening a live trading account. Please read [Account Plans](https://alpaca.markets/docs/trading-on-alpaca/account-plans/) for your eligiblity.  
 In addition, you can visit [OAuth Integration Guide](https://docs.alpaca.markets/build-apps_services-with-alpaca/oauth-guide/) to learn more about using OAuth to connect your applications with Alpaca. 
-We appreciate your understanding that brokerage API integration support, such as features that are not 
-currently in our documentation, is currently available by invite-only. Please complete the form once you 
-are ready to move forward or have any questions about building your project using the Alpaca API.
 
-Rest assured that our team actively reviews all inquiries and will reach out to you once we are ready to move on to next steps. We understand that forms can be a bit tedious (we've also been in your shoes before!), but your response will be extremely helpful to us in determining next steps and in supporting your request.
+Rest assured that our team actively reviews all inquiries and will do our best to support them at our most available capacity. We understand that forms can be a bit tedious (we've also been in your shoes before!), but your response will be extremely helpful to us in determining next steps and in supporting your request.
+
+
+a class="toggle-button cta-button-key" href="https://forms.gle/Wwt99XgK9t9a9x8y9" style="background-color: gold; color: #303030; float: none; margin: 0 auto; border: none; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);">
+
+Fill Out The Request Form
 
 We look forward to working with you!
-
-<a class="toggle-button cta-button-key" href="https://forms.gle/Wwt99XgK9t9a9x8y9" style="background-color: gold; color: #303030; float: none; margin: 0 auto; border: none; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5); font-weight: normal;">
-Fill Out The Request Form
 </a>
 
 
