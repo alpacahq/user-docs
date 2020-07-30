@@ -5,7 +5,7 @@ aliases:
     - /account-plans.md
 ---
 
-## Alpaca Paper Only Account
+## Alpaca Paper Only Account (Paper-Trading)
 
 Anyone globally can create an Alpaca Paper Only Account! All you need to do is [sign up](https://app.alpaca.markets/signup)
 with your email address.
@@ -16,12 +16,12 @@ to track your simulated activity and balance in the Alpaca web dashboard. As an 
 holder, you are only entitled to receive and make use of IEX market data. For more information about our paper
 trading environment, please refer to [Paper Trading Specification]({{< relref "/trading-on-alpaca/paper-trading.md" >}}).
 
-## Alpaca Brokerage Account
+## Alpaca Brokerage Account (Live-Trading)
 
 After creating an Alpaca Paper Only Account, you can enable live trading by becoming an Alpaca Brokerage Account
 holder. This requires you to go through an account on-boarding process with Alpaca Securities LLC, a FINRA
-member and SEC registered broker-dealer. Currently, we only support brokerage accounts for
-qualified U.S. residents.
+member and SEC registered broker-dealer. Currently, we support brokerage accounts for
+qualified U.S. residents and are currently running an invite-only beta program for non-U.S. residents and business entities globally.
 
 With a brokerage account, you will be able to fully utilize Alpaca for your automated trading and investing needs.
 Using the Alpaca API, you'll be able to buy and sell stocks in your brokerage account, and you'll receive
@@ -30,28 +30,30 @@ simulate your trades in our paper trading environment. And with the Alpaca web d
 both your paper trading and your real money brokerage account. All accounts are opened as margin accounts. Accounts with $2,000
 or more equity will have access to margin trading and short selling.
 
-**Individual Taxable Account**
+**For U.S. Residents: Individual Taxable Account**
 
 Alpaca Securities LLC supports individual taxable brokerage accounts. At this time, we do not support retirement accounts.
 
 
+**For Non-U.S. Residents: Invite Only Beta**
+
+We started an invite-only beta program for non-U.S. residents to open live-trading accounts. Due to the nature of this beta program, there are several restrictions including that the Alpaca Securities LLC brokerage is available internationally on a limited basis for "non-solicited" customers* only (* Any customer onboarding for live brokerage must electronically sign a Non-Solicitation Agreement certifying that the customer was not directly solicited to open a live brokerage account and must indicate how they became aware of Alpaca).
+
+Although we are working to remove certain restrictions that we have with today’s beta program, we start sending invites to the users who are okay with **$30,000 initial funding** and **using international-wire transfer to deposit funds** (This beta program does not support TransferWise or Revolut. ACH does not work with a bank account outside the US). Please read [this announcement](https://alpaca.markets/blog/business-brokerage-account-beta/) to learn more about the beta program.
+
+Please fill out [this form](https://forms.gle/vV96nn5zFBtHSrfU9) to be on the invite list.
+
+
 {{< hash-link business>}}
-**Business Account**
+**For Business Entities Globally: Business Trading Account**
 
-We support select business accounts for U.S. and non-U.S. residents. There's no charge to open a business account,
-but it does have a **$30,000 account minimum**. Additionally, please note that business accounts are considered
-professional data subscribers for which we currently are **unable** to provide Polygon's consolidated market data.
-You would still have access to our free IEX real-time data, but if you wanted a consolidated market data feed,
-you'd need to obtain this through another provider.
+We are currently running an invite-only beta program for the business trading account. This business trading account is prepared for business entities that intend to use Alpaca for trading purposes, but not for building apps/services. If you are ready to start integration and build apps using Alpaca API, please read [Build Apps/Services with Alpaca](https://alpaca.markets/docs/build-apps_services-with-alpaca/).
 
-Hedge funds, RIAs, app developers, and service providers, please [complete the form](https://docs.google.com/forms/d/e/1FAIpQLScH_5wylQNILGedoS_mAS7-djbU24hDqaOERMLiBVRRn9IaJA/viewform?usp=sf_link)
-if you are interested in opening a business account (currently available by invite-only).  You can also [read more](https://medium.com/automation-generation/trading-through-a-business-account-at-alpaca-6ccb79709797)
-about some of the entities we support.
+Today’s beta program accepts select US Corporations, LLCs, and we continue to expand the coverage of eligible business entity types. There's no charge to open a business trading account, but it does have a **$30,000 account minimum**. Additionally, please note that business accounts are considered
+professional data subscribers for which we currently are **unable** to provide Polygon's consolidated market data. You would still have access to [Alpaca Data API](https://alpaca.markets/docs/trading-on-alpaca/market-data/), but if you wanted a consolidated market data feed,
+you'd need to obtain this through another provider. Please read [this announcement](https://alpaca.markets/blog/business-brokerage-account-beta/) to learn more about the beta program.
 
-**Account for non-U.S. residents?**
-
-We've begun collecting interest from non-U.S. residents seeking commission-free U.S. stock trading.
-Please voice your interest by [completing this form](https://forms.gle/umPhEzWtUEuHAuVVA).
+Please [complete this form](https://docs.google.com/forms/d/e/1FAIpQLScH_5wylQNILGedoS_mAS7-djbU24hDqaOERMLiBVRRn9IaJA/viewform?usp=sf_link) to get on the list to receve an invite.
 
 
 ## Paper Only Account vs Brokerage Account Features
