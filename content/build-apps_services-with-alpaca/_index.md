@@ -13,7 +13,7 @@ In addition, you can visit [OAuth Integration Guide](https://docs.alpaca.markets
 Rest assured that our team actively reviews all inquiries and will do our best to support them at our most available capacity. We understand that forms can be a bit tedious (we've also been in your shoes before!), but your response will be extremely helpful to us in determining next steps and in supporting your request.
 
 
-a class="toggle-button cta-button-key" href="https://forms.gle/Wwt99XgK9t9a9x8y9" style="background-color: gold; color: #303030; float: none; margin: 0 auto; border: none; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);">
+<a class="toggle-button cta-button-key" href="https://forms.gle/Wwt99XgK9t9a9x8y9" style="background-color: gold; color: #303030; float: none; margin: 0 auto; border: none; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);">
 
 Fill Out The Request Form
 
