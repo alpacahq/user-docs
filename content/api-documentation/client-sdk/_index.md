@@ -19,6 +19,7 @@ In addition to the SDKs directly supported by Alpaca, individual members of our 
 
 - C++: [alpaca-trade-api-cpp](https://github.com/marpaia/alpaca-trade-api-cpp)
 - Java: [alpaca-java](https://github.com/mainstringargs/alpaca-java)
+- Node.js (TypeScript): [alpaca](https://github.com/117/alpaca)
 - R: [alpaca-for-r](https://github.com/jagg19/AlpacaforR)
 - Rust: [apca](https://github.com/d-e-s-o/apca) (SDK) & [apcacli](https://github.com/d-e-s-o/apcacli) (CLI)
 - Scala: [Alpaca Scala](https://github.com/cynance/alpaca-scala)
