@@ -79,7 +79,7 @@ When another connection is already open, you will receive the error below.
 }
 {{< /snippet >}}
 
-Once the authentication is done, send a `listen` messsge to start
+Once the authentication is done, send a `listen` message to start
 receiving the messages for the channels you want to receive.
 
 {{< snippet >}}

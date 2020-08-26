@@ -144,7 +144,7 @@ These are the events that are the expected results of actions you may have taken
     - *position_qty*: The size of your total position, after this fill event, in shares. Positive for long positions, negative for short positions.
 - `partial_fill`: Sent when a number of shares less than the total remaining quantity on your order has been filled.
     - *timestamp*: The time at which the shares were filled.
-    - *price*: The average price per share at which the shares werre filled.
+    - *price*: The average price per share at which the shares were filled.
     - *position_qty*: The size of your total position, after this fill event, in shares. Positive for long positions, negative for short positions.
 - `canceled`: Sent when your requested cancelation of an order is processed.
     - *timestamp*: The time at which the order was canceled.
