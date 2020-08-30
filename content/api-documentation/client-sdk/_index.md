@@ -18,7 +18,7 @@ Alpaca provides and supports the following open-source SDKs in a number of langu
 In addition to the SDKs directly supported by Alpaca, individual members of our community have created and contributed their own wrappers for these other languages. We are providing these links as a courtesy to the community and to our users who are looking for the API wrapper in other languages or variants. Please be sure to carefully review any code you use to access our financial trading API and/or trust your account credentials to. Made your own wrapper for a language not listed? Join our [community Slack](https://alpaca.markets/slack) and let us know about it!
 
 - C++: [alpaca-trade-api-cpp](https://github.com/marpaia/alpaca-trade-api-cpp)
-- Java: [alpaca-java](https://github.com/mainstringargs/alpaca-java)
+- Java: [alpaca-java](https://github.com/Petersoj/alpaca-java)
 - Node.js (TypeScript): [alpaca-ts](https://github.com/117/alpaca)
 - R: [alpaca-for-r](https://github.com/jagg19/AlpacaforR)
 - Rust: [apca](https://github.com/d-e-s-o/apca) (SDK) & [apcacli](https://github.com/d-e-s-o/apcacli) (CLI)
