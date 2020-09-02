@@ -33,7 +33,7 @@ namespace CodeExamples
             var calendars = await client.ListCalendarAsync(
                 new CalendarRequest().SetInclusiveTimeInterval(date, date));
             var calendarDay = calendars.First();
-            Console.WriteLine($"The market opened at {calendarDay.TradingOpenTime} and closed at {calendarDay.TradingCloseTime} on {date}.");
+            Console.WriteLine($"The market opened at {calendarDay.TradingOpenTimeUtc} and closed at {calendarDay.TradingCloseTimeUtc} on {date}.");
 
             Console.Read();
         }
