@@ -47,13 +47,11 @@ Please fill out [this form](https://forms.gle/vV96nn5zFBtHSrfU9) to be on the in
 {{< hash-link business>}}
 **For Business Entities Globally: Business Trading Account**
 
-We are currently running an invite-only beta program for the business trading account. This business trading account is prepared for business entities that intend to use Alpaca for trading purposes, but not for building apps/services. If you are ready to start integration and build apps using Alpaca API, please read [Build Apps/Services with Alpaca](https://alpaca.markets/docs/build-apps_services-with-alpaca/).
+We are currently running a beta program for the business trading account. This business trading account is prepared for business entities that intend to use Alpaca for trading purposes, but not for building apps/services. If you are looking to integrate with Alpaca API for your apps, please read [Build Apps/Services with Alpaca](https://alpaca.markets/docs/build-apps_services-with-alpaca/).
 
-Today’s beta program accepts select US Corporations, LLCs, and we continue to expand the coverage of eligible business entity types. There's no charge to open a business trading account, but it does have a **$30,000 account minimum**. Additionally, please note that business accounts are considered
-professional data subscribers for which we currently are **unable** to provide Polygon's consolidated market data. You would still have access to [Alpaca Data API](https://alpaca.markets/docs/trading-on-alpaca/market-data/), but if you wanted a consolidated market data feed,
-you'd need to obtain this through another provider. Please read [this announcement](https://alpaca.markets/blog/business-brokerage-account-beta/) to learn more about the beta program.
+Today’s beta program for the business trading account accepts select entities that are mainly Corporations, LLCs, Partnerships in the U.S. and we continue to expand the coverage of eligible business entity types. There's no charge to open a business trading account, but it does have a **$30,000 account minimum**. Additionally, please note that business accounts are considered professional data subscribers for which we currently are **unable** to provide Polygon's consolidated market data. You would still have access to [Alpaca Data API](https://alpaca.markets/docs/trading-on-alpaca/market-data/), but if you wanted a consolidated market data feed, you'd need to obtain this through another provider. Please read [this announcement](https://alpaca.markets/blog/business-brokerage-account-beta/) to learn more about the beta program.
 
-Please [complete this form](https://docs.google.com/forms/d/e/1FAIpQLScH_5wylQNILGedoS_mAS7-djbU24hDqaOERMLiBVRRn9IaJA/viewform?usp=sf_link) to get on the list to receive an invite.
+You can [sign up](https://app.alpaca.markets/signup) with your email address and follow steps on the dashboard. When our system considers that your business entity is eligible for this beta program, you should be able to go on to upload necessary information through the process to submit the application, otherwise you will be placed on the waitlist. Please note that we are updating the beta eligibility criteria and business trading account opening flow with ongoing basis.
 
 
 ## Paper Only Account vs Brokerage Account Features
