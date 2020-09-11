@@ -309,9 +309,9 @@ it may fill above or below the stop trigger price.
 
 To submit a trailing stop order, you will set the `type` parameter to "trailing_stop". There are two order submission parameters related to trailing stop, one of which is required when `type` is "trailing_stop".
 - `trail_price`: string&lt;number&gt;  
-  a dollar value away from the highest water mark. If you set this to 2.00, the stop price is always `hwm - 2.00`
+  a dollar value away from the highest water mark. If you set this to 2.00 for a sell trailing stop, the stop price is always `hwm - 2.00`.
 - `trail_percent`: string&lt;number&gt;  
-  a percent value away from the highest water mark. If you set this to 1.0, the stop price is always `hwm * 0.99`
+  a percent value away from the highest water mark. If you set this to 1.0 for a sell trailing stop, the stop price is always `hwm * 0.99`.
 
 One of these values must be set for trailing stop orders. The following is an example of trailing order submission JSON parameter.
 
