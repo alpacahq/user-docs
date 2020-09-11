@@ -13,20 +13,20 @@ behalf of the end-users. This document describes how you can integrate with Alpa
 
 *Note that these materials are supplementary to our API documentation. Please read the [API documentation](https://docs.alpaca.markets/api-documentation/api-v2/) for topics outside of OAuth integration.*
 
-* [Terms of Access and Use]({{< relref "#terms" >}})
-* [Registering Your Application]({{< relref "#registration" >}})
+* [Terms of Access and Use]({{< relref "#terms-of-access-and-use" >}})
+* [Registering Your Application]({{< relref "#application-creation-and-registration" >}})
 * [Integration]({{< relref "#integration" >}})
-* [Making API Calls]({{< relref "#APIcall" >}})
+* [Making API Calls]({{< relref "#api-call" >}})
 * [How to Use Polygon with OAuth]({{< relref "#how-to-use-polygon-with-oauth" >}})
 
-## <a name="terms"></a>Terms of Access and Use
+## Terms of Access and Use
 
 * You must read the terms and register in order to connect and use Alpaca's APIs
 * All API clients must authenticate with OAuth 2.0
 * You may not imply that the app was developed by Alpaca.
 * If you are building a commercial application that makes money (including ads, in-app purchases, etc), you must disclose it in the registration form and receive written approval.
 
-## <a name="registration"></a>Application Creation and Registration
+## Application Creation and Registration
 
 * Before integrating with Alpaca, you'll first need to create a new OAuth app under your [OAuth Apps](https://app.alpaca.markets/brokerage/apps/manage) page.
 
@@ -41,7 +41,7 @@ behalf of the end-users. This document describes how you can integrate with Alpa
 <center><img src="./application_info.png" width="60%"></center>
 <center><img src="./client_id_secret.png" width="30%"></center>
 
-## <a name="integration"></a>Integration
+## Integration
 
 Once the application is registered, we will issue a Client ID and Client Secret for it.
 
@@ -140,7 +140,7 @@ After a successful request, a valid access token will be returned in the respons
 }
 ```
 
-## <a name="APIcall"></a>API Call
+## API Call
 
 Once you have integrated and have a valid access token you can start make calls to Alpaca Trading API v2 on behalf of the end-user.
 
@@ -154,6 +154,17 @@ curl https://api.alpaca.markets/v2/account /
 ```
 curl https://paper-api.alpaca.markets/v2/orders /
   -H 'Authorization: Bearer 79500537-5796-4230-9661-7f7108877c60'
+```
+
+The OAuth token can also be used for the trade update websockets stream.
+
+```
+{
+  "action": "authenticate",
+  "data": {
+    "oauth_token": "79500537-5796-4230-9661-7f7108877c60"
+  }
+}
 ```
 
 ## How to Use Polygon with OAuth
