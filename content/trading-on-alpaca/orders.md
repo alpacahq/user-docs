@@ -220,7 +220,7 @@ be adjusted and the order will not be canceled in the event ofa dividend or
 other corporate action.
 - If the take-profit order is partially filled, the stop-loss order will
 be adjusted to the remaining quantity.
-- Order replacement (PATCH /v2/orders) is not supported yet.
+- Order replacement (PATCH /v2/orders) is supported to update `limit_price` and `stop_price`.
 
 Each order of the group is reported as an independent order in GET /v2/orders endpoint.
 But if you specify additional parameter nested=true, the order response will nest
@@ -267,7 +267,7 @@ Note that when you retrieve the list of orders with the `nested` parameter true,
 the take-profit order shows up as the parent order while the stop-loss order appears
 as a child order.
 
-Like bracket orders, order replacement is not supported yet.
+Like bracket orders, order replacement is supported to update `limit_price` and `stop_price`.
 
 ### OTO Orders
 OTO (One-Triggers-Other) is a variant of bracket order. It takes one of the

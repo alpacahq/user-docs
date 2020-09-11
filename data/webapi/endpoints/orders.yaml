@@ -118,7 +118,7 @@ endpoints:
       title: Cancel an order
       summary: |
         Attempts to cancel an open order. If the order is no longer cancelable
-        (example: `status=order_filled`), the server will respond with status 422,
+        (example: `status="filled"`), the server will respond with status 422,
         and reject the request.
       params:
         path:
@@ -345,7 +345,7 @@ endpoints:
       title: Cancel an order
       summary: |
         Attempts to cancel an open order. If the order is no longer cancelable
-        (example: `status=order_filled`), the server will respond with status 422,
+        (example: `status="filled"`), the server will respond with status 422,
         and reject the request. Upon acceptance of the cancel request, it returns
         status 204.
       params:
