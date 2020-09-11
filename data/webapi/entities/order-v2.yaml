@@ -45,7 +45,7 @@ spec:
   - name: type
     type: string<order_type>
     desc: |
-          Valid values: `market`, `limit`, `stop`, `stop_limit`
+          Valid values: `market`, `limit`, `stop`, `stop_limit`, `trailing_stop`
   - name: side
     type: string<side>
     desc: |
@@ -73,6 +73,15 @@ spec:
     desc: |
           When querying non-simple order_class orders in a nested style, an
           array of Order entities associated with this order. Otherwise, null.
+  - name: trail_price
+    type: string<number>
+    desc: The dollar value away from the high water mark for trailing stop orders.
+  - name: trail_percent
+    type: string<number>
+    desc: The percent value away from the high water mark for trailing stop orders.
+  - name: hwm
+    type: string<number>
+    desc: The highest (lowest) market price seen since the trailing stop order was submitted.
 example: |
   {
     "id": "904837e3-3b76-47ec-b432-046db621571b",
@@ -101,4 +110,7 @@ example: |
     "status": "accepted",
     "extended_hours": false,
     "legs": null
+    "trail_price": "1.05",
+    "trail_percent": null,
+    "hwm": "108.05"
   }

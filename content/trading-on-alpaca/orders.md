@@ -299,7 +299,55 @@ bracket orders.
 Like bracket orders, order replacement is not supported yet.
 
 ### Trailing Stop Orders
-This is one of the highly requested features. We are working hard to support it soon. Stay tuned!
+Trailing stop orders allow you to continuously and automatically keep updating the stop price threshold based on the stock price movement. You request a single order with a dollar offset value or percentage value as the trail and the actual stop price for this order changes as the stock price moves in your favorable way, or stay at the last level otherwise. This way, you don’t need to monitor the price movement and keep sending replace requests to update the stop price close to the latest market movement.
+
+Trailing stop orders keep track of the highest (for sell, lowest for buy) prices
+(called high water mark, or hwm) since the order was submitted, and the
+user-specified trail parameters determine the actual stop price to trigger relative to
+high water mark. Once the stop price is triggered, the order turns into a market order, and
+it may fill above or below the stop trigger price.
+
+To submit a trailing stop order, you will set the `type` parameter to "trailing_stop". There are two order submission parameters related to trailing stop, one of which is required when `type` is "trailing_stop".
+- `trail_price`: string&lt;number&gt;  
+  a dollar value away from the highest water mark. If you set this to 2.00, the stop price is always `hwm - 2.00`
+- `trail_percent`: string&lt;number&gt;  
+  a percent value away from the highest water mark. If you set this to 1.0, the stop price is always `hwm * 0.99`
+
+One of these values must be set for trailing stop orders. The following is an example of trailing order submission JSON parameter.
+
+```
+{
+  "side": "sell",
+  "symbol": "SPY",
+  "type": "trailing_stop",
+  "qty": "100",
+  "time_in_force": "day",
+  "trail_price": "6.15"
+}
+```
+
+The Order entity returned from the GET method has a few fields related to trailing stop orders.
+
+- `trail_price`: string&lt;number&gt;  
+  This is the same value as specified when the order was submitted. It will be null if this was not specified.
+- `trail_percent`: string&lt;number&gt;  
+  This is the same value as specified when the order was submitted. It will be null if this was not specified.
+- `hwm`: string&lt;number&gt;  
+  The high water mark value. This continuously changes as the market moves towards your favorable way.
+- `stop_price`: string&lt;number&gt;  
+  This is the same as stop price in the regular stop/stop limit orders, but this is derived from hwm and trail parameter, and continuously updates as hwm changes.
+
+If a trailing stop order is accepted, the order status becomes "new". While the order is pending stop price trigger, you can update the trail parameter by the PATCH method.
+
+- `trail`: string&lt;number&gt;  
+  The new value of the `trail_price` or `trail_percent` value. Such a replace request is effective only for the order type is "trailing_stop" before the stop price is hit. Note, you cannot change the price trailing to the percent trailing or vice versa.
+
+Here are some details of trailing stop.
+
+- Trailing stop will not trigger outside of the regular market hours.
+- Valid time-in-force values for trailing stop are "day" and "gtc".
+- Trailing stop orders are currently supported only with single orders. However, we plan to support trailing stop as the stop loss leg of bracket/OCO orders in the future.
+
 
 ## Time in Force
 
