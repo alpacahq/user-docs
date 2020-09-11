@@ -298,6 +298,18 @@ bracket orders.
 
 Like bracket orders, order replacement is not supported yet.
 
+### Threshold on stop price of stop-loss orders
+For the stop-loss order leg of advanced orders, please be aware the order request can be rejected because of the restriction of the `stop_price` parameter value.
+The stop price input has to be 0.1% below or lower (for stop-loss sell, above and higher for buy) than the "base price".
+The base price is determined as follows.
+
+- It is the limit price of the take-profit, for OCO orders.
+- It is the limit price of the entry order, for bracket or OTO orders if the entry type is limit.
+- It is also the current market price for any, of OCO, OTO and bracket.
+
+This restriction is to avoid potential race-conditions in the order handling, but as we improve our system
+capability, this may be loosened in the future.
+
 ### Trailing Stop Orders
 Trailing stop orders allow you to continuously and automatically keep updating the stop price threshold based on the stock price movement. You request a single order with a dollar offset value or percentage value as the trail and the actual stop price for this order changes as the stock price moves in your favorable way, or stay at the last level otherwise. This way, you don’t need to monitor the price movement and keep sending replace requests to update the stop price close to the latest market movement.
 
