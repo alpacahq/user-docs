@@ -8,14 +8,15 @@ Alpaca works with many ways to trade! We pride ourselves in enabling many partne
 
 **Check out [Integrations page](https://alpaca.markets/integrations) to see the full list of apps that work with Alpaca through OAuth 2.0**
 
-* TradingView ([How it works](./tradingview), [Partner page](https://tradingview.com/broker/Alpaca)
-* Blueshift ([How it works](./blueshift))
-* Streak ([How it works](https://blog.streak.world/2020/06/22/introducing-alpaca-on-streak-with-0-commission-trading/))
-* QuantoRocket ([Partner page](https://www.quantrocket.com/alpaca/))
-* Tradetron ([How it works](https://www.youtube.com/watch?v=nzLcNJDeP74&feature=youtu.be))
-* Arcade Trader ([How it works](https://medium.com/@arcade_trader/algorithmic-trading-for-beginners-part-1-d6589d4beb05))
-* IFTTT ([How it works](./ifttt), [Partner page](https://ifttt.com/alpaca))
-* Zapier ([Partner page](https://zapier.com/apps/alpaca/integrations))
+* TradingView ([How it works](./tradingview), [Partner page](https://tradingview.com/broker/Alpaca)): Connect with TradingView and unlock advanced charting to trade commission-free. TradingView is loved by more than 11 million active traders globally.
+* Blueshift ([How it works](./blueshift)): Write trading strategies on this web-based backtesting app to backtest them and run them in live trading instantly.
+* Streak ([How it works](https://blog.streak.world/2020/06/22/introducing-alpaca-on-streak-with-0-commission-trading/)): No coding but wanna do algorithmic trading? No problem if you use Streak. Streak supports over 300 thousand traders globally doing 27+ million backtests.
+* QuantoRocket ([Partner page](https://www.quantrocket.com/alpaca/)): Research and trade automated strategies with this professional-grade platform that caters to data-driven quants, featuring multiple backtesters and easy deployment to the cloud. 
+* Tradetron ([How it works](https://www.youtube.com/watch?v=nzLcNJDeP74&feature=youtu.be)): Allows you to build algo strategies without coding and allow others to subscribe your algos in their own linked brokerage accounts automatically.
+* Arcade Trader ([How it works](https://medium.com/@arcade_trader/algorithmic-trading-for-beginners-part-1-d6589d4beb05)): Originally designed for hedge funds, Arcade Trader gives you access to advanced algorithmic trading research tools.
+* IFTTT ([How it works](./ifttt), [Partner page](https://ifttt.com/alpaca)): Use triggers to build “if this, then that” services that launch trades or respond to them. IFTTT is trusted by over 18 million consumers and 130 thousand developers accross the world.
+* Zapier ([Partner page](https://zapier.com/apps/alpaca/integrations)): Connect to thousands of apps to automate your trading flow. Join the community of more than 3 million people that rely on Zapier.
+* Slack ([How it works](./alpaca-for-slack)): Connect to thousands of apps to automate your trading flow. Join the community of more than 3 million people that rely on Zapier.
 
 
 ## Third-Party Tools Integration
