@@ -4,9 +4,9 @@ weight: 90
 ---
 
 # Alpaca Works With
-Alpaca works with many ways to trade! We pride ourselves in enabling many partnerships and allow our users to customize and automate their trade flow. Explore all the ways you can trade on Alpaca and come back to this page for more news! We are constantly working on new ways to enable you to trade.
+Alpaca works with many ways to trade! We pride ourselves in enabling many partnerships and allow our users to customize and automate their trade flow. We are constantly working on new ways to enable you to trade. If you are looking to build applications with Alpaca API and OAuth 2.0, please read [OAuth Integration Guide](https://alpaca.markets/docs/build-apps_services-with-alpaca/oauth-guide/) to start building.
 
-**We currently support the following integrations through OAuth 2.0:**
+**Check out [Integrations page](https://alpaca.markets/integrations) to see the apps that works with Alpaca through OAuth 2.0**
 
 * [TradingView](https://tradingview.com/broker/Alpaca)
 * [IFTTT](https://ifttt.com/alpaca)
