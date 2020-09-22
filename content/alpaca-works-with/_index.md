@@ -6,13 +6,16 @@ weight: 90
 # Alpaca Works With
 Alpaca works with many ways to trade! We pride ourselves in enabling many partnerships and allow our users to customize and automate their trade flow. We are constantly working on new ways to enable you to trade. If you are looking to build applications with Alpaca API and OAuth 2.0, please read [OAuth Integration Guide](https://alpaca.markets/docs/build-apps_services-with-alpaca/oauth-guide/) to start building.
 
-**Check out [Integrations page](https://alpaca.markets/integrations) to see the list of apps that work with Alpaca through OAuth 2.0**
+**Check out [Integrations page](https://alpaca.markets/integrations) to see the full list of apps that work with Alpaca through OAuth 2.0**
 
-* [TradingView](https://tradingview.com/broker/Alpaca)
-* [IFTTT](https://ifttt.com/alpaca)
-* [Blueshift](./blueshift)
-* [Zapier (Early Access)](https://zapier.com/apps/alpaca/integrations)
-* [Slack](./alpaca-for-slack)
+* TradingView ([How it works](./tradingview), [Partner page](https://tradingview.com/broker/Alpaca)
+* Blueshift ([How it works](./blueshift))
+* Streak ([How it works](https://blog.streak.world/2020/06/22/introducing-alpaca-on-streak-with-0-commission-trading/))
+* QuantoRocket ([Partner page](https://www.quantrocket.com/alpaca/))
+* Tradetron ([How it works](https://www.youtube.com/watch?v=nzLcNJDeP74&feature=youtu.be))
+* Arcade Trader ([How it works](https://medium.com/@arcade_trader/algorithmic-trading-for-beginners-part-1-d6589d4beb05))
+* IFTTT ([How it works](./ifttt), [Partner page](https://ifttt.com/alpaca))
+* Zapier ([Partner page](https://zapier.com/apps/alpaca/integrations))
 
 
 ## Third-Party Tools Integration
