@@ -19,7 +19,7 @@ Alpaca works with many ways to trade! We pride ourselves in enabling many partne
 * Arcade Trader ([How it works](https://medium.com/@arcade_trader/algorithmic-trading-for-beginners-part-1-d6589d4beb05)): Originally designed for hedge funds, Arcade Trader gives you access to advanced algorithmic trading research tools.
 * IFTTT ([How it works](./ifttt), [Partner page](https://ifttt.com/alpaca)): Use triggers to build “if this, then that” services that launch trades or respond to them. IFTTT is trusted by over 18 million consumers and 130 thousand developers accross the world.
 * Zapier ([Partner page](https://zapier.com/apps/alpaca/integrations)): Connect to thousands of apps to automate your trading flow. Join the community of more than 3 million people that rely on Zapier.
-* Slack ([How it works](./alpaca-for-slack)): Quickly manage your Alpaca brokerage account right inside Slack. With simple commands, you can have AlpacaBot get your orders and positions, and you can even tell it to place orders for you.
+* Slack ([How it works](https://alpaca.markets/docs/alpaca-works-with/alpaca-for-slack/)): Quickly manage your Alpaca brokerage account right inside Slack. With simple commands, you can have AlpacaBot get your orders and positions, and you can even tell it to place orders for you.
 
 
 ## Open Source Integration Libraries
