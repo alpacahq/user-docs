@@ -22,7 +22,7 @@ Alpaca works with many ways to trade! We pride ourselves in enabling many partne
 * Slack ([How it works](./alpaca-for-slack)): Quickly manage your Alpaca brokerage account right inside Slack. With simple commands, you can have AlpacaBot get your orders and positions, and you can even tell it to place orders for you.
 
 
-## Third-Party Tools Integration
+## Open Source Integration Libraries
 We provide several open source libraries to aid in the platform integration process and help expedite the time it takes for you to get up and running with Alpaca. Below is a list of our official platform integration libraries. If you would like to see us provide integration support for a platform not listed here, please let us know at our Feature Request and Issues repo
 [here](https://github.com/alpacahq/Alpaca-API).
 
