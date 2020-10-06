@@ -79,7 +79,7 @@ spec:
     desc: Your buying power under Regulation T (your excess equity - equity minus margin value - times your margin multiplier)
 example: |
   {
-    "account_blocked": False,
+    "account_blocked": false,
     "account_number": "010203ABCD",
     "buying_power": "262113.632",
     "cash": "-23140.2",
@@ -95,14 +95,14 @@ example: |
     "long_market_value": "126960.76",
     "maintenance_margin": "38088.228",
     "multiplier": "4",
-    "pattern_day_trader": False,
+    "pattern_day_trader": false,
     "portfolio_value": "103820.56",
     "regt_buying_power": "80680.36",
     "short_market_value": "0",
-    "shorting_enabled": True,
+    "shorting_enabled": true,
     "sma": "0",
     "status": "ACTIVE",
-    "trade_suspended_by_user": False,
-    "trading_blocked": False,
-    "transfers_blocked": False
+    "trade_suspended_by_user": false,
+    "trading_blocked": false,
+    "transfers_blocked": false
   }
