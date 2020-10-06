@@ -1,0 +1,35 @@
+using Alpaca.Markets;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace CodeExamples
+{
+    internal static class Example
+    {
+        private static string API_KEY = "your_api_key";
+
+        private static string API_SECRET = "your_secret_key";
+
+        private static string CLIENT_ORDER_ID = "my_first_order";
+
+        public static async Task Main(string[] args)
+        {
+            // First, open the API connection
+            var client = Alpaca.Markets.Environments.Paper
+                .GetAlpacaTradingClient(new SecretKey(API_KEY, API_SECRET));
+
+            // Submit a market order and assign it a Client Order ID
+            await client.PostOrderAsync(
+                MarketOrder.Buy("AAPL", 1)
+                .WithClientOrderId(CLIENT_ORDER_ID)
+            );
+
+            // Get our order using its Client Order ID
+            var order = await client.GetOrderAsync(CLIENT_ORDER_ID);
+
+            Console.WriteLine($"Got order #{order.ClientOrderId}");
+            Console.Read();
+        }
+    }
+}
