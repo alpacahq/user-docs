@@ -30,7 +30,7 @@ endpoints:
             type: string
             desc: The ID of the end of your current page of results. (See the section on paging above.)
       returns: |
-        Array of [TradeActivty](#tradeactivity-entity) or [NonTradeActivity](#nontradeactivity-entity) objects
+        Array of [TradeActivity](#tradeactivity-entity) or [NonTradeActivity](#nontradeactivity-entity) objects
   /v2/account/activities:
     GET:
       title: Get account activities of multiple types
@@ -42,4 +42,4 @@ endpoints:
             type: string
             desc: A comma-separated list of the activity types to include in the response. If unspecified, activities of all types will be returned.
       returns: |
-        Array of [TradeActivty](#tradeactivity-entity) and [NonTradeActivity](#nontradeactivity-entity) objects
+        Array of [TradeActivity](#tradeactivity-entity) and [NonTradeActivity](#nontradeactivity-entity) objects

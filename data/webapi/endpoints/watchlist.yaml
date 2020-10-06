@@ -18,7 +18,7 @@ endpoints:
             type: array[string]
             desc: set of symbol string
       returns: |
-        An array of [Watchlist](#watchlist-entity) object
+        A [Watchlist](#watchlist-entity) object
       errors:
         - status: 404
           reason: one of the symbol is not found in the assets
