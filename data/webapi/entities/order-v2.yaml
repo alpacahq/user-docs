@@ -109,7 +109,7 @@ example: |
     "filled_avg_price": "106.00",
     "status": "accepted",
     "extended_hours": false,
-    "legs": null
+    "legs": null,
     "trail_price": "1.05",
     "trail_percent": null,
     "hwm": "108.05"
