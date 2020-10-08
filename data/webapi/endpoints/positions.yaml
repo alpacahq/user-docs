@@ -63,6 +63,10 @@ endpoints:
           - name: symbol
             type: string
             desc: symbol or asset_id
+        query:
+          - name: qty
+            type: decimal
+            desc: the number of shares to liquidate
       returns: |
         An Order object
       errors:
