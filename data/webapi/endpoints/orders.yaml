@@ -59,7 +59,7 @@ endpoints:
             type: string
             required: true
             desc: |
-              `market`, `limit`, `stop`, or `stop_limit`
+              `market`, `limit`, `stop`, `stop_limit` or `trailing_stop`
           - name: time_in_force
             type: string
             required: true
