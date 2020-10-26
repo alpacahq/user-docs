@@ -1,0 +1,44 @@
+using Alpaca.Markets;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace CodeExamples
+{
+    internal static class Example
+    {
+        private static string API_KEY = "your_api_key";
+
+        private static string API_SECRET = "your_secret_key";
+
+        public static async Task Main(string[] args)
+        {
+            // First, open the API connection
+            var client = Alpaca.Markets.Environments.Paper
+                .GetAlpacaTradingClient(new SecretKey(API_KEY, API_SECRET));
+
+            // Submit a market order to buy 1 share of Apple at market price
+            var order = await client.PostOrderAsync(
+                new NewOrderRequest("AAPL", 1, OrderSide.Buy, OrderType.Market, TimeInForce.Day));
+
+            // Submit a trailing stop order to sell 1 share of Apple at a
+            // trailing stop of
+            order = await client.PostOrderAsync(
+                new NewOrderRequest("AAPL", 1, OrderSide.Sell, OrderType.TrailingStop, TimeInForce.Day)
+                {
+                    TrailOffsetInDollars = 1.00M  // stop price will be hwm - 1.00$
+                });
+
+            /**
+            // Alternatively, you could use trail_percent:
+            order = await client.PostOrderAsync(
+                new NewOrderRequest("AAPL", 1, OrderSide.Sell, OrderType.TrailingStop, TimeInForce.Day)
+                {
+                    TrailOffsetInPercent = 1.00M  // stop price will be hwm*0.99
+                });
+            */
+
+            Console.Read();
+        }
+    }
+}
