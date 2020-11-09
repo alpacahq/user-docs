@@ -39,8 +39,8 @@ Alpaca uses the following table to calculate the overnight maintenance margin ap
 |---|---|---|
 |Long|share price < $2.50|100% of EOD market value|
 |Long|share price >= $2.50|30% of EOD market value|
-|Long|2x Leveraged ETF|60% of EOD market value|
-|Long|3x Leveraged ETF|90% of EOD market value|
+|Long|2x Leveraged ETF|100% of EOD market value|
+|Long|3x Leveraged ETF|100% of EOD market value|
 |Short|share price < $5.00|Greater of $2.50/share or 100%|
 |Short|share price >= $5.00|Greater of $5.00/share or 30%|
 
