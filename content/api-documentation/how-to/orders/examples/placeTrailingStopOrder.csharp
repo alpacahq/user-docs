@@ -24,18 +24,12 @@ namespace CodeExamples
             // Submit a trailing stop order to sell 1 share of Apple at a
             // trailing stop of
             order = await client.PostOrderAsync(
-                new NewOrderRequest("AAPL", 1, OrderSide.Sell, OrderType.TrailingStop, TimeInForce.Day)
-                {
-                    TrailOffsetInDollars = 1.00M  // stop price will be hwm - 1.00$
-                });
+                TrailingStopOrder.Sell("AAPL", 1, TrailOffset.InDollars(1.00M))); // stop price will be hwm - 1.00$
 
             /**
             // Alternatively, you could use trail_percent:
             order = await client.PostOrderAsync(
-                new NewOrderRequest("AAPL", 1, OrderSide.Sell, OrderType.TrailingStop, TimeInForce.Day)
-                {
-                    TrailOffsetInPercent = 1.00M  // stop price will be hwm*0.99
-                });
+                TrailingStopOrder.Sell("AAPL", 1, TrailOffset.InPercent(0.99M))); // stop price will be hwm * 0.99
             */
 
             Console.Read();

@@ -22,8 +22,7 @@ namespace CodeExamples
             // Submit a market order and assign it a Client Order ID
             await client.PostOrderAsync(
                 MarketOrder.Buy("AAPL", 1)
-                .WithClientOrderId(CLIENT_ORDER_ID)
-            );
+                    .WithClientOrderId(CLIENT_ORDER_ID));
 
             // Get our order using its Client Order ID
             var order = await client.GetOrderAsync(CLIENT_ORDER_ID);
