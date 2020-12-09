@@ -34,6 +34,12 @@ endpoints:
       summary: |
         Closes (liquidates) all of the account's open long and short positions. A response will be provided for each order that is attempted to be cancelled.
         If an order is no longer cancelable, the server will respond with status 500 and reject the request.
+      params:
+        query:
+          - name: cancel_orders
+            type: boolean
+            desc: |
+              Cancel all open orders before liquidating all positions.
       returns:
         HTTP 207 Multi-Status with body; an array of objects that include the order id and http status code for each status request.
       errors:

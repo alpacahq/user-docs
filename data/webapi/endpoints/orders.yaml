@@ -170,6 +170,10 @@ endpoints:
             desc: |
               If true, the result will roll up multi-leg orders under the
               `legs` field of primary order.
+          - name: symbols
+            type: string
+            desc: |
+              A comma-separated list of symbols to filter by (ex. "AAPL,TSLA,MSFT").
       returns: |
         An array of [Order](#order-entity) object
     POST:
