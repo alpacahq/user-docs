@@ -39,7 +39,7 @@ endpoints:
           - name: cancel_orders
             type: boolean
             desc: |
-              Cancel all open orders before liquidating all positions.
+              If true is specified, cancel all open orders before liquidating all positions.
       returns:
         HTTP 207 Multi-Status with body; an array of objects that include the order id and http status code for each status request.
       errors:
