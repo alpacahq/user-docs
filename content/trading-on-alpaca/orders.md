@@ -300,7 +300,7 @@ Like bracket orders, order replacement is not supported yet.
 
 ### Threshold on stop price of stop-loss orders
 For the stop-loss order leg of advanced orders, please be aware the order request can be rejected because of the restriction of the `stop_price` parameter value.
-The stop price input has to be 0.1% below or lower (for stop-loss sell, above and higher for buy) than the "base price".
+The stop price input has to be at least $0.01 below (for stop-loss sell, above for buy) than the "base price".
 The base price is determined as follows.
 
 - It is the limit price of the take-profit, for OCO orders.
