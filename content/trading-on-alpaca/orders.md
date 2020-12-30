@@ -360,6 +360,11 @@ Here are some details of trailing stop.
 - Valid time-in-force values for trailing stop are "day" and "gtc".
 - Trailing stop orders are currently supported only with single orders. However, we plan to support trailing stop as the stop loss leg of bracket/OCO orders in the future.
 
+Proper use of Trailing Stop orders requires understanding the purpose and how they operate. The primary point to keep in mind with Trailing Stop orders is to ensure the difference between the trailing stop and the price is big enough that typical price fluctuations do not trigger a premature execution. 
+
+In fast moving markets, the execution price may be less favorable than the stop price. The potential for such vulnerability increases for GTC orders across trading sessions or stocks experiencing trading halts. The stop price triggers a market order and therefore, it is not necessarily the case that the stop price will be the same as the execution price. 
+
+With regard to stock splits, Alpaca reserves the right to cancel or adjust pricing and/or share quantities of trailing stop orders based upon its own discretion. Since Alpaca relies on third parties for market data, corporate actions or incorrect price data may cause a trailing stop to be triggered prematurely.
 
 ## Time in Force
 
