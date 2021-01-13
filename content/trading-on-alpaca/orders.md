@@ -390,6 +390,7 @@ Alpaca supports the following Time-In-Force designations:
 - `ioc`  
   An Immediate Or Cancel (IOC) order requires all or part of the order to be executed immediately. Any unfilled
   portion of the order is canceled. Only available with API v2.
+  Most market makers who receive IOC orders will attempt to fill the order on a principal basis only, and cancel any unfilled balance. On occasion, this can result in the entire order being cancelled if the market maker does not have any existing inventory of the security in question. 
 - `fok`  
   A Fill or Kill (FOK) order is only executed if the entire order quantity can be filled, otherwise the order is canceled.
   Only available with API v2.
@@ -450,3 +451,12 @@ orders reach these states:
 
 An order may be canceled through the API up until the point it reaches
 a state of either `filled`, `canceled`, or `expired`.
+
+## Odd Lots and Block Trades
+When trading stocks, a round lot is typically defined as 100 shares, or a larger number that can be evenly divided by 100. An odd lot is anything that cannot be evenly divided by 100 shares (e.g. 48, 160, etc.). A block trade is typically defined as a trade that involves 10,000 shares or more.  
+
+
+For trading purposes, odd lots are typically treated like round lots. However, regulatory trading rules allow odd lots to be treated differently. Similarly, block trades are usually broken up for execution and may take longer to execute due to the market having to absorb the block of shares over time rather than in one large execution. When combined with a thinly traded stock, it’s quite possible that odd lots and block trades may not get filled or execute in a timely manner, and sometimes, not at all, depending on other factors like order types used. 
+
+## Short Sales
+A short sale is the sale of a stock that a seller does not own. In general, a short seller sells borrowed stock in anticipation of a price decline. The short seller later closes out the position by purchasing the stock. By rule, short sales cannot be placed on a downtick in the market price of the stock. This rule also applies when markets close. When a stock closes on a downtick, short sale orders will not be filled. 
