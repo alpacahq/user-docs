@@ -161,7 +161,9 @@ completely filled, two conditional exit orders are activated. One of the two
 closing orders is called a take-profit order, which is a limit order, and the
 other is called a stop-loss order, which is either a stop or stop-limit order.
 Importantly, only one of the two exit orders can be executed. Once one of the
-exit orders is filled, the other is canceled.
+exit orders is filled, the other is canceled. Please note, however, that in 
+extremely volatile and fast market conditions, both orders may fill before the 
+cancellation occurs.
 
 Without a bracket order, you would not be able to submit both entry and exit
 orders simultaneously since Alpaca's system only accepts exit orders for
