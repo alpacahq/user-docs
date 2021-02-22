@@ -1,0 +1,36 @@
+spec:
+  - name: T
+    type: string
+    desc: message type, always "b"
+  - name: S
+    type: string
+    desc: symbol
+  - name: o
+    type: number
+    desc: open price
+  - name: h
+    type: number
+    desc: high price
+  - name: l
+    type: number
+    desc: low price
+  - name: c
+    type: number
+    desc: close price
+  - name: v
+    type: int
+    desc: volume
+  - name: t
+    type: string
+    desc: RFC-3339 formatted timestamp.
+example: |
+  {
+    "T": "b",
+    "S": "SPY",
+    "o": 388.985,
+    "h": 389.13,
+    "l": 388.975,
+    "c": 389.12,
+    "v": 49378,
+    "t": "2021-02-22T19:15:00Z"
+  }
