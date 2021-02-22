@@ -2,13 +2,13 @@ spec:
   - name: t
     type: string
     required: true
-    desc: Timestamp in RFC-3339 format.
+    desc: Timestamp in RFC-3339 format with nanosecond precision.
   - name: x
     type: string
     required: true
     desc: Exchange where the trade happened. 
   - name: p
-    type: float
+    type: number
     required: true
     desc: Trade price.
   - name: s

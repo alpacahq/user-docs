@@ -2,13 +2,13 @@ spec:
   - name: t
     type: string
     required: true
-    desc: Timestamp in RFC-3339 format.
+    desc: Timestamp in RFC-3339 format with nanosecond precision.
   - name: ax
     type: string
     required: true
     desc: Ask exchange.
   - name: ap
-    type: float
+    type: number
     required: true
     desc: Ask price.
   - name: as
@@ -20,7 +20,7 @@ spec:
     required: true
     desc: Bid exchange.
   - name: bp
-    type: float
+    type: number
     required: true
     desc: Bid price.
   - name: bs
