@@ -1,0 +1,34 @@
+spec:
+  - name: t
+    type: string
+    required: true
+    desc: Timestamp in RFC-3339 format with nanosecond precision.
+  - name: o
+    type: number
+    required: true
+    desc: Open price.
+  - name: h
+    type: number
+    required: true
+    desc: High price.
+  - name: l
+    type: number
+    required: true
+    desc: Low price.
+  - name: c
+    type: number
+    required: true
+    desc: Close price.
+  - name: v
+    type: int
+    required: true
+    desc: Volume.
+example: |
+  {
+    "t": "2021-02-01T16:01:00Z",
+    "o": 133.32,
+    "h": 133.74,
+    "l": 133.31,
+    "c": 133.5,
+    "v": 9876
+  }
