@@ -56,7 +56,7 @@
 {{ $node.returns | markdownify }}
 </div>
 
-{{ $status_map := dict "403" "forbidden" "404" "not found" "422" "unprocessable"}}
+{{ $status_map := dict "400" "bad request" "403" "forbidden" "404" "not found" "422" "unprocessable" "429" "too many requests"}}
 {{ if $node.errors }}
 <h3>Errors</h3>
 {{ range $node.errors }}
