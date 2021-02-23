@@ -91,12 +91,12 @@ You will see two kinds of parameters in the API documentation: **path parameters
 
 Path parameters are documented using the `{parameter}` convention where you will have to replace the bracket and its contents with the value you wish to use. Path parameters are always required.
 
-Query parameters are key value pairs that follow a `?` and the end of the URL. Althoug more difficult to use than path parameters, this [Wikipedia article](https://en.wikipedia.org/wiki/Query_string) should be enough to get you started. Some query parameters are optional while some are required. Look for an indicator (i.e. `*` for required) when you are unsure.
+Query parameters are key value pairs that follow a `?` and the end of the URL. Althoug more difficult to use than path parameters, this [Wikipedia article](https://en.wikipedia.org/wiki/Query_string) should be enough to get you started. Some query parameters are optional while some are required.
 
 
 **Limiting**
 
-Depending on your goal you might like to receive more than one data point in the response for a query. Actually, this is almost always true after you're done experimenting with the API. To accomodate this you can include the `limit` query parameter. The value should be in the range **1 - 10000** (including them both) with **1000 being the default** if unspecified.
+Depending on your goal you might like to receive more than one data point in the response for a query. Actually, this is almost always true after you're done experimenting with the API. To accomodate this you can include the `limit` query parameter. The value should be in the range **1 - 10000** (endpoints included) with **1000 being the default** if unspecified.
 
 
 **Paging**
@@ -205,7 +205,7 @@ Once a connection is established and you have successfully authenticated yoursel
 - Minute bars are based on the trades from IEX.
 
 **Pro plan:** 
-- There is no limit for the number of channels at a time for trades, quotes and minute bars(`trades`,`quotes` and `bars`).
+- There is no limit for the number of channels at a time for trades, quotes and minute bars(`trades`, `quotes` and `bars`).
 - Trades, quotes and mintue bars are direct feeds from the CTA (administered by NYSE) and UTP (administered by Nasdaq) SIPs.
 
 
@@ -217,7 +217,7 @@ Once a connection is established and you have successfully authenticated yoursel
 To access real-time data use the URL below, substituting `iex` or `sip` to `{source}` depending on your subscription.
 
 ```
-ACTUALURL/{source}
+wss://stream.data.alpaca.markets/{source}
 ```
 
 Attemption to access a data source not available for your subscription will result in an error during authentication.
@@ -271,7 +271,8 @@ If you provided correct credentials you will receive another `success` message:
 
 Congratulations, you are ready to receive real-time market data!
 
-You can send one or more subscription messages (described below) and after confirmation you will receive the corresponding market data.
+You can send one or more subscription messages (described [below]({{<
+ relref "#subscribe" >}})) and after confirmation you will receive the corresponding market data.
 
 At any time you can subscribe to or unsubscribe from symbols. Please note that due to the internal buffering mentioned above for a short while you may receive data points for symbols you have recently unsubscribed from.
 
@@ -367,7 +368,7 @@ You have attempted to access a data source not available in your subscription pa
 ```
 An unexpected error occurred on our end and we are investigating the issue.
 
-#### Subscription confirmation
+### Subscription confirmation
 
 After subscribing or unsubscribing you will receive a message that describes your current list of subscriptions.
 ```
@@ -385,7 +386,7 @@ You will always receive your entire list of subscriptions, as illustrated by the
 ## Data points
 
 
-### T = Trade schema:
+### Trade schema:
 
 {{< rest-entity-desc name="stream-trade-v2" >}}
 
@@ -394,7 +395,7 @@ Example:
 {{< rest-entity-example name="stream-trade-v2" >}}
 
 
-### Q = Quote schema:
+### Quote schema:
 
 {{< rest-entity-desc name="stream-quote-v2" >}}
 
@@ -403,7 +404,7 @@ Example:
 {{< rest-entity-example name="stream-quote-v2" >}}
 
 
-### AM = Bar schema:
+### Bar schema:
 
 {{< rest-entity-desc name="stream-bar-v2" >}}
 
@@ -415,7 +416,7 @@ Example:
 ### Example
 
 {{< snippet >}}
-$ wscat -c wss://REPLACETHISURL
+$ wscat -c wss://stream.data.alpaca.markets
 connected (press CTRL+C to quit)
 < [{"T":"success","msg":"connected"}]
 > {"action": "auth", "key": "*****", "secret": "*****"}

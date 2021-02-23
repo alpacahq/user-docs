@@ -1,7 +1,7 @@
 ---
 title: Alpaca Data API v1
 weight: 120
-summary: Please note that Alpaca Data API v1 will be deprecated from Feb 28, 2021. Alpaca Data API v1 provides the market data available to the client user through the REST and websocket streaming interfaces. Alpaca Data API v1 consolidates data sources from five different exchanges.
+summary: Please note that Alpaca Data API v1 will be deprecated from Feb 28, 2021. Alpaca Data API v1 provides the market data available to the client user through the REST and websocket streaming interfaces and it consolidates data sources from five different exchanges.
 ---
 
 # Market Data
