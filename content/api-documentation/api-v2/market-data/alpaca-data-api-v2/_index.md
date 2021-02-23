@@ -12,13 +12,14 @@ Alpaca Data API v2 provides market data through an easy to use HTTP API for hist
 
 We provide easy to use SDKs written in Python, Go and NodeJS.
 
-**Please note that Alpaca Data API v2 will be live starting on Feb 27, 2021**
+**Please note that Alpaca Data API v2 will be live starting on Feb 27, 2021.**
 
 ## Subscription Plans
 
 Alpaca Data API v2 provides market data in 2 two different plans: **Basic** and **Pro**.
 
-The Basic plan is included in both paper-only and live trading accounts as the default plan for free. 
+The Basic plan is included in both paper-only and live trading accounts as the default plan for free.
+You can subscribe to the Pro plan from the Dashbaord, to sign up click [here](https://app.alpaca.markets/signup). 
 
 |  | Basic | Pro |
 | -------- | -------- | -------- |
@@ -59,9 +60,9 @@ Please visit our [Support](https://alpaca.markets/support/) page to learn more a
 
 ## Historical Data
 
-Alpaca Data API v2 provides three types of historical data: **[Trades]**({{<
- relref "#trades" >}}), **[quotes]**({{<
- relref "#quotes" >}}) and **[bars]**({{<
+Alpaca Data API v2 provides three types of historical data: [Trades]({{<
+ relref "#trades" >}}), [quotes]({{<
+ relref "#quotes" >}}) and [bars]({{<
  relref "#bars" >}}).
 
 ### Common behavior
@@ -114,17 +115,21 @@ The Trades API provides historcial trade data for a given ticker symbol on a spe
 
 {{< rest-endpoint resource="trades-v2" method="GET" path="/v2/stocks/{symbol}/trades" >}}
 
+
 ### Example of one trade
 
 {{< rest-entity-example name="trades-v2-item" >}}
+
 
 ### Properties
 
 {{< rest-entity-desc name="trades-v2-item" >}}
 
+
 ### Example of multiple trades
 
 {{< rest-entity-example name="trades-v2" >}}
+
 
 ### Properties
 
@@ -137,17 +142,21 @@ The Quotes API provides NBBO quotes for a given ticker symbol at a specified dat
 
 {{< rest-endpoint resource="quotes-v2" method="GET" path="/v2/stocks/{symbol}/quotes" >}}
 
+
 ### Example of one quote
 
 {{< rest-entity-example name="quotes-v2-item" >}}
+
 
 ### Properties
 
 {{< rest-entity-desc name="quotes-v2-item" >}}
 
+
 ### Example of multiple quotes
 
 {{< rest-entity-example name="quotes-v2" >}}
+
 
 ### Properties
 
@@ -160,17 +169,21 @@ The bars API returns aggregate historical data for the requested securities.
 
 {{< rest-endpoint resource="bars-v2" method="GET" path="/v2/stocks/{symbol}/bars" >}}
 
+
 ### Example of one bar
 
 {{< rest-entity-example name="bars-v2-item" >}}
+
 
 ### Properties
 
 {{< rest-entity-desc name="bars-v2-item" >}}
 
+
 ### Example of multiple bars
 
 {{< rest-entity-example name="bars-v2" >}}
+
 
 ### Properties
 
@@ -183,6 +196,7 @@ Alpaca Data API v2 provides websocket streaming for trades, quotes and minute ba
 
 Once a connection is established and you have successfully authenticated yourself you can subscribe to trades, quotes and minute bars for a particular symbol or multiple symbols.
 
+
 ### Subscription plans
 **Basic plan:**
 - You can only connect to IEX data source. One concurrent connection is allowed.
@@ -194,9 +208,11 @@ Once a connection is established and you have successfully authenticated yoursel
 - There is no limit for the number of channels at a time for trades, quotes and minute bars(`trades`,`quotes` and `bars`).
 - Trades, quotes and mintue bars are direct feeds from the CTA (administered by NYSE) and UTP (administered by Nasdaq) SIPs.
 
+
 ### Common behavior
 
-**URL**
+
+### URL
 
 To access real-time data use the URL below, substituting `iex` or `sip` to `{source}` depending on your subscription.
 
@@ -206,7 +222,8 @@ ACTUALURL/{source}
 
 Attemption to access a data source not available for your subscription will result in an error during authentication.
 
-**Message format**
+
+### Message format
 
 Every message you receive from the server will be in the format:
 ```
@@ -217,17 +234,20 @@ Control messages (i.e. where `"T"` is `error`, `success` or `subscription`) alwa
 
 Data points however may arrive in arrays that have a length that is greater than one. This is to facilitate clients whose connection is not fast enough to handle data points sent one by one. Our server buffers the outgoing messages but slow clients may get disconnected if their buffer becomes full.
 
-**Encoding and compression**
+
+### Encoding and compression
 
 Messages over the WebSocket are in encoded as clear text.
 
 To reduce bandwidth requirements we have implemented compression as per [RFC-7692](https://tools.ietf.org/html/rfc7692). Our SDKs handle this for you so in most cases you won't have to implement anything yourself.
 
-**Communication flow**
+
+### Communication flow
 
 The communication can be thought of as two separate phases: **establishment** and **receiving data**.
 
-**Establishment**
+
+### Establishment**
 
 To establish the connection **first you will need to connect** to our server using the URL above.
 
@@ -247,7 +267,7 @@ If you provided correct credentials you will receive another `success` message:
 [{"T":"success","msg":"authenticated"}]
 ```
 
-**Receiving data**
+### Receiving data
 
 Congratulations, you are ready to receive real-time market data!
 
@@ -255,16 +275,18 @@ You can send one or more subscription messages (described below) and after confi
 
 At any time you can subscribe to or unsubscribe from symbols. Please note that due to the internal buffering mentioned above for a short while you may receive data points for symbols you have recently unsubscribed from.
 
+
 ### Message reference - from client to server
 
-**Authentication**
+
+### Authentication
 
 After connecting you will have to authenticate as described above.
 ```
 {"action":"auth","key":"PK******************","secret":"***********************************"}
 ```
 
-**Subscribe**
+### Subscribe
 
 You can subscribe to `trades`, `quotes` and `bars` of a particular symbol (or `*` for evey symbol in the case of `bars`). A `subscribe` message should contain what subscription you want to add to your current subscriptions in your session so you don't have to send what you're already subscribed to.
 ```
@@ -272,7 +294,8 @@ You can subscribe to `trades`, `quotes` and `bars` of a particular symbol (or `*
 ```
 You can also omit either one of them (`trades`,`quotes` or `bars`) if you don't want to subscribe to any symbols in that category but be sure to include at least one of the three.
 
-**Unsubscribe**
+
+### Unsubscribe
 
 Much like `subscribe` you can also send an `unsubscribe` message that subtracts the list of subscriptions specified from your current set of subscriptions.
 
@@ -282,7 +305,8 @@ Much like `subscribe` you can also send an `unsubscribe` message that subtracts 
 
 ### Message reference - from server to client
 
-**Control messages**
+
+### Control messages
 
 You may receive the following control messages during your session. 
 ```
@@ -294,7 +318,8 @@ You have successfully connected to our server.
 ```
 You have successfully authenticated.
 
-**Errors**
+
+### Errors
 
 You may receive an error during your session. You can differentiate between them using the list below.
 ```
@@ -356,7 +381,9 @@ You will always receive your entire list of subscriptions, as illustrated by the
  > [{"T":"subscription","trades":["AAPL"],"quotes":["AMD","CLDR"],"bars":[]}]
 {{< /snippet >}}
 
+
 ## Data points
+
 
 ### T = Trade schema:
 
@@ -366,6 +393,7 @@ Example:
 
 {{< rest-entity-example name="stream-trade-v2" >}}
 
+
 ### Q = Quote schema:
 
 {{< rest-entity-desc name="stream-quote-v2" >}}
@@ -373,6 +401,7 @@ Example:
 Example: 
 
 {{< rest-entity-example name="stream-quote-v2" >}}
+
 
 ### AM = Bar schema:
 
