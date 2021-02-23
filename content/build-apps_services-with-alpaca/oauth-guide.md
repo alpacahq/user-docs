@@ -25,6 +25,8 @@ behalf of the end-users. This document describes how you can integrate with Alpa
 * All API clients must authenticate with OAuth 2.0
 * You may not imply that the app was developed by Alpaca.
 * If you are building a commercial application that makes money (including ads, in-app purchases, etc), you must disclose it in the registration form and receive written approval.
+* To allow live trading for other users, the app needs to be approved by Alpaca. Please contact partnership@alpaca.markets.
+* Live trading is allowed for the app developer user without approval.
 
 ## Application Creation and Registration
 

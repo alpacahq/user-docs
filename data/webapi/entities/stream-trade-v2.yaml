@@ -1,0 +1,43 @@
+spec:
+  - name: T
+    type: string
+    desc: message type, always "t"
+  - name: S
+    type: string
+    desc: symbol
+  - name: i
+    type: int
+    desc: trade ID
+  - name: x
+    type: int
+    desc: exchange code where the trade occurred
+  - name: p
+    type: number
+    desc: trade price
+  - name: s
+    type: int
+    desc: trade size
+  - name: t
+    type: string
+    desc: RFC-3339 formatted timestamp with nanosecond precision.
+  - name: c
+    type: array<string>
+    desc: trade condition
+  - name: z
+    type: string
+    desc: tape
+example: |
+  {
+    "T": "t",
+    "i": 96921,
+    "S": "AAPL",
+    "x": "D",
+    "p": 126.55,
+    "s": 1,
+    "t": "2021-02-22T15:51:44.208Z",
+    "c": [
+      "@",
+      "I"
+    ],
+    "z": "C"
+  }

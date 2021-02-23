@@ -161,7 +161,9 @@ completely filled, two conditional exit orders are activated. One of the two
 closing orders is called a take-profit order, which is a limit order, and the
 other is called a stop-loss order, which is either a stop or stop-limit order.
 Importantly, only one of the two exit orders can be executed. Once one of the
-exit orders is filled, the other is canceled.
+exit orders is filled, the other is canceled. Please note, however, that in 
+extremely volatile and fast market conditions, both orders may fill before the 
+cancellation occurs.
 
 Without a bracket order, you would not be able to submit both entry and exit
 orders simultaneously since Alpaca's system only accepts exit orders for
@@ -300,7 +302,7 @@ Like bracket orders, order replacement is not supported yet.
 
 ### Threshold on stop price of stop-loss orders
 For the stop-loss order leg of advanced orders, please be aware the order request can be rejected because of the restriction of the `stop_price` parameter value.
-The stop price input has to be 0.1% below or lower (for stop-loss sell, above and higher for buy) than the "base price".
+The stop price input has to be at least $0.01 below (for stop-loss sell, above for buy) than the "base price".
 The base price is determined as follows.
 
 - It is the limit price of the take-profit, for OCO orders.
@@ -360,6 +362,11 @@ Here are some details of trailing stop.
 - Valid time-in-force values for trailing stop are "day" and "gtc".
 - Trailing stop orders are currently supported only with single orders. However, we plan to support trailing stop as the stop loss leg of bracket/OCO orders in the future.
 
+Proper use of Trailing Stop orders requires understanding the purpose and how they operate. The primary point to keep in mind with Trailing Stop orders is to ensure the difference between the trailing stop and the price is big enough that typical price fluctuations do not trigger a premature execution. 
+
+In fast moving markets, the execution price may be less favorable than the stop price. The potential for such vulnerability increases for GTC orders across trading sessions or stocks experiencing trading halts. The stop price triggers a market order and therefore, it is not necessarily the case that the stop price will be the same as the execution price. 
+
+With regard to stock splits, Alpaca reserves the right to cancel or adjust pricing and/or share quantities of trailing stop orders based upon its own discretion. Since Alpaca relies on third parties for market data, corporate actions or incorrect price data may cause a trailing stop to be triggered prematurely.
 
 ## Time in Force
 
@@ -385,6 +392,7 @@ Alpaca supports the following Time-In-Force designations:
 - `ioc`  
   An Immediate Or Cancel (IOC) order requires all or part of the order to be executed immediately. Any unfilled
   portion of the order is canceled. Only available with API v2.
+  Most market makers who receive IOC orders will attempt to fill the order on a principal basis only, and cancel any unfilled balance. On occasion, this can result in the entire order being cancelled if the market maker does not have any existing inventory of the security in question. 
 - `fok`  
   A Fill or Kill (FOK) order is only executed if the entire order quantity can be filled, otherwise the order is canceled.
   Only available with API v2.
@@ -445,3 +453,12 @@ orders reach these states:
 
 An order may be canceled through the API up until the point it reaches
 a state of either `filled`, `canceled`, or `expired`.
+
+## Odd Lots and Block Trades
+When trading stocks, a round lot is typically defined as 100 shares, or a larger number that can be evenly divided by 100. An odd lot is anything that cannot be evenly divided by 100 shares (e.g. 48, 160, etc.). A block trade is typically defined as a trade that involves 10,000 shares or more.  
+
+
+For trading purposes, odd lots are typically treated like round lots. However, regulatory trading rules allow odd lots to be treated differently. Similarly, block trades are usually broken up for execution and may take longer to execute due to the market having to absorb the block of shares over time rather than in one large execution. When combined with a thinly traded stock, it’s quite possible that odd lots and block trades may not get filled or execute in a timely manner, and sometimes, not at all, depending on other factors like order types used. 
+
+## Short Sales
+A short sale is the sale of a stock that a seller does not own. In general, a short seller sells borrowed stock in anticipation of a price decline. The short seller later closes out the position by purchasing the stock. By rule, short sales cannot be placed on a downtick in the market price of the stock. This rule also applies when markets close. When a stock closes on a downtick, short sale orders will not be filled. 

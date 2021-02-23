@@ -1,0 +1,59 @@
+using Alpaca.Markets;
+using System;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace ShortingExample
+{
+    internal class ShortProgram
+    {
+        private static string API_KEY = "your_api_key";
+
+        private static string API_SECRET = "your_secret_key";
+
+        private static string symbol = "APPL";
+
+        public static async Task Main(string[] args)
+        {
+            // First, open the API connection
+            var tradingClient = Alpaca.Markets.Environments.Paper
+                .GetAlpacaTradingClient(new SecretKey(API_KEY, API_SECRET));
+
+            var dataClient = Alpaca.Markets.Environments.Paper
+                .GetAlpacaDataClient(new SecretKey(API_KEY, API_SECRET));
+
+            var barSet = await dataClient.GetBarSetAsync(
+                new BarSetRequest(symbol, TimeFrame.Minute) { Limit = 1 });
+            var price = barSet[symbol].Single().Close;
+
+            // We could buy a position and add a stop-loss and a take-profit of 5 %
+            await tradingClient.PostOrderAsync(
+                MarketOrder.Buy(symbol, 1)
+                .WithDuration(TimeInForce.Gtc)
+                .Bracket(
+                    stopLossStopPrice: price * 0.95M,
+                    takeProfitLimitPrice: price * 0.94M,
+                    stopLossLimitPrice: price * 1.05M));
+
+            // We could buy a position and just add a stop loss of 5 % (OTO Orders)
+            await tradingClient.PostOrderAsync(
+                MarketOrder.Buy(symbol, 1)
+                .WithDuration(TimeInForce.Gtc)
+                .StopLoss(
+                    stopLossStopPrice: price * 0.95M));
+
+            // We could split it to 2 orders. first buy a stock,
+            // and then add the stop/profit prices (OCO Orders)
+            await tradingClient.PostOrderAsync(
+                LimitOrder.Buy(symbol, 1, price));
+
+            await tradingClient.PostOrderAsync(
+                LimitOrder.Sell(symbol, 1, price)
+                .WithDuration(TimeInForce.Gtc)
+                .OneCancelsOther(
+                    stopLossStopPrice: price * 0.95M,
+                    stopLossLimitPrice: price * 1.05M));
+        }
+    }
+}

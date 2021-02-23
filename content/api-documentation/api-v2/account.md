@@ -30,17 +30,17 @@ may get in `ACCOUNT_UPDATED` when personal information is being updated
 from the dashboard, in which case you may not be allowed trading for
 a short period of time until the change is approved.
 
-- `ONBOARDING`<br>
+- `ONBOARDING`  
   The account is onboarding.
-- `SUBMISSION_FAILED`<br>
+- `SUBMISSION_FAILED`  
   The account application submission failed for some reason.
-- `SUBMITTED`<br>
+- `SUBMITTED`  
   The account application has been submitted for review.
-- `ACCOUNT_UPDATED`<br>
+- `ACCOUNT_UPDATED`  
   The account information is being updated.
-- `APPROVAL_PENDING`<br>
+- `APPROVAL_PENDING`  
   The final account approval is pending.
-- `ACTIVE`<br>
+- `ACTIVE`  
   The account is active for trading.
-- `REJECTED`<br>
+- `REJECTED`  
   The account application has been rejected.

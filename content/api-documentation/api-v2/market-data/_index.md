@@ -1,11 +1,11 @@
 ---
-title: Market Data
+title: Alpaca Data API v1
 weight: 120
 ---
 
-# Market Data
+## Overview
 
-## Alpaca Data API
+**Please note that Alpaca Data API v1 will be live deprecated from Feb 27, 2021**
 
 Alpaca Data API provides the market data available to the client user through
 the REST and websocket streaming interfaces. Alpaca Data API consolidates

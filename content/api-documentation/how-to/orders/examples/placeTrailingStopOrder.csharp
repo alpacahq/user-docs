@@ -18,12 +18,19 @@ namespace CodeExamples
                 .GetAlpacaTradingClient(new SecretKey(API_KEY, API_SECRET));
 
             // Submit a market order to buy 1 share of Apple at market price
-            var order = await client.PostOrderAsync(MarketOrder.Buy("AAPL", 1));
+            var order = await client.PostOrderAsync(
+                new NewOrderRequest("AAPL", 1, OrderSide.Buy, OrderType.Market, TimeInForce.Day));
 
-            // Submit a limit order to attempt to sell 1 share of AMD at a
-            // particular price ($20.50) when the market opens
+            // Submit a trailing stop order to sell 1 share of Apple at a
+            // trailing stop of
             order = await client.PostOrderAsync(
-                LimitOrder.Sell("AMD", 1, 20.50M).WithDuration(TimeInForce.Opg));
+                TrailingStopOrder.Sell("AAPL", 1, TrailOffset.InDollars(1.00M))); // stop price will be hwm - 1.00$
+
+            /**
+            // Alternatively, you could use trail_percent:
+            order = await client.PostOrderAsync(
+                TrailingStopOrder.Sell("AAPL", 1, TrailOffset.InPercent(0.99M))); // stop price will be hwm * 0.99
+            */
 
             Console.Read();
         }

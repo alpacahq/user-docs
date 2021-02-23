@@ -13,7 +13,6 @@ Once the connection is authorized, the client can listen to one or more streams
 to get updates on particular changes.  These are the streams the client can
 choose to listen to.
 
-- account_updates
 - trade_updates
 
 The details of each stream will be described later in this document.
@@ -144,7 +143,7 @@ These are the events that are the expected results of actions you may have taken
     - *position_qty*: The size of your total position, after this fill event, in shares. Positive for long positions, negative for short positions.
 - `partial_fill`: Sent when a number of shares less than the total remaining quantity on your order has been filled.
     - *timestamp*: The time at which the shares were filled.
-    - *price*: The average price per share at which the shares werre filled.
+    - *price*: The average price per share at which the shares were filled.
     - *position_qty*: The size of your total position, after this fill event, in shares. Positive for long positions, negative for short positions.
 - `canceled`: Sent when your requested cancelation of an order is processed.
     - *timestamp*: The time at which the order was canceled.
@@ -189,37 +188,6 @@ An example message sent over the `trade_updates` stream would look like:
             "side": "buy",
             ...
         }
-    }
-}
-```
-
-## Account Updates
-Users may also listen to the account updates stream under: `account_updates`. This stream provides clients with updates pertaining
-to their brokerage accounts at Alpaca, including balance information. The account updates stream can be listened to in the same
-way as the trade updates stream, and in fact, both streams can be listened to simultaneously:
-
-```
-{
-    "action": "listen",
-    "data": {
-        "streams": ["account_updates", "trade_updates"]
-    }
-}
-```
-
-It is highly recommended that clients listen to both streams when using Alpaca's streaming API. Any time there is a state change to the listening user's account, an update is sent over the WebSocket:
-```
-{
-    "stream": "account_updates",
-    "data": {
-        "id": "ef505a9a-2f3c-4b8a-be95-6b6f185f8a03",
-        "created_at": "2018-02-26T19:22:31Z",
-        "updated_at": "2018-02-27T18:16:24Z",
-        "deleted_at": null,
-        "status": "ACTIVE",
-        "currency": "USD",
-        "cash": "1241.54",
-        "cash_withdrawable": "523.71"
     }
 }
 ```

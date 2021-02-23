@@ -30,6 +30,13 @@ For more details, go to [Bracket Order Overview]({{< relref"/trading-on-alpaca/o
 
 {{< code-example exampleId="placeBracketOrder" pathURL="/api-documentation/how-to/orders/examples">}}
 
+## Submit Trailing Stop Orders
+Trailing stop orders allow you to create a stop order that automatically changes the stop price allowing 
+you to maximize your profits while still protecting your position with a stop price.
+For more details, go to [Trailing Stop Order Overview]({{< relref"/trading-on-alpaca/orders.md#trailing-stop-orders" >}})
+
+{{< code-example exampleId="placeTrailingStopOrder" pathURL="/api-documentation/how-to/orders/examples">}}
+
 ## Get a List of Existing Orders
 If you'd like to see a list of your existing orders, you can send a get request to our [/v2/orders]({{< relref "/api-documentation/api-v2/orders.md#get-a-list-of-orders" >}}) endpoint.
 

@@ -5,7 +5,7 @@ weight: 45
 
 The watchlist API provides CRUD operation for the account's watchlist.
 An account can have multiple watchlists and each is uniquely identified by `id`
-but can also be addressed by user-defined name. Each watchlist is an ordered
+but can also be addressed by user-defined `name`. Each watchlist is an ordered
 list of assets.
 
 {{< rest-endpoint resource="watchlist" method="GET" path="/v2/watchlists" >}}

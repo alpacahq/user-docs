@@ -11,20 +11,23 @@ namespace CodeExamples
 
         private static string API_SECRET = "your_secret_key";
 
+        private static string CLIENT_ORDER_ID = "my_first_order";
+
         public static async Task Main(string[] args)
         {
             // First, open the API connection
             var client = Alpaca.Markets.Environments.Paper
                 .GetAlpacaTradingClient(new SecretKey(API_KEY, API_SECRET));
 
-            // Submit a market order to buy 1 share of Apple at market price
-            var order = await client.PostOrderAsync(MarketOrder.Buy("AAPL", 1));
+            // Submit a market order and assign it a Client Order ID
+            await client.PostOrderAsync(
+                MarketOrder.Buy("AAPL", 1)
+                    .WithClientOrderId(CLIENT_ORDER_ID));
 
-            // Submit a limit order to attempt to sell 1 share of AMD at a
-            // particular price ($20.50) when the market opens
-            order = await client.PostOrderAsync(
-                LimitOrder.Sell("AMD", 1, 20.50M).WithDuration(TimeInForce.Opg));
+            // Get our order using its Client Order ID
+            var order = await client.GetOrderAsync(CLIENT_ORDER_ID);
 
+            Console.WriteLine($"Got order #{order.ClientOrderId}");
             Console.Read();
         }
     }

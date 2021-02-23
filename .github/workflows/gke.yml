@@ -20,14 +20,14 @@ jobs:
 
     - name: Extract branch name
       shell: bash
-      run: echo "::set-env name=BRANCH_NAME::$(echo ${GITHUB_REF#refs/heads/} | sed 's/\//-/g')"
+      run: echo "BRANCH_NAME=$(echo ${GITHUB_REF#refs/heads/} | sed 's/\//-/g')" >> $GITHUB_ENV
 
     - name: Checkout
       uses: actions/checkout@master
 
     - name: get commit message
       run: |
-        echo ::set-env name=commitmsg::$(git log --format=%B -n 1 ${{ github.event.after }})
+        echo "commitmsg=\"$(git log --format=%B -n 1 3176eca6763c3d3e042efd962b5fb48f1fce0481)\"" >> $GITHUB_ENV
 
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2

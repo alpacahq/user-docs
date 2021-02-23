@@ -28,8 +28,7 @@ namespace ShortingExample
                 .GetAlpacaDataClient(new SecretKey(API_KEY, API_SECRET));
 
             // Submit a market order to open a short position of one share
-            var order = await tradingClient.PostOrderAsync(
-                new NewOrderRequest(symbol, 1, OrderSide.Sell, OrderType.Market, TimeInForce.Day));
+            var order = await tradingClient.PostOrderAsync(MarketOrder.Sell(symbol, 1));
             Console.WriteLine("Market order submitted.");
 
             // Submit a limit order to attempt to grow our short position
@@ -40,11 +39,7 @@ namespace ShortingExample
             var price = bars[0].Close;
 
             // Submit another order for one share at that price
-            order = await tradingClient.PostOrderAsync(
-                new NewOrderRequest(symbol, 1, OrderSide.Sell, OrderType.Limit, TimeInForce.Day)
-                {
-                    LimitPrice = price
-                });
+            order = await tradingClient.PostOrderAsync(LimitOrder.Sell(symbol, 1, price));
             Console.WriteLine($"Limit order submitted. Limit price = {order.LimitPrice}");
 
             // Wait a few seconds for our orders to fill...
