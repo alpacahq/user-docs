@@ -1,9 +1,177 @@
 ---
-title: Real-time data
-weight: 20
+title: Alpaca Data API v2
+weight: 120
 ---
 
-## Overview
+### Overview
+
+Alpaca Data API v2 provides market data through an easy to use HTTP API for historical data and through WebSocket for real-time data.
+
+We provide easy to use SDKs written in Python, Go and NodeJS.
+
+**Please note that Alpaca Data API v2 will be live starting on Feb 27, 2021**
+
+#### Subscription Plans
+
+Alpaca Data API v2 provides market data in 2 two different plans: **Basic** and **Pro**.
+
+The Basic plan is included in both paper-only and live trading accounts as the default plan for free. 
+
+|  | Basic | Pro |
+| -------- | -------- | -------- |
+| Pricing    | Free     | $49/mo     |
+| Securities coverage    | US Stocks & ETFs     | US Stocks & ETFs    |
+| Real-time market coverage    | IEX     | All US Stock Exchanges     |
+| Websocket subscriptions   | 30 symbols    | Unlimited    |
+| Historical data timefrane   | 5+ years | 5+ years     |
+| Historical data delay| 15 minutes | -
+| Historical API calls    | 200/min     | Unlimited |
+
+
+The **Basic plan** provides data from IEX (Investors Exchange LLC).
+
+For the **Pro plan**, we receive direct feeds from the CTA (administered by NYSE) and UTP (administered by Nasdaq) SIPs. These 2 feeds combined offer 100% market volume. 
+Data from all 19 exchanges:
+* New York Stock Exchange LLC
+* NYSE National, Inc.
+* NYSE Chicago, Inc.
+* NYSE Arca, Inc.
+* NYSE American LLC
+* Nasdaq Stock Market LLC
+* Nasdaq BX, Inc.
+* Nasdaq PHLX LLC
+* Nasdaq ISE, LLC
+* Investors Exchange LLC
+* Financial Industry Regulatory Authority, Inc.
+* Cboe Exchange, Inc.
+* Cboe EDGX Exchange, Inc.
+* Cboe EDGA Exchange, Inc.
+* Cboe BZX Exchange, Inc.
+* Cboe BYX Exchange, Inc.
+* Long Term Stock Exchange, Inc.
+* Members Exchange (MEMX)
+* MIAX Pearl, LLC (MIAX).
+
+Please visit our [Support] (https://alpaca.markets/support/) page to learn more about the different plans.
+
+## Historical Data
+
+Alpaca Data API v2 provides three types of historical data: **Trades, quotes and bars**. (HERE we could probably link to the other sections)
+
+## Common behavior
+
+### Base URL
+
+Alpaca Data API v2 provides historical data through multiple endpoints. These endpoints have the same URL prefix (omitted from now on):
+
+```
+https://data.alpaca.markets/v2
+```
+
+This URL is the **same for both subscription plans** but users with Basic subscription will receive an error when trying to access data that is too recent.
+
+
+### Authentication
+The authentication is done the same way as with the [Trading API](https://alpaca.markets/docs/api-documentation/api-v2/#authentication), simply set the following HTTP headers:
+
+- `APCA-API-KEY-ID`
+- `APCA-API-SECRET-KEY`
+
+
+### Parameters
+
+You will see two kinds of parameters in the API documentation: **path parameters and query parameters**.
+
+Path parameters are documented using the `{parameter}` convention where you will have to replace the bracket and its contents with the value you wish to use. Path parameters are always required.
+
+Query parameters are key value pairs that follow a `?` and the end of the URL. Althoug more difficult to use than path parameters, this [Wikipedia article](https://en.wikipedia.org/wiki/Query_string) should be enough to get you started. Some query parameters are optional while some are required. Look for an indicator (i.e. `*` for required) when you are unsure.
+
+
+### Limiting
+
+Depending on your goal you might like to receive more than one data point in the response for a query. Actually, this is almost always true after you're done experimenting with the API. To accomodate this you can include the `limit` query parameter. The value should be in the range **1 - 10000** (including them both) with **1000 being the default** if unspecified.
+
+
+### Paging
+
+To support querying long timespans continuously we support paging in our API. If the result you have received contains a `next_page_token` that is **not `null`** there may be more data available in the timeframe you have chosen. Include the token you have received as the `page_token` query parameter for the next request you make while leaving the other parameters unchanged to continue where the previous response left off.
+
+
+### Ordering
+
+The results are ordered in ascending order by time.
+
+
+## Trades
+
+The Trades API provides historcial trade data for a given ticker symbol on a specified date.
+
+{{< rest-endpoint resource="trades-v2" method="GET" path="/v2/stocks/{symbol}/trades" >}}
+
+### Example of one trade
+
+{{< rest-entity-example name="trades-v2-item" >}}
+
+### Properties
+
+{{< rest-entity-desc name="trades-v2-item" >}}
+
+### Example of multiple trades
+
+{{< rest-entity-example name="trades-v2" >}}
+
+### Properties
+
+{{< rest-entity-desc name="trades-v2" >}}
+
+
+## Quotes
+
+The Quotes API provides NBBO quotes for a given ticker symbol at a specified date.
+
+{{< rest-endpoint resource="quotes-v2" method="GET" path="/v2/stocks/{symbol}/quotes" >}}
+
+### Example of one quote
+
+{{< rest-entity-example name="quotes-v2-item" >}}
+
+### Properties
+
+{{< rest-entity-desc name="quotes-v2-item" >}}
+
+### Example of multiple quotes
+
+{{< rest-entity-example name="quotes-v2" >}}
+
+### Properties
+
+{{< rest-entity-desc name="quotes-v2" >}}
+
+
+## Bars
+
+The bars API returns aggregate historical data for the requested securities.
+
+{{< rest-endpoint resource="bars-v2" method="GET" path="/v2/stocks/{symbol}/bars" >}}
+
+### Example of one bar
+
+{{< rest-entity-example name="bars-v2-item" >}}
+
+### Properties
+
+{{< rest-entity-desc name="bars-v2-item" >}}
+
+### Example of multiple bars
+
+{{< rest-entity-example name="bars-v2" >}}
+
+### Properties
+
+{{< rest-entity-desc name="bars-v2" >}}
+
+
+## Real-time data
 
 Alpaca Data API v2 provides websocket streaming for trades, quotes and minute bars. This helps receive the most up to date market information that could help your trading strategy to act upon certain market movements.
 
