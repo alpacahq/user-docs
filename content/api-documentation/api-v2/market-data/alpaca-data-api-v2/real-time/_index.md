@@ -1,7 +1,7 @@
 ---
 title: Real-time data
 weight: 120
-summary: Another one
+summary: Alpaca Data API v2 provides websocket streaming for trades, quotes and minute bars. This helps receive the most up to date market information that could help your trading strategy to act upon certain market movements.
  
 ---
 

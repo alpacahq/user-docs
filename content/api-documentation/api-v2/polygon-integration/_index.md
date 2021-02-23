@@ -5,8 +5,9 @@ weight: 50
 
 # Polygon Integration
 
-{{< warning title="Please note that the Polygon integration will be discontinued from Feb 28, 2021." >}}
-{{< /warning >}}
+
+{{< warning >}} Please note that the Polygon integration will be discontinued from Feb 28, 2021. {{< /warning >}}
+
 
 All Alpaca customers with live brokerage accounts can access various
 kinds of market data provided by [Polygon](https://polygon.io/).

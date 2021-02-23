@@ -1,7 +1,7 @@
 ---
 title: Historical data
 weight: 100
-summary: Write something else here
+summary: Alpaca Data API v2 provides three types of historical data. Trades, quotes and bars. To check the multiple endpoints click on the card.
 ---
 
 # Historical Data

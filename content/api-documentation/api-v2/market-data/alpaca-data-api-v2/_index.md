@@ -12,8 +12,7 @@ Alpaca Data API v2 provides market data through an easy to use HTTP API for hist
 
 We provide easy to use SDKs written in Python, Go and NodeJS.
 
-{{< warning title="Please note that Alpaca Data API v2 will be live starting on Feb 27, 2021." >}}
-{{< /warning >}}
+{{< warning >}} Please note that Alpaca Data API v2 will be live starting on Feb 27, 2021. {{< /warning >}}
 
 
 ## Subscription Plans
@@ -21,7 +20,7 @@ We provide easy to use SDKs written in Python, Go and NodeJS.
 Alpaca Data API v2 provides market data in 2 two different plans: **Basic** and **Pro**.
 
 The Basic plan is included in both paper-only and live trading accounts as the default plan for free.
-You can subscribe to the Pro plan from the Dashbaord, to sign up click [here](https://app.alpaca.markets/signup). 
+You will be able to subscribe to the Pro plan from the Dashboard after Feb 27, 2021, to sign up click [here](https://app.alpaca.markets/signup). 
 
 |  | Basic | Pro |
 | -------- | -------- | -------- |
