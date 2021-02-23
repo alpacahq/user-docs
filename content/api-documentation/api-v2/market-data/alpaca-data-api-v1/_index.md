@@ -42,7 +42,7 @@ This URL is the same between paper trading and live trading.
 Alpaca Data API provides websocket streaming for trades,
 quotes and minute bars with the same API key. For the details about
 the streaming, plase see [the reference page]({{<
- relref "/api-documentation/api-v2/market-data/streaming.md" >}})
+ relref "/api-documentation/api-v2/market-data/alpaca-data-api-v1/streaming.md" >}})
 
 
 ## Polygon Integration
