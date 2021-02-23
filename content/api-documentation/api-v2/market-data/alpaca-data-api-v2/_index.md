@@ -247,7 +247,7 @@ To reduce bandwidth requirements we have implemented compression as per [RFC-769
 The communication can be thought of as two separate phases: **establishment** and **receiving data**.
 
 
-### Establishment**
+### Establishment
 
 To establish the connection **first you will need to connect** to our server using the URL above.
 
