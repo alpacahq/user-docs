@@ -4,7 +4,11 @@
 {{ $root := index $.Site.Data.webapi.endpoints $resource -}}
 {{ $node := index (index $root.endpoints $path) $method -}}
 <div class="rest-endpoint">
+{{ if .Get "useh3" }}
+<h3 id="{{ replace (lower $node.title) " " "-" }}">[{{ $method }}] {{ $node.title | markdownify }}</h3>
+{{ else }}
 <h2 id="{{ replace (lower $node.title) " " "-" }}">[{{ $method }}] {{ $node.title | markdownify }}</h2>
+{{ end }}
 
 <div class="rest-http">
 <span class="method">{{- $method }}</span>
