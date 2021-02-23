@@ -10,6 +10,7 @@
 <h2 id="{{ replace (lower $node.title) " " "-" }}">[{{ $method }}] {{ $node.title | markdownify }}</h2>
 {{ end }}
 
+
 <div class="rest-http">
 <span class="method">{{- $method }}</span>
 {{- $path }}

@@ -200,6 +200,7 @@ You will always receive your entire list of subscriptions, as illustrated by the
 
 ## Data points
 
+
 Multiple data points may arrive in each message received from the server. These data points have the following formats, depending on their type.
 
 ### Trade schema:

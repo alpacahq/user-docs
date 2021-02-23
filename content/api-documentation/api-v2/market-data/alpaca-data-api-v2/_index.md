@@ -8,11 +8,12 @@ summary: Please note that Alpaca Data API v2 will be live starting on Feb 27, 20
 
 ## Overview
 
-Alpaca Data API v2 provides market data through an easy to use HTTP API for historical data and through WebSocket for real-time data.
+Alpaca Data API v2 provides market data through an easy to use HTTP API for historical data and through websocket for real-time data.
 
 We provide easy to use SDKs written in Python, Go and NodeJS.
 
-**Please note that Alpaca Data API v2 will be live starting on Feb 27, 2021.**
+{{< warning title="Please note that Alpaca Data API v2 will be live starting on Feb 27, 2021." >}}
+
 
 ## Subscription Plans
 
