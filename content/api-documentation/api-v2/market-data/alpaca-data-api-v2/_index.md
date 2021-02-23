@@ -1,11 +1,12 @@
 ---
 title: Alpaca Data API v2
 weight: 120
+summary: Please note that Alpaca Data API v2 will be live starting on Feb 27, 2021. Alpaca Data API v2 provides market data in 2 two different plans, Basic and Pro. The Basic plan is included in both paper-only and live trading accounts as the default plan for free. 
 ---
 
 # Market Data
 
-## Alpaca Data API v2
+## Overview
 
 Alpaca Data API v2 provides market data through an easy to use HTTP API for historical data and through WebSocket for real-time data.
 
@@ -13,7 +14,7 @@ We provide easy to use SDKs written in Python, Go and NodeJS.
 
 **Please note that Alpaca Data API v2 will be live starting on Feb 27, 2021**
 
-### Subscription Plans
+## Subscription Plans
 
 Alpaca Data API v2 provides market data in 2 two different plans: **Basic** and **Pro**.
 
@@ -26,14 +27,14 @@ The Basic plan is included in both paper-only and live trading accounts as the d
 | Real-time market coverage    | IEX     | All US Stock Exchanges     |
 | Websocket subscriptions   | 30 symbols    | Unlimited    |
 | Historical data timefrane   | 5+ years | 5+ years     |
-| Historical data delay| 15 minutes | -
+| Historical data delay| 15 minutes | 1 minute
 | Historical API calls    | 200/min     | Unlimited |
 
 
-The **Basic plan** provides data from IEX (Investors Exchange LLC).
+The **Basic plan** consists data from IEX (Investors Exchange LLC).
 
 For the **Pro plan**, we receive direct feeds from the CTA (administered by NYSE) and UTP (administered by Nasdaq) SIPs. These 2 feeds combined offer 100% market volume. 
-Data from all 19 exchanges:
+Data is received from all 19 exchanges:
 * New York Stock Exchange LLC
 * NYSE National, Inc.
 * NYSE Chicago, Inc.
@@ -58,14 +59,14 @@ Please visit our [Support](https://alpaca.markets/support/) page to learn more a
 
 ## Historical Data
 
-Alpaca Data API v2 provides three types of historical data: **Trades**({{<
- relref "#trades" >}}), **quotes**({{<
- relref "#quotes" >}}) and **bars**({{<
+Alpaca Data API v2 provides three types of historical data: **[Trades]**({{<
+ relref "#trades" >}}), **[quotes]**({{<
+ relref "#quotes" >}}) and **[bars]**({{<
  relref "#bars" >}}).
 
 ### Common behavior
 
-#### Base URL
+**Base URL**
 
 Alpaca Data API v2 provides historical data through multiple endpoints. These endpoints have the same URL prefix (omitted from now on):
 
@@ -76,14 +77,14 @@ https://data.alpaca.markets/v2
 This URL is the **same for both subscription plans** but users with Basic subscription will receive an error when trying to access data that is too recent.
 
 
-#### Authentication
+**Authentication**
 The authentication is done the same way as with the [Trading API](https://alpaca.markets/docs/api-documentation/api-v2/#authentication), simply set the following HTTP headers:
 
 - `APCA-API-KEY-ID`
 - `APCA-API-SECRET-KEY`
 
 
-#### Parameters
+**Parameters**
 
 You will see two kinds of parameters in the API documentation: **path parameters and query parameters**.
 
@@ -92,17 +93,17 @@ Path parameters are documented using the `{parameter}` convention where you will
 Query parameters are key value pairs that follow a `?` and the end of the URL. Althoug more difficult to use than path parameters, this [Wikipedia article](https://en.wikipedia.org/wiki/Query_string) should be enough to get you started. Some query parameters are optional while some are required. Look for an indicator (i.e. `*` for required) when you are unsure.
 
 
-#### Limiting
+**Limiting**
 
 Depending on your goal you might like to receive more than one data point in the response for a query. Actually, this is almost always true after you're done experimenting with the API. To accomodate this you can include the `limit` query parameter. The value should be in the range **1 - 10000** (including them both) with **1000 being the default** if unspecified.
 
 
-#### Paging
+**Paging**
 
 To support querying long timespans continuously we support paging in our API. If the result you have received contains a `next_page_token` that is **not `null`** there may be more data available in the timeframe you have chosen. Include the token you have received as the `page_token` query parameter for the next request you make while leaving the other parameters unchanged to continue where the previous response left off.
 
 
-#### Ordering
+**Ordering**
 
 The results are ordered in ascending order by time.
 
@@ -195,7 +196,7 @@ Once a connection is established and you have successfully authenticated yoursel
 
 ### Common behavior
 
-#### URL
+**URL**
 
 To access real-time data use the URL below, substituting `iex` or `sip` to `{source}` depending on your subscription.
 
@@ -205,7 +206,7 @@ ACTUALURL/{source}
 
 Attemption to access a data source not available for your subscription will result in an error during authentication.
 
-#### Message format
+**Message format**
 
 Every message you receive from the server will be in the format:
 ```
@@ -216,17 +217,17 @@ Control messages (i.e. where `"T"` is `error`, `success` or `subscription`) alwa
 
 Data points however may arrive in arrays that have a length that is greater than one. This is to facilitate clients whose connection is not fast enough to handle data points sent one by one. Our server buffers the outgoing messages but slow clients may get disconnected if their buffer becomes full.
 
-#### Encoding and compression
+**Encoding and compression**
 
 Messages over the WebSocket are in encoded as clear text.
 
 To reduce bandwidth requirements we have implemented compression as per [RFC-7692](https://tools.ietf.org/html/rfc7692). Our SDKs handle this for you so in most cases you won't have to implement anything yourself.
 
-#### Communication flow
+**Communication flow**
 
 The communication can be thought of as two separate phases: **establishment** and **receiving data**.
 
-#### Establishment
+**Establishment**
 
 To establish the connection **first you will need to connect** to our server using the URL above.
 
@@ -246,7 +247,7 @@ If you provided correct credentials you will receive another `success` message:
 [{"T":"success","msg":"authenticated"}]
 ```
 
-#### Receiving data
+**Receiving data**
 
 Congratulations, you are ready to receive real-time market data!
 
@@ -256,14 +257,14 @@ At any time you can subscribe to or unsubscribe from symbols. Please note that d
 
 ### Message reference - from client to server
 
-#### Authentication
+**Authentication**
 
 After connecting you will have to authenticate as described above.
 ```
 {"action":"auth","key":"PK******************","secret":"***********************************"}
 ```
 
-#### Subscribe
+**Subscribe**
 
 You can subscribe to `trades`, `quotes` and `bars` of a particular symbol (or `*` for evey symbol in the case of `bars`). A `subscribe` message should contain what subscription you want to add to your current subscriptions in your session so you don't have to send what you're already subscribed to.
 ```
@@ -271,7 +272,7 @@ You can subscribe to `trades`, `quotes` and `bars` of a particular symbol (or `*
 ```
 You can also omit either one of them (`trades`,`quotes` or `bars`) if you don't want to subscribe to any symbols in that category but be sure to include at least one of the three.
 
-#### Unsubscribe
+**Unsubscribe**
 
 Much like `subscribe` you can also send an `unsubscribe` message that subtracts the list of subscriptions specified from your current set of subscriptions.
 
@@ -281,7 +282,7 @@ Much like `subscribe` you can also send an `unsubscribe` message that subtracts 
 
 ### Message reference - from server to client
 
-#### Control messages
+**Control messages**
 
 You may receive the following control messages during your session. 
 ```
@@ -293,7 +294,7 @@ You have successfully connected to our server.
 ```
 You have successfully authenticated.
 
-#### Errors
+**Errors**
 
 You may receive an error during your session. You can differentiate between them using the list below.
 ```
