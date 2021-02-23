@@ -200,7 +200,7 @@ You will always receive your entire list of subscriptions, as illustrated by the
 
 ## Data points
 
-Multipe data points may arrive in each message received from the server. These data points have the following formats, depending on their type.
+Multiple data points may arrive in each message received from the server. These data points have the following formats, depending on their type.
 
 ### Trade schema:
 
@@ -232,7 +232,7 @@ Example:
 ### Example
 
 {{< snippet >}}
-$ wscat -c wss://stream.data.alpaca.markets
+$ wscat -c wss://stream.data.alpaca.markets/sip
 connected (press CTRL+C to quit)
 < [{"T":"success","msg":"connected"}]
 > {"action": "auth", "key": "*****", "secret": "*****"}
