@@ -19,7 +19,7 @@ data sources from five different exchanges.
 - NYSE Chicago, Inc.
 
 {{< warning title="Please note that Alpaca Data API v1 will be deprecated from Feb 28, 2021." >}}
-
+{{< /warning >}}
 
 ## Authentication
 The authentication is done the same way as [Trading API]({{< relref "/api-documentation/api-v2/_index.md#authentication" >}}),

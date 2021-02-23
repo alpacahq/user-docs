@@ -13,7 +13,7 @@ Alpaca Data API v2 provides market data through an easy to use HTTP API for hist
 We provide easy to use SDKs written in Python, Go and NodeJS.
 
 {{< warning title="Please note that Alpaca Data API v2 will be live starting on Feb 27, 2021." >}}
-
+{{< /warning >}}
 
 ## Subscription Plans
 
