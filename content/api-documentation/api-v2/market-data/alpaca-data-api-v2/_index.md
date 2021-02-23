@@ -3,7 +3,9 @@ title: Alpaca Data API v2
 weight: 120
 ---
 
-### Overview
+# Market Data
+
+## Alpaca Data API v1
 
 Alpaca Data API v2 provides market data through an easy to use HTTP API for historical data and through WebSocket for real-time data.
 
@@ -11,7 +13,7 @@ We provide easy to use SDKs written in Python, Go and NodeJS.
 
 **Please note that Alpaca Data API v2 will be live starting on Feb 27, 2021**
 
-#### Subscription Plans
+### Subscription Plans
 
 Alpaca Data API v2 provides market data in 2 two different plans: **Basic** and **Pro**.
 
