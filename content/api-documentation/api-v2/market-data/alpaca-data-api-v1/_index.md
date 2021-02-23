@@ -7,8 +7,8 @@ weight: 120
 
 ## Alpaca Data API v1
 
-Alpaca Data API provides the market data available to the client user through
-the REST and websocket streaming interfaces. Alpaca Data API consolidates
+Alpaca Data API v1 provides the market data available to the client user through
+the REST and websocket streaming interfaces. Alpaca Data API v1 consolidates
 data sources from five different exchanges.
 
 - IEX (Investors Exchange LLC)
@@ -16,6 +16,8 @@ data sources from five different exchanges.
 - Nasdaq BX, Inc.
 - Nasdaq PSX
 - NYSE Chicago, Inc.
+
+**Please note that Alpaca Data API v1 will be deprecated from Feb 28, 2021**
 
 ## Authentication
 The authentication is done the same way as [Trading API]({{< relref "/api-documentation/api-v2/_index.md#authentication" >}}),
@@ -25,7 +27,7 @@ and make sure you set the following fields in the HTTP header:
 - `APCA-API-SECRET-KEY`
 
 
-## Endpoint
+### Endpoint
 **Please note the Data API endpoint is different from the Trading API endpoint. Although the Trading API documented herein
 references v2, the Data API endpoint should still point to v1 as follows:**
 
@@ -35,7 +37,7 @@ https://data.alpaca.markets/v1
 
 This URL is the same between paper trading and live trading.
 
-## Streaming trades, quotes and bars
+### Streaming trades, quotes and bars
 
 Alpaca Data API provides websocket streaming for trades,
 quotes and minute bars with the same API key. For the details about
@@ -43,13 +45,13 @@ the streaming, please see [the reference page]({{<
  relref "#market-data-streaming" >}})
 
 
-## Polygon Integration
+### Polygon Integration
 
 Alpaca integrates with Polygon service, provided for the users who
 have funded live trading accounts. For details, please see
 [another page]({{< relref "/api-documentation/api-v2/polygon-integration/_index.md" >}})
 
-## Which API should I use?
+### Which API should I use?
 
 The biggest difference between Alpaca Data API and Polygon is the
 density of the data. While Polygon data is full volume consolidated
