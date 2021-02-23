@@ -31,18 +31,9 @@ The authentication is done the same way as with the [Trading API](https://alpaca
 - `APCA-API-SECRET-KEY`
 
 
-**Parameters**
-
-You will see two kinds of parameters in the API documentation: **path parameters and query parameters**.
-
-Path parameters are documented using the `{parameter}` convention where you will have to replace the bracket and its contents with the value you wish to use. Path parameters are always required.
-
-Query parameters are key value pairs that follow a `?` and the end of the URL. Althoug more difficult to use than path parameters, this [Wikipedia article](https://en.wikipedia.org/wiki/Query_string) should be enough to get you started. Some query parameters are optional while some are required. Look for an indicator (i.e. `*` for required) when you are unsure.
-
-
 **Limiting**
 
-Depending on your goal you might like to receive more than one data point in the response for a query. Actually, this is almost always true after you're done experimenting with the API. To accomodate this you can include the `limit` query parameter. The value should be in the range **1 - 10000** (including them both) with **1000 being the default** if unspecified.
+Use the `limit` query parameter. The value should be in the range **1 - 10000** (endpoints included) with **1000 being the default** if unspecified.
 
 
 **Paging**

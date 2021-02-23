@@ -32,7 +32,7 @@ Once a connection is established and you have successfully authenticated yoursel
 To access real-time data use the URL below, substituting `iex` or `sip` to `{source}` depending on your subscription.
 
 ```
-ACTUALURL/{source}
+wss://stream.data.alpaca.markets/{source}
 ```
 
 Attemption to access a data source not available for your subscription will result in an error during authentication.
@@ -52,7 +52,7 @@ Data points however may arrive in arrays that have a length that is greater than
 
 ### Encoding and compression
 
-Messages over the WebSocket are in encoded as clear text.
+Messages over the websocket are in encoded as clear text.
 
 To reduce bandwidth requirements we have implemented compression as per [RFC-7692](https://tools.ietf.org/html/rfc7692). Our SDKs handle this for you so in most cases you won't have to implement anything yourself.
 
@@ -75,7 +75,7 @@ Now you will need to **authenticate yourself using** your credentials by sending
 {"action": "auth", "key": "{APCA-API-KEY-ID}", "secret": "{APCA-API-SECRET-KEY}"}
 ```
 
-Please not that each account can have up to one concurrent websocket connection. Subsequent attempts to connect are rejected.
+Please note that each account can have up to one concurrent websocket connection. Subsequent attempts to connect are rejected.
 
 If you provided correct credentials you will receive another `success` message:
 ```
@@ -86,7 +86,8 @@ If you provided correct credentials you will receive another `success` message:
 
 Congratulations, you are ready to receive real-time market data!
 
-You can send one or more subscription messages (described below) and after confirmation you will receive the corresponding market data.
+You can send one or more subscription messages (described [below]({{<
+ relref "#subscribe" >}})) and after confirmation you will receive the corresponding market data.
 
 At any time you can subscribe to or unsubscribe from symbols. Please note that due to the internal buffering mentioned above for a short while you may receive data points for symbols you have recently unsubscribed from.
 
@@ -199,9 +200,9 @@ You will always receive your entire list of subscriptions, as illustrated by the
 
 ## Data points
 
-As discussed above, multipe data points may arrive in each message received from the server. These data points have the following formats, depending on their type.
+Multipe data points may arrive in each message received from the server. These data points have the following formats, depending on their type.
 
-### T = Trade schema:
+### Trade schema:
 
 {{< rest-entity-desc name="stream-trade-v2" >}}
 
@@ -210,7 +211,7 @@ Example:
 {{< rest-entity-example name="stream-trade-v2" >}}
 
 
-### Q = Quote schema:
+### Quote schema:
 
 {{< rest-entity-desc name="stream-quote-v2" >}}
 
@@ -219,7 +220,7 @@ Example:
 {{< rest-entity-example name="stream-quote-v2" >}}
 
 
-### AM = Bar schema:
+### Bar schema:
 
 {{< rest-entity-desc name="stream-bar-v2" >}}
 
@@ -231,7 +232,7 @@ Example:
 ### Example
 
 {{< snippet >}}
-$ wscat -c wss://REPLACETHISURL
+$ wscat -c wss://stream.data.alpaca.markets
 connected (press CTRL+C to quit)
 < [{"T":"success","msg":"connected"}]
 > {"action": "auth", "key": "*****", "secret": "*****"}
