@@ -1,7 +1,7 @@
 ---
 title: Alpaca Data API v2
 weight: 80
-summary: Please note that Alpaca Data API v2 will be live starting on Feb 27, 2021. Alpaca Data API v2 provides market data in 2 two different plans, Basic and Pro. The Basic plan is included in both paper-only and live trading accounts as the default plan for free.
+summary: Please note that Alpaca Data API v2 will be live starting from Feb 27, 2021. Alpaca Data API v2 provides market data in 2 two different plans, Basic and Pro. The Basic plan is included in both paper-only and live trading accounts as the default plan for free.
 ---
 
 # Market Data
@@ -12,7 +12,7 @@ Alpaca Data API v2 provides market data through an easy to use HTTP API for hist
 
 We provide easy to use SDKs written in Python, Go and NodeJS. The SDK in C# is currently in development, we will let you know once it's ready for you to use.
 
-{{< warning >}} Please note that Alpaca Data API v2 will be live starting on Feb 27, 2021. {{< /warning >}}
+{{< warning >}} Please note that Alpaca Data API v2 will be live starting from Feb 27, 2021. {{< /warning >}}
 
 
 ## Subscription Plans
