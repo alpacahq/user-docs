@@ -52,7 +52,7 @@ To learn more about paper trading, visit the [paper trading page]({{< relref "/t
 ## Rate Limit
 There is a rate limit for the API requests.  When it is exceeded, the API
 server returns error response with HTTP status code 429.  **The rate limit is
-200 requests per every minute per API key.**
+200 requests every minute per API key.**
 
 ## General Rules
 ### Time Format and Time Zone
