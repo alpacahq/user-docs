@@ -10,7 +10,7 @@ summary: Please note that Alpaca Data API v2 will be live starting on Feb 27, 20
 
 Alpaca Data API v2 provides market data through an easy to use HTTP API for historical data and through websocket for real-time data.
 
-We provide easy to use SDKs written in Python, Go and NodeJS.
+We provide easy to use SDKs written in Python, Go and NodeJS. The SDK in C# is currently in development, we will let you know once it's ready for you to use.
 
 {{< warning >}} Please note that Alpaca Data API v2 will be live starting on Feb 27, 2021. {{< /warning >}}
 
@@ -33,7 +33,7 @@ You will be able to subscribe to the Pro plan from the Dashboard after Feb 27, 2
 | Historical API calls    | 200/min     | Unlimited |
 
 
-The **Basic plan** consists data from IEX (Investors Exchange LLC).
+The **Basic plan** consists of data from IEX (Investors Exchange LLC).
 
 For the **Pro plan**, we receive direct feeds from the CTA (administered by NYSE) and UTP (administered by Nasdaq) SIPs. These 2 feeds combined offer 100% market volume. 
 Data is received from all 19 exchanges:

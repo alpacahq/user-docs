@@ -6,7 +6,7 @@ summary: Alpaca Data API v2 provides three types of historical data. Trades, quo
 
 # Historical Data
 
-Alpaca Data API v2 provides three types of historical data: [Trades]({{<
+Alpaca Data API v2 provides three types of historical data: [trades]({{<
  relref "#trades" >}}), [quotes]({{<
  relref "#quotes" >}}) and [bars]({{<
  relref "#bars" >}}).

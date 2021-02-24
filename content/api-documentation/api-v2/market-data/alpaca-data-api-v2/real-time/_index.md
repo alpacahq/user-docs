@@ -32,7 +32,7 @@ Once a connection is established and you have successfully authenticated yoursel
 To access real-time data use the URL below, substituting `iex` or `sip` to `{source}` depending on your subscription.
 
 ```
-wss://stream.data.alpaca.markets/{source}
+wss://stream.data.alpaca.markets/v2/{source}
 ```
 
 Attemption to access a data source not available for your subscription will result in an error during authentication.
@@ -104,7 +104,7 @@ After connecting you will have to authenticate as described above.
 
 ### Subscribe
 
-You can subscribe to `trades`, `quotes` and `bars` of a particular symbol (or `*` for evey symbol in the case of `bars`). A `subscribe` message should contain what subscription you want to add to your current subscriptions in your session so you don't have to send what you're already subscribed to.
+You can subscribe to `trades`, `quotes` and `bars` of a particular symbol (or `*` for every symbol in the case of `bars`). A `subscribe` message should contain what subscription you want to add to your current subscriptions in your session so you don't have to send what you're already subscribed to.
 ```
 {"action":"subscribe","trades":["AAPL"],quotes":["AMD","CLDR"],"bars":["AAPL","VOO"]}
 ```
@@ -232,7 +232,7 @@ Example:
 ### Example
 
 {{< snippet >}}
-$ wscat -c wss://stream.data.alpaca.markets/sip
+$ wscat -c wss://stream.data.alpaca.markets/v2/sip
 connected (press CTRL+C to quit)
 < [{"T":"success","msg":"connected"}]
 > {"action": "auth", "key": "*****", "secret": "*****"}
