@@ -78,7 +78,7 @@ If you are not logged in, you will be prompted to log in. After you have logged 
 Alpaca on TradingView supports many features including:
 
 - all basic order types (market, limit, stop, stop limit)
-- bracket orders (take profiet and stop loss)
+- bracket orders (take profit and stop loss)
 - all the time-in-force (day, gtc, opg, ioc, fok, cls)
 - margin and short selling
 - real time synchronization of open orders and positions
