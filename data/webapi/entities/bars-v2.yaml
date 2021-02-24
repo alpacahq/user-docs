@@ -1,0 +1,36 @@
+spec:
+  - name: bars
+    type: array<bar>
+    required: true
+    desc: Array of bars.
+  - name: symbol
+    type: string
+    required: true
+    desc: Symbol that was queried.
+  - name: next_page_token
+    type: string (Nullable)
+    required: true
+    desc: Token that can be used to query the next page.
+example: |
+  {
+    "bars": [
+      {
+        "t": "2021-02-01T16:01:00Z",
+        "o": 133.32,
+        "h": 133.74,
+        "l": 133.31,
+        "c": 133.5,
+        "v": 9876
+      },
+      {
+        "t": "2021-02-01T16:02:00Z",
+        "o": 133.5,
+        "h": 133.58,
+        "l": 133.44,
+        "c": 133.58,
+        "v": 3567
+      }
+    ],
+    "symbol": "AAPL",
+    "next_page_token": "MjAyMS0wMi0wMVQxNDowMjowMFo7MQ=="
+  }

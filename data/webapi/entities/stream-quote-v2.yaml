@@ -1,0 +1,50 @@
+spec:
+  - name: T
+    type: string
+    desc: message type, always "q"
+  - name: S
+    type: string
+    desc: symbol
+  - name: ax
+    type: int
+    desc: ask exchange code
+  - name: ap
+    type: number
+    desc: ask price
+  - name: as
+    type: int
+    desc: ask size
+  - name: bx
+    type: int
+    desc: bid exchange code
+  - name: bp
+    type: number
+    desc: bid price
+  - name: bs
+    type: int
+    desc: bid size
+  - name: t
+    type: string
+    desc: RFC-3339 formatted timestamp with nanosecond precision.
+  - name: c
+    type: array<string>
+    desc: quote condition
+  - name: z
+    type: string
+    desc: tape
+example: |
+  {
+    "T": "q",
+    "S": "AMD",
+    "bx": "U",
+    "bp": 87.66,
+    "bs": 1,
+    "ax": "Q",
+    "ap": 87.68,
+    "as": 4,
+    "t": "2021-02-22T15:51:45.335689322Z",
+    "c": [
+      "R"
+    ],
+    "z": "C"
+  }

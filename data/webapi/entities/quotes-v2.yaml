@@ -1,0 +1,44 @@
+spec:
+  - name: quotes
+    type: array<quote>
+    required: true
+    desc: Array of quotes.
+  - name: symbol
+    type: string
+    required: true
+    desc: Symbol that was queried.
+  - name: next_page_token
+    type: string (Nullable)
+    required: true
+    desc: Token that can be used to query the next page.
+example: |
+  {
+    "quotes": [
+        {
+            "t": "2021-02-06T13:35:08.946977536Z",
+            "ax": "C",
+            "ap": 387.7,
+            "as": 1,
+            "bx": "N",
+            "bp": 387.67,
+            "bs": 1,
+            "c": [
+                "R"
+            ]
+        },
+        {
+            "t": "2021-02-06T13:35:09.327977984Z",
+            "ax": "C",
+            "ap": 387.7,
+            "as": 1,
+            "bx": "C",
+            "bp": 387.58,
+            "bs": 1,
+            "c": [
+                "R"
+            ]
+        }
+    ],
+    "symbol": "SPY",
+    "next_page_token": "MjAyMS0wMi0wNlQxMzozNTowOVo7MQ=="
+  }

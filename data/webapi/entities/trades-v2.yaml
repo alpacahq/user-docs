@@ -1,0 +1,44 @@
+spec:
+  - name: trades
+    type: array<trade>
+    required: true
+    desc: Array of trades.
+  - name: symbol
+    type: string
+    required: true
+    desc: Symbol that was queried.
+  - name: next_page_token
+    type: string (Nullable)
+    required: true
+    desc: Token that can be used to query the next page.
+example: |
+  {
+    "trades": [
+        {
+            "t": "2021-02-06T13:04:56.334320128Z",
+            "x": "C",
+            "p": 387.62,
+            "s": 100,
+            "c": [
+                " ",
+                "T"
+            ],
+            "i": 52983525029461,
+            "z": "B"
+        },
+        {
+            "t": "2021-02-06T13:09:42.325484032Z",
+            "x": "C",
+            "p": 387.69,
+            "s": 100,
+            "c": [
+                " ",
+                "T"
+            ],
+            "i": 52983525033813,
+            "z": "B"
+        }
+    ],
+    "symbol": "SPY",
+    "next_page_token": "MjAyMS0wMi0wNlQxMzowOTo0Mlo7MQ=="
+  }
