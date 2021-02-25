@@ -47,9 +47,13 @@ endpoints:
             required: true
             desc: symbol or asset ID to identify the asset to trade
           - name: qty
-            type: string<int>
+            type: string<number>
             required: true
-            desc: number of shares to trade
+            desc: number of shares to trade. Can be fractionable.
+          - name: notional
+            type: string<number>
+            required: true
+            desc: dollar amount to trade. Cannot work with `qty`. Can only work for `market` order types and `day` for time in force.
           - name: side
             type: string
             required: true
@@ -94,8 +98,7 @@ endpoints:
           - name: client_order_id
             type: string<uuid>
             desc: Client Order ID
-      returns:
-        The requested [Order](#order-entity) object
+      returns: The requested [Order](#order-entity) object
       errors:
         - status: 404
           reason: Order is not found.
@@ -109,8 +112,7 @@ endpoints:
           - name: order_id
             type: string<uuid>
             desc: Order ID
-      returns:
-        The requested [Order](#order-entity) object
+      returns: The requested [Order](#order-entity) object
       errors:
         - status: 404
           reason: Order is not found.
@@ -266,8 +268,7 @@ endpoints:
       summary: |
         Attempts to cancel all open orders. A response will be provided for each order that is attempted to be cancelled.
         If an order is no longer cancelable, the server will respond with status 500 and reject the request.
-      returns:
-        HTTP 207 Multi-Status with body; an array of objects that include the order id and http status code for each status request.
+      returns: HTTP 207 Multi-Status with body; an array of objects that include the order id and http status code for each status request.
       errors:
         - status: 500
           reason: Failed to cancel order.
@@ -282,8 +283,7 @@ endpoints:
           - name: client_order_id
             type: string
             desc: Client Order ID
-      returns:
-        The requested [Order](#order-entity) object
+      returns: The requested [Order](#order-entity) object
       errors:
         - status: 404
           reason: Order is not found.
@@ -303,8 +303,7 @@ endpoints:
             desc: |
               If true, the result will roll up multi-leg orders under the
               `legs` field of primary order.
-      returns:
-        The requested [Order](#order-entity) object
+      returns: The requested [Order](#order-entity) object
       errors:
         - status: 404
           reason: Order is not found.
