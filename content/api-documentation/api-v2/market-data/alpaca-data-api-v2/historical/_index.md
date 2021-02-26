@@ -10,10 +10,10 @@ Alpaca Data API v2 provides three types of historical data: [trades]({{<
  relref "#trades" >}}), [quotes]({{<
  relref "#quotes" >}}) and [bars]({{<
  relref "#bars" >}}).
+ 
 
-{{< warning >}} 
-Alpaca Data API v2 is currently in public beta. 
-Please keep in mind that the public beta version may be less stable. {{< /warning >}} 
+{{< note >}} Alpaca Data API v2 is currently in public beta. 
+Please keep in mind that the public beta version may be less stable. {{< /note >}}
 
 
 ## Backfill rate table
