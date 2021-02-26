@@ -13,11 +13,11 @@ Alpaca Data API v2 provides market data through an easy to use HTTP API for hist
 We provide easy to use SDKs written in Python, Go and NodeJS. The SDK in C# is currently in development, we will let you know once it's ready for you to use.
 
 {{< note >}} Alpaca Data API v2 is currently in public beta. 
-Please keep in mind that the public beta version may be less stable. {{< /note >}}
+Please keep in mind that the public beta version may result in . {{< /note >}}
 
-## Backfill rate table
+## Public beta status
 
-As the Alpaca Data API v2 is currently in public beta, we are still running backfill processes to have a complete 5+ years of historical data available. We ask for your patience until we have everything up and running.
+As the Alpaca Data API v2 is currently in public beta, we are still running backfill processes to have a complete 5+ years of historical data available. We ask for your patience until we have everything up and running in the next week or two.
 
 The table below will be updated on a daily basis to show you our data availability:
 
@@ -33,7 +33,7 @@ The table below will be updated on a daily basis to show you our data availabili
 Alpaca Data API v2 provides market data in 2 two different plans: **Basic** and **Pro**.
 
 The Basic plan is included in both paper-only and live trading accounts as the default plan for free.
-During the public beta, no beta tester will be charged with the Pro plan. To sign up click [here](https://app.alpaca.markets/signup). 
+During the public beta, no user will be charged with the Pro plan. To sign up click [here](https://app.alpaca.markets/signup). 
 
 |  | Basic | Pro |
 | -------- | -------- | -------- |
@@ -51,7 +51,7 @@ The **Basic plan** consists of data from IEX (Investors Exchange LLC).
 For the **Pro plan**, we receive direct feeds from the CTA (administered by NYSE) and UTP (administered by Nasdaq) SIPs. These 2 feeds combined offer 100% market volume. 
 
 
-## Exchange codes 
+## Exchanges
 
 List of stock exchanges which are supported by Alpaca.
 
@@ -89,7 +89,7 @@ Each feed/exchange uses its own set of codes to identify trade and quote conditi
 
 ### Trade conditions
 
-#### CTS
+### CTS
 
 The table below shows codes that denotes a particular condition applicable to the trade from the CTA Plan. 
 
@@ -188,5 +188,5 @@ For more information, see the [UQDF Specification](http://www.utpplan.com/DOC/uq
 | Z    | No Open No Resume     |
 | 4    | On Demand Intra Day Auction     |
 
-Please visit our [Support](https://alpaca.markets/support/) page to learn more about the different plans.
+Please visit our [Support](https://alpaca.markets/support/) page to learn more about our market data products.
 
