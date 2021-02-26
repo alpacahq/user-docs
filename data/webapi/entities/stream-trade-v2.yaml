@@ -9,7 +9,7 @@ spec:
     type: int
     desc: trade ID
   - name: x
-    type: int
+    type: string
     desc: exchange code where the trade occurred
   - name: p
     type: number

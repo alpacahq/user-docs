@@ -11,6 +11,24 @@ Alpaca Data API v2 provides three types of historical data: [trades]({{<
  relref "#quotes" >}}) and [bars]({{<
  relref "#bars" >}}).
 
+
+{{< note >}} Alpaca Data API v2 is currently in public beta. 
+Please keep in mind that the public beta version may be less stable. {{< /note >}}
+
+
+## Public beta status
+
+As the Alpaca Data API v2 is currently in public beta, we are still running backfill processes to have a complete 5+ years of historical data available. We ask for your patience until we have everything up and running in the next week or two.
+
+The table below will be updated on a daily basis to show you our data availability:
+
+|  | 2021 | 2020 | 2019 | 2018 | 2017 | 2016 |
+| -------- | -------- | -------- | -------- | -------- | -------- | -------- |
+| Trades     | Done     | Done     | Done      | In progress    | In progress     | In progress      |
+| Quotes     | Done     | In progress     | In progress      | In progress      | In progress      | In progress      |
+| Bars    | In progress       | In progress      | In progress      | In progress     | In progress      | In progress     |
+
+
 ## Common behavior
 
 **Base URL**

@@ -11,6 +11,9 @@ Alpaca Data API v2 provides websocket streaming for trades, quotes and minute ba
 
 Once a connection is established and you have successfully authenticated yourself you can subscribe to trades, quotes and minute bars for a particular symbol or multiple symbols.
 
+{{< note >}} Alpaca Data API v2 is currently in public beta. 
+Please keep in mind that the public beta version may be less stable. {{< /note >}}
+
 
 ## Subscription plans
 **Basic plan:**
@@ -106,7 +109,7 @@ After connecting you will have to authenticate as described above.
 
 You can subscribe to `trades`, `quotes` and `bars` of a particular symbol (or `*` for every symbol in the case of `bars`). A `subscribe` message should contain what subscription you want to add to your current subscriptions in your session so you don't have to send what you're already subscribed to.
 ```
-{"action":"subscribe","trades":["AAPL"],quotes":["AMD","CLDR"],"bars":["AAPL","VOO"]}
+{"action":"subscribe","trades":["AAPL"],"quotes":["AMD","CLDR"],"bars":["AAPL","VOO"]}
 ```
 You can also omit either one of them (`trades`,`quotes` or `bars`) if you don't want to subscribe to any symbols in that category but be sure to include at least one of the three.
 
@@ -114,7 +117,6 @@ You can also omit either one of them (`trades`,`quotes` or `bars`) if you don't 
 ### Unsubscribe
 
 Much like `subscribe` you can also send an `unsubscribe` message that subtracts the list of subscriptions specified from your current set of subscriptions.
-
 ```
 {"action":"unsubscribe","trades":["VOO"],quotes":["IBM"],"bars":[]}
 ```

@@ -6,7 +6,7 @@ spec:
     type: string
     desc: symbol
   - name: ax
-    type: int
+    type: string
     desc: ask exchange code
   - name: ap
     type: number
@@ -15,7 +15,7 @@ spec:
     type: int
     desc: ask size
   - name: bx
-    type: int
+    type: string
     desc: bid exchange code
   - name: bp
     type: number

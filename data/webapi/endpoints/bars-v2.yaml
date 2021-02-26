@@ -28,7 +28,7 @@ endpoints:
             required: true
             type: string
             desc: |
-              Timeframe for the aggregation. Available values are: `1Sec`, `1Min`, `1Hour`, `1Day`.
+              Timeframe for the aggregation. Available values are: `1Min`, `1Hour`, `1Day`.
       returns: |
         A bars response object.
       errors:
