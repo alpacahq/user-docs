@@ -23,7 +23,7 @@ The table below will be updated on a daily basis to show you our data availabili
 
 |  | 2021 | 2020 | 2019 | 2018 | 2017 | 2016 |
 | -------- | -------- | -------- | -------- | -------- | -------- | -------- |
-| Trades     | Done      | Done     | In progress      | In progress    | In progress     | In progress      |
+| Trades     | Done      | Done     | Done      | In progress    | In progress     | In progress      |
 | Quotes     | Done      | In progress     | In progress      | In progress      | In progress      | In progress      |
 | Bars    | In progress       | In progress      | In progress      | In progress     | In progress      | In progress     |
 
