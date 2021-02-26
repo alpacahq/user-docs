@@ -13,7 +13,7 @@ Alpaca Data API v2 provides market data through an easy to use HTTP API for hist
 We provide easy to use SDKs written in Python, Go and NodeJS. The SDK in C# is currently in development, we will let you know once it's ready for you to use.
 
 {{< note >}} Alpaca Data API v2 is currently in public beta. 
-Please keep in mind that the public beta version may result in . {{< /note >}}
+Please keep in mind that the public beta version may be less stable. {{< /note >}}
 
 ## Public beta status
 
