@@ -117,7 +117,6 @@ You can also omit either one of them (`trades`,`quotes` or `bars`) if you don't 
 ### Unsubscribe
 
 Much like `subscribe` you can also send an `unsubscribe` message that subtracts the list of subscriptions specified from your current set of subscriptions.
-
 ```
 {"action":"unsubscribe","trades":["VOO"],quotes":["IBM"],"bars":[]}
 ```

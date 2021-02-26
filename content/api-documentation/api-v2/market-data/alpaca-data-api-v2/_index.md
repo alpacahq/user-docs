@@ -15,6 +15,7 @@ We provide easy to use SDKs written in Python, Go and NodeJS. The SDK in C# is c
 {{< note >}} Alpaca Data API v2 is currently in public beta. 
 Please keep in mind that the public beta version may be less stable. {{< /note >}}
 
+
 ## Public beta status
 
 As the Alpaca Data API v2 is currently in public beta, we are still running backfill processes to have a complete 5+ years of historical data available. We ask for your patience until we have everything up and running in the next week or two.
@@ -33,6 +34,7 @@ The table below will be updated on a daily basis to show you our data availabili
 Alpaca Data API v2 provides market data in 2 two different plans: **Basic** and **Pro**.
 
 The Basic plan is included in both paper-only and live trading accounts as the default plan for free.
+
 During the public beta, no user will be charged with the Pro plan. To sign up click [here](https://app.alpaca.markets/signup). 
 
 |  | Basic | Pro |
