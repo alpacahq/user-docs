@@ -47,13 +47,9 @@ endpoints:
             required: true
             desc: symbol or asset ID to identify the asset to trade
           - name: qty
-            type: string<number>
+            type: string<int>
             required: true
-            desc: number of shares to trade. Can be fractionable.
-          - name: notional
-            type: string<number>
-            required: true
-            desc: dollar amount to trade. Cannot work with `qty`. Can only work for `market` order types and `day` for time in force.
+            desc: number of shares to trade.
           - name: side
             type: string
             required: true
@@ -191,9 +187,13 @@ endpoints:
             required: true
             desc: symbol or asset ID to identify the asset to trade
           - name: qty
-            type: string<int>
+            type: string<number>
             required: true
-            desc: number of shares to trade
+            desc: number of shares to trade. Can be fractionable.
+          - name: notional
+            type: string<number>
+            required: true
+            desc: dollar amount to trade. Cannot work with `qty`. Can only work for `market` order types and `day` for time in force.
           - name: side
             type: string
             required: true
