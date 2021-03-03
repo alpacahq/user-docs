@@ -45,12 +45,6 @@ the streaming, plase see [the reference page]({{<
  relref "/api-documentation/api-v2/market-data/alpaca-data-api-v1/streaming.md" >}})
 
 
-## Polygon Integration
-
-Alpaca integrates with Polygon service, provided for the users who
-have funded live trading accounts. For details, please see
-[another page]({{< relref "/api-documentation/api-v2/polygon-integration/_index.md" >}})
-
 ## Which API should I use?
 
 The biggest difference between Alpaca Data API and Polygon is the
