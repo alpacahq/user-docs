@@ -27,6 +27,9 @@ spec:
   - name: easy_to_borrow
     type: boolean
     desc: Asset is easy-to-borrow or not (filtering for easy_to_borrow = True is the best way to check whether the name is currently available to short at Alpaca).
+  - name: fractionable
+    type: boolean
+    desc: Asset is fractionable or not.
 example: |
   {
     "id": "904837e3-3b76-47ec-b432-046db621571b",
@@ -37,5 +40,6 @@ example: |
     "tradable": true,
     "marginable": true,
     "shortable": true,
-    "easy_to_borrow": true
+    "easy_to_borrow": true,
+    "fractionable": true
   }
