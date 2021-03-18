@@ -6,8 +6,7 @@ weight: 40
 ## Overview
 Alpaca's API offers WebSocket streaming for account and order updates which follows the [RFC6455 WebSocket protocol](https://tools.ietf.org/html/rfc6455).
 
-To connect to the WebSocket follow the standard opening handshake as defined by the RFC specification to the `/stream`
-endpoint of Alpaca's API. Alpaca's streaming service supports both JSON and MessagePack codecs.
+To connect to the WebSocket follow the standard opening handshake as defined by the RFC specification to `wss://paper-api.alpaca.markets/stream` or `wss://api.alpaca.markets/stream`. Alpaca's streaming service supports both JSON and MessagePack codecs.
 
 Once the connection is authorized, the client can listen to one or more streams
 to get updates on particular changes.  These are the streams the client can
