@@ -189,7 +189,7 @@ endpoints:
           - name: qty
             type: string<number>
             required: true
-            desc: number of shares to trade. Can be fractionable.
+            desc: number of shares to trade. Can be fractionable for only `market` and `day` order types.
           - name: notional
             type: string<number>
             required: true
