@@ -5,8 +5,6 @@ aliases:
   - /fractional-trading.md
 ---
 
-## Fractional Trading
-
 Fractional shares are fractions of a whole share, meaning that you don’t need to buy a whole share to own a portion of a company. You can now buy as little as $1 worth of shares for over 2,000 US equities.
 
 By default all Alpaca accounts are allowed to trade fractional shares in both live and paper environments. Please make sure you reset your paper account if you run into any issues dealing with fractional shares.
