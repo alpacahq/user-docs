@@ -39,7 +39,7 @@ During the public beta, no user will be charged with the Pro plan. To sign up cl
 
 |  | Basic | Pro |
 | -------- | -------- | -------- |
-| Pricing    | Free     | $49/mo     |
+| Pricing    | Free     | $[49]/mo     |
 | Securities coverage    | US Stocks & ETFs     | US Stocks & ETFs    |
 | Real-time market coverage    | IEX     | All US Stock Exchanges     |
 | Websocket subscriptions   | 30 symbols    | Unlimited    |
