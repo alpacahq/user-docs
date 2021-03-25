@@ -8,13 +8,13 @@ aliases:
 Alpaca provides you with different market data depending upon your plan type. Below is a summary of the data feeds
 available. **Currently, we only provide data for U.S. listed equities.**
 
-## Basic plan
+## Free plan
 
 Users that have signed up with Alpaca will receive free real-time data as a default from IEX. Please note that this data feed only includes quotes and trades occurring on the order books of IEX.
 
-## Pro plan 
+## Unlimited plan 
 
-Users who sign up to the **Pro plan**, are provided with a consolidated U.S. equity market data feed.
+Users who sign up to the **Unlimited plan**, are provided with a consolidated U.S. equity market data feed.
 For more information and pricing, click [here](https://alpaca.markets/docs/api-documentation/api-v2/market-data/alpaca-data-api-v2/#subscription-plans).
 
 Consolidated stock market data is an aggregated reporting of all securities exchanges’ and alternative trading venues’

@@ -1,7 +1,7 @@
 ---
 title: Alpaca Data API v2
 weight: 80
-summary: Please note that Alpaca Data API v2 is now in public beta. Alpaca Data API v2 provides market data in 2 two different plans, Basic and Pro. The Basic plan is included in both paper-only and live trading accounts as the default plan for free.
+summary: Please note that Alpaca Data API v2 is now in public beta. Alpaca Data API v2 provides market data in 2 two different plans, Free and Unlimited. The Free plan is included in both paper-only and live trading accounts as the default plan for free.
 ---
 
 # Market Data
@@ -18,26 +18,30 @@ Please keep in mind that the public beta version may be less stable. {{< /note >
 
 ## Public beta status
 
-As the Alpaca Data API v2 is currently in public beta, we are still running backfill processes to have a complete 5+ years of historical data available. We ask for your patience until we have everything up and running in the next week or two.
+*Last update: Mar 25, 2021*
 
-The table below will be updated on a daily basis to show you our data availability:
+We finished backfilling all trades, quotes and bars for the 2016-2020 period, these are now available through the APIs.
+
+However, the 2021 data still has gaps resulting from the difficulties with the streaming service. We are in the process of backfilling to date and will regularly update the progress below. 
 
 |  | 2021 | 2020 | 2019 | 2018 | 2017 | 2016 |
 | -------- | -------- | -------- | -------- | -------- | -------- | -------- |
-| Trades     | Done      | Done     | Done      | In progress    | In progress     | In progress      |
-| Quotes     | Done      | In progress     | In progress      | In progress      | In progress      | In progress      |
-| Bars    | In progress       | In progress      | In progress      | In progress     | In progress      | In progress     |
+| Trades     | Done*     | Done     | Done      | Done     | Done      | Done      |
+| Quotes     | Done*    | Done      | Done     | Done      | Done      | Done       |
+| Bars    | Done*    | Done       | Done       | Done      | Done       | Done      |
+
+*certain trades, quotes and bars are missing for this period
 
 
 ## Subscription Plans
 
-Alpaca Data API v2 provides market data in 2 two different plans: **Basic** and **Pro**.
+Alpaca Data API v2 provides market data in 2 two different plans: **Free** and **Unlimited**.
 
-The Basic plan is included in both paper-only and live trading accounts as the default plan for free.
+The Free plan is included in both paper-only and live trading accounts as the default plan for free.
 
-During the public beta, no user will be charged with the Pro plan. To sign up click [here](https://app.alpaca.markets/signup). 
+During the public beta, no user will be charged with the Unlimited plan. To sign up click [here](https://app.alpaca.markets/signup). 
 
-|  | Basic | Pro |
+|  | Free | Unlimited |
 | -------- | -------- | -------- |
 | Pricing    | Free     | $49/mo     |
 | Securities coverage    | US Stocks & ETFs     | US Stocks & ETFs    |
@@ -48,9 +52,9 @@ During the public beta, no user will be charged with the Pro plan. To sign up cl
 | Historical API calls    | 200/min     | Unlimited |
 
 
-The **Basic plan** consists of data from IEX (Investors Exchange LLC).
+The **Free plan** consists of data from IEX (Investors Exchange LLC).
 
-For the **Pro plan**, we receive direct feeds from the CTA (administered by NYSE) and UTP (administered by Nasdaq) SIPs. These 2 feeds combined offer 100% market volume. 
+For the **Unlimited plan**, we receive direct feeds from the CTA (administered by NYSE) and UTP (administered by Nasdaq) SIPs. These 2 feeds combined offer 100% market volume. 
 
 
 ## Exchanges
