@@ -47,4 +47,4 @@ the streaming, please see [the reference page]({{<
 
 ### Can I get the full volume data from Alpaca?
 
-Yes, the Pro plan of Alpaca Data API v2 provides full volume data.
+Yes, the Unlimited plan of Alpaca Data API v2 provides full volume data.

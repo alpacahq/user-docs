@@ -18,16 +18,19 @@ Please keep in mind that the public beta version may be less stable. {{< /note >
 
 ## Public beta status
 
-As the Alpaca Data API v2 is currently in public beta, we are still running backfill processes to have a complete 5+ years of historical data available. We ask for your patience until we have everything up and running in the next week or two.
+*Last update: Mar 25, 2021*
 
-The table below will be updated on a daily basis to show you our data availability:
+We finished backfilling all trades, quotes and bars for the 2016-2020 period, these are now available through the APIs.
+
+However, the 2021 data still has gaps resulting from the difficulties with the streaming service. We are in the process of backfilling to date and will regularly update the progress below. 
 
 |  | 2021 | 2020 | 2019 | 2018 | 2017 | 2016 |
 | -------- | -------- | -------- | -------- | -------- | -------- | -------- |
-| Trades     | Done     | Done     | Done      | In progress    | In progress     | In progress      |
-| Quotes     | Done     | In progress     | In progress      | In progress      | In progress      | In progress      |
-| Bars    | In progress       | In progress      | In progress      | In progress     | In progress      | In progress     |
+| Trades     | Done*     | Done     | Done      | Done     | Done      | Done      |
+| Quotes     | Done*    | Done      | Done     | Done      | Done      | Done       |
+| Bars    | Done*    | Done       | Done       | Done      | Done       | Done      |
 
+*certain trades, quotes and bars are missing for this period
 
 ## Common behavior
 
@@ -39,7 +42,7 @@ Alpaca Data API v2 provides historical data through multiple endpoints. These en
 https://data.alpaca.markets/v2
 ```
 
-This URL is the **same for both subscription plans** but users with Basic subscription will receive an error when trying to access data that is too recent.
+This URL is the **same for both subscription plans** but users with Free subscription will receive an error when trying to access data that is too recent.
 
 
 **Authentication**

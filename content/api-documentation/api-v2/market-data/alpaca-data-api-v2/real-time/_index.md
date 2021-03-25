@@ -16,13 +16,13 @@ Please keep in mind that the public beta version may be less stable. {{< /note >
 
 
 ## Subscription plans
-**Basic plan:**
+**Free plan:**
 - You can only connect to IEX data source. One concurrent connection is allowed.
 - Subscription is limited to 30 channels at a time for trades (`trades`) and quotes (`quotes`). We may support more channels in the future.
 - There is no limit for the number of channels with minute bars (`bars`).
 - Minute bars are based on the trades from IEX.
 
-**Pro plan:** 
+**Unlimited plan:** 
 - There is no limit for the number of channels at a time for trades, quotes and minute bars(`trades`,`quotes` and `bars`).
 - Trades, quotes and mintue bars are direct feeds from the CTA (administered by NYSE) and UTP (administered by Nasdaq) SIPs.
 
