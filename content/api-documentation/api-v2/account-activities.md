@@ -31,12 +31,12 @@ Pagination is handled using the `page_token` and `page_size` parameters. `page_t
 ## Activity Types
 
 * `FILL`: Order fills (both partial and full fills)
-* `TRANS`: Cash transactions (both CSD and CSR)
+* `TRANS`: Cash transactions (both CSD and CSW)
 * `MISC`: Miscellaneous or rarely used activity types (All types except those in TRANS, DIV, or FILL)
 * `ACATC`: ACATS IN/OUT (Cash)
 * `ACATS`: ACATS IN/OUT (Securities)
-* `CSD`: Cash disbursement(+)
-* `CSR`: Cash receipt(-)
+* `CSD`: Cash deposit(+)
+* `CSW`: Cash withdrawal(-)
 * `DIV`: Dividends
 * `DIVCGL`: Dividend (capital gain long term)
 * `DIVCGS`: Dividend (capital gain short term)
