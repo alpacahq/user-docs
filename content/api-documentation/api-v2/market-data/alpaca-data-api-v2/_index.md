@@ -18,19 +18,16 @@ Please keep in mind that the public beta version may be less stable. {{< /note >
 
 ## Public beta status
 
-*Last update: Mar 25, 2021*
+*Last update: Apr 1, 2021*
 
 We finished backfilling all trades, quotes and bars for the 2016-2020 period, these are now available through the APIs.
 
-However, the 2021 data still has gaps resulting from the difficulties with the streaming service. We are in the process of backfilling to date and will regularly update the progress below. 
-
 |  | 2021 | 2020 | 2019 | 2018 | 2017 | 2016 |
 | -------- | -------- | -------- | -------- | -------- | -------- | -------- |
-| Trades     | Done*     | Done     | Done      | Done     | Done      | Done      |
-| Quotes     | Done*    | Done      | Done     | Done      | Done      | Done       |
-| Bars    | Done*    | Done       | Done       | Done      | Done       | Done      |
+| Trades     | Done     | Done     | Done      | Done     | Done      | Done      |
+| Quotes     | Done    | Done      | Done     | Done      | Done      | Done       |
+| Bars    | Done    | Done       | Done       | Done      | Done       | Done      |
 
-*certain trades, quotes and bars are missing for this period
 
 
 ## Subscription Plans
