@@ -7,7 +7,7 @@ weight: 10
 
 ## Who We Are
 
-Alpaca is a technology company headquartered in Silicon Valley that builds commission-free stock trading API (Brokerage services are provided by Alpaca Securities LLC, member FINRA/SIPC). We are a team of diverse background individuals with deep financial and technology expertise, backed by some of the top investors in the industry globally. We are proud to be supported by the love of enthusiastic community members on [various platforms](https://alpaca.markets/community).
+Alpaca is a great technology company headquartered in Silicon Valley that builds commission-free stock trading API (Brokerage services are provided by Alpaca Securities LLC, member FINRA/SIPC). We are a team of diverse background individuals with deep financial and technology expertise, backed by some of the top investors in the industry globally. We are proud to be supported by the love of enthusiastic community members on [various platforms](https://alpaca.markets/community).
 
 Alpaca's globally distributed team consists of developers, traders, and brokerage business specialists, who collectively have decades of
 financial services and technology industry experience at organizations such as FINRA, Wealthfront, EMC, Greenplum, Cloudera, IBM, Brevan Howard and Lehman Brothers. Alpaca is led by [Yoshi Yokokawa](https://www.linkedin.com/in/yoshiyokokawa/) (CEO),
