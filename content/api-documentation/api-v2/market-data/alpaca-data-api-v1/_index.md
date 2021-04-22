@@ -9,14 +9,10 @@ summary: Alpaca Data API v1 provides the market data available to the client use
 ## Overview
 
 Alpaca Data API v1 provides the market data available to the client user through
-the REST and websocket streaming interfaces. Alpaca Data API consolidates
-data sources from five different exchanges.
+the REST and websocket streaming interfaces. The Alpaca Data API v1 consolidates
+data sources from a single exchange.
 
 - IEX (Investors Exchange LLC)
-- NYSE National, Inc.
-- Nasdaq BX, Inc.
-- Nasdaq PSX
-- NYSE Chicago, Inc.
 
 
 ## Authentication
