@@ -1,0 +1,124 @@
+spec:
+  - name: latestTrade
+    type: object
+    required: true
+    desc: Latest trade object.
+  - name: latestQuote
+    type: object
+    required: true
+    desc: Latest quote object.
+  - name: minuteBar
+    type: object
+    required: true
+    desc: Minute bar object.
+  - name: dailyBar
+    type: object
+    required: true
+    desc: Daily bar object.
+  - name: prevDailyBar
+    type: object
+    required: true
+    desc: Previous daily close bar object.
+example: |
+  {
+    "AAPL": {
+        "latestTrade": {
+            "t": "2021-05-11T20:00:00.435997104Z",
+            "x": "Q",
+            "p": 125.91,
+            "s": 5589631,
+            "c": [
+                "@",
+                "M"
+            ],
+            "i": 179430,
+            "z": "C"
+        },
+        "latestQuote": {
+            "t": "2021-05-11T21:48:32.342305Z",
+            "ax": "P",
+            "ap": 125.68,
+            "as": 4,
+            "bx": "P",
+            "bp": 125.6,
+            "bs": 2,
+            "c": [
+                "R"
+            ]
+        },
+        "minuteBar": {
+            "t": "2021-05-11T21:46:00Z",
+            "o": 125.57,
+            "h": 125.67,
+            "l": 125.57,
+            "c": 125.57,
+            "v": 1722
+        },
+        "dailyBar": {
+            "t": "2021-05-11T04:00:00Z",
+            "o": 123.5,
+            "h": 126.27,
+            "l": 122.77,
+            "c": 125.91,
+            "v": 125853552
+        },
+        "prevDailyBar": {
+            "t": "2021-05-10T04:00:00Z",
+            "o": 129.41,
+            "h": 129.54,
+            "l": 126.81,
+            "c": 126.85,
+            "v": 79569305
+        }
+    },
+    "TSLA": {
+        "latestTrade": {
+            "t": "2021-05-11T20:00:00.438347686Z",
+            "x": "Q",
+            "p": 617.2,
+            "s": 268388,
+            "c": [
+                "@",
+                "M"
+            ],
+            "i": 301112,
+            "z": "C"
+        },
+        "latestQuote": {
+            "t": "2021-05-11T21:49:14.42603133Z",
+            "ax": "P",
+            "ap": 616.4,
+            "as": 1,
+            "bx": "Q",
+            "bp": 616.05,
+            "bs": 1,
+            "c": [
+                "R"
+            ]
+        },
+        "minuteBar": {
+            "t": "2021-05-11T21:45:00Z",
+            "o": 616,
+            "h": 616,
+            "l": 616,
+            "c": 616,
+            "v": 479
+        },
+        "dailyBar": {
+            "t": "2021-05-11T04:00:00Z",
+            "o": 599.24,
+            "h": 627.0999,
+            "l": 595.6,
+            "c": 617.2,
+            "v": 46393457
+        },
+        "prevDailyBar": {
+            "t": "2021-05-10T04:00:00Z",
+            "o": 664.71,
+            "h": 665.05,
+            "l": 627.6101,
+            "c": 629.04,
+            "v": 31336228
+        }
+    }
+  }

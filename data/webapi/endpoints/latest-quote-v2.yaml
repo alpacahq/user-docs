@@ -1,0 +1,22 @@
+endpoints:
+  /v2/stocks/{symbol}/quotes/latest:
+    GET:
+      title: Returns latest quote for the queried stock symbol
+      summary: |
+        This endpoint returns latest quote for the requested security.
+      params:
+        path:
+          - name: symbol
+            type: string
+            desc: The symbol to query for
+      returns: |
+        A quotes response object.
+      errors:
+        - status: 400
+          reason: Invalid value for query parameter
+        - status: 403
+          reason: Unauthorized
+        - status: 422
+          reason: Invalid query parameter
+        - status: 429
+          reason: Rate limit exceeded

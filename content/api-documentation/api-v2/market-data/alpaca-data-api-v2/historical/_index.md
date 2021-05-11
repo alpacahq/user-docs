@@ -90,6 +90,22 @@ The Trades API provides historcial trade data for a given ticker symbol on a spe
 
 {{< rest-entity-desc name="trades-v2" >}}
 
+## Latest trade
+
+The Latest trade API provides the latest trade data for a given ticker symbol.
+
+{{< rest-endpoint resource="latest-trade-v2" method="GET" path="/v2/stocks/{symbol}/trades/latest" useh3="true" >}}
+
+
+### Example of latest trade
+
+{{< rest-entity-example name="latest-trade-v2" >}}
+
+
+### Properties
+
+{{< rest-entity-desc name="latest-trade-v2" >}}
+
 
 ## Quotes
 
@@ -117,6 +133,22 @@ The Quotes API provides NBBO quotes for a given ticker symbol at a specified dat
 
 {{< rest-entity-desc name="quotes-v2" >}}
 
+## Latest quote
+
+The Latest quote API provides the latest quote data for a given ticker symbol.
+
+{{< rest-endpoint resource="latest-quote-v2" method="GET" path="/v2/stocks/{symbol}/quotes/latest" useh3="true" >}}
+
+
+### Example of latest trade
+
+{{< rest-entity-example name="latest-trade-v2" >}}
+
+
+### Properties
+
+{{< rest-entity-desc name="latest-trade-v2" >}}
+
 
 ## Bars
 
@@ -143,3 +175,37 @@ The bars API returns aggregate historical data for the requested securities.
 ### Properties
 
 {{< rest-entity-desc name="bars-v2" >}}
+
+
+## Snapshot - Multiple tickers
+
+The Snapshot API for multiple tickers provides the latest trade, latest quote, minute bar daily bar and previous daily bar data for the given ticker symbols.
+
+{{< rest-endpoint resource="snapshot-multiple-tickers-v2" method="GET" path="/v2/stocks/snapshots" useh3="true" >}}
+
+
+### Example of snapshots for multiple tickers
+
+{{< rest-entity-example name="snapshot-multiple-tickers-v2" >}}
+
+
+### Properties
+
+{{< rest-entity-desc name="snapshot-multiple-tickers-v2" >}}
+
+
+## Snapshot - Ticker
+
+The Snapshot API for one ticker provides the latest trade, latest quote, minute bar daily bar and previous daily bar data for a given ticker symbol.
+
+{{< rest-endpoint resource="snapshot-ticker-v2" method="GET" path="/v2/stocks/{symbol}/snapshot" useh3="true" >}}
+
+
+### Example of a snapshot for one ticker
+
+{{< rest-entity-example name="snapshot-ticker-v2" >}}
+
+
+### Properties
+
+{{< rest-entity-desc name="snapshot-ticker-v2" >}}

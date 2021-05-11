@@ -1,0 +1,73 @@
+spec:
+  - name: latestTrade
+    type: object
+    required: true
+    desc: Latest trade object.
+  - name: latestQuote
+    type: object
+    required: true
+    desc: Latest quote object.
+  - name: minuteBar
+    type: object
+    required: true
+    desc: Minute bar object.
+  - name: dailyBar
+    type: object
+    required: true
+    desc: Daily bar object.
+  - name: prevDailyBar
+    type: object
+    required: true
+    desc: Previous daily close bar object.
+example: |
+  {
+    "symbol": "AAPL",
+    "latestTrade": {
+        "t": "2021-05-11T20:00:00.435997104Z",
+        "x": "Q",
+        "p": 125.91,
+        "s": 5589631,
+        "c": [
+            "@",
+            "M"
+        ],
+        "i": 179430,
+        "z": "C"
+    },
+    "latestQuote": {
+        "t": "2021-05-11T22:05:02.307304704Z",
+        "ax": "P",
+        "ap": 125.68,
+        "as": 12,
+        "bx": "P",
+        "bp": 125.6,
+        "bs": 4,
+        "c": [
+            "R"
+        ]
+    },
+    "minuteBar": {
+        "t": "2021-05-11T22:02:00Z",
+        "o": 125.66,
+        "h": 125.66,
+        "l": 125.66,
+        "c": 125.66,
+        "v": 396
+    },
+    "dailyBar": {
+        "t": "2021-05-11T04:00:00Z",
+        "o": 123.5,
+        "h": 126.27,
+        "l": 122.77,
+        "c": 125.91,
+        "v": 125863164
+    },
+    "prevDailyBar": {
+        "t": "2021-05-10T04:00:00Z",
+        "o": 129.41,
+        "h": 129.54,
+        "l": 126.81,
+        "c": 126.85,
+        "v": 79569305
+    }
+  }
