@@ -177,7 +177,7 @@ The bars API returns aggregate historical data for the requested securities.
 {{< rest-entity-desc name="bars-v2" >}}
 
 
-## Snapshot - Multiple ticker
+## Snapshot - Multiple tickers
 
 The Snapshot API for multiple tickers provides the latest trade, latest quote, minute bar daily bar and previous daily bar data for the given ticker symbols.
 
