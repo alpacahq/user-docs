@@ -1,0 +1,42 @@
+spec:
+  - name: t
+    type: string
+    required: true
+    desc: Timestamp in RFC-3339 format with nanosecond precision.
+  - name: x
+    type: string
+    required: true
+    desc: Exchange where the trade happened. 
+  - name: p
+    type: number
+    required: true
+    desc: Trade price.
+  - name: s
+    type: int
+    required: true
+    desc: Trade size.
+  - name: c
+    type: array<string>
+    required: true
+    desc: Trade conditions.
+  - name: i
+    type: int
+    required: true
+    desc: Trade ID.
+  - name: z
+    type: string
+    required: true
+    desc: Tape.
+example: |
+  {
+    "t": "2021-02-06T13:04:56.334320128Z",
+    "x": "C",
+    "p": 387.62,
+    "s": 100,
+    "c": [
+      " ",
+      "T"
+    ],
+    "i": 52983525029461,
+    "z": "B"
+  }

@@ -1,0 +1,46 @@
+spec:
+  - name: t
+    type: string
+    required: true
+    desc: Timestamp in RFC-3339 format with nanosecond precision.
+  - name: ax
+    type: string
+    required: true
+    desc: Ask exchange.
+  - name: ap
+    type: number
+    required: true
+    desc: Ask price.
+  - name: as
+    type: int
+    required: true
+    desc: Ask size.
+  - name: bx
+    type: string
+    required: true
+    desc: Bid exchange.
+  - name: bp
+    type: number
+    required: true
+    desc: Bid price.
+  - name: bs
+    type: int
+    required: true
+    desc: Bid size.
+  - name: c
+    type: array<string>
+    required: true
+    desc: Quote conditions.
+example: |
+  {
+    "t": "2021-02-06T13:35:08.946977536Z",
+    "ax": "C",
+    "ap": 387.7,
+    "as": 1,
+    "bx": "N",
+    "bp": 387.67,
+    "bs": 1,
+    "c": [
+      "R"
+    ]
+  }
