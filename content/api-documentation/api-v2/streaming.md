@@ -16,6 +16,8 @@ choose to listen to.
 
 The details of each stream will be described later in this document.
 
+Note: The trade_updates stream coming from wss://paper-api.alpaca.markets/stream uses Binary frames which differs from the Text frames that comes from the wss://data.alpaca.markets/stream stream
+
 In order to listen to streams, the client sends a `listen` message
 to the server as follows.
 ```
