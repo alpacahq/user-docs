@@ -11,9 +11,6 @@ Alpaca Data API v2 provides websocket streaming for trades, quotes and minute ba
 
 Once a connection is established and you have successfully authenticated yourself you can subscribe to trades, quotes and minute bars for a particular symbol or multiple symbols.
 
-{{< note >}} Alpaca Data API v2 is currently in public beta. 
-Please keep in mind that the public beta version may be less stable. {{< /note >}}
-
 
 ## Subscription plans
 **Free plan:**

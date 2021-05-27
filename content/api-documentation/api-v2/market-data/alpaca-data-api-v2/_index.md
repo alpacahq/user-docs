@@ -1,7 +1,7 @@
 ---
 title: Alpaca Data API v2
 weight: 80
-summary: Please note that Alpaca Data API v2 is now in public beta. Alpaca Data API v2 provides market data in 2 two different plans, Free and Unlimited. The Free plan is included in both paper-only and live trading accounts as the default plan for free.
+summary: Alpaca Data API v2 provides market data in 2 two different plans, Free and Unlimited. The Free plan is included in both paper-only and live trading accounts as the default plan for free.
 ---
 
 # Market Data
@@ -10,25 +10,7 @@ summary: Please note that Alpaca Data API v2 is now in public beta. Alpaca Data 
 
 Alpaca Data API v2 provides market data through an easy to use HTTP API for historical data and through websocket for real-time data.
 
-We provide easy to use SDKs written in Python, Go and NodeJS. The SDK in C# is currently in development, we will let you know once it's ready for you to use.
-
-{{< note >}} Alpaca Data API v2 is currently in public beta. 
-Please keep in mind that the public beta version may be less stable. {{< /note >}}
-
-
-## Public beta status
-
-*Last update: Apr 1, 2021*
-
-We finished backfilling all trades, quotes and bars for the 2016-2020 period, these are now available through the APIs.
-
-|  | 2021 | 2020 | 2019 | 2018 | 2017 | 2016 |
-| -------- | -------- | -------- | -------- | -------- | -------- | -------- |
-| Trades     | Done     | Done     | Done      | Done     | Done      | Done      |
-| Quotes     | Done    | Done      | Done     | Done      | Done      | Done       |
-| Bars    | Done    | Done       | Done       | Done      | Done       | Done      |
-
-
+We provide easy to use SDKs written in Python, Go, NodeJS and C#.
 
 ## Subscription Plans
 
@@ -36,16 +18,15 @@ Alpaca Data API v2 provides market data in 2 two different plans: **Free** and *
 
 The Free plan is included in both paper-only and live trading accounts as the default plan for free.
 
-During the public beta, no user will be charged with the Unlimited plan. To sign up click [here](https://app.alpaca.markets/signup). 
 
 |  | Free | Unlimited |
 | -------- | -------- | -------- |
-| Pricing    | Free     | $[49]/mo     |
+| Pricing    | Free     | $9/mo     |
 | Securities coverage    | US Stocks & ETFs     | US Stocks & ETFs    |
 | Real-time market coverage    | IEX     | All US Stock Exchanges     |
 | Websocket subscriptions   | 30 symbols    | Unlimited    |
 | Historical data timeframe   | 5+ years | 5+ years     |
-| Historical data delay| 15 minutes | 1 minute
+| Historical data delay| 15 minutes | - |
 | Historical API calls    | 200/min     | Unlimited |
 
 
