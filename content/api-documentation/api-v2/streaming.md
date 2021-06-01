@@ -54,6 +54,8 @@ In order to maintain the state of their brokerage accounts at Alpaca, along with
 listen to the trade streams for their accounts. This will ensure any running algorithms will always have the most up-to-date
 picture of any accounts they are trading with at Alpaca.
 
+**Note:** to request with MessagePack, add the header: `Content-Type: application/msgpack`.
+
 ## Authentication
 The WebSocket client can be authenticated using the same API key when making HTTP requests. Upon connecting to the WebSocket
 client must send an authentication message over the WebSocket connection with the API key, and secret key as its payload:
