@@ -222,13 +222,38 @@ Example:
 {{< rest-entity-example name="stream-quote-v2" >}}
 
 
-### Bar schema:
+### Minute Bar schema:
 
 {{< rest-entity-desc name="stream-bar-v2" >}}
 
 Example: 
 
 {{< rest-entity-example name="stream-bar-v2" >}}
+
+
+### Daily Bar schema:
+
+A daily bar is returned as partial bar up to the current time and updates only at the first valid trade of the day.
+
+
+{{< rest-entity-desc name="stream-daily-bar-v2" >}}
+
+Example: 
+
+{{< rest-entity-example name="stream-daily-bar-v2" >}}
+
+
+### Status schema:
+
+Identifies the trading status applicable to the security and reason for the trading halt if any. For more information on the status indicators, click [here](https://alpaca.markets/docs/api-documentation/api-v2/market-data/alpaca-data-api-v2/real-time/#data-points).
+
+
+{{< rest-entity-desc name="stream-status-v2" >}}
+
+Example: 
+
+{{< rest-entity-example name="stream-status-v2" >}}
+
 
 
 ### Example
@@ -239,7 +264,7 @@ connected (press CTRL+C to quit)
 < [{"T":"success","msg":"connected"}]
 > {"action": "auth", "key": "*****", "secret": "*****"}
 < [{"T":"success","msg":"authenticated"}]
-> {"action": "subscribe", "trades": ["AAPL"], "quotes": ["AMD", "CLDR"], "bars": ["*"]}
+> {"action": "subscribe", "trades": ["AAPL"], "quotes": ["AMD", "CLDR"], "bars": ["*"],"dailyBars":["VOO"],"statuses":["*"]}
 < [{"T":"t","i":96921,"S":"AAPL","x":"D","p":126.55,"s":1,"t":"2021-02-22T15:51:44.208Z","c":["@","I"],"z":"C"}]
 < [{"T":"q","S":"AMD","bx":"U","bp":87.66,"bs":1,"ax":"X","ap":87.67,"as":1,"t":"2021-02-22T15:51:45.3355677Z","c":["R"],"z":"C"},{"T":"q","S":"AMD","bx":"U","bp":87.66,"bs":1,"ax":"Q","ap":87.68,"as":4,"t":"2021-02-22T15:51:45.335689322Z","c":["R"],"z":"C"},{"T":"q","S":"AMD","bx":"U","bp":87.66,"bs":1,"ax":"X","ap":87.67,"as":1,"t":"2021-02-22T15:51:45.335806018Z","c":["R"],"z":"C"}]
 {{< /snippet >}}

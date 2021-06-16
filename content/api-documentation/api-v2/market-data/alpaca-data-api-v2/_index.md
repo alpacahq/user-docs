@@ -10,7 +10,7 @@ summary: Please note that Alpaca Data API v2 is now in public beta. Alpaca Data 
 
 Alpaca Data API v2 provides market data through an easy to use HTTP API for historical data and through websocket for real-time data.
 
-We provide easy to use SDKs written in Python, Go and NodeJS. The SDK in C# is currently in development, we will let you know once it's ready for you to use.
+We provide easy to use SDKs written in Python, Go, NodeJS and C#.
 
 {{< note >}} Alpaca Data API v2 is currently in public beta. 
 Please keep in mind that the public beta version may be less stable. {{< /note >}}
@@ -190,6 +190,118 @@ For more information, see the [UQDF Specification](http://www.utpplan.com/DOC/uq
 | X    | Order Influx      |
 | Z    | No Open No Resume     |
 | 4    | On Demand Intra Day Auction     |
+
+
+## Status messages
+
+Status messages can be used to identify security statuses and trading halts real-time via websocket streaming. Each feed uses its own set of indicators.
+
+
+## Security status
+
+### CTS
+
+The table below shows security indicators from the CTA Plan.
+
+For more information, see the [CTS Specification](https://www.ctaplan.com/publicdocs/ctaplan/CTS_Pillar_Output_Specification.pdf).
+
+
+| Code | Value |
+| -------- | -------- |
+| 2    | Trading Halt     |
+| 3    | Resume      |
+| 5    | Price Indication      |
+| 6    | Trading Range Indication     |
+| 7    | Market Imbalance Buy    |
+| 8    | Market Imbalance Sell     |
+| 9    | Market On Close Imbalance Buy    |
+| A    | Market On Close Imbalance Sell     |
+| C    | No Market Imbalance    |
+| D    | No Market On Close Imbalance     |
+| E    | Short Sale Restriction     |
+| F    | Limit Up-Limit Down      |
+
+
+### UTDF
+
+The table below shows security indicators from the UTP Plan.
+
+For more information, see the [UTP Specification](https://www.utpplan.com/DOC/UtpBinaryOutputSpec.pdf#page=43).
+
+| Code | Value |
+| -------- | -------- |
+| H    | Trading Halt     |
+| Q    | Quotation Resumption      |
+| T    | Trading Resumption      |
+| P    | Volatility Trading Pause     |
+
+
+
+## Halt reason
+
+### CTS
+
+The table below shows halt reasons from the CTA Plan.
+
+For more information, see the [CTS Specification](https://www.ctaplan.com/publicdocs/ctaplan/CTS_Pillar_Output_Specification.pdf).
+
+
+| Code | Value |
+| -------- | -------- |
+| D    | News Released (formerly News Dissemination)     |
+| I    | Order Imbalance      |
+| M    | Limit Up-Limit Down (LULD) Trading Pause      |
+| P    | News Pending     |
+| X    | Operational    |
+| Y    | Sub-Penny Trading     |
+| 1    | Market-Wide Circuit Breaker Level 1 – Breached   |
+| 2    | Market-Wide Circuit Breaker Level 2 – Breached     |
+| 3    | Market-Wide Circuit Breaker Level 3 – Breached    |
+
+### UTDF
+
+The table below shows halt reasons from the UTP Plan.
+
+For more information, see the [UTP Specification](https://www.utpplan.com/DOC/UtpBinaryOutputSpec.pdf#page=43).
+
+| Code | Value |
+| -------- | -------- |
+| T1    | Halt News Pending    |
+| T2    | Halt News Dissemination      |
+| T5    | Single Stock Trading Pause In Affect      |
+| T6    | Regulatory Halt Extraordinary Market Activity     |
+| T8    | Halt ETF    |
+| T12    | Trading Halted; For information requested by NASDAQ      |
+| H4    | Halt Non Compliance     |
+| H9    | Halt Filings Not Current     |
+| H10    | Halt SEC Trading Suspension    |
+| H11    | Halt Regulatory Concern      |
+| O1    | Operations Halt, Contact Market Operations      |
+| IPO1    | IPO Issue not yet Trading     |
+| M1    | Corporate Action      |
+| M2    | Quotation Not Available      |
+| LUDP    | Volatility Trading Pause     |
+| LUDS    | Volatility Trading Pause – Straddle Condition      |
+| MWC1    | Market Wide Circuit Breaker Halt – Level 1     |
+| MWC2    | Market Wide Circuit Breaker Halt – Level 2     |
+| MWC3    | Market Wide Circuit Breaker Halt – Level 3      |
+| MWC0    | Market Wide Circuit Breaker Halt – Carry over from previous day      |
+| T3    | News and Resumption Times     |
+| T7    | Single Stock Trading Pause/Quotation-Only Period     |
+| R4    | Qualifications Issues Reviewed/Resolved; Quotations/Trading to Resume     |
+| R9    | Filing Requirements Satisfied/Resolved; Quotations/Trading To Resume      |
+| C3    | Issuer News Not Forthcoming; Quotations/Trading To Resume      |
+| C4    | Qualifications Halt ended; maint. Req. met; Resume     |
+| C9    | Qualifications Halt Concluded; Filings Met; Quotes/Trades To Resume     |
+| C11    | Trade Halt Concluded By Other Regulatory Auth,; Quotes/Trades Resume     |
+| R1    | New Issue Available      |
+| R    | Issue Available      |
+| IPOQ    | IPO security released for quotation     |
+| IPOE    | IPO security – positioning window extension     |
+| MWCQ    | Market Wide Circuit Breaker Resumption     |
+
+
+
 
 Please visit our [Support](https://alpaca.markets/support/) page to learn more about our market data products.
 

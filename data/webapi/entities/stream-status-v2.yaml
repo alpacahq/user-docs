@@ -1,0 +1,36 @@
+spec:
+  - name: T
+    type: string
+    desc: message type, always "s"
+  - name: S
+    type: string
+    desc: symbol
+  - name: sc
+    type: string
+    desc: status code
+  - name: sm
+    type: string
+    desc: status message
+  - name: rc
+    type: string
+    desc: reason code
+  - name: rm
+    type: string
+    desc: reason message
+  - name: t
+    type: string
+    desc: RFC-3339 formatted timestamp
+  - name: z
+    type: string
+    desc: tape
+example: |
+  {
+    "T": "s",
+    "S": "AAPL",
+    "sc": "H",
+    "sm": "Trading Halt",
+    "rc": "T12",
+    "rm": "Trading Halted; For information requested by NASDAQ",
+    "t": "2021-02-22T19:15:00Z",
+    "z": "C"
+  }
