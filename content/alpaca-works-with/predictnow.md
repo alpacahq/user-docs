@@ -35,4 +35,9 @@ One is the round-trip PnL. A round trip would basically be taking a long version
 
 Users will first work in train mode to create a model using training data and once the model is complete and you are satisfied with probability analysis you can go ahead and download the model and upload it into the live mode. 
 
+Below is a demo which walks you through how to link your Alpaca data to PredictNow and how to train and use the live modes. This demo will also go into detail regarding which results are relevant and what specific data sheets indicate.
+
+{{< youtube nP9gef7ErRw >}} 
+
 If you have any questions or trouble setting up, please do not hesitate to reach out to us at **info@predictnow.ai**. Our team also offers professional consulting services and is happy to guide you through setting up a successful model to further improve your trading strategy.  
+
