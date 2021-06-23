@@ -23,9 +23,8 @@ namespace ShortingExample
             var dataClient = Alpaca.Markets.Environments.Paper
                 .GetAlpacaDataClient(new SecretKey(API_KEY, API_SECRET));
 
-            var barSet = await dataClient.GetBarSetAsync(
-                new BarSetRequest(symbol, TimeFrame.Minute) { Limit = 1 });
-            var price = barSet[symbol].Single().Close;
+            var snapshot = await dataClient.GetSnapshotAsync(symbol);
+            var price = snapshot.MinuteBar.Close;
 
             // We could buy a position and add a stop-loss and a take-profit of 5 %
             await tradingClient.PostOrderAsync(
