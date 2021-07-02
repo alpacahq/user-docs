@@ -126,14 +126,14 @@ The Latest quote API provides the latest quote data for a given ticker symbol.
 {{< rest-endpoint resource="latest-quote-v2" method="GET" path="/v2/stocks/{symbol}/quotes/latest" useh3="true" >}}
 
 
-### Example of latest trade
+### Example of latest quote
 
-{{< rest-entity-example name="latest-trade-v2" >}}
+{{< rest-entity-example name="latest-quote-v2" >}}
 
 
 ### Properties
 
-{{< rest-entity-desc name="latest-trade-v2" >}}
+{{< rest-entity-desc name="latest-quote-v2" >}}
 
 
 ## Bars
