@@ -44,3 +44,5 @@ a short period of time until the change is approved.
   The account is active for trading.
 - `REJECTED`  
   The account application has been rejected.
+- `DISABLED`  
+  The account has been disabled.
