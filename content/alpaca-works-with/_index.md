@@ -24,6 +24,8 @@ Alpaca works with many ways to trade! We pride ourselves in enabling many partne
 * MetaTrader 5 ([Partner page](https://www.metatrader5.com/en/terminal/help/startworking/acc_open)): Convenient and Functional Trading Platform featuring technical analysis, fundamental analysis, automated trading, and trading from mobile devices.
 * Algo Bulls ([Partner page](https://help.algobulls.com/broker/alpaca/)): Make use of powerful features like Live Trading, Paper Trading, Backtesting, Strategy Customizations, Python Build, and much more directly from the website or Android App.
 * Trellis ([How it works](https://www.trytrellis.co/)): Build a trading bot without code, connect with social integrations, and compete against other users in both paper and live trading all free of charge.
+* PredictNow.ai ([How it works](https://www.predictnow.ai/)): A no-code machine learning SaaS, helping traders apply machine learning to their investment strategies in order to predict the profitability of their next trade.
+            
 
 
 ## Open Source Integration Libraries
