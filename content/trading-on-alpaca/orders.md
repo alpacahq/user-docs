@@ -462,3 +462,18 @@ For trading purposes, odd lots are typically treated like round lots. However, r
 
 ## Short Sales
 A short sale is the sale of a stock that a seller does not own. In general, a short seller sells borrowed stock in anticipation of a price decline. The short seller later closes out the position by purchasing the stock. By rule, short sales cannot be placed on a downtick in the market price of the stock. This rule also applies when markets close. When a stock closes on a downtick, short sale orders will not be filled. 
+
+## Order Handling Standards at Alpaca Securities LLC
+Market and limit order orders are protected on the primary exchange opening print.  We do not necessarily route retail orders to the exchange, but will route orders to market makers who will route orders on your behalf to the primary market opening auction.  This protection is subject to exchange time cutoff for each exchange’s opening process.  For instance, if you enter a market order between 9:28:01 and 9:29:59 on a Nasdaq security you would not receive the Nasdaq Official Opening Price (NOOP) since Nasdaq has a cutoff of 9:28 for market orders to be sent to the cross. Any market orders received before 9:28 will be filled at the Nasdaq Official Opening Price.
+
+
+Stop orders and trailing stops are elected on the consolidated print.  Your stop order will only elect if there is a trade on the consolidated tape at or lower than your stop price and provided the electing trade is not outside of the NBBO.  
+
+
+Limit Orders are generally subject to limit order display and protection.  Protection implies that you should not see the stock trade better than your limit without you receiving an execution. Limit Order Display is bound by REG NMS Rule 611.  Your orders will be displayed if they are the National Best Bid or Best Offer excluding exceptions outlined REG NMS Rule 611. Some examples are listed below:
+- An odd lot order (under a unit of trade).  Most NMS securities have a unit of trade of 100 shares.    
+- Block Order.  A block order under REG NMS is designated as an order of at least 10,000 shares or at least $200,000 notional.  
+- An “all or none” order
+- The client requests the order to not be displayed.  
+- Not Held orders   
+
