@@ -27,7 +27,7 @@ The Free plan is included in both paper-only and live trading accounts as the de
 | Websocket subscriptions   | 30 symbols    | Unlimited    |
 | Historical data timeframe   | 5+ years | 5+ years     |
 | Historical data delay| 15 minutes | - |
-| Historical API calls    | 200/min     | Unlimited |
+| Historical API calls    | 200/min     | 1000/min |
 
 
 The **Free plan** consists of data from IEX (Investors Exchange LLC).
