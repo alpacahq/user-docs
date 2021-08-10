@@ -115,6 +115,6 @@ And
 
 **Daily HTB stock borrow fee = <span style="font-size:18px">&#931;</span>((each stock’s HTB short $ market value * that stock’s HTB rate) / 360)**
 
-Please note that if you hold short positions as of a Friday settlement date, you will incur stock borrow fees for 3 days (Friday, Saturday, Sunday).
+Please note that if you hold short positions as of a Friday settlement date, you will incur stock borrow fees for 3 days (Friday, Saturday and Sunday).
 
-Stock borrow fees are charged in the nearest round lot (100 shares) regardless of how many shares were actually shorted. This is because stocks are borrowed in round lots. Alpaca passes through this charge to the end client without marking up the fee.
+Stock borrow fees are charged in the nearest round lot (100 shares) regardless of how many shares were actually shorted. This is because stocks are borrowed in round lots. 
