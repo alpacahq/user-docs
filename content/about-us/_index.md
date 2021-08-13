@@ -7,7 +7,7 @@ weight: 10
 
 ## Who We Are
 
-Alpaca is a technology company headquartered in California Silicon Valley that builds an API-first stock brokerage platform (Brokerage services are provided by Alpaca Securities LLC, member FINRA/SIPC). We are a team of diverse background individuals across the globe with deep financial and technology expertise, backed by some of the top investors in the industry globally. We are proud to be supported by the love of enthusiastic community members on [various platforms](https://alpaca.markets/docs/community/).
+Alpaca is a technology company headquartered in California Silicon Valley that builds an API-first stock brokerage platform (Brokerage services are provided by Alpaca Securities LLC, member FINRA/SIPC). We are a team of diverse background individuals across the globe with deep financial and technology expertise, backed by some of the top investors in the industry. We are proud to be supported by the love of enthusiastic community members on [various platforms](https://alpaca.markets/docs/community/).
 
 Alpaca's globally distributed team consists of developers, traders, and brokerage business specialists, who collectively have decades of
 financial services and technology industry experience at organizations such as FINRA, Apple, Wealthfront, Robinhood, EMC, Cloudera, JP Morgan, and Lehman Brothers. Alpaca is co-founded and led by [Yoshi Yokokawa](https://www.linkedin.com/in/yoshiyokokawa/) (CEO) and [Hitoshi Harada](https://www.linkedin.com/in/hitoshi-harada-02b01425/) (CTO/CPO). Our investors include a group of well-capitalized
@@ -16,15 +16,17 @@ such as Joshua S. Levine (former CTO/COO of ETRADE), Nate Rodland (former COO of
 
 ## Who Is Alpaca For?
 
-Alpaca Securities provides brokerage services to technology-minded users with a variety of experiences including general usage of APIs or automation of investing and trading. Our paper trading API is open to everyone, and our live trading API is available for U.S. residents and is an invite-only beta for non-U.S. residents and business entities globally. Please read [Account Plans](https://alpaca.markets/docs/trading-on-alpaca/account-plans/) to learn more about your eligibility.
+Alpaca is built for developers as well as technology-minded individuals and businesses. Our products are used in various ways including automation of investing and trading, building your own version of trading app, and integrating commission-free fractional stock trading services into your businesses. We have been algorithmic traders ourselves and built fintech apps and introducing brokers in the past. Our own experience being on the other side of the table drives us to build products so that we can solve the pain that we had to go through.
+
+For account types and eligibility, please read [Account Plans](https://alpaca.markets/docs/trading-on-alpaca/account-plans/) to learn more.
 
 With an Alpaca brokerage account, users have access to:
 
-* Commission-free trading
+* Commission-free fractional trading
 * An official API that is constantly being improved and updated
 * Easy to understand API documentation
-* Free, real-time Consolidated Market Data
-* Paper trading for testing your strategies
+* Free, real-time market data
+* Paper trading and sandbox environment for testing your strategies and integrations
 * Fully working, example algorithms that can be deployed immediately
 * Multiple support channels
 
@@ -68,10 +70,9 @@ For Alpaca Securities SEC Rule 606 disclosures, please click [here](https://alpa
 At the beginning of 2018 Alpaca Securities LLC (Alpaca Securities) became a member of FINRA and registered
 with the SEC to provide securities brokerage services. In order for Alpaca Securities to obtain such
 membership and registration, we had to go through rigorous paperwork and procedure development. Alpaca
-Securities’ brokerage service and operations are led by John Torola, who is a FINRA veteran with more than
-25+ years of financial services experience. He most recently led the compliance team at one of the biggest
-robo advisory firms, WealthFront. John oversees a brokerage operations team consisting of licensed
-professionals who came from such firms as Waddell & Reed, Charles Schwab, and Morgan Stanley.
+Securities’ brokerage service and operations are led by David Rafteseth, who has decades of experience running brokerage operations at TD Ameritrade and Pension Financial, and supported by John Torola, who is a FINRA veteran and most recently led the compliance team at one of the biggest
+robo advisory firms, Wealthfront. The team oversees a brokerage operations team consisting of licensed
+professionals who came from such firms as Waddell & Reed, TD Ameritrade, Robinhood, Axos Clearing, and Raymond James.
 
 You can check the background of Alpaca on FINRA’s [BrokerCheck](https://brokercheck.finra.org/firm/summary/288202).
 
@@ -88,4 +89,4 @@ specifically to handle financial markets time series data. This led us to provid
 institutions including Bank of Tokyo Mitsubishi, Japan's largest bank. We also managed a deep neural net trading
 algorithm service, AlpacaAlgo, that had more than 25,000 deep neural net trading algorithms simultaneously constantly
 generating trade signals to the users. This required processing a large volume of time series data efficiently.
-Hitoshi and Luke, who lead Alpaca's technology team, both come from Greenplum (Luke is a co-founder/CTO of Greenplum), a parallel distributed database company that is used globally by major financial institutions and their quant desks. With their relevant experience from Greenplum, they lead the effort in building and supporting Alpaca's data intensive system architecture.
+Hitoshi (Co-founder & CTO/CPO), who leads Alpaca's technology team, comes from Greenplum (Hitoshi was a lead architect of Greenplum), a parallel distributed database company that is used globally by major financial institutions and their quant desks. With his relevant experience from Greenplum, he leads the effort in building and supporting Alpaca's data intensive system architecture.
