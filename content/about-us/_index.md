@@ -7,15 +7,12 @@ weight: 10
 
 ## Who We Are
 
-Alpaca is a great technology company headquartered in Silicon Valley that builds commission-free stock trading API (Brokerage services are provided by Alpaca Securities LLC, member FINRA/SIPC). We are a team of diverse background individuals with deep financial and technology expertise, backed by some of the top investors in the industry globally. We are proud to be supported by the love of enthusiastic community members on [various platforms](https://alpaca.markets/community).
+Alpaca is a technology company headquartered in California Silicon Valley that builds an API-first stock brokerage platform (Brokerage services are provided by Alpaca Securities LLC, member FINRA/SIPC). We are a team of diverse background individuals across the globe with deep financial and technology expertise, backed by some of the top investors in the industry globally. We are proud to be supported by the love of enthusiastic community members on [various platforms](https://alpaca.markets/docs/community/).
 
 Alpaca's globally distributed team consists of developers, traders, and brokerage business specialists, who collectively have decades of
-financial services and technology industry experience at organizations such as FINRA, Wealthfront, EMC, Greenplum, Cloudera, IBM, Brevan Howard and Lehman Brothers. Alpaca is led by [Yoshi Yokokawa](https://www.linkedin.com/in/yoshiyokokawa/) (CEO),
-[Hitoshi Harada](https://www.linkedin.com/in/hitoshi-harada-02b01425/) (CTO/CPO), and [John Torola](https://www.linkedin.com/in/johnttorola/) (CCO). Our investors include a group of well-capitalized
-investors including Spark Capital, Portag3, Social Leverage, Y Combinator as well as highly experienced industry angel investors
-such as Joshua S. Levine (former CTO/COO of ETRADE), Eric Di Benedetto (a fintech angel investor with more than 30 IPO and M&A exits),
-and several YC alumni angels. Additionally, members of the Berkeley Angel Network and two of the largest Japanese banks (MUFG and SMBC) are
-investors in Alpaca.
+financial services and technology industry experience at organizations such as FINRA, Apple, Wealthfront, Robinhood, EMC, Cloudera, JP Morgan, and Lehman Brothers. Alpaca is co-founded and led by [Yoshi Yokokawa](https://www.linkedin.com/in/yoshiyokokawa/) (CEO) and [Hitoshi Harada](https://www.linkedin.com/in/hitoshi-harada-02b01425/) (CTO/CPO). Our investors include a group of well-capitalized
+investors including Portage Ventures, Spark Capital, Tribe Capital, Social Leverage, Horizons Ventures, Elderidge, and Y Combinator as well as highly experienced industry angel investors
+such as Joshua S. Levine (former CTO/COO of ETRADE), Nate Rodland (former COO of Robinhood & GP of Elefund), Jacqueline Reses (former Executive Chairman of Square Financial Services), Asiff Hirjii (former President/COO of Coinbase), Aaron Levie (CEO of Box), and founders of leading Fintech companies including Plaid and Wealthsimple.
 
 ## Who Is Alpaca For?
 
