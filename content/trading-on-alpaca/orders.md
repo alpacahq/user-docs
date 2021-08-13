@@ -141,7 +141,7 @@ the features of a stop order with those of a limit order and is used to mitigate
 The stop-limit order will be executed at a specified limit price, or better, after
 a given stop price has been reached. Once the stop price is reached, the
 stop-limit order becomes a limit order to buy or sell at the limit price
-or better.
+or better. In the case of a gap down in the market that causes the election of your order, but not the execution, you order will remain active as a limit order until it is executable or cancelled.
 
 In order to submit a stop limit order, you will need to specify both the
 limit and stop price parameters in the API.
