@@ -13,7 +13,7 @@ with your email address.
 An Alpaca Paper Only Account is for **paper trading only**. It allows you to fully utilize the Alpaca API and
 run your algorithm in our paper trading environment only. You won't be trading real money, but you will be able
 to track your simulated activity and balance in the Alpaca web dashboard. As an Alpaca Paper Only Account
-holder, you are only entitled to receive and make use of IEX market data. By default, cryptocurrency trading is enabled. For more information about our paper
+holder, you are only entitled to receive and make use of IEX market data. Cryptocurrency trading is enabled by default. For more information about our paper
 trading environment, please refer to [Paper Trading Specification]({{< relref "/trading-on-alpaca/paper-trading.md" >}}).
 
 ## Alpaca Brokerage Account (Live-Trading)
@@ -45,7 +45,7 @@ You can [sign up](https://app.alpaca.markets/signup) with your email address and
 
 ## Alpaca Cryptocurrency Account (Live-Trading)
 
-We currently offer cryptocurrency trading to users in California, Massachusetts, Missouri, and Montana. If you are in those states, crypto trading can be enabled while creating your Alpaca Brokerage Account by accepting the Crypto Agreement. If you already have an Alpaca Brokerage Account, you can enable crypto trading by updating the crypto-enabled setting in Account Configuration through the Alpaca web dashboard or by [API](https://alpaca.markets/docs/api-documentation/api-v2/account-configuration/).
+We currently offer cryptocurrency trading to users in California, Massachusetts, Missouri, and Montana. If you are in those states, crypto trading can be enabled while creating your Alpaca Brokerage Account by accepting the Crypto Agreement. If you already have an Alpaca Brokerage Account, you can enable crypto trading by updating the crypto-enabled setting in Account Configuration through the Alpaca web dashboard or the [API](https://alpaca.markets/docs/api-documentation/api-v2/account-configuration/).
 
 ## Paper Only Account vs Brokerage Account Features
 
