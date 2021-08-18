@@ -45,7 +45,7 @@ endpoints:
           - name: symbol
             type: string
             required: true
-            desc: symbol or asset ID to identify the asset to trade
+            desc: symbol, asset ID, or currency pair to identify the asset to trade
           - name: qty
             type: string<int>
             required: true
@@ -172,6 +172,7 @@ endpoints:
             type: string
             desc: |
               A comma-separated list of symbols to filter by (ex. "AAPL,TSLA,MSFT").
+              A currency pair is required for crypto orders (ex. "BTCUSD,BCHUSD,LTCUSD,ETCUSD").
       returns: |
         An array of [Order](#order-entity) object
     POST:
@@ -185,7 +186,7 @@ endpoints:
           - name: symbol
             type: string
             required: true
-            desc: symbol or asset ID to identify the asset to trade
+            desc: symbol, asset ID, or currency pair to identify the asset to trade
           - name: qty
             type: string<number>
             required: true
