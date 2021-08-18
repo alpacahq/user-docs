@@ -9,9 +9,7 @@ aliases:
 
 Paper trading is a real-time simulation environment where you can test
 your code. You can reset and test your algorithm as much as you want using
-free, real-time market data. Paper trading simulates crypto trading as well. Everything on the broker side behaves the same way
-as the live account except the orders aren't routed to the real exchanges.
-Instead, the system simulates the order filling based on the real-time
+free, real-time market data. Paper trading simulates crypto trading as well. Paper trading works the same way as live trading end to end - except the order is not routed a live exchange. Instead, the system simulates the order filling based on the real-time
 quotes.
 
 When you run your algorithm with the live market, there are many
