@@ -371,7 +371,6 @@ In fast moving markets, the execution price may be less favorable than the stop 
 With regard to stock splits, Alpaca reserves the right to cancel or adjust pricing and/or share quantities of trailing stop orders based upon its own discretion. Since Alpaca relies on third parties for market data, corporate actions or incorrect price data may cause a trailing stop to be triggered prematurely.
 
 ## Time in Force
-**Note:** Time in Force is not supported for Crypto Trading
 
 Alpaca supports the following Time-In-Force designations:
 
@@ -399,6 +398,8 @@ Alpaca supports the following Time-In-Force designations:
 - `fok`  
   A Fill or Kill (FOK) order is only executed if the entire order quantity can be filled, otherwise the order is canceled.
   Only available with API v2.
+  
+  **Note:** For Crypto Trading, Alpaca supports the following Time-In-Force designations: `day`, `gtc`, `ioc` and `fok`. OPG and CLS are not supported
 
 ## Order Lifecycle
 An order executed through Alpaca can experience several status changes
