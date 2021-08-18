@@ -36,6 +36,8 @@ be $7,000. Even if this order is unfilled, as long as it is open and has not bee
 your available buying power. If you then submitted another order with an order value of $8,000, it would be rejected.
 
 ## Orders Submitted Outside of Eligible Trading Hours
+**Note:** Crypto Trading is 24/7. Eligible Trading Hours do not apply to Crypto
+
 Orders not eligible for extended hours submitted between 4:00pm - 7:00pm ET
 will be **rejected**.
 
@@ -369,6 +371,7 @@ In fast moving markets, the execution price may be less favorable than the stop 
 With regard to stock splits, Alpaca reserves the right to cancel or adjust pricing and/or share quantities of trailing stop orders based upon its own discretion. Since Alpaca relies on third parties for market data, corporate actions or incorrect price data may cause a trailing stop to be triggered prematurely.
 
 ## Time in Force
+**Note:** Time in Force is not supported for Crypto Trading
 
 Alpaca supports the following Time-In-Force designations:
 
