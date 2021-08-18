@@ -7,7 +7,7 @@ spec:
     desc: Symbol name of the asset
   - name: exchange
     type: string
-    desc: Exchange name of the asset
+    desc: Exchange name of the asset (ErisX for crypto)
   - name: asset_class
     type: string
     desc: Asset class name
@@ -50,7 +50,7 @@ spec:
 example: |
   {
     "asset_id": "904837e3-3b76-47ec-b432-046db621571b",
-    "symbol": "AAPL",
+    "symbol": "AAPL ",
     "exchange": "NASDAQ",
     "asset_class": "us_equity",
     "avg_entry_price": "100.0",
