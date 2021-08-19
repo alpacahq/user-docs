@@ -10,7 +10,7 @@ We have enabled several types of protections to enhance your trading experience.
 * [Pattern Day Trader (PDT) Protection]({{<relref "#pattern-day-trader-pdt-protection-at-alpaca">}})
 * [Day Trade Margin Call (DTMC) Protection]({{<relref "#day-trade-margin-call-dtmc-protection-at-alpaca">}})
 
-These are not applied to cryptocurrency trading as it is not subject to the PDT rule and crypto cannot be purchased using margin.
+These do not apply to cryptocurrency trading as it is not subject to the PDT rule and is non-marginable.
 
 ## Pattern Day Trader (PDT) Protection at Alpaca
 In order to prevent Alpaca Brokerage Account customers from unintentionally being
@@ -110,11 +110,11 @@ This option is the more conservative of the two DTMC protections that our users 
 The second DTMC protection option is protection **on exit** of a position. This means that Alpaca will block
 the exit of positions that would cause a Day Trading Margin Call. This may cause users to be unable to liquidate a position until the next day.
 
+Neither of the DTMC protection options check crypto orders since it is non-marginable.
+
 One of the two protections will be enabled for all users (you cannot have both protections disabled). If you would like to switch your protection option, please contact [our support](https://support.alpaca.markets/hc/en-us/requests/new).
 
 We are working towards features to allow users to change their DTMC protection setting on their own without support help.
-
-Crypto orders are not evaluated by DTMC protection logic and are checked against non_marginable_buying_power since cryptocurrency cannot be purchased using margin.
 
 ### Equity/Order Ratio Validation Check  
 In order to help Alpaca Brokerage Account customers from placing orders larger than the calculated buying power, Alpaca has instituted a control on the account independent of the buying power for the account.  Alpaca will restrict the account to closing transactions when an account has a position that is 600% larger than the equity in the account.  The account will remain restricted for closing transactions until a member of Alpaca’s trading team reviews the account.  The trading team will either clear the alert by allowing opening transactions or will notify the client of the restriction and take corrective actions as necessary. 
