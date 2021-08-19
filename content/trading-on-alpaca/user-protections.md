@@ -110,7 +110,7 @@ This option is the more conservative of the two DTMC protections that our users 
 The second DTMC protection option is protection **on exit** of a position. This means that Alpaca will block
 the exit of positions that would cause a Day Trading Margin Call. This may cause users to be unable to liquidate a position until the next day.
 
-Neither of the DTMC protection options check crypto orders since it is non-marginable.
+Neither of the DTMC protection options evaluate crypto orders since crypto cannot be purchased using margin.
 
 One of the two protections will be enabled for all users (you cannot have both protections disabled). If you would like to switch your protection option, please contact [our support](https://support.alpaca.markets/hc/en-us/requests/new).
 
