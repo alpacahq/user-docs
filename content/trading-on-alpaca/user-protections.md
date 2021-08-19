@@ -116,6 +116,7 @@ One of the two protections will be enabled for all users (you cannot have both p
 
 We are working towards features to allow users to change their DTMC protection setting on their own without support help.
 
+
 ### Equity/Order Ratio Validation Check  
 In order to help Alpaca Brokerage Account customers from placing orders larger than the calculated buying power, Alpaca has instituted a control on the account independent of the buying power for the account.  Alpaca will restrict the account to closing transactions when an account has a position that is 600% larger than the equity in the account.  The account will remain restricted for closing transactions until a member of Alpaca’s trading team reviews the account.  The trading team will either clear the alert by allowing opening transactions or will notify the client of the restriction and take corrective actions as necessary. 
 
