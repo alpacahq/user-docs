@@ -45,7 +45,7 @@ Learn more about [orders]({{< relref "/trading-on-alpaca/orders.md" >}}) and [fr
 Currently, crypto is non-marginable and orders are evaluated against `non_marginable_buying_power`. Additionally, crypto is not shortable.
 
 ## Market Data
-Crypto market data is provided through both the Free and Unlimited data plans
+Crypto market data is provided through both the Free and Unlimited data plans.
 
 ## Transferring Crypto
 At this time, we don't support transfers of crypto in or out of your account.
