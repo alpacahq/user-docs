@@ -398,8 +398,8 @@ Alpaca supports the following Time-In-Force designations:
 - `fok`  
   A Fill or Kill (FOK) order is only executed if the entire order quantity can be filled, otherwise the order is canceled.
   Only available with API v2.
-  
-  
+   <br />
+   <br />
   **Note:** For Crypto Trading, Alpaca supports the following Time-In-Force designations: `day`, `gtc`, `ioc` and `fok`. OPG and CLS are not supported
 
 ## Order Lifecycle
