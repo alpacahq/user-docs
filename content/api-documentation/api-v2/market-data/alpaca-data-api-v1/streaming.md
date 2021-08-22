@@ -10,7 +10,7 @@ upon certain market movement.
 
 ### Specifications
 
-- Each account can have up to one concurrent websocket connection.
+- Each account can have one websocket connection open at a time.
 - Trades, quotes and minute bars are supported.
 - Subscription is limited to 30 channels at a time for trades and quotes (`T.` and `Q.`). This limit is temporary and we may support more channels in the future.
 - There is no limit for the number of channels with minute bars (`AM.`).
