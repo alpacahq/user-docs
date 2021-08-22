@@ -7,7 +7,7 @@ weight: 10
 
 ## Who We Are
 
-Alpaca is a technology company headquartered in California Silicon Valley that builds an API-first stock brokerage platform (Brokerage services are provided by Alpaca Securities LLC, member FINRA/SIPC). We are a team of diverse background individuals across the globe with deep financial and technology expertise, backed by some of the top investors in the industry. We are proud to be supported by the love of enthusiastic community members on [various platforms](https://alpaca.markets/docs/community/).
+Alpaca is a technology company headquartered in California Silicon Valley that builds an API-first stock brokerage platform (stock trading is offered through an account with Alpaca Securities LLC, a member of FINRA/SIPC, and crypto trading is offered through an account with Alpaca Crypto LLC, not a member of FINRA/SIPC). We are a team of diverse background individuals across the globe with deep financial and technology expertise, backed by some of the top investors in the industry. We are proud to be supported by the love of enthusiastic community members on [various platforms](https://alpaca.markets/docs/community/).
 
 Alpaca's globally distributed team consists of developers, traders, and brokerage business specialists, who collectively have decades of
 financial services and technology industry experience at organizations such as FINRA, Apple, Wealthfront, Robinhood, EMC, Cloudera, JP Morgan, and Lehman Brothers. Alpaca is co-founded and led by [Yoshi Yokokawa](https://www.linkedin.com/in/yoshiyokokawa/) (CEO) and [Hitoshi Harada](https://www.linkedin.com/in/hitoshi-harada-02b01425/) (CTO/CPO). Our investors include a group of well-capitalized
@@ -79,14 +79,38 @@ You can check the background of Alpaca on FINRA’s [BrokerCheck](https://broker
 ## Safety of Your Money
 **SIPC Membership**
 
-Member of SIPC, which protects securities customers of its members up to $500,000 (including $250,000 for
+Alpaca Securities LLC is a member of SIPC, which protects securities customers of its members up to $500,000 (including $250,000 for
 claims for cash). Explanatory brochure available upon request or at [www.sipc.org](https://www.sipc.org).
 
+Cryptocurrency trading is offered through an account with
+Alpaca Crypto LLC. Alpaca Crypto LLC is not a member of FINRA or SIPC.
+Cryptocurrencies are not stocks and your cryptocurrency investments are not
+protected by either FDIC or SIPC.
+
 ## Systems and Technology
-We initially started Alpaca in 2015 as a pure technology company building a database solution for unstructured data,
-initially visual data and ultimately time-series data. One of our achievements, which continues to be improved on an ongoing basis, is [MarketStore](https://github.com/alpacahq/marketstore), a dedicated open source database written in Go designed
-specifically to handle financial markets time series data. This led us to provide our technology to financial
-institutions including Bank of Tokyo Mitsubishi, Japan's largest bank. We also managed a deep neural net trading
-algorithm service, AlpacaAlgo, that had more than 25,000 deep neural net trading algorithms simultaneously constantly
-generating trade signals to the users. This required processing a large volume of time series data efficiently.
-Hitoshi (Co-founder & CTO/CPO), who leads Alpaca's technology team, comes from Greenplum (Hitoshi was a lead architect of Greenplum), a parallel distributed database company that is used globally by major financial institutions and their quant desks. With his relevant experience from Greenplum, he leads the effort in building and supporting Alpaca's data intensive system architecture.
+We initially started Alpaca in 2015 as a pure technology company building a
+database solution for unstructured data, initially visual data and ultimately
+time-series data.
+
+We believe there are and will be huge innovation opportunities in the financial
+industry by (re)building technology to make the business scalable and flexible.
+In order to achieve our vision of providing faster and easier access of
+financial markets to everyone on the planet, our platform systems, such as
+accounting system, order management system and FIX clients, are written in Go
+from scratch and designed for massive scale in the cloud and on-premise. Hitoshi
+(Co-founder & CTO/CPO), who leads Alpaca's technology team, comes from Greenplum
+(he was a lead architect of Greenplum), a parallel distributed database system
+used globally by major financial institutions and their quant desks, where
+thousands of database instances are running.
+
+At the same time, we thrive with our strong developer communiy and are grateful
+to live in the opensource age. [Our GitHub](https://github.com/alpacahq) hosts
+variety of opensource SDKs and libraries as well as there are growing number of
+community-built ones outside of our GitHub.   Hitoshi is also a big believer and
+contributor in the opensource community and built window functions and common
+table expressions in PostgreSQL, as well as initiated PostgreSQL-related
+projects such as plv8js.
+
+Alpaca is a truly technology company and is committed to innovating the
+financial industry using latest technology with community to help everyone on
+the globe.

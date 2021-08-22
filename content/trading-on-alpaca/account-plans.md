@@ -47,6 +47,8 @@ You can [sign up](https://app.alpaca.markets/signup) with your email address and
 
 Crypto trading is available through an invite-only beta to users in California, Massachusetts, Missouri, and Montana as well as international users in Hungary. BTC, BCH, ETH, and LTC are currently supported. We're working to increase our list of tradable cryptocurrencies and broaden our eligibility criteria to more states and countries so stay tuned!
 
+For more information about crypto trading, please read [Crypto Trading]({{< relref "/trading-on-alpaca/crypto-trading.md" >}}).
+
 ## Paper Only Account vs Brokerage Account Features
 
 |<span style="font-size:14px">Feature</span>|<span style="font-size:14px">Alpaca Paper Only Account</span>|<span style="font-size:14px">Alpaca Brokerage Account</span>|

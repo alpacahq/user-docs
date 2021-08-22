@@ -10,7 +10,7 @@ We have enabled several types of protections to enhance your trading experience.
 * [Pattern Day Trader (PDT) Protection]({{<relref "#pattern-day-trader-pdt-protection-at-alpaca">}})
 * [Day Trade Margin Call (DTMC) Protection]({{<relref "#day-trade-margin-call-dtmc-protection-at-alpaca">}})
 
-These do not apply to cryptocurrency trading as it is not subject to the PDT rule and is non-marginable.
+Please note that these do not apply to crypto trading as cryptocurrencies are not marginable. Pattern Day Trading rule does not apply to crypto trading either.
 
 ## Pattern Day Trader (PDT) Protection at Alpaca
 In order to prevent Alpaca Brokerage Account customers from unintentionally being
