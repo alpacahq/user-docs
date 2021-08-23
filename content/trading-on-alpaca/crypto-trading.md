@@ -47,7 +47,15 @@ When submitting crypto orders through the [orders API]({{< relref
 `time_in_force` values are `day`, `gtc`, `ioc`, and `fok`. We accept fractional
 orders as well with either `notional` or `qty` provided.
 
-All cryptocurrency assets are fractionable and up to 8 decimal points are supported for `qty`.
+All cryptocurrency assets are fractionable but the supported decimal points vary depending on the cryptocurrency.
+
+| Symbol | Minimum Order Size  | Price Increment  |
+|--------|---|---|
+| BTCUSD | 0.001  | $0.10  |
+| BCHUSD | 0.01  | $0.01 |
+| ETHUSD | 0.01  | $0.01  |
+| LTCUSD | 0.1  | $0.01 |
+
 
 Learn more about [orders]({{< relref "/trading-on-alpaca/orders.md" >}}) and [fractional trading]({{< relref "/trading-on-alpaca/fractional-trading.md" >}}). 
 
