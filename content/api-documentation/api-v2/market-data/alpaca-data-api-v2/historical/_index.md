@@ -4,6 +4,8 @@ weight: 100
 summary: Alpaca Data API v2 provides three types of historical data. Trades, quotes and bars. To check the multiple endpoints click on the card.
 ---
 
+**Adjusted bars are now in indefinite beta! With split-adjusted historical price data, we remove large gaps caused by splits. This offers a more accurate representation of stock growth from the past until the present.Please note that this addition does not change current behavior, every call will default to raw adjustment.**
+
 # Historical Data
 
 Alpaca Data API v2 provides three types of historical data: [trades]({{<
