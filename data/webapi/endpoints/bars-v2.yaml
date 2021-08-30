@@ -30,7 +30,6 @@ endpoints:
             desc: |
               Timeframe for the aggregation. Values are customizeable, frequently used examples: `1Min`, `15Min`, `1Hour`, `1Day`.
           - name: adjustment
-            required: true
             type: string
             desc: |
               Specifies the corporate action adjustment for the stocks. Enum: 'raw', 'split', 'dividend' or 'all'. Default value is 'raw'.
