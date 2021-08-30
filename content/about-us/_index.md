@@ -34,7 +34,7 @@ Please see the footer of the [Alpaca homepage](https://alpaca.markets/) for disc
 
 ## How Alpaca Works
 
-![Alpaca Trade Flow](https://s3.amazonaws.com/docs.alpaca.markets/images/trade-flow5.png)
+![Alpaca Trade Flow](https://s3.amazonaws.com/docs.alpaca.markets/images/how-alpaca-works-v2-1.png)
 
 ## Why Commission-Free?
 
