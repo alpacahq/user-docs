@@ -36,6 +36,8 @@ be $7,000. Even if this order is unfilled, as long as it is open and has not bee
 your available buying power. If you then submitted another order with an order value of $8,000, it would be rejected.
 
 ## Orders Submitted Outside of Eligible Trading Hours
+**Note:** Crypto Trading is 24/7. Eligible Trading Hours do not apply to Crypto
+
 Orders not eligible for extended hours submitted between 4:00pm - 7:00pm ET
 will be **rejected**.
 
@@ -370,6 +372,8 @@ With regard to stock splits, Alpaca reserves the right to cancel or adjust prici
 
 ## Time in Force
 
+  **Note:** For Crypto Trading, Alpaca supports the following Time-In-Force designations: `day`, `gtc`, `ioc` and `fok`. OPG and CLS are not supported. 
+  
 Alpaca supports the following Time-In-Force designations:
 
 - `day`  
@@ -396,6 +400,7 @@ Alpaca supports the following Time-In-Force designations:
 - `fok`  
   A Fill or Kill (FOK) order is only executed if the entire order quantity can be filled, otherwise the order is canceled.
   Only available with API v2.
+
 
 ## Order Lifecycle
 An order executed through Alpaca can experience several status changes

@@ -11,7 +11,9 @@ trades and transfers (`account_blocked` flag) if Alpaca identifies the account t
 engaging in any suspicious activity. Also, in accordance with FINRA's pattern day
 trading rule, an account may be flagged for pattern day trading
 (`pattern_day_trader flag`), which would inhibit an account from placing any
-further day-trades.
+further day-trades. Please note that cryptocurrencies are not eligible assets to be
+used as collateral for margin accounts and will require the asset be traded using 
+cash only.
 
 {{< rest-endpoint resource="account" method="GET" path="/v2/account" >}}
 

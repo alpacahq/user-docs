@@ -410,3 +410,9 @@ h1.homepage-title {
     padding: 20px;
     border: 2px solid #fc9999;
 }
+
+.admonition.note a,
+.admonition.note a:visited
+ {
+    color: #FFD700;
+}

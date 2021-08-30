@@ -43,6 +43,11 @@ Today’s beta program for the business trading account accepts select entities 
 
 You can [sign up](https://app.alpaca.markets/signup) with your email address and follow steps on the dashboard. When our system considers that your business entity is eligible for this beta program, you should be able to go on to upload necessary information through the process to submit the application, otherwise you will be placed on the waitlist. Please note that we are updating the beta eligibility criteria and business trading account opening flow with ongoing basis.
 
+## Alpaca Cryptocurrency Account (Live-Trading)
+
+Crypto trading is available through an invite-only beta to users in California, Massachusetts, Missouri, and Montana as well as international users in Hungary. BTC, BCH, ETH, and LTC are currently supported. We're working to increase our list of tradable cryptocurrencies and broaden our eligibility criteria to more states and countries so stay tuned!
+
+For more information about crypto trading, please read [Crypto Trading]({{< relref "/trading-on-alpaca/crypto-trading.md" >}}).
 
 ## Paper Only Account vs Brokerage Account Features
 
@@ -60,4 +65,4 @@ You can [sign up](https://app.alpaca.markets/signup) with your email address and
 
 ## Markets Supported
 
-Currently, Alpaca only supports trading of listed U.S. stocks.
+Currently, Alpaca only supports trading of listed U.S. stocks and select cryptocurrencies.

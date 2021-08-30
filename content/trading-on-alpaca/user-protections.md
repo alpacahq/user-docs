@@ -10,6 +10,8 @@ We have enabled several types of protections to enhance your trading experience.
 * [Pattern Day Trader (PDT) Protection]({{<relref "#pattern-day-trader-pdt-protection-at-alpaca">}})
 * [Day Trade Margin Call (DTMC) Protection]({{<relref "#day-trade-margin-call-dtmc-protection-at-alpaca">}})
 
+Please note that these do not apply to crypto trading as cryptocurrencies are not marginable. Pattern Day Trading rule does not apply to crypto trading either.
+
 ## Pattern Day Trader (PDT) Protection at Alpaca
 In order to prevent Alpaca Brokerage Account customers from unintentionally being
 designated as a Pattern Day Trader (PDT), the Alpaca Trading platform checks the PDT
@@ -26,6 +28,8 @@ covering the short on the same day is also considered a day trade.
 An account is designated as a Pattern Day Trader if it makes four (4) day
 trades within five (5) business days. Day trades less than this criteria
 will not flag the account for PDT.
+
+Cryptocurrency trading is not subject to the PDT rule. As a result, crypto orders are not evaluated by PDT protection logic and round-trip crypto trades on the same day do not contribute to the day trade count.
 
 ### Alpaca’s Order Rejection
 Alpaca Trading platform monitors the number of day trades for the account
@@ -105,6 +109,8 @@ This option is the more conservative of the two DTMC protections that our users 
 
 The second DTMC protection option is protection **on exit** of a position. This means that Alpaca will block
 the exit of positions that would cause a Day Trading Margin Call. This may cause users to be unable to liquidate a position until the next day.
+
+Neither of the DTMC protection options evaluate crypto orders since crypto cannot be purchased using margin.
 
 One of the two protections will be enabled for all users (you cannot have both protections disabled). If you would like to switch your protection option, please contact [our support](https://support.alpaca.markets/hc/en-us/requests/new).
 

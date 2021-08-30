@@ -6,7 +6,7 @@ aliases:
 ---
 
 **In order to trade on margin or sell short, you must have $2,000 or more account equity.
-Accounts with less than $2,000 will not have access to these features and will be restricted to 1x buying power.**
+Accounts with less than $2,000 will not have access to these features and will be restricted to 1x buying power. This do not apply to Crypto Trading. Margin Trading for Crypto is not applicable. In addition, PDT checks do not count towards crypto orders or fills**
 
 ## How Margin Works
 
