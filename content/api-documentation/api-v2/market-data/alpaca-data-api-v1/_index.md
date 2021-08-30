@@ -7,7 +7,7 @@ summary: Alpaca Data API v1 provides the market data available to the client use
 # Market Data
 
 
-**The Data API v1 will be deprecated on August 26th, 2021, so please make sure to update any existing systems to use the new endpoint before that date.**
+**The Data API v1 will be deprecated on September 26th, 2021, so please make sure to update any existing systems to use the new endpoint before that date.**
 
 ## Overview
 
