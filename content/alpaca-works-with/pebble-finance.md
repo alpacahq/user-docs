@@ -4,8 +4,7 @@ weight: 30
 ---
 
 ## What is Pebble?
-[Pebble](https://pebble.finance) is an direct indexing app that integrates with Alpaca that allows you to customize and implement an ETF right in your Alpaca account.
-With [Pebble](https://pebble.finance), you can have a say in what goes into your index and never pay ETF fees again.
+[Pebble](https://pebble.finance) is an direct indexing app that integrates with Alpaca. [Pebble](https://pebble.finance) allows you to customize an ETF and implement it right in your Alpaca account so you can have a say in what goes into your investing portfolio and never pay ETF fees again.
 
 ## How to Use Pebble with Alpaca?
 [Pebble](https://pebble.finance) integrates with Alpaca through Alpaca's standard OAuth integration.
@@ -87,7 +86,13 @@ Select the portfolio you'd like to launch and the account to launch it to. Launc
 {{< safe-html >}}
 <br/>
 <img src="./launch-portfolio.png" height="450px" alt="Screen to choose portfolio and account to deploy">
-<img src="./portfolio-summary.png" height="450px" alt="Screen showing total account value over time and current holdings">
+<img src="./launch-success.png" height="450px" alt="Screen showing a rocker after launching a portfolio">
 {{< /safe-html >}}
 
 [Pebble](https://pebble.finance/) will submit the orders for creating your index using Alpaca's fractional share capabilities as soon as possible over the next 24 to 48 hours. Meanwhile, you can view open your orders and positions in [the Pebble app](https://pebble.finance/) or in your Alpaca dashboard.
+
+{{< safe-html >}}
+<br/>
+<img src="./portfolio-summary-1.png" height="450px" alt="Screen showing total acount value over time and current holds">
+<img src="./portfolio-summary-2.png" height="450px" alt="Screen showing cash value, equity value and current holdings">
+{{< /safe-html >}}
