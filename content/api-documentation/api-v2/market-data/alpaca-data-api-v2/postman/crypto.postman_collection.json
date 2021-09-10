@@ -1,0 +1,365 @@
+{
+	"info": {
+		"_postman_id": "1c789734-89c6-41ca-957c-c18ce6bbbfae",
+		"name": "Data v2 crypto API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Trades",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Apca-Api-Key-Id",
+						"value": "{{APCA_API_KEY_ID}}",
+						"type": "text"
+					},
+					{
+						"key": "Apca-Api-Secret-Key",
+						"value": "{{APCA_API_SECRET_KEY}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{HOST}}/v2/crypto/:symbol/trades?start=2021-04-01T0:00:00Z&end=2021-09-26T11:00:00Z",
+					"protocol": "https",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"v2",
+						"crypto",
+						":symbol",
+						"trades"
+					],
+					"query": [
+						{
+							"key": "exchanges",
+							"value": "ERSX,GNSS,CBSE",
+							"description": "One of the following exchanges: ERSX, GNSS or CBSE, default: All",
+							"disabled": true
+						},
+						{
+							"key": "start",
+							"value": "2021-04-01T0:00:00Z",
+							"description": "Filter data equal to or after this time in RFC-3339 format. Fractions of a second are not accepted."
+						},
+						{
+							"key": "end",
+							"value": "2021-09-26T11:00:00Z",
+							"description": "Filter data equal to or before this time in RFC-3339 format. Fractions of a second are not accepted."
+						},
+						{
+							"key": "limit",
+							"value": "1000",
+							"description": "Number of data points to return. Must be in range 1-10000, defaults to 1000.",
+							"disabled": true
+						},
+						{
+							"key": "page_token",
+							"value": "",
+							"description": "Pagination token to continue from.",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "symbol",
+							"value": "BTCUSD",
+							"description": "The symbol to query for"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quotes",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Apca-Api-Key-Id",
+						"value": "{{APCA_API_KEY_ID}}",
+						"type": "text"
+					},
+					{
+						"key": "Apca-Api-Secret-Key",
+						"value": "{{APCA_API_SECRET_KEY}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{HOST}}/v2/crypto/:symbol/trades?start=2020-04-01T0:00:00Z&end=2021-08-26T11:00:00Z",
+					"protocol": "https",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"v2",
+						"crypto",
+						":symbol",
+						"trades"
+					],
+					"query": [
+						{
+							"key": "exchanges",
+							"value": "ERSX",
+							"description": "One of the following exchanges: ERSX, GNSS or CBSE, default: All",
+							"disabled": true
+						},
+						{
+							"key": "start",
+							"value": "2020-04-01T0:00:00Z",
+							"description": "Filter data equal to or after this time in RFC-3339 format. Fractions of a second are not accepted."
+						},
+						{
+							"key": "end",
+							"value": "2021-08-26T11:00:00Z",
+							"description": "Filter data equal to or before this time in RFC-3339 format. Fractions of a second are not accepted."
+						},
+						{
+							"key": "limit",
+							"value": "1000",
+							"description": "Number of data points to return. Must be in range 1-10000, defaults to 1000.",
+							"disabled": true
+						},
+						{
+							"key": "page_token",
+							"value": "",
+							"description": "Pagination token to continue from.",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "symbol",
+							"value": "AAPL",
+							"description": "The symbol to query for"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bars",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Apca-Api-Key-Id",
+						"value": "{{APCA_API_KEY_ID}}",
+						"type": "text"
+					},
+					{
+						"key": "Apca-Api-Secret-Key",
+						"value": "{{APCA_API_SECRET_KEY}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{HOST}}/v2/crypto/:symbol/trades?start=2020-04-01T0:00:00Z&end=2021-08-26T11:00:00Z",
+					"protocol": "https",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"v2",
+						"crypto",
+						":symbol",
+						"trades"
+					],
+					"query": [
+						{
+							"key": "exchanges",
+							"value": "ERSX",
+							"description": "One of the following exchanges: ERSX, GNSS or CBSE, default: All",
+							"disabled": true
+						},
+						{
+							"key": "start",
+							"value": "2020-04-01T0:00:00Z",
+							"description": "Filter data equal to or after this time in RFC-3339 format. Fractions of a second are not accepted."
+						},
+						{
+							"key": "end",
+							"value": "2021-08-26T11:00:00Z",
+							"description": "Filter data equal to or before this time in RFC-3339 format. Fractions of a second are not accepted."
+						},
+						{
+							"key": "limit",
+							"value": "1000",
+							"description": "Number of data points to return. Must be in range 1-10000, defaults to 1000.",
+							"disabled": true
+						},
+						{
+							"key": "page_token",
+							"value": "",
+							"description": "Pagination token to continue from.",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "symbol",
+							"value": "AAPL",
+							"description": "The symbol to query for"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Latest Trade",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Apca-Api-Key-Id",
+						"value": "{{APCA_API_KEY_ID}}",
+						"type": "text"
+					},
+					{
+						"key": "Apca-Api-Secret-Key",
+						"value": "{{APCA_API_SECRET_KEY}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{HOST}}/v2/crypto/:symbol/quotes/latest?exchange=ERSX",
+					"protocol": "https",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"v2",
+						"crypto",
+						":symbol",
+						"quotes",
+						"latest"
+					],
+					"query": [
+						{
+							"key": "exchange",
+							"value": "ERSX",
+							"description": "One of the following exchanges: ERSX, GNSS or CBSE"
+						}
+					],
+					"variable": [
+						{
+							"key": "symbol",
+							"value": "BTCUSD",
+							"description": "The symbol to query for"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Latest Quote",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Apca-Api-Key-Id",
+						"value": "{{APCA_API_KEY_ID}}",
+						"type": "text"
+					},
+					{
+						"key": "Apca-Api-Secret-Key",
+						"value": "{{APCA_API_SECRET_KEY}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{HOST}}/v2/crypto/:symbol/quotes/latest?exchange=ERSX",
+					"protocol": "https",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"v2",
+						"crypto",
+						":symbol",
+						"quotes",
+						"latest"
+					],
+					"query": [
+						{
+							"key": "exchange",
+							"value": "ERSX",
+							"description": "One of the following exchanges: ERSX, GNSS or CBSE"
+						}
+					],
+					"variable": [
+						{
+							"key": "symbol",
+							"value": "BTCUSD"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

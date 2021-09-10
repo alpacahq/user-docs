@@ -181,8 +181,8 @@ We provide Postman collections to help our developers to easily access and test 
 
 ### Available collections
  
-* [Data v2 stocks API](./postman/data_v2_stocks_api.postman_collection.json)
-* [Data v2 crypto API](./postman/data_v2_crypto_api.postman_collection.json)
+* [stocks API](./postman/stocks.postman_collection.json)
+* [crypto API](./postman/crypto.postman_collection.json)
 
 ### Usage
 

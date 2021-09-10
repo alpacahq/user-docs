@@ -703,13 +703,14 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{HOST}}/v2/meta/conditions/:tickType?tape=A",
+					"raw": "https://{{HOST}}/v2/stocks/meta/conditions/:tickType?tape=A",
 					"protocol": "https",
 					"host": [
 						"{{HOST}}"
 					],
 					"path": [
 						"v2",
+						"stocks",
 						"meta",
 						"conditions",
 						":tickType"
@@ -749,13 +750,14 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{HOST}}/v2/meta/exchanges",
+					"raw": "https://{{HOST}}/v2/stocks/meta/exchanges",
 					"protocol": "https",
 					"host": [
 						"{{HOST}}"
 					],
 					"path": [
 						"v2",
+						"stocks",
 						"meta",
 						"exchanges"
 					]
