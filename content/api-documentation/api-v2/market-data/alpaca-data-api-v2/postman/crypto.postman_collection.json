@@ -365,6 +365,52 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Latest XBBO",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Apca-Api-Key-Id",
+						"value": "{{APCA_API_KEY_ID}}",
+						"type": "text"
+					},
+					{
+						"key": "Apca-Api-Secret-Key",
+						"value": "{{APCA_API_SECRET_KEY}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{HOST}}/v1beta1/crypto/:symbol/xbbo/latest?exchange=ERSX",
+					"protocol": "https",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"v1beta1",
+						"crypto",
+						":symbol",
+						"xbbo",
+						"latest"
+					],
+					"query": [
+						{
+							"key": "exchange",
+							"value": "ERSX",
+							"description": "One of the following exchanges: ERSX, GNSS or CBSE"
+						}
+					],
+					"variable": [
+						{
+							"key": "symbol",
+							"value": "BTCUSD"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
