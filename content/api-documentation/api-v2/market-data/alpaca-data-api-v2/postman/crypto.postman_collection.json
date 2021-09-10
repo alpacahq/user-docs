@@ -36,7 +36,7 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{HOST}}/v2/crypto/:symbol/trades?start=2021-04-01T0:00:00Z&end=2021-09-26T11:00:00Z",
+					"raw": "https://{{HOST}}/v2/crypto/:symbol/trades?start=2021-04-01T0:00:00Z&end=2021-09-10T11:00:00Z",
 					"protocol": "https",
 					"host": [
 						"{{HOST}}"
@@ -61,7 +61,7 @@
 						},
 						{
 							"key": "end",
-							"value": "2021-09-26T11:00:00Z",
+							"value": "2021-09-10T11:00:00Z",
 							"description": "Filter data equal to or before this time in RFC-3339 format. Fractions of a second are not accepted."
 						},
 						{
@@ -119,7 +119,7 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{HOST}}/v2/crypto/:symbol/trades?start=2020-04-01T0:00:00Z&end=2021-08-26T11:00:00Z",
+					"raw": "https://{{HOST}}/v2/crypto/:symbol/quotes?start=2021-04-01T0:00:00Z&end=2021-09-10T11:00:00Z",
 					"protocol": "https",
 					"host": [
 						"{{HOST}}"
@@ -128,23 +128,23 @@
 						"v2",
 						"crypto",
 						":symbol",
-						"trades"
+						"quotes"
 					],
 					"query": [
 						{
 							"key": "exchanges",
-							"value": "ERSX",
+							"value": "ERSX,GNSS,CBSE",
 							"description": "One of the following exchanges: ERSX, GNSS or CBSE, default: All",
 							"disabled": true
 						},
 						{
 							"key": "start",
-							"value": "2020-04-01T0:00:00Z",
+							"value": "2021-04-01T0:00:00Z",
 							"description": "Filter data equal to or after this time in RFC-3339 format. Fractions of a second are not accepted."
 						},
 						{
 							"key": "end",
-							"value": "2021-08-26T11:00:00Z",
+							"value": "2021-09-10T11:00:00Z",
 							"description": "Filter data equal to or before this time in RFC-3339 format. Fractions of a second are not accepted."
 						},
 						{
@@ -163,7 +163,7 @@
 					"variable": [
 						{
 							"key": "symbol",
-							"value": "AAPL",
+							"value": "BTCUSD",
 							"description": "The symbol to query for"
 						}
 					]
@@ -202,7 +202,7 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{HOST}}/v2/crypto/:symbol/trades?start=2020-04-01T0:00:00Z&end=2021-08-26T11:00:00Z",
+					"raw": "https://{{HOST}}/v2/crypto/:symbol/bars?start=2021-04-01T0:00:00Z&end=2021-09-10T11:00:00Z&timeframe=1Min",
 					"protocol": "https",
 					"host": [
 						"{{HOST}}"
@@ -211,24 +211,29 @@
 						"v2",
 						"crypto",
 						":symbol",
-						"trades"
+						"bars"
 					],
 					"query": [
 						{
 							"key": "exchanges",
-							"value": "ERSX",
+							"value": "ERSX,GNSS,CBSE",
 							"description": "One of the following exchanges: ERSX, GNSS or CBSE, default: All",
 							"disabled": true
 						},
 						{
 							"key": "start",
-							"value": "2020-04-01T0:00:00Z",
+							"value": "2021-04-01T0:00:00Z",
 							"description": "Filter data equal to or after this time in RFC-3339 format. Fractions of a second are not accepted."
 						},
 						{
 							"key": "end",
-							"value": "2021-08-26T11:00:00Z",
+							"value": "2021-09-10T11:00:00Z",
 							"description": "Filter data equal to or before this time in RFC-3339 format. Fractions of a second are not accepted."
+						},
+						{
+							"key": "timeframe",
+							"value": "1Min",
+							"description": "Timeframe for the aggregation. Values are customizeable, frequently used examples: 1Min, 15Min, 1Hour, 1Day."
 						},
 						{
 							"key": "limit",
@@ -246,7 +251,7 @@
 					"variable": [
 						{
 							"key": "symbol",
-							"value": "AAPL",
+							"value": "BTCUSD",
 							"description": "The symbol to query for"
 						}
 					]
