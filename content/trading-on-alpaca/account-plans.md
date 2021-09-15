@@ -20,8 +20,8 @@ trading environment, please refer to [Paper Trading Specification]({{< relref "/
 
 After creating an Alpaca Paper Only Account, you can enable live trading by becoming an Alpaca Brokerage Account
 holder. This requires you to go through an account on-boarding process with Alpaca Securities LLC, a FINRA
-member and SEC registered broker-dealer. Currently, we support brokerage accounts for
-qualified U.S. residents and are currently running an invite-only beta program for non-U.S. residents and business entities globally.
+member and SEC registered broker-dealer. We now support brokerage accounts for
+individuals and business entities from around the world.
 
 With a brokerage account, you will be able to fully utilize Alpaca for your automated trading and investing needs.
 Using the Alpaca API, you'll be able to buy and sell stocks in your brokerage account, and you'll receive
@@ -30,19 +30,9 @@ simulate your trades in our paper trading environment. And with the Alpaca web d
 both your paper trading and your real money brokerage account. All accounts are opened as margin accounts. Accounts with $2,000
 or more equity will have access to margin trading and short selling.
 
-**For U.S. Residents: Individual Taxable Account**
+**For Individuals Globally: Individual Taxable Account**
 
 Alpaca Securities LLC supports individual taxable brokerage accounts. At this time, we do not support retirement accounts.
-
-
-**For Non-U.S. Residents: Invite Only Beta**
-
-We started an invite-only beta program for non-U.S. residents to open live-trading accounts. Due to the nature of this beta program, there are several restrictions including that the Alpaca Securities LLC brokerage is available internationally on a limited basis for "non-solicited" customers* only (* Any customer onboarding for live brokerage must electronically sign a Non-Solicitation Agreement certifying that the customer was not directly solicited to open a live brokerage account and must indicate how they became aware of Alpaca).
-
-Although we are working to remove certain restrictions that we have with today’s beta program, we start sending invites to the users who are okay with **$30,000 initial funding** and **using international-wire transfer to deposit funds** (This beta program does not support TransferWise or Revolut. ACH does not work with a bank account outside the US). Please read [this announcement](https://alpaca.markets/blog/non-us-live-trading-beta/) to learn more about the beta program.
-
-Please fill out [this form](https://forms.gle/vV96nn5zFBtHSrfU9) to be on the invite list.
-
 
 {{< hash-link business>}}
 **For Business Entities Globally: Business Trading Account**
@@ -53,12 +43,17 @@ Today’s beta program for the business trading account accepts select entities 
 
 You can [sign up](https://app.alpaca.markets/signup) with your email address and follow steps on the dashboard. When our system considers that your business entity is eligible for this beta program, you should be able to go on to upload necessary information through the process to submit the application, otherwise you will be placed on the waitlist. Please note that we are updating the beta eligibility criteria and business trading account opening flow with ongoing basis.
 
+## Alpaca Cryptocurrency Account (Live-Trading)
+
+Crypto trading is available through an invite-only beta to users in California, Massachusetts, Missouri, and Montana as well as international users in Hungary. BTC, BCH, ETH, and LTC are currently supported. We're working to increase our list of tradable cryptocurrencies and broaden our eligibility criteria to more states and countries so stay tuned!
+
+For more information about crypto trading, please read [Crypto Trading]({{< relref "/trading-on-alpaca/crypto-trading.md" >}}).
 
 ## Paper Only Account vs Brokerage Account Features
 
 |<span style="font-size:14px">Feature</span>|<span style="font-size:14px">Alpaca Paper Only Account</span>|<span style="font-size:14px">Alpaca Brokerage Account</span>|
 |---|---|---|
-|Eligibility|All|Qualified U.S. Residents|
+|Eligibility|All|All|
 |Paper Trading|<span style="color:#27e272;font-size:18px">&#10003;</span>|<span style="color:#27e272;font-size:18px"> &#10003; </span>|
 |Commission-Free Live Trading|N/A|<span style="color:#27e272;font-size:18px">&#10003;</span>|
 |API Access|<span style="color:#27e272;font-size:18px">&#10003;</span>|<span style="color:#27e272;font-size:18px">&#10003;</span>|
@@ -70,4 +65,4 @@ You can [sign up](https://app.alpaca.markets/signup) with your email address and
 
 ## Markets Supported
 
-Currently, Alpaca only supports trading of listed U.S. stocks.
+Currently, Alpaca only supports trading of listed U.S. stocks and select cryptocurrencies.

@@ -6,7 +6,7 @@ aliases:
 ---
 
 **In order to trade on margin or sell short, you must have $2,000 or more account equity.
-Accounts with less than $2,000 will not have access to these features and will be restricted to 1x buying power.**
+Accounts with less than $2,000 will not have access to these features and will be restricted to 1x buying power. This do not apply to Crypto Trading. Margin Trading for Crypto is not applicable. In addition, PDT checks do not count towards crypto orders or fills**
 
 ## How Margin Works
 
@@ -115,6 +115,6 @@ And
 
 **Daily HTB stock borrow fee = <span style="font-size:18px">&#931;</span>((each stock’s HTB short $ market value * that stock’s HTB rate) / 360)**
 
-Note that if you hold short positions as of a Friday settlement date, you will incur stock borrow fees for 3 days (Fri, Sat, Sun).
+Please note that if you hold short positions as of a Friday settlement date, you will incur stock borrow fees for 3 days (Friday, Saturday and Sunday).
 
-Please note that stock borrow fees are charged in the nearest round lot (100 shares) regardless of how many shares were actually shorted. This is because stocks are borrowed in round lots.
+Stock borrow fees are charged in the nearest round lot (100 shares) regardless of how many shares were actually shorted. This is because stocks are borrowed in round lots. 

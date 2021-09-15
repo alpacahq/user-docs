@@ -17,16 +17,18 @@ namespace CodeExamples
             var client = Alpaca.Markets.Environments.Paper
                 .GetAlpacaDataClient(new SecretKey(API_KEY, API_SECRET));
 
+            var into = DateTime.Today;
+            var from = into.AddDays(-5);
             // Get daily price data for AAPL over the last 5 trading days.
-            var bars = await client.GetBarSetAsync(
-              new BarSetRequest("AAPL", TimeFrame.Day) { Limit = 5 });
+            var bars = await client.ListHistoricalBarsAsync(
+                new HistoricalBarsRequest("AAPL", from, into, BarTimeFrame.Day));
 
             // See how much AAPL moved in that timeframe.
-            var startPrice = bars["AAPL"].First().Open;
-            var endPrice = bars["AAPL"].Last().Close;
+            var startPrice = bars.Items.First().Open;
+            var endPrice = bars.Items.Last().Close;
 
-            var percentChange = (endPrice - startPrice) / startPrice * 100;
-            Console.WriteLine($"AAPL moved {percentChange} over the last 5 days.");
+            var percentChange = (endPrice - startPrice) / startPrice;
+            Console.WriteLine($"AAPL moved {percentChange:P} over the last 5 days.");
 
             Console.Read();
         }

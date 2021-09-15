@@ -40,8 +40,7 @@ endpoints:
             type: boolean
             desc: |
               If true is specified, cancel all open orders before liquidating all positions.
-      returns:
-        HTTP 207 Multi-Status with body; an array of objects that include the order id and http status code for each status request.
+      returns: HTTP 207 Multi-Status with body; an array of objects that include the order id and http status code for each status request.
       errors:
         - status: 500
           reason: Failed to liquidate.
@@ -72,7 +71,10 @@ endpoints:
         query:
           - name: qty
             type: decimal
-            desc: the number of shares to liquidate
+            desc: the number of shares to liquidate. Can accept up to 9 decimal points. Cannot work with `percentage`
+          - name: percentage
+            type: decimal
+            desc: percentage of position to liquidate. Must be between 0 and 100. Would only sell fractional if position is originally fractional. Can accept up to 9 decimal points. Cannot work with `qty`
       returns: |
         An Order object
       errors:

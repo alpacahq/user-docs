@@ -6,17 +6,16 @@ summary: Alpaca Data API v1 provides the market data available to the client use
 
 # Market Data
 
+
+**The Data API v1 will be deprecated on August 26th, 2021, so please make sure to update any existing systems to use the new endpoint before that date.**
+
 ## Overview
 
 Alpaca Data API v1 provides the market data available to the client user through
-the REST and websocket streaming interfaces. Alpaca Data API consolidates
-data sources from five different exchanges.
+the REST and websocket streaming interfaces. The Alpaca Data API v1 consolidates
+data sources from a single exchange.
 
 - IEX (Investors Exchange LLC)
-- NYSE National, Inc.
-- Nasdaq BX, Inc.
-- Nasdaq PSX
-- NYSE Chicago, Inc.
 
 
 ## Authentication

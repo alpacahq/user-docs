@@ -6,8 +6,7 @@ weight: 40
 ## Overview
 Alpaca's API offers WebSocket streaming for account and order updates which follows the [RFC6455 WebSocket protocol](https://tools.ietf.org/html/rfc6455).
 
-To connect to the WebSocket follow the standard opening handshake as defined by the RFC specification to the `/stream`
-endpoint of Alpaca's API. Alpaca's streaming service supports both JSON and MessagePack codecs.
+To connect to the WebSocket follow the standard opening handshake as defined by the RFC specification to `wss://paper-api.alpaca.markets/stream` or `wss://api.alpaca.markets/stream`. Alpaca's streaming service supports both JSON and MessagePack codecs.
 
 Once the connection is authorized, the client can listen to one or more streams
 to get updates on particular changes.  These are the streams the client can
@@ -16,6 +15,8 @@ choose to listen to.
 - trade_updates
 
 The details of each stream will be described later in this document.
+
+Note: The trade_updates stream coming from wss://paper-api.alpaca.markets/stream uses Binary frames which differs from the Text frames that comes from the wss://data.alpaca.markets/stream stream
 
 In order to listen to streams, the client sends a `listen` message
 to the server as follows.
@@ -52,6 +53,8 @@ ones.
 In order to maintain the state of their brokerage accounts at Alpaca, along with requesting from the REST API, clients can also
 listen to the trade streams for their accounts. This will ensure any running algorithms will always have the most up-to-date
 picture of any accounts they are trading with at Alpaca.
+
+**Note:** to request with MessagePack, add the header: `Content-Type: application/msgpack`.
 
 ## Authentication
 The WebSocket client can be authenticated using the same API key when making HTTP requests. Upon connecting to the WebSocket

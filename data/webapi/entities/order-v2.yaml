@@ -1,10 +1,10 @@
 spec:
   - name: id
     type: string<uuid>
-    desc: Order id
+    desc: Order ID
   - name: client_order_id
     type: string
-    desc: Client unique order id
+    desc: Client unique order ID
   - name: created_at
     type: string<timestamp>
   - name: updated_at
@@ -36,32 +36,43 @@ spec:
   - name: asset_class
     type: string
     desc: Asset class
+  - name: notional
+    type: string<number>
+    desc: Ordered notional amount. If entered, `qty` will be null. Can take up to 9 decimal points.
   - name: qty
     type: string<number>
-    desc: Ordered quantity
+    desc: Ordered quantity. If entered, `notional` will be null. Can take up to 9 decimal points.
   - name: filled_qty
     type: string<number>
     desc: Filled quantity
+  - name: filled_avg_price
+    type: string<number> (Nullable)
+    desc: Filled average price
+  - name: order_class
+    type: string
+    desc: |
+      `simple`, `bracket`, `oco` or `oto`. For details of non-simple order classes,
+      please see [Bracket Order Overview](/trading-on-alpaca/orders#bracket-orders)
+  - name: order_type
+    type: string
+    desc: (Deprecated with just `type` field below.)
   - name: type
     type: string<order_type>
     desc: |
-          Valid values: `market`, `limit`, `stop`, `stop_limit`, `trailing_stop`
+      Valid values: `market`, `limit`, `stop`, `stop_limit`, `trailing_stop`
   - name: side
     type: string<side>
     desc: |
-          Valid values: `buy`, `sell`
+      Valid values: `buy`, `sell`
   - name: time_in_force
     type: string<time_in_force>
-    desc:  See [Orders page](/trading-on-alpaca/orders/#time-in-force)
+    desc: See [Orders page](/trading-on-alpaca/orders/#time-in-force)
   - name: limit_price
     type: string<number> (Nullable)
     desc: Limit price
   - name: stop_price
     type: string<number> (Nullable)
     desc: Stop price
-  - name: filled_avg_price
-    type: string<number> (Nullable)
-    desc: Filled average price
   - name: status
     type: string<order_status>
     desc: See [Orders page](/trading-on-alpaca/orders/#order-lifecycle)
@@ -71,46 +82,49 @@ spec:
   - name: legs
     type: array<Order>
     desc: |
-          When querying non-simple order_class orders in a nested style, an
-          array of Order entities associated with this order. Otherwise, null.
-  - name: trail_price
-    type: string<number>
-    desc: The dollar value away from the high water mark for trailing stop orders.
+      When querying non-simple order_class orders in a nested style, an
+      array of Order entities associated with this order. Otherwise, null.
   - name: trail_percent
     type: string<number>
     desc: The percent value away from the high water mark for trailing stop orders.
+  - name: trail_price
+    type: string<number>
+    desc: The dollar value away from the high water mark for trailing stop orders.
   - name: hwm
     type: string<number>
     desc: The highest (lowest) market price seen since the trailing stop order was submitted.
 example: |
   {
-    "id": "904837e3-3b76-47ec-b432-046db621571b",
-    "client_order_id": "904837e3-3b76-47ec-b432-046db621571b",
-    "created_at": "2018-10-05T05:48:59Z",
-    "updated_at": "2018-10-05T05:48:59Z",
-    "submitted_at": "2018-10-05T05:48:59Z",
-    "filled_at": "2018-10-05T05:48:59Z",
-    "expired_at": "2018-10-05T05:48:59Z",
-    "canceled_at": "2018-10-05T05:48:59Z",
-    "failed_at": "2018-10-05T05:48:59Z",
-    "replaced_at": "2018-10-05T05:48:59Z",
-    "replaced_by": "904837e3-3b76-47ec-b432-046db621571b",
+    "id": "61e69015-8549-4bfd-b9c3-01e75843f47d",
+    "client_order_id": "eb9e2aaa-f71a-4f51-b5b4-52a6c565dad4",
+    "created_at": "2021-03-16T18:38:01.942282Z",
+    "updated_at": "2021-03-16T18:38:01.942282Z",
+    "submitted_at": "2021-03-16T18:38:01.937734Z",
+    "filled_at": null,
+    "expired_at": null,
+    "canceled_at": null,
+    "failed_at": null,
+    "replaced_at": null,
+    "replaced_by": null,
     "replaces": null,
-    "asset_id": "904837e3-3b76-47ec-b432-046db621571b",
+    "asset_id": "b0b6dd9d-8b9b-48a9-ba46-b9d54906e415",
     "symbol": "AAPL",
     "asset_class": "us_equity",
-    "qty": "15",
+    "notional": "500",
+    "qty": null,
     "filled_qty": "0",
+    "filled_avg_price": null,
+    "order_class": "",
+    "order_type": "market",
     "type": "market",
     "side": "buy",
     "time_in_force": "day",
-    "limit_price": "107.00",
-    "stop_price": "106.00",
-    "filled_avg_price": "106.00",
+    "limit_price": null,
+    "stop_price": null,
     "status": "accepted",
     "extended_hours": false,
     "legs": null,
-    "trail_price": "1.05",
     "trail_percent": null,
-    "hwm": "108.05"
+    "trail_price": null,
+    "hwm": null
   }
