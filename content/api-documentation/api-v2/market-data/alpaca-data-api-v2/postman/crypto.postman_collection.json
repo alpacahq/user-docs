@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "3e6bb62a-42fc-41e1-bfcd-fb77510a5088",
+		"_postman_id": "0879f00f-865c-44ee-be12-9e2ad7452811",
 		"name": "Data v2 crypto API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -51,7 +51,7 @@
 						{
 							"key": "exchanges",
 							"value": "ERSX,GNSS,CBSE",
-							"description": "One of the following exchanges: ERSX, GNSS or CBSE, default: All",
+							"description": "The comma-separated exchanges we query for: ERSX, GNSS or CBSE, default: All",
 							"disabled": true
 						},
 						{
@@ -134,7 +134,7 @@
 						{
 							"key": "exchanges",
 							"value": "ERSX,GNSS,CBSE",
-							"description": "One of the following exchanges: ERSX, GNSS or CBSE, default: All",
+							"description": "The comma-separated exchanges we query for: ERSX, GNSS or CBSE, default: All",
 							"disabled": true
 						},
 						{
@@ -217,7 +217,7 @@
 						{
 							"key": "exchanges",
 							"value": "ERSX,GNSS,CBSE",
-							"description": "One of the following exchanges: ERSX, GNSS or CBSE, default: All",
+							"description": "The comma-separated exchanges we query for: ERSX, GNSS or CBSE, default: All",
 							"disabled": true
 						},
 						{
@@ -309,7 +309,7 @@
 						{
 							"key": "exchanges",
 							"value": "ERSX,GNSS",
-							"description": "One of the following exchanges: ERSX, GNSS or CBSE, default: All",
+							"description": "The comma-separated exchanges we query for: ERSX, GNSS or CBSE, default: All",
 							"disabled": true
 						},
 						{
@@ -468,7 +468,7 @@
 					}
 				],
 				"url": {
-					"raw": "https://{{HOST}}/v1beta1/crypto/:symbol/xbbo/latest?exchange=ERSX",
+					"raw": "https://{{HOST}}/v1beta1/crypto/:symbol/xbbo/latest",
 					"protocol": "https",
 					"host": [
 						"{{HOST}}"
@@ -482,9 +482,10 @@
 					],
 					"query": [
 						{
-							"key": "exchange",
-							"value": "ERSX",
-							"description": "One of the following exchanges: ERSX, GNSS or CBSE"
+							"key": "exchanges",
+							"value": "ERSX,GNSS,CBSE",
+							"description": "The comma-separated exchanges we query for: ERSX, GNSS or CBSE, default: ERSX,GNSS",
+							"disabled": true
 						}
 					],
 					"variable": [
