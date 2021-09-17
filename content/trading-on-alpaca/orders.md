@@ -126,10 +126,10 @@ The thresholds are doubled during pre-market and after-hours.
 ### Stop Order
 A stop (market) order is an order to buy or sell a security when its price moves past
 a particular point, ensuring a higher probability of achieving a predetermined
-entry or exit price. Once the market price crosses the specified stop price,
-the stop order becomes a market order. Alpaca converts buy stop orders into stop limit
-orders with a limit price that is 4% higher than a stop price < $50 (or 2.5% higher than a
-stop price >= $50). Sell stop orders are **not** converted into stop limit orders.
+entry or exit price. Once the order is elected, the stop order becomes a market order. 
+Alpaca converts buy stop orders into stop limit orders with a limit price that is 4% higher 
+than a stop price < $50 (or 2.5% higher than a stop price >= $50). Sell stop orders are 
+**not** converted into stop limit orders.
 
 A stop order does not guarantee the order will be filled at a certain price
 after it is converted to a market order.
