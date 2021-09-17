@@ -56,7 +56,7 @@ For the **Unlimited plan**, we receive direct feeds from the CTA (administered b
 
 ## Exchanges
 
-List of stock exchanges which are supported by Alpaca.
+List of **stock** exchanges which are supported by Alpaca.
 
 The tape id of each exchange is returned in all market data requests. You can use this table to map the code to an exchange.
 
@@ -84,6 +84,15 @@ The tape id of each exchange is returned in all market data requests. You can us
 | X      | NASDAQ OMX PSX     |
 | Y      | Cboe BYX     |
 | Z      | Cboe BZX     |
+
+
+List of **crypto** exchanges which are supported by Alpaca.
+
+| Exchange Code | Name of Exchange      |
+| ------------- | --------------------- |     
+| ERSX          | ErisX                 |
+| GNSS          | Genesis               |
+| CBSE          | Coinbase              |
 
 
 ## Conditions

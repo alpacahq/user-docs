@@ -1,0 +1,34 @@
+spec:
+  - name: t
+    type: string
+    required: true
+    desc: Timestamp in RFC-3339 format with nanosecond precision.
+  - name: x
+    type: string
+    required: true
+    desc: Exchange.
+  - name: ap
+    type: number
+    required: true
+    desc: Ask price.
+  - name: as
+    type: int
+    required: true
+    desc: Ask size.
+  - name: bp
+    type: number
+    required: true
+    desc: Bid price.
+  - name: bs
+    type: int
+    required: true
+    desc: Bid size.
+example: |
+  {
+    "t": "2021-08-30T14:25:35.129Z",
+    "x": "ERSX",
+    "ap": 48393.95,
+    "as": 1.41223,
+    "bp": 47418.13,
+    "bs": 0.23404,
+  }

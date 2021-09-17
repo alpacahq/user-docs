@@ -1,0 +1,35 @@
+spec:
+  - name: t
+    type: string
+    required: true
+    desc: Timestamp in RFC-3339 format with nanosecond precision.
+  - name: x
+    type: string
+    required: true
+    desc: Exchange where the trade happened. 
+  - name: p
+    type: number
+    required: true
+    desc: Trade price.
+  - name: s
+    type: double
+    required: true
+    desc: Trade size.
+  - name: i
+    type: int
+    required: true
+    desc: Trade ID.
+  - name: tks
+    type: string
+    required: true
+    desc: TakerSide of the trade (buy, sell, or unspecified)
+    enum: ["B", "S", "-"]
+example: |
+  {
+    "t": "2021-09-09T09:16:15.157103000Z",
+    "x": "CBSE",
+    "p": 46375.43,
+    "s": 0.0108846,
+    "i": 209688130,
+    "tks": "B"
+  }
