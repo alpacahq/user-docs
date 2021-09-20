@@ -150,17 +150,17 @@ The Bars API returns aggregate historical data for the requested securities.
 
 The XBBO API best bid and offer across venues.
 
-{{< rest-endpoint resource="crypto-bars" method="GET" path="/v1beta1/crypto/{symbol}/bars" useh3="true" >}}
+{{< rest-endpoint resource="crypto-xbbo" method="GET" path="/v1beta1/crypto/{symbol}/xbbo/latest" useh3="true" >}}
 
 
 ### Response
 
-{{< rest-entity-example name="crypto-bars" >}}
+{{< rest-entity-example name="crypto-xbbo" >}}
 
 
 ### Properties
 
-{{< rest-entity-desc name="crypto-bars" >}}
+{{< rest-entity-desc name="crypto-xbbo" >}}
 
 
 
