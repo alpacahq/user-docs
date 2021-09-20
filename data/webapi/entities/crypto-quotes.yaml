@@ -1,0 +1,41 @@
+spec:
+  - name: t
+    type: string
+    required: true
+    desc: Timestamp in RFC-3339 format with nanosecond precision.
+  - name: x
+    type: string
+    required: true
+    desc: Exchange.
+  - name: ap
+    type: number
+    required: true
+    desc: Ask price.
+  - name: as
+    type: int
+    required: true
+    desc: Ask size.
+  - name: bp
+    type: number
+    required: true
+    desc: Bid price.
+  - name: bs
+    type: int
+    required: true
+    desc: Bid size.
+example: |
+  {
+    "quotes": [
+        {
+            "t": "2021-04-01T00:00:10.495Z",
+            "x": "CBSE",
+            "bp": 58798.69,
+            "bs": 0.12,
+            "ap": 58805.39,
+            "as": 0.0131436
+        },
+        ...
+    ],
+    "symbol": "BTCUSD",
+    "next_page_token": "QlRDVVNEfDIwMjEtMDQtMDFUMDg6NDg6NTYuODUyMDAwMDAwWnxDQlNFfDY2OTBCRkQ1"
+  }

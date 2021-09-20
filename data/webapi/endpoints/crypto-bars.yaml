@@ -1,0 +1,43 @@
+endpoints:
+  /v1beta1/crypto/{symbol}/bars:
+    GET:
+      title: Returns bars for the queried crypto symbol
+      summary: |
+        This endpoint returns aggregate historical data for the requested crypto.
+      params:
+        path:
+          - name: symbol
+            type: string
+            desc: The symbol to query for
+        query:
+          - name: exchanges
+            type: string
+            desc: The comma-separated exchanges which can be ERSX, GNSS or CBSE. Defaults to All.
+          - name: start
+            type: string
+            required: true
+            desc: Filter data equal to or after this time in RFC-3339 format. Fractions of a second are not accepted.
+          - name: end
+            type: string
+            desc: Filter data equal to or before this time in RFC-3339 format. Fractions of a second are not accepted. Defaults to current time.
+          - name: limit
+            type: int
+            desc: Number of data points to return. Must be in range 1-10000, defaults to 1000.
+          - name: page_token
+            type: string
+            desc: Pagination token to continue from.
+          - name: timeframe
+            required: true
+            type: string
+            desc: |
+              Timeframe for the aggregation. Values are customizeable, frequently used examples: `1Min`, `15Min`, `1Hour`, `1Day`. Limits: 1Min-59Min, 1Hour-23Hour.
+      returns: |
+        A bars response object.
+      errors:
+        - status: 400
+          reason: Invalid value for query parameter
+        - status: 403
+          reason: Unauthorized
+        - status: 429
+          reason: Rate limit exceeded
+

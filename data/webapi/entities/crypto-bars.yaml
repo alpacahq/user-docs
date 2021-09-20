@@ -1,0 +1,56 @@
+spec:
+  - name: t
+    type: string
+    required: true
+    desc: Timestamp in RFC-3339 format with nanosecond precision.
+  - name: x
+    type: number
+    required: true
+    desc: Exchnage code for the bar.
+  - name: o
+    type: number
+    required: true
+    desc: Open price.
+  - name: h
+    type: number
+    required: true
+    desc: High price.
+  - name: l
+    type: number
+    required: true
+    desc: Low price.
+  - name: c
+    type: number
+    required: true
+    desc: Close price.
+  - name: v
+    type: int
+    required: true
+    desc: Volume.
+  - name: n
+    type: int
+    required: true
+    desc: Number of trades.
+  - name: vw
+    type: number
+    required: true
+    desc: Volume weighted average price.
+example: |
+  {
+    "bars": [
+        {
+            "t": "2021-04-01T00:00:00Z",
+            "x": "CBSE",
+            "o": 58800.01,
+            "h": 58838,
+            "l": 58756.07,
+            "c": 58837.71,
+            "v": 9.43435863,
+            "n": 375,
+            "vw": 58792.3224699778
+        },
+        ...
+    ],
+    "symbol": "BTCUSD",
+    "next_page_token": "QlRDVVNEfE18MjAyMS0wNC0wMVQxNjozOTowMC4wMDAwMDAwMDBafENCU0U="
+  }

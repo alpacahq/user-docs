@@ -1,0 +1,28 @@
+endpoints:
+  /v1beta1/crypto/{symbol}/xbbo/latest:
+    GET:
+      title: Returns latest Cross Best Bid and Offer for the queried crypto symbol.
+      summary: |
+        Returns the XBBO for a crypto symbol that calculates the Best Bid and Offer across multiple exchanges.
+        If exchanges is not specified then only the exchanges that can be traded on Alpaca are included in the calculation.
+      params:
+        path:
+          - name: symbol
+            type: string
+            desc: The symbol to query for
+        query:
+          - name: exchanges
+            type: string
+            desc: The comma-separated exchanges which can be ERSX, GNSS or CBSE. Defaults to ERSX,GNSS.
+      returns: |
+        A quotes response object.
+      errors:
+        - status: 400
+          reason: Invalid query parameters
+        - status: 403
+          reason: Unauthorized
+        - status: 404
+          reason: Not found
+        - status: 429
+          reason: Too many requests
+

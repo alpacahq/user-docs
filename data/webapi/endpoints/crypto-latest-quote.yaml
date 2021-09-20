@@ -1,0 +1,27 @@
+endpoints:
+  /v1beta1/crypto/{symbol}/quotes/latest:
+    GET:
+      title: Returns latest quote for the queried crypto symbol
+      summary: |
+        This endpoint returns latest quote for the requested crypto symbol.
+      params:
+        path:
+          - name: symbol
+            type: string
+            desc: The symbol to query for
+        query:
+          - name: exchange
+            type: string
+            required: true
+            desc: The comma-separated exchanges which can be ERSX, GNSS or CBSE. Defaults to All.
+      returns: |
+        A quotes response object.
+      errors:
+        - status: 400
+          reason: Invalid query parameters
+        - status: 403
+          reason: Unauthorized
+        - status: 404
+          reason: Not found
+        - status: 429
+          reason: Too many requests

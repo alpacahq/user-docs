@@ -1,0 +1,37 @@
+spec:
+  - name: t
+    type: string
+    required: true
+    desc: Timestamp in RFC-3339 format with nanosecond precision.
+  - name: x
+    type: string
+    required: true
+    desc: Exchange.
+  - name: ap
+    type: number
+    required: true
+    desc: Ask price.
+  - name: as
+    type: int
+    required: true
+    desc: Ask size.
+  - name: bp
+    type: number
+    required: true
+    desc: Bid price.
+  - name: bs
+    type: int
+    required: true
+    desc: Bid size.
+example: |
+  {
+    "symbol": "BTCUSD",
+    "quote": {
+        "t": "2021-09-18T11:32:24.108Z",
+        "x": "ERSX",
+        "bp": 48132.12,
+        "bs": 0.5456,
+        "ap": 49126.6,
+        "as": 0.7596
+    }
+  }

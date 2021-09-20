@@ -1,0 +1,38 @@
+spec:
+  - name: t
+    type: string
+    required: true
+    desc: Timestamp in RFC-3339 format with nanosecond precision.
+  - name: x
+    type: string
+    required: true
+    desc: Exchange where the trade happened. 
+  - name: p
+    type: number
+    required: true
+    desc: Trade price.
+  - name: s
+    type: double
+    required: true
+    desc: Trade size.
+  - name: tks
+    type: string
+    required: true
+    desc: TakerSide of the trade (buy, sell, or unspecified)
+    enum: ["B", "S", "-"]
+  - name: i
+    type: int
+    required: true
+    desc: Trade ID.
+example: |
+  {
+    "symbol": "BTCUSD",
+    "trade": {
+        "t": "2021-09-18T11:14:46.80939002Z",
+        "x": "ERSX",
+        "p": 48577.3,
+        "s": 1.3003,
+        "tks": "B",
+        "i": 0
+    }
+  }

@@ -1,0 +1,37 @@
+endpoints:
+  /v1beta1/crypto/{symbol}/trades:
+    GET:
+      title: Returns trades for the queried crypto symbol
+      summary: |
+        This endpoint returns trade historical data for the requested crypto symbol. 
+      params:
+        path:
+          - name: symbol
+            type: string
+            desc: The symbol to query for
+        query:
+          - name: exchanges
+            type: string
+            desc: The comma-separated exchanges which can be ERSX, GNSS or CBSE. Defaults to All.
+          - name: start
+            type: string
+            required: true
+            desc: Filter data equal to or after this time in RFC-3339 format. Fractions of a second are not accepted.
+          - name: end
+            type: string
+            desc: Filter data equal to or before this time in RFC-3339 format. Fractions of a second are not accepted. Default value is now.
+          - name: limit
+            type: int
+            desc: Number of data points to return. Must be in range 1-10000, defaults to 1000.
+          - name: page_token
+            type: string
+            desc: Pagination token to continue from.
+      returns: |
+        A trades response object.
+      errors:
+        - status: 400
+          reason: Invalid query parameters
+        - status: 403
+          reason: Unauthorized
+        - status: 429
+          reason: Too many requests
