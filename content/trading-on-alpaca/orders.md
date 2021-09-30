@@ -75,8 +75,24 @@ with an error. You must adhere to these settings in order to participate in exte
 1) The order type must be set to `limit` (with limit price). Any other type of orders will be rejected with an error.\
 2) Time-in-force must be set to be `day`. Any other time-in-force will be rejected with an error.
 
+For Fractional Orders, starting on October 27, 2021, customers will not be able to send the following sequence of orders outside of market hours for the same security. This is so customers will not have a net short position. Examples of the order sequences that will be rejected are shown below.
+
+
+| Summary                            | Order 1       | Order 2       | Second Order Handling Accept / Reject  |
+|------------------------------------|---------------|---------------|----------------------------------------|
+| 2 x Sell                           | Notional Sell | Quantity Sell | Reject                                 |
+| 2 x Sell                           | Notional Sell | Notional Sell | Reject                                 |
+| 2 x Sell                           | Quantity Sell | Notional Sell | Reject                                 |
+| 2 x Sell [with Correct Quantity]   | Quantity Sell | Quantity Sell | Accept                                 |
+| 2 x Sell [with Incorrect Quantity] | Quantity Sell | Quantity Sell | Reject                                 |
+
+For more information - please see our [Blog Post](https://alpaca.markets/blog/shorting-prevention-breaking-change-notification/) on this topic.
+
+If this is done you will see the following error message:
+`"unable to open new notional orders while having open closing position orders"`
+
 All symbols supported during regular market hours are also supported during extended hours. Short selling is also
-treated the same.
+treated the same. 
 
 ## Order Types
 When you submit an order, you can choose one of supported order types.
