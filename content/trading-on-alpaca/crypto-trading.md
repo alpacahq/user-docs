@@ -7,8 +7,8 @@ aliases:
 
 We now offer crypto trading through our API and the Alpaca web dashboard! Trade all day, seven days a week, as frequently as you'd like. 
 
-{{< note title="Please sign up for the waitlist!" >}}
-Crypto trading is currently invite-only. Please sign up for the [waitlist](https://alpaca.markets/crypto-invite) and get updates as we open it up soon.
+{{< note title="Crypto trading is currently in open beta!" >}}
+Sign up for an account [here](https://app.alpaca.markets/signup) to start trading now!
 {{< /note >}}
 
 ## Eligibility
