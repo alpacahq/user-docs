@@ -12,7 +12,7 @@ Alpaca Data API v2 provides market data through an easy to use HTTP API for hist
 
 We provide easy to use SDKs written in [Python](https://github.com/alpacahq/alpaca-trade-api-python), [Go](https://github.com/alpacahq/alpaca-trade-api-go), [NodeJS](https://github.com/alpacahq/alpaca-trade-api-js) and [C#](https://github.com/alpacahq/alpaca-trade-api-csharp).
 
-Developers can easily access our Market Data APIs via [Postman collections](#postman-collections).
+Developers can easily access our Market Data APIs via Postman collections on [Postman public workspace](https://www.postman.com/alpacamarkets) or [GitHub](https://github.com/alpacahq/alpaca-postman).
 
 ## Subscription Plans
 
@@ -173,34 +173,3 @@ For more information, see the [UQDF Specification](http://www.utpplan.com/DOC/uq
 | X    | Order Influx                   |
 | Z    | No Open No Resume              |
 | 4    | On Demand Intra Day Auction    |
-
-
-## Postman collections
-
-We provide Postman collections to help our developers to easily access and test our REST APIs.
-
-### Available collections
- 
-* [stocks API](./postman/stocks.postman_collection.json)
-* [crypto API](./postman/crypto.postman_collection.json)
-
-### Usage
-
-1. Create a Postman environment (File -> New...) with the following variables
-
-{{< safe-html >}}
-</br>
-<center><img src="./postman/environment.png" width="100%"></center>
-{{< /safe-html >}}
-
-2. Download one of the collections from the "Available collections" links
-3. Import the file into Postman (File -> Import...)
-4. Use one of the defined HTTP requests while the created environment is selected
-
-{{< safe-html >}}
-</br>
-<center><img src="./postman/collections.png" width="100%"></center>
-{{< /safe-html >}}
-
-Please visit our [Support](https://alpaca.markets/support/) page to learn more about our market data products.
-
