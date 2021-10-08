@@ -16,6 +16,8 @@ Alpaca Data API v2 provides three types of historical data: [trades]({{<
 
 ## Common behavior
 
+All endpoints provide compressed (gzipped) data when `Accept-Encoding: gzip` header is added in the HTTP request, and the response size is bigger than 256 bytes.
+
 **Base URL**
 
 Alpaca Data API v2 provides historical data through multiple endpoints. These endpoints have the same URL prefix (omitted from now on):
