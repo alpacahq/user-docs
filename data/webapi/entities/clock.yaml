@@ -6,7 +6,7 @@ spec:
     type: boolean
     desc: Whether or not the market is open
   - name: next_open
-    type: string<timestamp
+    type: string<timestamp>
     desc: Next market open timestamp
   - name: next_close
     type: string<timestamp>
