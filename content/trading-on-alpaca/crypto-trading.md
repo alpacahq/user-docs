@@ -8,12 +8,16 @@ aliases:
 We now offer crypto trading through our API and the Alpaca web dashboard! Trade all day, seven days a week, as frequently as you'd like. 
 
 {{< note title="Crypto trading is currently in open beta!" >}}
-Sign up for an account [here](https://app.alpaca.markets/signup) to start trading now!
+
+Crypto trading is currently available for eligible international participants and participants in the following US jurisdictions: California, Massachusetts, Missouri and Montana. Existing Alpaca users in approved jurisdictions can enable crypto trading capabilities now via the dashboard.
+
+New users in approved jurisdictions can sign up for an account [here](https://app.alpaca.markets/signup) to start trading crypto now.
+
 {{< /note >}}
 
 ## Eligibility
 
-Currently (as of Oct 28th, 2021), the public beta is open to international users and only the following U.S. jurisdictions: California, Massachusetts, Missouri, and Montana. We're working to broaden our eligibility criteria to more states and countries so stay tuned!
+Currently crypto is enabled in beta for eligible participants in the approved jurisdictions indicated above.  Please stay tuned for additional announcements as we work to broaden our eligibility criteria to include additional states and countries.
 
 ## Supported Assets
 
@@ -43,7 +47,7 @@ Please note that the symbol appears with `USD`, such as `BTCUSD` instead of `BTC
 
 ## Supported Orders
 When submitting crypto orders through the [orders API]({{< relref
-"/api-documentation/api-v2/orders.md" >}}) and the Alpaca web dashboard, all the order types, including advanced order, are supported while the supported
+"/api-documentation/api-v2/orders.md" >}}) and the Alpaca web dashboard, Market, Limit and Stop Limit orders are supported while the supported
 `time_in_force` values are `day`, `gtc`, `ioc`, and `fok`. We accept fractional
 orders as well with either `notional` or `qty` provided.
 
