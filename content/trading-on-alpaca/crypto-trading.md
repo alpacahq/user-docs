@@ -13,7 +13,7 @@ Sign up for an account [here](https://app.alpaca.markets/signup) to start tradin
 
 ## Eligibility
 
-Currently, crypto trading is enabled through an invite-only beta for participants in California, Massachusetts, Missouri, and Montana as well as international users in Hungary. We're working to broaden our eligibility criteria to more states and countries so stay tuned!
+Currently (as of Oct 28th, 2021), the public beta is open to international users and only the following U.S. jurisdictions: California, Massachusetts, Missouri, and Montana. We're working to broaden our eligibility criteria to more states and countries so stay tuned!
 
 ## Supported Assets
 
