@@ -22,7 +22,7 @@ Currently crypto is enabled in beta for eligible participants in the approved ju
 ## Supported Assets
 
 The list of supported cryptocurrencies includes BTC, BCH, ETH, and LTC. We
-constantly evaluate the list and aim to to grow the number of supported
+constantly evaluate the list and aim to grow the number of supported
 currencies.
 
 Tradable cryptocurrencies can be identified through the [assets API]({{< relref "/api-documentation/api-v2/assets.md" >}}) where the asset entity has `class = crypto` and `tradable = true`.
