@@ -24,7 +24,8 @@ Alpaca works with many ways to trade! We pride ourselves in enabling many partne
 * Algo Bulls ([Partner page](https://help.algobulls.com/broker/alpaca/)): Make use of powerful features like Live Trading, Paper Trading, Backtesting, Strategy Customizations, Python Build, and much more directly from the website or Android App.
 * Trellis ([How it works](https://www.trytrellis.co/)): Build a trading bot without code, connect with social integrations, and compete against other users in both paper and live trading all free of charge.
 * PredictNow.ai ([How it works](https://www.predictnow.ai/)): A no-code machine learning SaaS, helping traders apply machine learning to their investment strategies in order to predict the profitability of their next trade.
-            
+* Breaking Equity ([How it works](https://www.breakingequity.com/)): Use custom-built, backtested algorithms to buy, sell, and short multiple asset classes with extreme precision and speed that remains unmatched by humans.
+* Composer ([How it works](https://www.composer.trade/)): Create hedge fund-like dynamic strategies with a no-code visual editor. Browse and modify strategies from a growing collection of ready-made strategies.
 
 
 ## Open Source Integration Libraries
