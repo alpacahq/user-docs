@@ -36,7 +36,7 @@ getting a list of existing orders.
 
 In order to start trading, you need to deposit your money into your account. Go to your dashboard, link your bank
 account, and initiate an ACH transfer from your bank to your Alpaca account. Please also read our
-[FAQ page for banking](https://alpaca.markets/learn/tag/banking/), too.
+[FAQ page for banking](https://alpaca.markets/support/tag/pricing-and-funding/), too.
 
 ## Start live trading
 
