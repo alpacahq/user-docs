@@ -21,7 +21,7 @@ pygmentsUseClasses = true
 
 	version = ""
 	logo = "images/alpacalogo.png"
-	favicon = "https://alpaca.markets/static/favicon-32x32.png"
+	favicon = "images/favicon.ico"
 
 	permalink = "#"
 
