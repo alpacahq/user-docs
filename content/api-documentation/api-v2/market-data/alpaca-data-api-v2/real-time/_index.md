@@ -21,7 +21,7 @@ Once a connection is established and you have successfully authenticated yoursel
 
 **Unlimited plan:** 
 - There is no limit for the number of channels at a time for trades, quotes and minute bars(`trades`,`quotes` and `bars`).
-- Trades, quotes and mintue bars are direct feeds from the CTA (administered by NYSE) and UTP (administered by Nasdaq) SIPs.
+- Trades, quotes and minute bars are direct feeds from the CTA (administered by NYSE) and UTP (administered by Nasdaq) SIPs.
 
 
 ## Common behavior
