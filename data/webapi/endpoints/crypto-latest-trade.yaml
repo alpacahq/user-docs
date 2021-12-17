@@ -13,7 +13,7 @@ endpoints:
           - name: exchange
             type: string
             required: true
-            desc: The comma-separated exchanges which can be ERSX, GNSS or CBSE. Defaults to All.
+            desc: The comma-separated exchanges which can be ERSX, FTX or CBSE. Defaults to All.
       returns: |
         A Trade response object.
       errors:

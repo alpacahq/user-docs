@@ -9,7 +9,7 @@ Alpaca provides and supports the following open-source SDKs in a number of langu
 
 - Python: [alpaca-trade-api-python](https://github.com/alpacahq/alpaca-trade-api-python/) /
 [PyPI](https://pypi.org/project/alpaca-trade-api/)
-- .NET/C#: [alpaca-trade-api-charp](https://github.com/alpacahq/alpaca-trade-api-csharp/) /
+- .NET/C#: [alpaca-trade-api-csharp](https://github.com/alpacahq/alpaca-trade-api-csharp/) /
 [NuGet](https://www.nuget.org/packages/Alpaca.Markets/)
 - Go: [alpaca-trade-api-go](https://github.com/alpacahq/alpaca-trade-api-go/)
 - Node: [alpaca-trade-api-js](https://github.com/alpacahq/alpaca-trade-api-js/)

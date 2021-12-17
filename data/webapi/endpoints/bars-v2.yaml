@@ -33,6 +33,9 @@ endpoints:
             type: string
             desc: |
               Specifies the corporate action adjustment for the stocks. Enum: 'raw', 'split', 'dividend' or 'all'. Default value is 'raw'.
+          - name: feed
+            type: string
+            desc: Defaults to IEX for Free users and SIP for users with an Unlimited subscription.
       returns: |
         A bars response object.
       errors:

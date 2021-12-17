@@ -9,6 +9,10 @@ endpoints:
           - name: symbol
             type: string
             desc: The symbol to query for
+          - name: feed
+            type: string
+            desc: Defaults to IEX for Free users and SIP for users with an Unlimited subscription.
+          - name: limit
       returns: |
         A trades response object.
       errors:

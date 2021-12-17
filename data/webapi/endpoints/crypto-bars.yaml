@@ -12,12 +12,10 @@ endpoints:
         query:
           - name: exchanges
             type: string
-            desc: The comma-separated exchanges which can be ERSX, GNSS or CBSE. Defaults to All.
+            desc: The comma-separated exchanges which can be ERSX, FTX or CBSE. Defaults to All.
           - name: start
             type: string
-            required: true
-            desc: Filter data equal to or after this time in RFC-3339 format. Fractions of a second are not accepted.
-          - name: end
+            desc: Filter data equal to or after this time in RFC-3339 format. Fractions of a second are not accepted. Defaults to the current day in CT.
             type: string
             desc: Filter data equal to or before this time in RFC-3339 format. Fractions of a second are not accepted. Defaults to current time.
           - name: limit

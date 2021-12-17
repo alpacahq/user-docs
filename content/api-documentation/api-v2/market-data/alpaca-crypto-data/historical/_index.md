@@ -14,9 +14,10 @@ List of **crypto** exchanges which are supported by Alpaca.
 
 | Exchange Code | Name of Exchange      |
 | ------------- | --------------------- |     
-| ERSX          | ErisX                 |
-| GNSS          | Genesis               |
 | CBSE          | Coinbase              |
+| ERSX          | ErisX                 |
+| FTX           | FTX                   |
+
 
 
 ## Common behavior

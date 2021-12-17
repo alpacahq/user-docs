@@ -23,6 +23,14 @@ spec:
     type: int
     required: true
     desc: Volume.
+  - name: n
+    type: int
+    required: true
+    desc: Number of trades.
+  - name: vw
+    type: int
+    required: true
+    desc: Volume weighted average price.
 example: |
   {
     "t": "2021-02-01T16:01:00Z",
@@ -31,4 +39,6 @@ example: |
     "l": 133.31,
     "c": 133.5,
     "v": 9876
+    "n": 587,
+    "vw": 630.285205
   }

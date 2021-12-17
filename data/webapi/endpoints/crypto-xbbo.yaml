@@ -13,7 +13,7 @@ endpoints:
         query:
           - name: exchanges
             type: string
-            desc: The comma-separated exchanges which can be ERSX, GNSS or CBSE. Defaults to ERSX,GNSS.
+            desc: The comma-separated exchanges which can be ERSX, FTX or CBSE. Defaults to ERSX.
       returns: |
         A quotes response object.
       errors:
