@@ -1,0 +1,85 @@
+spec:
+  - name: id
+    type: string/UUID
+    desc: ID that is specific to a single announcement. 
+  - name: corporate_action_id
+    type: string
+    desc: ID that remains consistent across all announcements for the same corporate action. Unlike ‘id’, this can be used to connect multiple announcements to see how the terms have changed throughout the lifecycle of the corporate action event.
+  - name: ca_type
+    type: string
+    desc: |
+      `dividend`, `merger`, `spinoff`, or `split`
+  - name: ca_sub_type
+    type: string
+    desc: |
+      `cash`, `stock`, `merger_update`, `merger_completion`, `spinoff`, `stock_split`, `unit_split`, `reverse_split`, or `recapitalization`
+  - name: initiating_symbol
+    type: string
+    desc: Symbol of the company initiating the announcement.
+  - name: initiating_original_cusip
+    type: string
+    desc: CUSIP of the company initiating the announcement.
+  - name: target_symbol
+    type: string
+    desc: Symbol of the child company involved in the announcement.
+  - name: target_original_cusip
+    type: string
+    desc: CUSIP of the child company involved in the announcement.
+  - name: declaration_date
+    type: string
+    desc: Date the corporate action or subsequent terms update was announced.
+  - name: ex_date
+    type: string
+    desc: The first date that purchasing a security will not result in a corporate action entitlement.
+  - name: record_date
+    type: string
+    desc: The date an account must hold a settled position in the security in order to receive the corporate action entitlement.
+  - name: payable_date
+    type: string
+    desc: The date the announcement will take effect. On this date, account stock and cash balances are expected to be processed accordingly.
+  - name: cash
+    type: string
+    desc: The amount of cash to be paid per share held by an account on the record date.
+  - name: old_rate
+    type: string
+    desc: The denominator to determine any quantity change ratios in positions.
+  - name: new_rate
+    type: string
+    desc: The numerator to determine any quantity change ratios in positions.
+example: |
+  [
+    {
+      "id": "be3c368a-4c7c-4384-808e-f02c9f5a8afe",
+      "corporate_actions_id": "F58684224_XY37",
+      "ca_type": "Dividend",
+      "ca_sub_type": "DIV",
+      "initiating_symbol": "MLLAX",
+      "initiating_original_cusip": "55275E101",
+      "target_symbol": "MLLAX",
+      "target_original_cusip": "55275E101",
+      "declaration_date": "2021-01-05",
+      "expiration_date": "2021-01-12",
+      "record_date": "2021-01-13",
+      "payable_date": "2021-01-14",
+      "cash": "0.018",
+      "old_rate": "1",
+      "new_rate": "1"
+    },
+    {
+        "corporate_action_id": "48251W104_AD21",
+        "ca_type": "Dividend",
+        "ca_sub_type": "cash",
+        "initiating_symbol": "KKR",
+        "initiating_original_cusip": "G52830109",
+        "target_symbol": "KKR",
+        "target_original_cusip": "G52830109",
+        "declaration_date": "2021-11-01",
+        "ex_date": "2021-11-12",
+        "record_date": "2021-11-15",
+        "payable_date": "2021-11-30",
+        "cash": "0.145",
+        "old_rate": "1",
+        "new_rate": "1"
+    }
+  ]
+

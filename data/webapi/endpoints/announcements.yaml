@@ -1,0 +1,33 @@
+endpoints:
+  /v2/corporate_actions/announcements:
+    GET:
+      title: Get announcements
+      summary: Returns announcements.
+      params:
+        query:
+          - name: ca_types
+            type: string
+            desc: |
+              `Dividend`, `Merger`, `Spinoff`, or `Split`
+          - name: since
+            type: timestamp
+            desc: |
+              The start (inclusive) of the date range when searching corporate action announcements. This should follow the YYYY-MM-DD format. The date range is limited to 90 days.
+          - name: until
+            type: timestamp
+            desc: |
+              The end (inclusive) of the date range when searching corporate action announcements. This should follow the YYYY-MM-DD format. The date range is limited to 90 days.
+          - name: symbol
+            type: string
+            desc: |
+              The symbol of the company initiating the announcement.
+          - name: cusip
+            type: string
+            desc: |
+              The CUSIP of the company initiating the announcement.
+          - name: date_type
+            type: string
+            desc: |
+              `declaration_date`, `ex_date`, `record_date`, or `payable_date`
+      returns: |
+        An array of [Announcement](#announcements-entity) object
