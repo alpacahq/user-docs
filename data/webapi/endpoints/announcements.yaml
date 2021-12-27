@@ -2,7 +2,7 @@ endpoints:
   /v2/corporate_actions/announcements:
     GET:
       title: Get announcements
-      summary: Returns announcements.
+      summary: Returns corporate action announcements information.
       params:
         query:
           - name: ca_types
@@ -30,4 +30,4 @@ endpoints:
             desc: |
               `declaration_date`, `ex_date`, `record_date`, or `payable_date`
       returns: |
-        An array of [Announcement](#announcements-entity) object
+        An array of [Announcement](#announcements-entity) objects.

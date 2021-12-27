@@ -1,6 +1,6 @@
 spec:
   - name: id
-    type: string/UUID
+    type: string<uuid>
     desc: ID that is specific to a single announcement. 
   - name: corporate_action_id
     type: string
@@ -38,13 +38,13 @@ spec:
     type: string
     desc: The date the announcement will take effect. On this date, account stock and cash balances are expected to be processed accordingly.
   - name: cash
-    type: string
+    type: string<number>
     desc: The amount of cash to be paid per share held by an account on the record date.
   - name: old_rate
-    type: string
+    type: string<number>
     desc: The denominator to determine any quantity change ratios in positions.
   - name: new_rate
-    type: string
+    type: string<number>
     desc: The numerator to determine any quantity change ratios in positions.
 example: |
   [
