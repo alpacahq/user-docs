@@ -23,7 +23,7 @@ spec:
     type: int
     required: true
     desc: Volume.
-  - name: n
+  - name: 'n'
     type: int
     required: true
     desc: Number of trades.
