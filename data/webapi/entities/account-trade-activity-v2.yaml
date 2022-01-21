@@ -21,7 +21,7 @@ spec:
   - name: side
     type: string
     desc: |
-      `buy` or `sell`
+      `buy`, `sell` or `sell_short`
   - name: symbol
     type: string
     desc: The symbol of the security being traded.
