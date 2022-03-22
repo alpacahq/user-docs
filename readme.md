@@ -1,4 +1,6 @@
-# Alpaca User Documentation
+# Alpaca User Documentation [:warning: Deprecated]
+
+This repo is no longer maintained. For latest documentation and OpenAPI specs visit: https://github.com/alpacahq/alpaca-docs
 
 This repository powers the documentation for Alpaca's users.
 
