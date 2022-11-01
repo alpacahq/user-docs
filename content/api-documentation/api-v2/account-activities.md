@@ -59,6 +59,7 @@ Pagination is handled using the `page_token` and `page_size` parameters. `page_t
 * `OPXRC`: Option exercise
 * `PTC`: Pass Thru Charge
 * `PTR`: Pass Thru Rebate
+* `FEE`: REG/TAF fees
 * `REORG`: Reorg CA
 * `SC`: Symbol change
 * `SSO`: Stock spinoff
