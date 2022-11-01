@@ -353,9 +353,7 @@ endpoints:
     DELETE:
       title: Cancel an order
       summary: |
-        Attempts to cancel an open order. If the order is no longer cancelable
-        (example: `status="filled"`), the server will respond with status 422,
-        and reject the request. Upon acceptance of the cancel request, it returns
+        Attempts to cancel an open order. Upon acceptance of the cancel request, it returns
         status 204.
       params:
         path:
